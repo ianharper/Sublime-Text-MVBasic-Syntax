@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>qm</string>
+	</array>
+	<key>name</key>
+	<string>QM Basic</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Basic Comments</string>
+			<key>match</key>
+			<string>(^\s*|;\s*)(\*).*</string>
+			<key>name</key>
+			<string>comment.line.qm-basic</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(\\)</string>
+			<key>comment</key>
+			<string>Basic Stings</string>
+			<key>end</key>
+			<string>(\\)</string>
+			<key>name</key>
+			<string>string.quoted.double.qm-basic</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(")</string>
+			<key>comment</key>
+			<string>Basic Stings</string>
+			<key>end</key>
+			<string>(")</string>
+			<key>name</key>
+			<string>string.quoted.double.qm-basic</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(')</string>
+			<key>comment</key>
+			<string>Basic Stings</string>
+			<key>end</key>
+			<string>(')</string>
+			<key>name</key>
+			<string>string.quoted.double.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic "Constants"</string>
+			<key>match</key>
+			<string>(@AM|@VM|@SVM)</string>
+			<key>name</key>
+			<string>constant.character.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic Keywords</string>
+			<key>match</key>
+			<string>(\b|^\s*)(?i)(ABS|ABSS|ACCEPT\.SOCKET\.CONNECTACOS|ALPHA|ANDS|ARG|ARG\.COUNT|ASCII|ASIN|ASSIGNED|ATAN|BINDKEY|BITAND|BITNOT|BITOR|BITRESET|BITSET|BITTEST|BITXOR|CATALOGUED|CATS|CHANGE|CHAR|COL1|COL2|COMPARE|CONFIG|CONNECT\.PORT|CONVERT|COS|COUNT|COUNTS|CREATE\.SERVER\.SOCKETCROP|CSVDQ|DATE|DCOUNT|DECRYPT|DELETE|DIR|DIV|DOWNCASE|DQUOTE|DTX|EBCDIC|ENCRYPT|ENV|EQS|EXP|EXTRACT|FIELD|FIELDS|FIELDSTORE|FILEINFO|FMT|FMTS|FOLD|FOLDS|GES|GET\.MESSAGES|GET\.PORT\.PARAMS|GETNLS|GETREM|GTS|ICONV|ICONVS|IDIV|IFS|INDEX|INDEXS|INDICES|INMAT|INSERT|INT|ITYPE|KEYCODE|KEYIN|KEYINC|KEYINR|KEYREADY|LEN|LENS|LES|LISTINDEX|LN|LOCATE|LOWER|LTS|MATCHFIELD|MAX|MAXIMUM|MIN|MINIMUM|MOD|MODS|NEG|NEGS|NES|NOT|NOTS|NUM|NUMS|OBJECT|OBJINFO|OCONV|OCONVS|OPEN\.SOCKET|ORS|OS\.ERROR|OUTERJOIN|PRINTER\.SETTING|PWR|QUOTE|RAISE|RDIV|READ\.SOCKET|RECORDLOCKED|REM|REMOVE|REPLACE|REUSE|RND|RTRANS|SAVE\.SCREEN|SELECTINFO|SENTENCE|SEQ|SERVER\.ADDR|SET\.PORT\.PARAMS|SET\.SOCKET\.MODE|SETNLS|SHIFT|SIN|SOCKET\.INFO|SOUNDEX|SOUNDEXS|SPACE|SPACES|SPLICE|SQRT|SQUOTE|STATUS|STR|STRS|SUBR|SUBSTITUTE|SUBSTRINGS|SUM|SUMMATION|SWAP|SWAPCASE|SYSTEM|TAN|TERMINFO|TIME|TIMEDATE|TRANS|TRIM|TRIMB|TRIMBS|TRIMF|TRIMFS|TRIMS|TTYGET|UNASSIGNED|UPCASE|VSLICE|WRITE\.SOCKET|XLATE|XTD|)(?=\()</string>
+			<key>name</key>
+			<string>support.function.builtin.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic Keywords</string>
+			<key>match</key>
+			<string>(\b\s|^\s*)(?i)(FOR|LOOP|REPEAT|NEXT|IF|THEN|ELSE|END)</string>
+			<key>name</key>
+			<string>keyword.control.flow.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic Keywords</string>
+			<key>match</key>
+			<string>(\b\s|^\s*)(?i)(ABORT|ABORTE|ABORTM|BEGIN TRANSACTION|BREAK|CALL|CASE|CHAIN|CLASS|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|CLOSE|CLOSESEQ|CLOSE.SOCKET|COMMIT|COMMON|CONTINUE|CONVERT|CREATE|CREATE.FILE|CRT|DATA|DEBUG|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIM|DIMENSION|DISINHERIT|DISPLAY|DPARSE|DPARSE.CSV|ECHO|END TRANSACTION|ENTER|EQUATE|ERRMSG|EXECUTE|EXIT|FILE|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FLUSH|FOOTING|FORMLIST|FUNCTION|GETLIST|GETPU|GOSUB|HEADING|HUSH|INHERIT|INPUT|INPUTCLEAR|INPUTCSV|INPUTERR|INPUTFIELD|INS|KEYEDIT|KEYEXIT|KEYTRAP|LOCATE|LOCK|LOGMSG|LOCAL|MARK.MAPPING|MAT|MATBUILD|MATPARSE|MATREAD|MATREADCSV|MATREADL|MATREADU|MATWRITE|MATWRITEU|NAP|NOBUF|NULL|ON GOSUB|ON GOTO|OPEN|OPENPATH|OPENSEQ|OS.EXECUTE|PAGE|PAUSE|PERFORM|PRECISION|PRINT|PRINTER CLOSE|PRINTER DISPLAY|PRINTER FILE|PRINTER NAME|PRINTER OFF|PRINTER ON|PRINTER RESET|PRINTER SETTING|PRINTERR|PRIVATE|PROCREAD|PROCWRITE|PROGRAM|PROMPT|PUBLIC|READ|READBLK|READCSV|READL|READLIST|READNEXT|READSEQ|READU|READV|READVL|READVU|RECORDLOCKL|RECORDLOCKU|RELEASE|REMARK|REMOVE|RESTORE.SCREEN|RETURN|RETURN TO|ROLLBACK|RQM|SAVELIST|SEEK|SELECT|SELECTE|SELECTINDEX|SELECTLEFT|SELECTN|SELECTRIGHT|SELECTV|SET.ARG|SET.EXIT.STATUS|SETLEFT|SETPU|SETRIGHT|SETREM|SLEEP|SSELECT|STATUS|STOP|STOPE|STOPM|SUBROUTINE|TCLREAD|TIMEOUT|TTYSET|UNLOCK|UNTIL|WAKE|WEOFSEQ|WHILE|WRITE|WRITEBLK|WRITECSV|WRITESEQ|WRITESEQF|WRITEU|WRITEV|WRITEVU|VOID|ABORT|COMMIT|START)\s</string>
+			<key>name</key>
+			<string>keyword.other.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic Operators</string>
+			<key>match</key>
+			<string>(\b\s*)+(GE|GT|LE|LT|EQ|NE|ge|gt|le|lt|eq|ne)(\s)</string>
+			<key>name</key>
+			<string>keyword.operator.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic Operators</string>
+			<key>match</key>
+			<string>(?=.+)(\+|-|=|\*|\/|\&lt;\&gt;|:=|\+=|-=)(?=.+)</string>
+			<key>name</key>
+			<string>keyword.operator.qm-basic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Basic Operators</string>
+			<key>match</key>
+			<string>(?=.+)(:)</string>
+			<key>name</key>
+			<string>keyword.operator.qm-basic</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.qm-basic</string>
+	<key>uuid</key>
+	<string>55cb68f6-ab09-4c9e-aa4e-77ff4bad4ea9</string>
+</dict>
+</plist>

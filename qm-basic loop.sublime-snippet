@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+loop
+	$1
+repeat$0
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>loop</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.qm-basic</scope>
+</snippet>
