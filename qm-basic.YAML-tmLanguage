@@ -10,6 +10,14 @@ patterns:
   name: comment.line.qm-basic
   match: (^\s*|;\s*)(\*).*
 
+- comment: Basic Comments
+  name: comment.line.qm-basic
+  match: (^\s*|;\s*)(\!).*
+
+- comment: Basic Line Labels
+  name: entity.name.section.qm-basic
+  match: (^([a-zA-Z0-9]+)\:)
+
 - comment: Basic Stings
   name: string.quoted.double.qm-basic
   begin: (\\)
