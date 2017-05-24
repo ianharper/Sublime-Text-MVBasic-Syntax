@@ -11,7 +11,7 @@ patterns:
   match: (^\s*|;\s*)(\*|\!).*
 
 - comment: Basic Line Labels
-  name: entity.name.section.qm-basic
+  name: entity.name.label.qm-basic
   match: (^([a-zA-Z0-9]+)\:)
 
 - comment: Basic Stings
@@ -51,7 +51,11 @@ patterns:
 
 - comment: Basic Operators
   name: keyword.operator.qm-basic
-  match: (\b\s*)+(?i)(ge|gt|le|lt|eq|ne|and|or)(\s)
+  match: (\b\s*)+(?i)(ge|gt|le|lt|eq|ne)\s
+
+- comment: Basic Operators
+  name: keyword.operator.word
+  match: (?i)\b\s+(and|or)\s
 
 - comment: Basic Operators
   name: keyword.operator.qm-basic
