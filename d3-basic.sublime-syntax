@@ -7,9 +7,10 @@ file_extensions:
 scope: source.D3-basic
 contexts:
   main:
-    - match: (^\s*|;\s*)(\*|\!).*
+    - match: (^|;)\s*(\*)
       comment: Basic Comments
-      scope: comment.line
+      scope: punctuation.definition.comment
+      push: line_comment
 
     - match: (^[a-zA-Z0-9\.]+:)|(^[0-9]+)
       comment: Basic Line Labels
@@ -81,3 +82,8 @@ contexts:
     - match: (?i) ([a-z][a-z\.\$]*)
       comment: Basic Variables
       scope: variable
+
+  line_comment:
+    - meta_scope: comment.line
+    - match: $
+      pop: true
