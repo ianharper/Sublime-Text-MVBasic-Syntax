@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>name</key>
+   <string>D3 Basic Metadata</string>
+   
+   <key>scope</key>
+   <string>source.D3-basic</string>
+
+   <key>settings</key>
+   <dict>
+      
+      <key>increaseIndentPattern</key>
+      <string>(?i)^\s*(begin case|loop)$|^\s*(for|case)|.*\s(then|locked|on error|else)\s*(;\s*\*.*)?$</string>
+
+      <key>decreaseIndentPattern</key>
+      <string>(^\s*)(?i)((end case)|(case)|(end))</string>
+
+      <key>unIndentedLinePattern</key>
+      <string>(?i)
+         ^\s*[\*\!].*
+         |((^[a-zA-Z0-9\.]+):)\s*(\*.*)?$
+         |(^[0-9]+)\s*(\*.*)?$</string>
+   </dict>
+</dict>
+</plist>
