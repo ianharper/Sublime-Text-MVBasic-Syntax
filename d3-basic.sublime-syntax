@@ -7,14 +7,26 @@ file_extensions:
 scope: source.D3-basic
 contexts:
   main:
-    - match: (^|;)\s*(\*)
+    - match: (?<=;|^)\s*(\*|\!)
       comment: Basic Comments
-      scope: punctuation.definition.comment
-      push: line_comment
+      captures:
+        '1': source.D3-basic
+      push:
+        - meta_scope: comment.line
+        - match: $
+          pop: true
+          # captures:
+          # '2': comment.line
 
-    - match: (^[a-zA-Z0-9\.]+:)|(^[0-9]+)
-      comment: Basic Line Labels
-      scope: entity.name.function
+
+    - comment: Basic Line Labels
+      scope: entity.name
+      match: (^([a-zA-Z0-9\.]+):|^([0-9]+))\s?([\*\!].*)?
+      captures:
+        '2': entity.name.function
+        '3': entity.name.function
+        '4': comment.line
+      
       # scope: entity.name.label
 
     - match: (\\)
@@ -42,10 +54,9 @@ contexts:
       comment: Basic "Constants"
       scope: constant.character
 
-    - match: (\b|^\s*)(?i)(@|abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)(?=\()
+    - match: (\b|\s)(?i)(@|abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)(?=\()
       comment: Basic Functions
-      scope: entity.name.function
-      # scope: support.function.builtin
+      scope: entity.name.function.languageFunction
 
     - match: (^|\;)\s*(?i)(for|loop|repeat|next|if)
       comment: Basic Flow Control
@@ -59,15 +70,23 @@ contexts:
       comment: Basic Keywords
       scope: keyword.control.flow
 
-    - match: (\s*)(?i)(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|convert|crt|data|debug|del|delete|dimension|echo|enter|equate|error|execute|execute|file|filelock|fileunlock|footing|get|getx|gosub|goto|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|key|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print|print\son|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction|transaction\sabort|transaction\scache|transaction\scommit|transaction\sflush|transaction\srollback|transaction\sstart|unlock|weof|write|writet|writeu|writev|writevu|writex)\s
+    - match: (?i)(;|^|(?<=then)|(?<=else)|(?<=locked)|(?<=on\serror))\s+(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|key|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print|print\son|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction|transaction\sabort|transaction\scache|transaction\scommit|transaction\sflush|transaction\srollback|transaction\sstart|unlock|weof|write|writet|writeu|writev|writevu|writex)\s
       comment: Basic Statements
-      scope: entity.name.function
+      captures: 
+        '2': entity.name.function.languageStatement
 
-    - match: (?i)\s(from|to|on|rtnlist|capturing|passlist)\s
+    - match: (?i)\s*(gosub|goto|go)\s(.*?)[;\n]
+      comment: Gosub/goto
+      scope: entity.name
+      captures:
+        '1': entity.name.function.languageStatement
+        '2': variable.function
+
+    - match: (?i)\s(from|to|on|rtnlist|capturing|setting|passlist)\s
       comment: Basic Statements
       scope: keyword.other
 
-    - match: (\b\s*)+(?i)(ge|gt|le|lt|eq|ne|and|or)(\s)
+    - match: (?i)\s(ge|gt|le|lt|eq|ne|and|or)\s
       comment: Basic Operators
       scope: keyword.operator
 
@@ -82,8 +101,3 @@ contexts:
     - match: (?i) ([a-z][a-z\.\$]*)
       comment: Basic Variables
       scope: variable
-
-  line_comment:
-    - meta_scope: comment.line
-    - match: $
-      pop: true
