@@ -1,0 +1,76 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - proc
+scope: source.mv-proc
+contexts:
+  main:
+    - match: '^[0-9]+'
+      scope: entity.name.function
+
+    # Comment lines begin with a 'C' and finish at the end of the line
+    - match: '(?i)\bc'
+      scope: punctuation.definition.comment
+      push: line_comment
+
+    # Keywords are if, else for and while.
+    # Note that blackslashes don't need to be escaped within single quoted
+    # strings in YAML. When using single quoted strings, only single quotes
+    # need to be escaped: this is done by using two single quotes next to each
+    # other.
+    - match: '(?i)\b(if)\s(.+?)\s(.+?)\b'
+      scope: keyword.control
+      captures:
+        '1': keyword.control.flow
+        '2': entity.name.function.languageStatement
+        '3': keyword.operator
+
+    - match: '(?i)\bo'
+      scope: punctuation.definition.string.begin
+      push: single_quoted_string
+
+    - match: '(?i)\b(go)\s([0-9]+)'
+      scope: entity.name
+      captures:
+        '1': entity.name.function.languageStatement
+        '2': variable.function
+
+    # Cursor Control - User Exit
+    - match: '(?i)\U01A6'
+      scope: entity.name.function.languageFunction
+      push: cursor_control
+
+    - match: '(?i)\b(a\"?[0-9]+?|h|p|ri|ro|ip|ston)(.*)'
+      scope: entity.name
+      captures:
+        '1': entity.name.function.languageStatement
+        '2': source.mv-proc
+
+
+  single_quoted_string:
+    - meta_scope: string.quoted.single
+    - match: $
+      scope: punctuation.definition.string.end
+      pop: true
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double
+    - match: '"'
+      scope: punctuation.definition.string.end
+      pop: true
+  
+
+  line_comment:
+    - meta_scope: comment.line
+    - match: $
+      pop: true
+
+  cursor_control:
+    - meta_scope: string.quoted.double
+    - match: '"'
+      push: double_quoted_string
+
+    - meta_scope: entity.name
+    - match: '^[^(]'
+      pop: true
