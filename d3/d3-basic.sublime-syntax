@@ -1,0 +1,114 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: D3 Basic
+file_extensions:
+  - bp
+scope: source.D3-basic
+contexts:
+  main:
+    - match: (?<=;|^)\s*(\*|\!)
+      comment: Basic Comments
+      captures:
+        '1': source.D3-basic
+      push:
+        - meta_scope: comment.line
+        - match: $
+          pop: true
+          # captures:
+          # '2': comment.line
+
+
+    - comment: Basic Line Labels
+      scope: entity.name
+      match: (^([a-zA-Z0-9\._]+):|^([0-9]+))\s?([\*\!].*)?
+      captures:
+        '2': entity.name.function
+        '3': entity.name.function
+        '4': comment.line
+      
+      # scope: entity.name.label
+
+    - match: (\\)
+      comment: Basic Stings
+      push:
+        - meta_scope: string.quoted.double
+        - match: (\\)
+          pop: true
+
+    - match: (")
+      comment: Basic Stings
+      push:
+        - meta_scope: string.quoted.double
+        - match: (")
+          pop: true
+
+    - match: (')
+      comment: Basic Stings
+      push:
+        - meta_scope: string.quoted.single
+        - match: (')
+          pop: true
+
+    - match: (?i)(@am|@vm|@sm|@svm|@user|@pib|@account)
+      comment: Basic "Constants"
+      scope: constant.character
+
+    - match: (?i)(\b|^|\s)\s*(@|abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)(?=\()
+      comment: Basic Functions
+      scope: entity.name.function.languageFunction
+
+    - match: (^|;)\s*(?i)(for|loop|repeat|until|while|next|if)(\s|$)
+      comment: Basic Flow Control
+      captures: 
+        '2': keyword.control.flow
+
+    - match: (?i)(^\s*)(begin\s|end\s)?(case)
+      comment: Basic Keywords
+      scope: keyword.control.flow
+
+    - match: (?i)(^|\s)\s*(end\s)?(then|else|end|locked)(\s|;|$)
+      comment: Basic Keywords
+      captures:
+        '2': keyword.control.flow
+        '3': keyword.control.flow
+
+    - match: (?i)(;\s*|^|(?<=\sthen\s)|(?<=\selse\s)|(?<=\slocked\s)|(?<=\son\serror\s))\s*(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print|print\son|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction|transaction\sabort|transaction\scache|transaction\scommit|transaction\sflush|transaction\srollback|transaction\sstart|unlock|weof|write|writet|writeu|writev|writevu|writex)(\s|$|;)
+      comment: Basic Statements
+      captures: 
+        '2': entity.name.function.languageStatement
+
+    - match: (?i)\s*(\son)\s(.*?)\s(gosub|goto)\s(.*)[\s;\n]
+      comment: on gosub/goto
+      scope: entity.name
+      captures:
+        '1': entity.name.function.languageStatement
+        '3': entity.name.function.languageStatement
+        '4': variable.function
+
+    - match: (?i)\s*(gosub|goto|go)\s(.*?)[\s;\n]
+      comment: Gosub/goto
+      scope: entity.name
+      captures:
+        '1': entity.name.function.languageStatement
+        '2': variable.function
+
+    - match: (?i)\s(before|do|from|to|on|rtnlist|capturing|returning|setting|passlist)\s
+      comment: Basic Statements
+      scope: keyword.other
+
+    - match: (?i)\s(ge|gt|le|lt|eq|ne|and|or)\s
+      comment: Basic Operators
+      scope: keyword.operator
+
+    - match: (?=.+)(\+|-|=|\*|\/|\<|\>|:=|\+=|-=)(?=.+)
+      comment: Basic Operators
+      scope: keyword.operator
+
+    - match: (?=.+)(:)
+      comment: Basic Operators
+      scope: keyword.operator
+
+    - match: (?i) ([a-z][a-z\.\$]*)
+      comment: Basic Variables
+      scope: variable

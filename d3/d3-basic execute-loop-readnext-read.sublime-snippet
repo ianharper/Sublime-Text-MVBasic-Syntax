@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+execute \\$1\\ rtnlist $2 $3
+loop
+  readnext $4 from $2 else exit
+  read $5 from $6, $4 else continue
+  $7
+repeat
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>elrnr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.D3-basic</scope>
+</snippet>
