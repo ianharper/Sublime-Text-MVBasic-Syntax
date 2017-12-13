@@ -1,0 +1,945 @@
+* SYNTAX TEST "d3-basic.sublime-syntax"
+
+* foo
+* ^ source.D3-basic comment.line
+
+* Labels:
+
+1000 * comment
+* <- source.D3-basic entity.name.function
+*   ^ source.D3-basic
+*    ^ source.D3-basic comment.line
+
+text.label: * comment
+* <- source.D3-basic entity.name.function 
+*          ^ source.D3-basic
+*           ^ source.D3-basic comment.line
+
+* Constants:
+  @am
+* ^^^ source.D3-basic constant.character
+  @vm
+* ^^^ source.D3-basic constant.character
+  @sm
+* ^^^ source.D3-basic constant.character
+  @svm
+* ^^^^ source.D3-basic constant.character
+  @user
+* ^^^^^ source.D3-basic constant.character
+  @pib
+* ^^^^ source.D3-basic constant.character
+  @account
+* ^^^^^^^^ source.D3-basic constant.character
+
+* Functions:
+
+  @()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  abs()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  access()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  alpha()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  ascii()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  assigned()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  change()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  char()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  col1()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  col2()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  convert()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  cos()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  count()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  date()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  dcount()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  delete()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  dquote()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  dtx()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  ebcdic()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  ereplace()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  error()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  exchange()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  exp()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  extract()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  field()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  fmt()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  fold()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  iconv()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  index()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  inmat()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  insert()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  int()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  key()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  len()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  ln()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  locate()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  maximum()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  minimum()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  mod()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  not()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  num()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  occurs()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  oconv()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  oconvs()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  pwr()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  rem()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  replace()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  rnd()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  scan()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  sentence()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  seq()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  sin()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  sort()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  soundex()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  space()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  sqrt()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  squote()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  status()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  str()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  sum()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  summation()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  swap()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  system()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  tan()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  time()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  timedate()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  trans()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  trim()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  trimb()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  trimf()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+  xtd()
+* ^ source.D3-basic entity.name.function.languageFunction
+
+
+* Variable with the same name as functions:
+*   Depending on the MV database these should be scoped as variables or invalid.
+
+  abs
+* ^ source.D3-basic variable
+
+  access
+* ^ source.D3-basic variable
+
+  alpha
+* ^ source.D3-basic variable
+
+  ascii
+* ^ source.D3-basic variable
+
+  assigned
+* ^ source.D3-basic variable
+
+  change
+* ^ source.D3-basic variable
+
+  char
+* ^ source.D3-basic variable
+
+  col1
+* ^ source.D3-basic variable
+
+  col2
+* ^ source.D3-basic variable
+
+
+  cos
+* ^ source.D3-basic variable
+
+  count
+* ^ source.D3-basic variable
+
+  date
+* ^ source.D3-basic variable
+
+  dcount
+* ^ source.D3-basic variable
+
+
+  dquote
+* ^ source.D3-basic variable
+
+  dtx
+* ^ source.D3-basic variable
+
+  ebcdic
+* ^ source.D3-basic variable
+
+  ereplace
+* ^ source.D3-basic variable
+
+
+  exchange
+* ^ source.D3-basic variable
+
+  exp
+* ^ source.D3-basic variable
+
+  extract
+* ^ source.D3-basic variable
+
+  field
+* ^ source.D3-basic variable
+
+  fmt
+* ^ source.D3-basic variable
+
+  fold
+* ^ source.D3-basic variable
+
+  iconv
+* ^ source.D3-basic variable
+
+  index
+* ^ source.D3-basic variable
+
+  inmat
+* ^ source.D3-basic variable
+
+  insert
+* ^ source.D3-basic variable
+
+  int
+* ^ source.D3-basic variable
+
+  key
+* ^ source.D3-basic variable
+
+  len
+* ^ source.D3-basic variable
+
+  ln
+* ^ source.D3-basic variable
+
+
+  maximum
+* ^ source.D3-basic variable
+
+  minimum
+* ^ source.D3-basic variable
+
+  mod
+* ^ source.D3-basic variable
+
+  not
+* ^ source.D3-basic variable
+
+  num
+* ^ source.D3-basic variable
+
+  occurs
+* ^ source.D3-basic variable
+
+  oconv
+* ^ source.D3-basic variable
+
+  oconvs
+* ^ source.D3-basic variable
+
+  pwr
+* ^ source.D3-basic variable
+
+  rnd
+* ^ source.D3-basic variable
+
+  scan
+* ^ source.D3-basic variable
+
+  sentence
+* ^ source.D3-basic variable
+
+  seq
+* ^ source.D3-basic variable
+
+  sin
+* ^ source.D3-basic variable
+
+  sort
+* ^ source.D3-basic variable
+
+  soundex
+* ^ source.D3-basic variable
+
+  space
+* ^ source.D3-basic variable
+
+  sqrt
+* ^ source.D3-basic variable
+
+  squote
+* ^ source.D3-basic variable
+
+  status
+* ^ source.D3-basic variable
+
+  str
+* ^ source.D3-basic variable
+
+  sum
+* ^ source.D3-basic variable
+
+  summation
+* ^ source.D3-basic variable
+
+  swap
+* ^ source.D3-basic variable
+
+  system
+* ^ source.D3-basic variable
+
+  tan
+* ^ source.D3-basic variable
+
+  time
+* ^ source.D3-basic variable
+
+  timedate
+* ^ source.D3-basic variable
+
+  trans
+* ^ source.D3-basic variable
+
+  trim
+* ^ source.D3-basic variable
+
+  trimb
+* ^ source.D3-basic variable
+
+  trimf
+* ^ source.D3-basic variable
+
+  xtd
+* ^ source.D3-basic variable
+
+* Strings
+
+ 'single quoted string ;* not a comment'
+* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.D3-basic string.quoted.single
+
+ "string quoted  += double"
+* ^^^^^^^^^^^^^^^^^^^^^^^^ source.D3-basic string.quoted.double
+
+ \string=quoted double\
+* ^^^^^^^^^^^^^^^^^^^^ source.D3-basic string.quoted.double
+
+
+* Flow Control:
+
+for x = 1 to 10
+* <- source.D3-basic keyword.control.flow
+*     ^ source.D3-basic keyword.operator
+*          ^ source.D3-basic keyword.other
+
+next x
+* <- source.D3-basic keyword.control.flow
+
+loop
+* <- source.D3-basic keyword.control.flow
+
+until done
+* <- source.D3-basic keyword.control.flow
+*       ^ source.D3-basic
+
+while x > 0
+* <- source.D3-basic keyword.control.flow
+*       ^ source.D3-basic keyword.operator
+repeat
+* <- source.D3-basic keyword.control.flow
+
+if true then 
+* <- source.D3-basic keyword.control.flow
+*       ^ source.D3-basic keyword.control.flow
+
+end else
+* <- source.D3-basic keyword.control.flow
+*   ^ source.D3-basic keyword.control.flow
+
+end
+* <- source.D3-basic keyword.control.flow
+
+begin case
+* <- source.D3-basic keyword.control.flow
+
+case 1
+* <- source.D3-basic keyword.control.flow
+
+end case
+* <- source.D3-basic keyword.control.flow
+
+
+* Statements:
+
+call
+* <- source.D3-basic entity.name.function.languageStatement
+
+chain
+* <- source.D3-basic entity.name.function.languageStatement
+
+include
+* <- source.D3-basic entity.name.function.languageStatement
+
+options
+* <- source.D3-basic entity.name.function.languageStatement
+
+abort
+* <- source.D3-basic entity.name.function.languageStatement
+
+aux
+* <- source.D3-basic entity.name.function.languageStatement
+
+begin work
+* <- source.D3-basic entity.name.function.languageStatement
+*     ^ source.D3-basic entity.name.function.languageStatement
+
+break
+* <- source.D3-basic entity.name.function.languageStatement
+
+casing
+* <- source.D3-basic entity.name.function.languageStatement
+
+cfunction
+* <- source.D3-basic entity.name.function.languageStatement
+
+chain
+* <- source.D3-basic entity.name.function.languageStatement
+
+clear
+* <- source.D3-basic entity.name.function.languageStatement
+
+cleardata
+* <- source.D3-basic entity.name.function.languageStatement
+
+clearfile
+* <- source.D3-basic entity.name.function.languageStatement
+
+clearselect
+* <- source.D3-basic entity.name.function.languageStatement
+
+close
+* <- source.D3-basic entity.name.function.languageStatement
+
+commit work
+* <- source.D3-basic entity.name.function.languageStatement
+*      ^ source.D3-basic entity.name.function.languageStatement
+
+common
+* <- source.D3-basic entity.name.function.languageStatement
+
+compare
+* <- source.D3-basic entity.name.function.languageStatement
+
+continue
+* <- source.D3-basic entity.name.function.languageStatement
+
+convert
+* <- source.D3-basic entity.name.function.languageStatement
+
+crt
+* <- source.D3-basic entity.name.function.languageStatement
+
+data
+* <- source.D3-basic entity.name.function.languageStatement
+
+debug
+* <- source.D3-basic entity.name.function.languageStatement
+
+del
+* <- source.D3-basic entity.name.function.languageStatement
+
+delete
+* <- source.D3-basic entity.name.function.languageStatement
+
+dim
+* <- source.D3-basic entity.name.function.languageStatement
+
+dimension
+* <- source.D3-basic entity.name.function.languageStatement
+
+echo
+* <- source.D3-basic entity.name.function.languageStatement
+
+enter
+* <- source.D3-basic entity.name.function.languageStatement
+
+equ
+* <- source.D3-basic entity.name.function.languageStatement
+
+equate
+* <- source.D3-basic entity.name.function.languageStatement
+
+error
+* <- source.D3-basic entity.name.function.languageStatement
+
+execute
+* <- source.D3-basic entity.name.function.languageStatement
+
+exit
+* <- source.D3-basic entity.name.function.languageStatement
+
+file
+* <- source.D3-basic entity.name.function.languageStatement
+
+filelock
+* <- source.D3-basic entity.name.function.languageStatement
+
+fileunlock
+* <- source.D3-basic entity.name.function.languageStatement
+
+footing
+* <- source.D3-basic entity.name.function.languageStatement
+
+get
+* <- source.D3-basic entity.name.function.languageStatement
+
+getx
+* <- source.D3-basic entity.name.function.languageStatement
+
+heading
+* <- source.D3-basic entity.name.function.languageStatement
+
+in
+* <- source.D3-basic entity.name.function.languageStatement
+
+input
+* <- source.D3-basic entity.name.function.languageStatement
+
+inputclear
+* <- source.D3-basic entity.name.function.languageStatement
+
+inputctrl
+* <- source.D3-basic entity.name.function.languageStatement
+
+inputerr
+* <- source.D3-basic entity.name.function.languageStatement
+
+inputnull
+* <- source.D3-basic entity.name.function.languageStatement
+
+inputparity
+* <- source.D3-basic entity.name.function.languageStatement
+
+inputtrap off
+* <- source.D3-basic entity.name.function.languageStatement
+*         ^ source.D3-basic entity.name.function.languageStatement
+
+ins
+* <- source.D3-basic entity.name.function.languageStatement
+
+let
+* <- source.D3-basic entity.name.function.languageStatement
+
+locate
+* <- source.D3-basic entity.name.function.languageStatement
+
+lock
+* <- source.D3-basic entity.name.function.languageStatement
+
+mat
+* <- source.D3-basic entity.name.function.languageStatement
+
+matbuild
+* <- source.D3-basic entity.name.function.languageStatement
+
+matparse
+* <- source.D3-basic entity.name.function.languageStatement
+
+matread
+* <- source.D3-basic entity.name.function.languageStatement
+
+matreadu
+* <- source.D3-basic entity.name.function.languageStatement
+
+matreadt
+* <- source.D3-basic entity.name.function.languageStatement
+
+matwrite
+* <- source.D3-basic entity.name.function.languageStatement
+
+matwriteu
+* <- source.D3-basic entity.name.function.languageStatement
+
+null
+* <- source.D3-basic entity.name.function.languageStatement
+
+open
+* <- source.D3-basic entity.name.function.languageStatement
+
+out
+* <- source.D3-basic entity.name.function.languageStatement
+
+page
+* <- source.D3-basic entity.name.function.languageStatement
+
+precision
+* <- source.D3-basic entity.name.function.languageStatement
+
+print
+* <- source.D3-basic entity.name.function.languageStatement
+
+print on
+* <- source.D3-basic entity.name.function.languageStatement
+*     ^ source.D3-basic entity.name.function.languageStatement
+
+printchar
+* <- source.D3-basic entity.name.function.languageStatement
+
+printer
+* <- source.D3-basic entity.name.function.languageStatement
+
+procread
+* <- source.D3-basic entity.name.function.languageStatement
+
+procwrite
+* <- source.D3-basic entity.name.function.languageStatement
+
+program
+* <- source.D3-basic entity.name.function.languageStatement
+
+prompt
+* <- source.D3-basic entity.name.function.languageStatement
+
+read
+* <- source.D3-basic entity.name.function.languageStatement
+
+readu
+* <- source.D3-basic entity.name.function.languageStatement
+
+readnext
+* <- source.D3-basic entity.name.function.languageStatement
+
+readt
+* <- source.D3-basic entity.name.function.languageStatement
+
+readtx
+* <- source.D3-basic entity.name.function.languageStatement
+
+readv
+* <- source.D3-basic entity.name.function.languageStatement
+
+readvu
+* <- source.D3-basic entity.name.function.languageStatement
+
+release
+* <- source.D3-basic entity.name.function.languageStatement
+
+rem
+* <- source.D3-basic entity.name.function.languageStatement
+
+remove
+* <- source.D3-basic entity.name.function.languageStatement
+
+replace
+* <- source.D3-basic entity.name.function.languageStatement
+
+return
+* <- source.D3-basic entity.name.function.languageStatement
+
+rewind
+* <- source.D3-basic entity.name.function.languageStatement
+
+rollback work
+* <- source.D3-basic entity.name.function.languageStatement
+*        ^ source.D3-basic entity.name.function.languageStatement
+
+root
+* <- source.D3-basic entity.name.function.languageStatement
+
+rqm
+* <- source.D3-basic entity.name.function.languageStatement
+
+select
+* <- source.D3-basic entity.name.function.languageStatement
+
+send
+* <- source.D3-basic entity.name.function.languageStatement
+
+sendx
+* <- source.D3-basic entity.name.function.languageStatement
+
+sleep
+* <- source.D3-basic entity.name.function.languageStatement
+
+spoolq
+* <- source.D3-basic entity.name.function.languageStatement
+
+stop
+* <- source.D3-basic entity.name.function.languageStatement
+
+subroutine
+* <- source.D3-basic entity.name.function.languageStatement
+
+ta
+* <- source.D3-basic entity.name.function.languageStatement
+
+tcl
+* <- source.D3-basic entity.name.function.languageStatement
+
+tclread
+* <- source.D3-basic entity.name.function.languageStatement
+
+transaction
+* <- source.D3-basic entity.name.function.languageStatement
+
+transaction abort
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+
+transaction cache
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+
+transaction commit
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+
+transaction flush
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+
+transaction rollback
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+
+transaction start
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+
+unlock
+* <- source.D3-basic entity.name.function.languageStatement
+
+weof
+* <- source.D3-basic entity.name.function.languageStatement
+
+write
+* <- source.D3-basic entity.name.function.languageStatement
+
+writet
+* <- source.D3-basic entity.name.function.languageStatement
+
+writeu
+* <- source.D3-basic entity.name.function.languageStatement
+
+writev
+* <- source.D3-basic entity.name.function.languageStatement
+
+writevu
+* <- source.D3-basic entity.name.function.languageStatement
+
+writex
+* <- source.D3-basic entity.name.function.languageStatement
+
+
+* gosub/goto:
+
+goto 1000 ;* comment
+* <- source.D3-basic entity.name.function.languageStatement
+*    ^ source.D3-basic variable.function
+*         ^ source.D3-basic punctuation.terminator
+*          ^ source.D3-basic comment.line
+
+gosub 1000
+* <- source.D3-basic entity.name.function.languageStatement
+*     ^ source.D3-basic variable.function
+
+on variable goto 100, 200, semantic.label
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+*                ^^^ variable.function
+*                   ^ source.D3-basic
+*                     ^ source.D3-basic variable.function
+*                          ^ source.D3-basic variable.function
+
+on variable gosub 100, 200, semantic.label
+* <- source.D3-basic entity.name.function.languageStatement
+*           ^ source.D3-basic entity.name.function.languageStatement
+*                 ^^^ variable.function
+*                    ^ source.D3-basic
+*                      ^ variable.function
+*                            ^ variable.function 
+
+
+* Operators:
+
+if ge gt le lt eq ne and or then 
+*  ^ source.D3-basic keyword.operator
+*     ^ source.D3-basic keyword.operator
+*        ^ source.D3-basic keyword.operator  
+*           ^ source.D3-basic keyword.operator
+*              ^ source.D3-basic keyword.operator
+*                 ^ source.D3-basic keyword.operator
+*                     ^ source.D3-basic keyword.operator
+*                         ^ source.D3-basic keyword.operator
+
+if < > <= >= #
+*  ^ source.D3-basic keyword.operator
+*    ^ source.D3-basic keyword.operator
+*      ^^ source.D3-basic keyword.operator
+*         ^^ source.D3-basic keyword.operator
+*            ^ source.D3-basic keyword.operator
+
+var = 1 + 2 - 3 * 4 / 5 : '.'
+*   ^ source.D3-basic keyword.operator
+*       ^ source.D3-basic keyword.operator
+*           ^ source.D3-basic keyword.operator
+*               ^ source.D3-basic keyword.operator
+*                   ^ source.D3-basic keyword.operator
+*                       ^ source.D3-basic keyword.operator
+
+var=1+2-3*4/5:'.'
+*  ^ source.D3-basic keyword.operator
+*    ^ source.D3-basic keyword.operator
+*      ^ source.D3-basic keyword.operator
+*        ^ source.D3-basic keyword.operator
+*          ^ source.D3-basic keyword.operator
+*            ^ source.D3-basic keyword.operator
+
+var += 1
+*   ^^ source.D3-basic keyword.operator
+
+var -= 1
+*   ^^ source.D3-basic keyword.operator
+
+var /= 1
+*   ^^ source.D3-basic keyword.operator
+
+var *= 1
+*   ^^ source.D3-basic keyword.operator
+
+var := 1
+*   ^^ source.D3-basic keyword.operator
+
