@@ -56,7 +56,8 @@ contexts:
 
     - match: (?i)\b(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
       comment: Basic Functions
-      scope: entity.name.function.languageFunction
+      captures: 
+        '1': entity.name.function.languageFunction
 
     - match: \B@\(
       comment: Basic @() Function
@@ -70,11 +71,11 @@ contexts:
       comment: Basic Keywords
       scope: keyword.control.flow
 
-    - match: (?i)(^|\s)\s*(end\s)?(then|else|end|locked)(\s|;|$)
+    - match: (?i)\b(end\s)?(then|else|end|locked)\b
       comment: Basic Keywords
       captures:
+        '1': keyword.control.flow
         '2': keyword.control.flow
-        '3': keyword.control.flow
 
     - match: (?i)\b(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
       comment: Basic Statements
@@ -113,7 +114,7 @@ contexts:
     - match: ;
       comment: Compound line statement 
       scope: punctuation.terminator
-      push: main
+      set: main
 
   ongoto:
     - match: \b{{linelabelref}}\b
