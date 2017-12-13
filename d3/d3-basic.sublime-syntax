@@ -7,7 +7,7 @@ file_extensions:
 scope: source.D3-basic
 
 variables:
-  linelabelref: '([a-zA-Z0-9\._]+)|([0-9]+)'
+  linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
 
 contexts:
@@ -20,18 +20,14 @@ contexts:
         - meta_scope: comment.line
         - match: $
           pop: true
-          # captures:
-          # '2': comment.line
-
 
     - comment: Basic Line Labels
-      scope: entity.name.function
-      match: (^([a-zA-Z0-9\._]+):|^([0-9]+)\b)(\s\*.*$)?
+      match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
-        '1': entity.name.function
+        '2': entity.name.function
+        '3': entity.name.function
         '4': comment.line
       push: main
-      # scope: entity.name.label
 
     - match: (\\)
       comment: Basic Stings
@@ -80,7 +76,7 @@ contexts:
         '2': keyword.control.flow
         '3': keyword.control.flow
 
-    - match: (?i)\b(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b
+    - match: (?i)\b(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
       comment: Basic Statements
       scope: entity.name.function.languageStatement
 
