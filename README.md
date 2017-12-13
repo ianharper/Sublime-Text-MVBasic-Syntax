@@ -1,4 +1,4 @@
-# Sublime-Text2-MVBasic-Syntax
+# Sublime-Text-MVBasic-Syntax
 
 Syntax highlighting/indentation/sinppets for OpenQM and D3 Basic. This will (currently) work well with most versions of Basic for MV databases, not just D3 and QM. I've also included some preferences that help with MV syntax (especially allowing "." as part of a variable name). Even with that I've noticed that Sublime doesn't 100% support this setting with goto definition. The syntax definitions are case insensitive, however, the snippet tab completions are not (I've defined them in lowercase). 
 
