@@ -13,111 +13,92 @@ variables:
 contexts:
   main:
     - match: (?<=;|^)\s*(\*|\!)
-      comment: Basic Comments
       captures:
-        '1': source.D3-basic
+        '1': punctuation.definition.comment.D3-basic
       push:
-        - meta_scope: comment.line
-        - match: $
+        - meta_content_scope: comment.line.D3-basic
+        - match: \n
           pop: true
 
-    - comment: Basic Line Labels
-      match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
+    - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
-        '2': entity.name.function
-        '3': entity.name.function
-        '4': comment.line
+        '2': entity.name.function.D3-basic
+        '3': entity.name.function.D3-basic
+        '4': comment.line.D3-basic
       push: main
 
     - match: (\\)
-      comment: Basic Stings
       push:
-        - meta_scope: string.quoted.double
+        - meta_scope: string.quoted.double.D3-basic
         - match: (\\)
           pop: true
 
     - match: (")
-      comment: Basic Stings
       push:
-        - meta_scope: string.quoted.double
+        - meta_scope: string.quoted.double.D3-basic
         - match: (")
           pop: true
 
     - match: (')
-      comment: Basic Stings
       push:
-        - meta_scope: string.quoted.single
+        - meta_scope: string.quoted.single.D3-basic
         - match: (')
           pop: true
 
     - match: (?i)(@am|@vm|@sm|@svm|@user|@pib|@account)
-      comment: Basic "Constants"
-      scope: constant.character
+      scope: constant.character.D3-basic
 
     - match: (?i)\b(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
-      comment: Basic Functions
       captures: 
-        '1': entity.name.function.languageFunction
+        '1': entity.name.function.languageFunction.D3-basic
 
     - match: \B@\(
-      comment: Basic @() Function
-      scope: entity.name.function.languageFunction
+      scope: entity.name.function.languageFunction.D3-basic
 
     - match: (?i)\b(for|loop|repeat|until|while|next|if)\b
-      comment: Basic Flow Control
-      scope: keyword.control.flow
+      scope: keyword.control.flow.D3-basic
 
     - match: (?i)\b(begin\s|end\s)?(case)\b
-      comment: Basic Keywords
-      scope: keyword.control.flow
+      scope: keyword.control.flow.D3-basic
 
     - match: (?i)\b(end\s)?(then|else|end|locked)\b
-      comment: Basic Keywords
       captures:
-        '1': keyword.control.flow
-        '2': keyword.control.flow
+        '1': keyword.control.flow.D3-basic
+        '2': keyword.control.flow.D3-basic
 
     - match: (?i)\b(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
-      comment: Basic Statements
-      scope: entity.name.function.languageStatement
+      scope: entity.name.function.languageStatement.D3-basic
 
     - match: (?i)\b(on)\s({{basicvariable}})\s(gosub|goto)\s
-      comment: on gosub/goto
       captures:
-        '1': entity.name.function.languageStatement 
-        '3': entity.name.function.languageStatement 
+        '1': entity.name.function.languageStatement.D3-basic 
+        '3': entity.name.function.languageStatement.D3-basic 
       push: ongoto
 
     - match: (?i)\b(gosub|goto|go)\s({{linelabelref}})\b
-      comment: Gosub/goto
-      scope: entity.name
+      scope: entity.name.D3-basic
       captures:
-        '1': entity.name.function.languageStatement
-        '2': variable.function
+        '1': entity.name.function.languageStatement.D3-basic
+        '2': variable.function.D3-basic
 
     - match: (?i)\b(before|do|from|to|on|rtnlist|capturing|returning|setting|passlist)\b
-      comment: Basic Statements
-      scope: keyword.other
+      scope: keyword.other.D3-basic
 
     - match: (?i)\b(ge|gt|le|lt|eq|ne|and|or)\b
-      comment: Basic Logical Operators
-      scope: keyword.operator
+      scope: keyword.operator.D3-basic
 
     - match: (\+|-|=|#|:|\*|\/|\<|\>|:=|\+=|-=)
-      comment: Basic Operators
-      scope: keyword.operator
+      scope: keyword.operator.D3-basic
 
     - match: (?i){{basicvariable}}
-      comment: Basic Variables
-      scope: variable
+      scope: variable.D3-basic
 
     - match: ;
-      comment: Compound line statement 
-      scope: punctuation.terminator
+      scope: punctuation.terminator.D3-basic
       set: main
 
   ongoto:
     - match: \b{{linelabelref}}\b
-      scope: variable.function
+      scope: variable.function.D3-basic
     - match: ;|$
       pop: true

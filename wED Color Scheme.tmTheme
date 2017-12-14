@@ -176,6 +176,17 @@
     </dict>
     <dict>
       <key>name</key>
+      <string>Comment</string>
+      <key>scope</key>
+      <string>punctuation.definition.comment</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#008000</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
       <string>Invalid</string>
       <key>scope</key>
       <string>invalid</string>
