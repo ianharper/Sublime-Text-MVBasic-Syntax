@@ -1,7 +1,7 @@
 * SYNTAX TEST "d3-basic.sublime-syntax"
 
 * foo
-* <- source.D3-basic punctuation.definition.comment.D3-basic 
+* <- source.D3-basic punctuation.definition.comment.D3-basic
 * ^ source.D3-basic comment.line.D3-basic
 
 * Labels:
@@ -12,7 +12,7 @@
 *    ^ source.D3-basic comment.line.D3-basic
 
 text.label: * comment
-* <- source.D3-basic entity.name.function.D3-basic 
+* <- source.D3-basic entity.name.function.D3-basic
 *          ^ source.D3-basic
 *           ^ source.D3-basic comment.line.D3-basic
 
@@ -482,7 +482,7 @@ while x > 0
 repeat
 * <- source.D3-basic keyword.control.flow.D3-basic
 
-if true then 
+if true then
 * <- source.D3-basic keyword.control.flow.D3-basic
 *       ^ source.D3-basic keyword.control.flow.D3-basic
 
@@ -871,7 +871,7 @@ goto 1000 ;* comment
 * <- source.D3-basic entity.name.function.languageStatement.D3-basic
 *    ^ source.D3-basic variable.function.D3-basic
 *         ^ source.D3-basic punctuation.terminator.D3-basic
-*          ^ punctuation.definition.comment.D3
+*          ^ source.D3-basic punctuation.definition.comment.D3-basic
 *            ^ source.D3-basic comment.line.D3-basic
 
 gosub 1000
@@ -892,15 +892,15 @@ on variable gosub 100, 200, semantic.label
 *                 ^^^ variable.function
 *                    ^ source.D3-basic
 *                      ^ variable.function
-*                            ^ variable.function 
+*                            ^ variable.function
 
 
 * Operators:
 
-if ge gt le lt eq ne and or then 
+if ge gt le lt eq ne and or then
 *  ^ source.D3-basic keyword.operator.D3-basic
 *     ^ source.D3-basic keyword.operator.D3-basic
-*        ^ source.D3-basic keyword.operator.D3-basic  
+*        ^ source.D3-basic keyword.operator.D3-basic
 *           ^ source.D3-basic keyword.operator.D3-basic
 *              ^ source.D3-basic keyword.operator.D3-basic
 *                 ^ source.D3-basic keyword.operator.D3-basic

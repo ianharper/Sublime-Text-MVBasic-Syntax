@@ -45,7 +45,7 @@ contexts:
         - match: (')
           pop: true
 
-    - match: (?i)(@am|@vm|@sm|@svm|@user|@pib|@account)
+    - match: (?i)\B(@am|@vm|@sm|@svm|@user|@pib|@account)\b
       scope: constant.character.D3-basic
 
     - match: (?i)\b(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
