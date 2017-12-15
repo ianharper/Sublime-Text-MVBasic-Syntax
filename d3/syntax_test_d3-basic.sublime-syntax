@@ -871,7 +871,7 @@ goto 1000 ;* comment
 * <- source.D3-basic entity.name.function.languageStatement.D3-basic
 *    ^ source.D3-basic variable.function.D3-basic
 *         ^ source.D3-basic punctuation.terminator.D3-basic
-*          ^ punctuation.definition.comment.D3
+*          ^ source.D3-basic punctuation.definition.comment.D3-basic
 *            ^ source.D3-basic comment.line.D3-basic
 
 gosub 1000
