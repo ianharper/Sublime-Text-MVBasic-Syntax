@@ -55,7 +55,7 @@ contexts:
     - match: \B@\(
       scope: entity.name.function.languageFunction.D3-basic
 
-    - match: (?i)\b(for|loop|repeat|until|while|next|if)\b
+    - match: (?i)(?<=^|;|\s)(for|loop|repeat|until|while|next|if)(?!\.)\b
       scope: keyword.control.flow.D3-basic
 
     - match: (?i)\b(begin\s|end\s)?(case)\b

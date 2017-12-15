@@ -21,4 +21,3 @@ If you have better soultions please contribute to this! This is my first crack a
 ## TODO
 * Convert the QM syntax to the sublime-syntax format used the sublime v3.092+
 * Add additional MV dialects
-* Enable expand selection to word (ctrl+d) to ignore "."
