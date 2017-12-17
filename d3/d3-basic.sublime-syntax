@@ -4,7 +4,7 @@
 name: D3 Basic
 file_extensions:
   - bp
-scope: source.D3-basic
+scope: source.d3-basic
 
 variables:
   linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
@@ -14,91 +14,99 @@ contexts:
   main:
     - match: (?<=;|^)\s*(\*|\!)
       captures:
-        '1': punctuation.definition.comment.D3-basic
+        '1': punctuation.definition.comment.d3-basic
       push:
-        - meta_content_scope: comment.line.D3-basic
+        - meta_content_scope: comment.line.d3-basic
         - match: \n
           pop: true
 
     - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
-        '2': entity.name.function.D3-basic
-        '3': entity.name.function.D3-basic
-        '4': comment.line.D3-basic
+        '2': entity.name.function.d3-basic
+        '3': entity.name.function.d3-basic
+        '4': comment.line.d3-basic
       push: main
 
     - match: (\\)
       push:
-        - meta_scope: string.quoted.double.D3-basic
+        - meta_scope: string.quoted.double.d3-basic
         - match: (\\)
           pop: true
 
     - match: (")
       push:
-        - meta_scope: string.quoted.double.D3-basic
+        - meta_scope: string.quoted.double.d3-basic
         - match: (")
           pop: true
 
     - match: (')
       push:
-        - meta_scope: string.quoted.single.D3-basic
+        - meta_scope: string.quoted.single.d3-basic
         - match: (')
           pop: true
 
     - match: (?i)\B(@am|@vm|@sm|@svm|@user|@pib|@account)\b
-      scope: constant.character.D3-basic
+      scope: constant.character.d3-basic
 
-    - match: (?i)\b(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
+    - match: (?i)(?<!\.)(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
       captures: 
-        '1': entity.name.function.languageFunction.D3-basic
+        '1': entity.name.function.languageFunction.d3-basic
 
-    - match: \B@\(
-      scope: entity.name.function.languageFunction.D3-basic
+    - match: \B(@)\(
+      captures:
+        '1': entity.name.function.languageFunction.d3-basic
 
     - match: (?i)(?<=^|;|\s)(for|loop|repeat|until|while|next|if)(?!\.)\b
-      scope: keyword.control.flow.D3-basic
+      scope: keyword.control.flow.d3-basic
 
-    - match: (?i)\b(begin\s|end\s)?(case)\b
-      scope: keyword.control.flow.D3-basic
+    - match: (?i)(?<=^|;|\s)(begin\s|end\s)?(case)(?=\s|$|;)
+      scope: keyword.control.flow.d3-basic
 
-    - match: (?i)\b(end\s)?(then|else|end|locked)\b
+    - match: (?i)(?<=^|;|\s)(end\s)?(then|else|end|locked)(?=\s|$|;)
       captures:
-        '1': keyword.control.flow.D3-basic
-        '2': keyword.control.flow.D3-basic
+        '1': keyword.control.flow.d3-basic
+        '2': keyword.control.flow.d3-basic
 
-    - match: (?i)\b(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
-      scope: entity.name.function.languageStatement.D3-basic
+    - match: (?i)(?<=^|;|\s)(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
+      scope: entity.name.function.languageStatement.d3-basic
 
-    - match: (?i)\b(on)\s({{basicvariable}})\s(gosub|goto)\s
+    - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)\s
       captures:
-        '1': entity.name.function.languageStatement.D3-basic 
-        '3': entity.name.function.languageStatement.D3-basic 
+        '1': entity.name.function.languageStatement.d3-basic 
+        '3': entity.name.function.languageStatement.d3-basic 
       push: ongoto
 
-    - match: (?i)\b(gosub|goto|go)\s({{linelabelref}})\b
-      scope: entity.name.D3-basic
+    - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
       captures:
-        '1': entity.name.function.languageStatement.D3-basic
-        '2': variable.function.D3-basic
+        '1': entity.name.function.languageStatement.d3-basic
+        '2': variable.function.d3-basic
 
-    - match: (?i)\b(before|do|from|to|on|rtnlist|capturing|returning|setting|passlist)\b
-      scope: keyword.other.D3-basic
+    - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|passlist)(?=\s)
+      scope: keyword.other.d3-basic
 
-    - match: (?i)\b(ge|gt|le|lt|eq|ne|and|or)\b
-      scope: keyword.operator.D3-basic
+    - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
+      captures: 
+        '1': keyword.operator.d3-basic
 
-    - match: (\+|-|=|#|:|\*|\/|\<|\>|:=|\+=|-=)
-      scope: keyword.operator.D3-basic
+    - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
+      scope: keyword.operator.d3-basic
 
-    - match: (?i){{basicvariable}}
-      scope: variable.D3-basic
+    - match: (?i)({{basicvariable}})\(?
+      captures:
+        '1': variable.d3-basic
+
+    - match: \b[0-9]+\.[0-9]+\b
+      scope: constant.numeric.float.d3-basic
+
+    - match: \b\d+\b
+      scope: constant.numeric.integer.d3-basic
 
     - match: ;
-      scope: punctuation.terminator.D3-basic
+      scope: punctuation.terminator.d3-basic
       set: main
 
   ongoto:
     - match: \b{{linelabelref}}\b
-      scope: variable.function.D3-basic
+      scope: variable.function.d3-basic
     - match: ;|$
       pop: true
