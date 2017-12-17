@@ -1,0 +1,123 @@
+* SYNTAX TEST "d3-basic.sublime-syntax"
+
+* foo
+* <- source.d3-basic punctuation.definition.comment.d3-basic
+* ^ source.d3-basic comment.line.d3-basic
+
+* Labels:
+
+1000 * comment
+* <- source.d3-basic entity.name.function.d3-basic
+*   ^ source.d3-basic
+*    ^ source.d3-basic comment.line.d3-basic
+
+semantic.label: * comment
+* <- source.d3-basic entity.name.function.d3-basic
+*              ^ source.d3-basic
+*               ^ source.d3-basic comment.line.d3-basic
+
+* Variable with the same name as functions:
+*   Depending on the MV database these should be scoped as variables or invalid.
+
+  tot.abs(1)
+* ^ source.d3-basic variable.d3-basic
+
+  a.abs(1)
+* ^^^^^ source.d3-basic variable.d3-basic
+
+* Strings
+
+ 'single quoted string ;* not a comment'
+* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.d3-basic string.quoted.single.d3-basic
+
+ "string quoted  += double"
+* ^^^^^^^^^^^^^^^^^^^^^^^^ source.d3-basic string.quoted.double.d3-basic
+
+ \string=quoted double\
+* ^^^^^^^^^^^^^^^^^^^^ source.d3-basic string.quoted.double.d3-basic
+
+
+* Flow Control:
+
+for x = 1 to 10
+* <- source.d3-basic keyword.control.flow.d3-basic
+*     ^ source.d3-basic keyword.operator.d3-basic
+*          ^ source.d3-basic keyword.other.d3-basic
+
+next x
+* <- source.d3-basic keyword.control.flow.d3-basic
+
+until done
+* <- source.d3-basic keyword.control.flow.d3-basic
+*       ^ source.d3-basic
+
+while x > 0
+* <- source.d3-basic keyword.control.flow.d3-basic
+*       ^ source.d3-basic keyword.operator.d3-basic
+if true then
+* <- source.d3-basic keyword.control.flow.d3-basic
+*       ^ source.d3-basic keyword.control.flow.d3-basic
+
+case 1
+* <- source.d3-basic keyword.control.flow.d3-basic
+
+
+* gosub/goto:
+
+goto 1000 ;* comment
+* <- source.d3-basic entity.name.function.languageStatement.d3-basic
+*    ^ source.d3-basic variable.function.d3-basic
+*         ^ source.d3-basic punctuation.terminator.d3-basic
+*          ^ source.d3-basic punctuation.definition.comment.d3-basic
+*            ^ source.d3-basic comment.line.d3-basic
+
+gosub 1000
+* <- source.d3-basic entity.name.function.languageStatement.d3-basic
+*     ^ source.d3-basic variable.function.d3-basic
+
+on variable goto 100, 200, semantic.label
+* <- source.d3-basic entity.name.function.languageStatement.d3-basic
+*           ^ source.d3-basic entity.name.function.languageStatement.d3-basic
+*                ^^^ variable.function
+*                   ^ source.d3-basic
+*                     ^ source.d3-basic variable.function.d3-basic
+*                          ^ source.d3-basic variable.function.d3-basic
+
+on variable gosub 100, 200, semantic.label
+* <- source.d3-basic entity.name.function.languageStatement.d3-basic
+*           ^ source.d3-basic entity.name.function.languageStatement.d3-basic
+*                 ^^^ variable.function
+*                    ^ source.d3-basic
+*                      ^ variable.function
+*                            ^ variable.function
+
+
+* Operators:
+
+ var = 1 + 2 - 3 * 4 / 5 : '.'
+*    ^ source.d3-basic keyword.operator.d3-basic
+*      ^ source.d3-basic constant.numeric.integer.d3-basic
+*        ^ source.d3-basic keyword.operator.d3-basic
+*          ^ source.d3-basic constant.numeric.integer.d3-basic
+*            ^ source.d3-basic keyword.operator.d3-basic
+*                ^ source.d3-basic keyword.operator.d3-basic
+*                    ^ source.d3-basic keyword.operator.d3-basic
+*                        ^ source.d3-basic keyword.operator.d3-basic
+
+ var=1+2-3*4/5:'.'
+*   ^ source.d3-basic keyword.operator.d3-basic
+*     ^ source.d3-basic keyword.operator.d3-basic
+*       ^ source.d3-basic keyword.operator.d3-basic
+*         ^ source.d3-basic keyword.operator.d3-basic
+*           ^ source.d3-basic keyword.operator.d3-basic
+*             ^ source.d3-basic keyword.operator.d3-basic
+
+  var += 1000 
+* ^^^ source.d3-basic variable.d3-basic
+*     ^^ source.d3-basic keyword.operator.d3-basic
+*        ^^^^ source.d3-basic constant.numeric.integer.d3-basic
+
+var -= 10.001
+* <- source.d3-basic variable.d3-basic
+*   ^^ source.d3-basic keyword.operator.d3-basic
+*      ^^^^^^ source.d3-basic constant.numeric.float.d3-basic
