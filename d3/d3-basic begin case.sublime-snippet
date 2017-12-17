@@ -6,5 +6,5 @@ begin case
 end case
 ]]></content>
 	<tabTrigger>beg</tabTrigger>
-	<scope>source.D3-basic</scope>
+	<scope>source.d3-basic</scope>
 </snippet>

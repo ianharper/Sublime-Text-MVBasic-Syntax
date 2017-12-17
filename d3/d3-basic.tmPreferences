@@ -6,7 +6,7 @@
    <string>D3 Basic Metadata</string>
    
    <key>scope</key>
-   <string>source.D3-basic</string>
+   <string>source.d3-basic</string>
 
    <key>settings</key>
    <dict>

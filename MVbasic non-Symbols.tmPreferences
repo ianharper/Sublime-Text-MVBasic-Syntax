@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Hide MV Statements From List</string>
 	<key>scope</key>
-	<string>source.D3-basic entity.name.function.languageStatement</string>
+	<string>source.d3-basic entity.name.function.languageStatement</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Hide MV Functions From List</string>
 	<key>scope</key>
-	<string>source.D3-basic entity.name.function.languageFunction</string>
+	<string>source.d3-basic entity.name.function.languageFunction.d3-basic</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
