@@ -1,16 +1,14 @@
-# Sublime-Text-MVBasic-Syntax
-
-Syntax highlighting/indentation/sinppets for OpenQM and D3 Basic. This will (currently) work well with most versions of Basic for MV databases, not just D3 and QM. I've also included some preferences that help with MV syntax (especially allowing "." as part of a variable name). Even with that I've noticed that Sublime doesn't 100% support this setting with goto definition. The syntax definitions are case insensitive but the snippet tab completions are not (I've defined them in lowercase). 
-
-If you have better soultions please contribute to this! This is my first crack at customizing Sublime.
+Sublime Text syntax highlighting, indentation, and sinppets for MultiValue Basic. 
 
 ## Features
-* D3 Syntax
-* OpenQM Syntax
-* Auto-Indentation rules (used while typing)
+* MultiValue Syntaxes Supported:
+  * D3
+  * OpenQM
+* "\\" Quotes
+* Auto-Indentation while typing
 * "wED" Color Scheme (at least this is how I've setup colors in wED)
 * Integration with Sublime's Goto Definition for MV Basic line labels 
-* Snippets:
+* Snippets: 
   * if-then if-else if-then-else
   * for dcount-for
   * loop-repeat
@@ -19,7 +17,19 @@ If you have better soultions please contribute to this! This is my first crack a
   * open
   * read-readnext
 
+
+## Installation
+Installation is easy with Sublime's command palate:
+~~~~
+Package Control: Install Package
+MultiValue BASIC
+~~~~
+
+## Contributing 
+Pull requests are welcome. For major changes please open an issue to discuss what you would like to change.
+
 ## TODO
 * Add additional MV dialects
 * Enable goto definition for subroutine calls
 * Add uppercase tab completions for snippets
+* Rework syntax definition to suppport meta_scopes for MV blocks (for, if, loop, clauses, etc).
