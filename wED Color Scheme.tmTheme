@@ -122,11 +122,13 @@
       <key>name</key>
       <string>Function name</string>
       <key>scope</key>
-      <string>entity.name.function.languageStatement</string>
+      <string>support.function.builtin.basicStatement</string>
       <key>settings</key>
       <dict>
         <key>foreground</key>
         <string>orangered4</string>
+        <key>fontStyle</key>
+        <string></string>
       </dict>
     </dict>
     <!-- wED User Keywords -->
@@ -134,11 +136,13 @@
       <key>name</key>
       <string>Function name</string>
       <key>scope</key>
-      <string>entity.name.function.languageFunction</string>
+      <string>support.function.builtin.basicFunction</string>
       <key>settings</key>
       <dict>
         <key>foreground</key>
         <string>orangered4</string>
+        <key>fontStyle</key>
+        <string></string>
       </dict>
     </dict>
     <dict>
