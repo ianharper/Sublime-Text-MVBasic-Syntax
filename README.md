@@ -33,6 +33,4 @@ Pull requests are welcome. For major changes please open an issue to discuss wha
 
 ## TODO
 * Add additional MV dialects
-* Enable goto definition for subroutine calls
 * Add uppercase tab completions for snippets
-* Rework syntax definition to suppport meta_scopes for MV blocks (for, if, loop, clauses, etc).
