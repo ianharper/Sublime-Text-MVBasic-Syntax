@@ -52,1314 +52,1314 @@
 
 * Functions:
 @()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    @() 
-*  ^ source.d3-basic entity.name.function.languageFunction
+*  ^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageFunction
+*     ^ source.d3-basic - support.function.builtin.basicFunction
 
 abs()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    abs() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 access()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    access() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 alpha()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    alpha() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 ascii()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    ascii() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 assigned()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    assigned() 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageFunction
+*            ^ source.d3-basic - support.function.builtin.basicFunction
 
 change()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    change() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 char()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    char() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 col1()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    col1() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 col2()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    col2() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 convert()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    convert() 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageFunction
+*           ^ source.d3-basic - support.function.builtin.basicFunction
 
 cos()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    cos() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 count()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    count() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 date()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    date() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 dcount()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    dcount() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 delete()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    delete() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 dquote()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    dquote() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 dtx()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    dtx() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 ebcdic()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    ebcdic() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 ereplace()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    ereplace() 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageFunction
+*            ^ source.d3-basic - support.function.builtin.basicFunction
 
 error()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    error() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 exchange()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    exchange() 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageFunction
+*            ^ source.d3-basic - support.function.builtin.basicFunction
 
 exp()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    exp() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 extract()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    extract() 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageFunction
+*           ^ source.d3-basic - support.function.builtin.basicFunction
 
 field()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    field() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 fmt()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    fmt() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 fold()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    fold() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 iconv()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    iconv() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 index()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    index() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 inmat()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    inmat() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 insert()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    insert() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 int()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    int() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 key()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    key() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 len()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    len() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 ln()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    ln() 
-*  ^^ source.d3-basic entity.name.function.languageFunction
+*  ^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageFunction
+*      ^ source.d3-basic - support.function.builtin.basicFunction
 
 locate()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    locate() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 maximum()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    maximum() 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageFunction
+*           ^ source.d3-basic - support.function.builtin.basicFunction
 
 minimum()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    minimum() 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageFunction
+*           ^ source.d3-basic - support.function.builtin.basicFunction
 
 mod()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    mod() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 not()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    not() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 num()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    num() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 occurs()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    occurs() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 oconv()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    oconv() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 oconvs()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    oconvs() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 pwr()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    pwr() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 rem()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    rem() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 replace()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    replace() 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageFunction
+*           ^ source.d3-basic - support.function.builtin.basicFunction
 
 rnd()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    rnd() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 scan()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    scan() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 sentence()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    sentence() 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageFunction
+*            ^ source.d3-basic - support.function.builtin.basicFunction
 
 seq()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    seq() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 sin()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    sin() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 sort()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    sort() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 soundex()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    soundex() 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageFunction
+*           ^ source.d3-basic - support.function.builtin.basicFunction
 
 space()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    space() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 sqrt()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    sqrt() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 squote()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    squote() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 status()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    status() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 str()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    str() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 sum()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    sum() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 summation()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    summation() 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*             ^ source.d3-basic - entity.name.function.languageFunction
+*             ^ source.d3-basic - support.function.builtin.basicFunction
 
 swap()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    swap() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 system()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    system() 
-*  ^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageFunction
+*          ^ source.d3-basic - support.function.builtin.basicFunction
 
 tan()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    tan() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 time()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    time() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 timedate()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    timedate() 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageFunction
+*            ^ source.d3-basic - support.function.builtin.basicFunction
 
 trans()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    trans() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 trim()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    trim() 
-*  ^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageFunction
+*        ^ source.d3-basic - support.function.builtin.basicFunction
 
 trimb()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    trimb() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 trimf()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    trimf() 
-*  ^^^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageFunction
+*         ^ source.d3-basic - support.function.builtin.basicFunction
 
 xtd()
-* <- source.d3-basic entity.name.function.languageFunction
+* <- source.d3-basic support.function.builtin.basicFunction
    xtd() 
-*  ^^^ source.d3-basic entity.name.function.languageFunction
+*  ^^^ source.d3-basic support.function.builtin.basicFunction
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageFunction
+*       ^ source.d3-basic - support.function.builtin.basicFunction
 
 * Statements:
 call
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    call 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 chain
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    chain 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 include
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    include 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 options
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    options 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 abort
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    abort 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 aux
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    aux 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 begin work
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    begin work 
-*  ^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageStatement
+*            ^ source.d3-basic - support.function.builtin.basicStatement
 
 break
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    break 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 casing
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    casing 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 cfunction
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    cfunction 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 chain
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    chain 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 clear
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    clear 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 cleardata
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    cleardata 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 clearfile
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    clearfile 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 clearselect
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    clearselect 
-*  ^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*             ^ source.d3-basic - entity.name.function.languageStatement
+*             ^ source.d3-basic - support.function.builtin.basicStatement
 
 close
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    close 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 commit work
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    commit work 
-*  ^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*             ^ source.d3-basic - entity.name.function.languageStatement
+*             ^ source.d3-basic - support.function.builtin.basicStatement
 
 common
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    common 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 compare
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    compare 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 continue
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    continue 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 convert
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    convert 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 crt
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    crt 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 data
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    data 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 debug
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    debug 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 del
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    del 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 delete
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    delete 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 dim
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    dim 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 dimension
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    dimension 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 echo
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    echo 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 enter
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    enter 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 equ
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    equ 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 equate
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    equate 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 error
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    error 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 execute
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    execute 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 exit
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    exit 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 file
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    file 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 filelock
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    filelock 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 fileunlock
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    fileunlock 
-*  ^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageStatement
+*            ^ source.d3-basic - support.function.builtin.basicStatement
 
 footing
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    footing 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 get
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    get 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 getx
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    getx 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 heading
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    heading 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 in
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    in 
-*  ^^ source.d3-basic entity.name.function.languageStatement
+*  ^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*    ^ source.d3-basic - entity.name.function.languageStatement
+*    ^ source.d3-basic - support.function.builtin.basicStatement
 
 input
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    input 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 inputclear
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    inputclear 
-*  ^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageStatement
+*            ^ source.d3-basic - support.function.builtin.basicStatement
 
 inputctrl
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    inputctrl 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 inputerr
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    inputerr 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 inputnull
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    inputnull 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 inputparity
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    inputparity 
-*  ^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*             ^ source.d3-basic - entity.name.function.languageStatement
+*             ^ source.d3-basic - support.function.builtin.basicStatement
 
 inputtrap off
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    inputtrap off 
-*  ^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*               ^ source.d3-basic - entity.name.function.languageStatement
+*               ^ source.d3-basic - support.function.builtin.basicStatement
 
 ins
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    ins 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 let
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    let 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 locate
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    locate 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 lock
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    lock 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 mat
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    mat 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 matbuild
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matbuild 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 matparse
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matparse 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 matread
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matread 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 matreadu
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matreadu 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 matreadt
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matreadt 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 matwrite
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matwrite 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 matwriteu
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    matwriteu 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 null
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    null 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 open
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    open 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 out
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    out 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 page
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    page 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 precision
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    precision 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 print
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    print 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 print on
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    print on 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 printchar
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    printchar 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 printer
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    printer 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 procread
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    procread 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 procwrite
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    procwrite 
-*  ^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*           ^ source.d3-basic - entity.name.function.languageStatement
+*           ^ source.d3-basic - support.function.builtin.basicStatement
 
 program
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    program 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 prompt
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    prompt 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 read
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    read 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 readu
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    readu 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 readnext
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    readnext 
-*  ^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*          ^ source.d3-basic - entity.name.function.languageStatement
+*          ^ source.d3-basic - support.function.builtin.basicStatement
 
 readt
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    readt 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 readtx
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    readtx 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 readv
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    readv 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 readvu
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    readvu 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 release
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    release 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 rem
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    rem 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 remove
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    remove 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 replace
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    replace 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 return
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    return 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 rewind
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    rewind 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 rollback work
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    rollback work 
-*  ^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*               ^ source.d3-basic - entity.name.function.languageStatement
+*               ^ source.d3-basic - support.function.builtin.basicStatement
 
 root
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    root 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 rqm
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    rqm 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 select
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    select 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 send
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    send 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 sendx
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    sendx 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 sleep
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    sleep 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 spoolq
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    spoolq 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 stop
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    stop 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 subroutine
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    subroutine 
-*  ^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*            ^ source.d3-basic - entity.name.function.languageStatement
+*            ^ source.d3-basic - support.function.builtin.basicStatement
 
 ta
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    ta 
-*  ^^ source.d3-basic entity.name.function.languageStatement
+*  ^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*    ^ source.d3-basic - entity.name.function.languageStatement
+*    ^ source.d3-basic - support.function.builtin.basicStatement
 
 tcl
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    tcl 
-*  ^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*     ^ source.d3-basic - entity.name.function.languageStatement
+*     ^ source.d3-basic - support.function.builtin.basicStatement
 
 tclread
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    tclread 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction 
-*  ^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*             ^ source.d3-basic - entity.name.function.languageStatement
+*             ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction abort
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction abort 
-*  ^^^^^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*                   ^ source.d3-basic - entity.name.function.languageStatement
+*                   ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction cache
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction cache 
-*  ^^^^^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*                   ^ source.d3-basic - entity.name.function.languageStatement
+*                   ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction commit
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction commit 
-*  ^^^^^^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*                    ^ source.d3-basic - entity.name.function.languageStatement
+*                    ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction flush
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction flush 
-*  ^^^^^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*                   ^ source.d3-basic - entity.name.function.languageStatement
+*                   ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction rollback
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction rollback 
-*  ^^^^^^^^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*                      ^ source.d3-basic - entity.name.function.languageStatement
+*                      ^ source.d3-basic - support.function.builtin.basicStatement
 
 transaction start
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    transaction start 
-*  ^^^^^^^^^^^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*                   ^ source.d3-basic - entity.name.function.languageStatement
+*                   ^ source.d3-basic - support.function.builtin.basicStatement
 
 unlock
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    unlock 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 weof
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    weof 
-*  ^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*      ^ source.d3-basic - entity.name.function.languageStatement
+*      ^ source.d3-basic - support.function.builtin.basicStatement
 
 write
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    write 
-*  ^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*       ^ source.d3-basic - entity.name.function.languageStatement
+*       ^ source.d3-basic - support.function.builtin.basicStatement
 
 writet
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    writet 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 writeu
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    writeu 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 writev
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    writev 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 writevu
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    writevu 
-*  ^^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*         ^ source.d3-basic - entity.name.function.languageStatement
+*         ^ source.d3-basic - support.function.builtin.basicStatement
 
 writex
-* <- source.d3-basic entity.name.function.languageStatement
+* <- source.d3-basic support.function.builtin.basicStatement
    writex 
-*  ^^^^^^ source.d3-basic entity.name.function.languageStatement
+*  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
-*        ^ source.d3-basic - entity.name.function.languageStatement
+*        ^ source.d3-basic - support.function.builtin.basicStatement
 
 * Flow Control:
 for
@@ -1618,46 +1618,46 @@ locked
 
 * Labels:
 10
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 10 
-* <- source.d3-basic entity.name.function
-* ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+* ^ source.d3-basic - entity.name.function.linelabel
 
 1000
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 1000 
-* <- source.d3-basic entity.name.function
-*   ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*   ^ source.d3-basic - entity.name.function.linelabel
 
 1000:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 1000: 
-* <- source.d3-basic entity.name.function
-*    ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*    ^ source.d3-basic - entity.name.function.linelabel
 
 10.50
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 10.50 
-* <- source.d3-basic entity.name.function
-*    ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*    ^ source.d3-basic - entity.name.function.linelabel
 
 semantic.label:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 semantic.label: 
-* <- source.d3-basic entity.name.function
-*              ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*              ^ source.d3-basic - entity.name.function.linelabel
 
 onewordlabel:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 onewordlabel: 
-* <- source.d3-basic entity.name.function
-*            ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*            ^ source.d3-basic - entity.name.function.linelabel
 
 multiple.dots.in.label:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 multiple.dots.in.label: 
-* <- source.d3-basic entity.name.function
-*                      ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*                      ^ source.d3-basic - entity.name.function.linelabel
 
 * Variables: 
  abs.test 

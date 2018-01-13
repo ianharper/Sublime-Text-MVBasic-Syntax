@@ -7,12 +7,12 @@
 * Labels:
 
 1000 * comment
-* <- source.d3-basic entity.name.function.d3-basic
+* <- source.d3-basic entity.name.function.linelabel.d3-basic
 *   ^ source.d3-basic
 *    ^ source.d3-basic comment.line.d3-basic
 
 semantic.label: * comment
-* <- source.d3-basic entity.name.function.d3-basic
+* <- source.d3-basic entity.name.function.linelabel.d3-basic
 *              ^ source.d3-basic
 *               ^ source.d3-basic comment.line.d3-basic
 
@@ -65,27 +65,27 @@ case 1
 * gosub/goto:
 
 goto 1000 ;* comment
-* <- source.d3-basic entity.name.function.languageStatement.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *    ^ source.d3-basic variable.function.d3-basic
 *         ^ source.d3-basic punctuation.terminator.d3-basic
 *          ^ source.d3-basic punctuation.definition.comment.d3-basic
 *            ^ source.d3-basic comment.line.d3-basic
 
 gosub 1000
-* <- source.d3-basic entity.name.function.languageStatement.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *     ^ source.d3-basic variable.function.d3-basic
 
 on variable goto 100, 200, semantic.label
-* <- source.d3-basic entity.name.function.languageStatement.d3-basic
-*           ^ source.d3-basic entity.name.function.languageStatement.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
+*           ^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 *                ^^^ variable.function
 *                   ^ source.d3-basic
 *                     ^ source.d3-basic variable.function.d3-basic
 *                          ^ source.d3-basic variable.function.d3-basic
 
 on variable gosub 100, 200, semantic.label
-* <- source.d3-basic entity.name.function.languageStatement.d3-basic
-*           ^ source.d3-basic entity.name.function.languageStatement.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
+*           ^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 *                 ^^^ variable.function
 *                    ^ source.d3-basic
 *                      ^ variable.function
