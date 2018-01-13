@@ -22,8 +22,8 @@ contexts:
 
     - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
-        '2': entity.name.function.d3-basic
-        '3': entity.name.function.d3-basic
+        '2': entity.name.function.linelabel.d3-basic
+        '3': entity.name.function.linelabel.d3-basic
         '4': comment.line.d3-basic
       push: main
 
@@ -50,11 +50,11 @@ contexts:
 
     - match: (?i)(?<!\.)(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
       captures: 
-        '1': entity.name.function.languageFunction.d3-basic
+        '1': support.function.builtin.basicFunction.d3-basic
 
     - match: \B(@)\(
       captures:
-        '1': entity.name.function.languageFunction.d3-basic
+        '1': support.function.builtin.basicFunction.d3-basic
 
     - match: (?i)(?<=^|;|\s)(for|loop|repeat|until|while|next|if)(?!\.)\b
       scope: keyword.control.flow.d3-basic
@@ -68,17 +68,17 @@ contexts:
         '2': keyword.control.flow.d3-basic
 
     - match: (?i)(?<=^|;|\s)(call|chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
-      scope: entity.name.function.languageStatement.d3-basic
+      scope: support.function.builtin.basicStatement.d3-basic
 
     - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)\s
       captures:
-        '1': entity.name.function.languageStatement.d3-basic 
-        '3': entity.name.function.languageStatement.d3-basic 
+        '1': support.function.builtin.basicStatement.d3-basic 
+        '3': support.function.builtin.basicStatement.d3-basic 
       push: ongoto
 
     - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
       captures:
-        '1': entity.name.function.languageStatement.d3-basic
+        '1': support.function.builtin.basicStatement.d3-basic
         '2': variable.function.d3-basic
 
     - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|passlist)(?=\s)
