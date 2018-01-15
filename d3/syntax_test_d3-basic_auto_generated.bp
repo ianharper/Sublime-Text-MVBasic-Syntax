@@ -549,13 +549,6 @@ xtd()
 *       ^ source.d3-basic - support.function.builtin.basicFunction
 
 * Statements:
-call
-* <- source.d3-basic support.function.builtin.basicStatement
-   call 
-*  ^^^^ source.d3-basic support.function.builtin.basicStatement
-* ^ source.d3-basic 
-*      ^ source.d3-basic - support.function.builtin.basicStatement
-
 chain
 * <- source.d3-basic support.function.builtin.basicStatement
    chain 
@@ -1538,9 +1531,23 @@ locked
 *  ^ source.d3-basic 
 *          ^ source.d3-basic - keyword.other
 
+ stacking 
+*^ source.d3-basic keyword.other
+    stacking  
+*   ^^^^^^^^ source.d3-basic keyword.other
+*  ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.other
+
  passlist 
 *^ source.d3-basic keyword.other
     passlist  
+*   ^^^^^^^^ source.d3-basic keyword.other
+*  ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.other
+
+ stacking 
+*^ source.d3-basic keyword.other
+    stacking  
 *   ^^^^^^^^ source.d3-basic keyword.other
 *  ^ source.d3-basic 
 *           ^ source.d3-basic - keyword.other
@@ -1609,6 +1616,13 @@ locked
 *  ^ source.d3-basic 
 *          ^ source.d3-basic - keyword.other
 
+ stacking 
+*^ source.d3-basic keyword.other
+    stacking  
+*   ^^^^^^^^ source.d3-basic keyword.other
+*  ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.other
+
  passlist 
 *^ source.d3-basic keyword.other
     passlist  
@@ -1616,48 +1630,55 @@ locked
 *  ^ source.d3-basic 
 *           ^ source.d3-basic - keyword.other
 
+ stacking 
+*^ source.d3-basic keyword.other
+    stacking  
+*   ^^^^^^^^ source.d3-basic keyword.other
+*  ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.other
+
 * Labels:
 10
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 10 
-* <- source.d3-basic entity.name.function.linelabel
-* ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+* ^ source.d3-basic - entity.name.function
 
 1000
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 1000 
-* <- source.d3-basic entity.name.function.linelabel
-*   ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+*   ^ source.d3-basic - entity.name.function
 
 1000:
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 1000: 
-* <- source.d3-basic entity.name.function.linelabel
-*    ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+*    ^ source.d3-basic - entity.name.function
 
 10.50
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 10.50 
-* <- source.d3-basic entity.name.function.linelabel
-*    ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+*    ^ source.d3-basic - entity.name.function
 
 semantic.label:
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 semantic.label: 
-* <- source.d3-basic entity.name.function.linelabel
-*              ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+*              ^ source.d3-basic - entity.name.function
 
 onewordlabel:
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 onewordlabel: 
-* <- source.d3-basic entity.name.function.linelabel
-*            ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+*            ^ source.d3-basic - entity.name.function
 
 multiple.dots.in.label:
-* <- source.d3-basic entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
 multiple.dots.in.label: 
-* <- source.d3-basic entity.name.function.linelabel
-*                      ^ source.d3-basic - entity.name.function.linelabel
+* <- source.d3-basic entity.name.function
+*                      ^ source.d3-basic - entity.name.function
 
 * Variables: 
  abs.test 
@@ -3619,34 +3640,6 @@ xtd.test
 *   ^^^^^^^^ source.d3-basic variable
 *  ^ source.d3-basic 
 *           ^ source.d3-basic - variable
-
- call.test 
-*^ source.d3-basic variable
-    call.test  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
-call.test 
-* <- source.d3-basic variable
-   call.test  
-*  ^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.call 
-*^ source.d3-basic variable
-    test.call  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.call
-*^ source.d3-basic variable
-    test.call 
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
 
  chain.test 
 *^ source.d3-basic variable
@@ -7568,6 +7561,34 @@ setting.test
 *  ^ source.d3-basic 
 *               ^ source.d3-basic - variable
 
+ stacking.test 
+*^ source.d3-basic variable
+    stacking.test  
+*   ^^^^^^^^^^^^^ source.d3-basic variable
+*  ^ source.d3-basic 
+*                ^ source.d3-basic - variable
+
+stacking.test 
+* <- source.d3-basic variable
+   stacking.test  
+*  ^^^^^^^^^^^^^ source.d3-basic variable
+* ^ source.d3-basic 
+*               ^ source.d3-basic - variable
+
+ test.stacking 
+*^ source.d3-basic variable
+    test.stacking  
+*   ^^^^^^^^^^^^^ source.d3-basic variable
+*  ^ source.d3-basic 
+*                ^ source.d3-basic - variable
+
+ test.stacking
+*^ source.d3-basic variable
+    test.stacking 
+*   ^^^^^^^^^^^^^ source.d3-basic variable
+*  ^ source.d3-basic 
+*                ^ source.d3-basic - variable
+
  passlist.test 
 *^ source.d3-basic variable
     passlist.test  
@@ -7592,6 +7613,34 @@ passlist.test
  test.passlist
 *^ source.d3-basic variable
     test.passlist 
+*   ^^^^^^^^^^^^^ source.d3-basic variable
+*  ^ source.d3-basic 
+*                ^ source.d3-basic - variable
+
+ stacking.test 
+*^ source.d3-basic variable
+    stacking.test  
+*   ^^^^^^^^^^^^^ source.d3-basic variable
+*  ^ source.d3-basic 
+*                ^ source.d3-basic - variable
+
+stacking.test 
+* <- source.d3-basic variable
+   stacking.test  
+*  ^^^^^^^^^^^^^ source.d3-basic variable
+* ^ source.d3-basic 
+*               ^ source.d3-basic - variable
+
+ test.stacking 
+*^ source.d3-basic variable
+    test.stacking  
+*   ^^^^^^^^^^^^^ source.d3-basic variable
+*  ^ source.d3-basic 
+*                ^ source.d3-basic - variable
+
+ test.stacking
+*^ source.d3-basic variable
+    test.stacking 
 *   ^^^^^^^^^^^^^ source.d3-basic variable
 *  ^ source.d3-basic 
 *                ^ source.d3-basic - variable
