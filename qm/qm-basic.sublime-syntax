@@ -1,7 +1,7 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
-name: D3 Basic
+name: QM Basic
 file_extensions:
   - bp
 scope: source.qm-basic
@@ -27,7 +27,7 @@ contexts:
         '4': comment.line.qm-basic
       push: main
 
-    - match: (?i)^(subroutine)\s({{basicvariable}})
+    - match: (?i)^\s*(subroutine)\s({{basicvariable}})
       captures:
         '1': support.function.builtin.basicStatement.qm-basic 
         '2': entity.name.function.linelabel.qm-basic
