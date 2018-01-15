@@ -91,7 +91,7 @@ contexts:
         '1': support.function.builtin.basicStatement.d3-basic
         '2': variable.function.d3-basic
 
-    - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|passlist)(?=\s)
+    - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.d3-basic
 
     - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
