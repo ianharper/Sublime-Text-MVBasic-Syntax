@@ -27,7 +27,7 @@ contexts:
         '4': comment.line.d3-basic
       push: main
 
-    - match: (?i)^(subroutine)\s({{basicvariable}})
+    - match: (?i)^\s*(subroutine)\s({{basicvariable}})
       captures:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': entity.name.function.linelabel.d3-basic
