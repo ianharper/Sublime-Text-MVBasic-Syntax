@@ -1,0 +1,11 @@
+<snippet>
+	<content>
+READNEXT $1 ELSE EXIT
+READ $2 FROM $3, $1$0 ELSE CONTINUE
+$4
+</content>
+	
+	<tabTrigger>RNR</tabTrigger>
+	
+	<scope>source.qm-basic</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content>
+BEGIN CASE
+	CASE $1
+		$2
+END CASE
+</content>
+	<tabTrigger>BEG</tabTrigger>
+	<scope>source.d3-basic</scope>
+</snippet>

@@ -10,7 +10,7 @@ Sublime Text syntax highlighting, indentation, and sinppets for MultiValue Basic
 * "\\" Quotes
 * Auto-Indentation while typing
 * "wED" Color Scheme (at least this is how I've setup colors in wED)
-* Integration with Sublime's Goto Definition for MV Basic line labels 
+* Integration with Sublime's Goto Definition for MV Basic line labels and subroutine calls
 * Snippets: 
   * if-then if-else if-then-else
   * for dcount-for
@@ -33,6 +33,3 @@ Pull requests are welcome. For major changes please open an issue to discuss wha
 
 ## TODO
 * Add additional MV dialects
-* Enable goto definition for subroutine calls
-* Add uppercase tab completions for snippets
-* Rework syntax definition to suppport meta_scopes for MV blocks (for, if, loop, clauses, etc).

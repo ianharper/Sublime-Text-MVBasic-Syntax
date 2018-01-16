@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+IF NOT(ASSIGNED($1)) THEN OPEN '$2' TO $1 ELSE STOP 201, '$2'
+</content>
+	
+	<tabTrigger>OPEN</tabTrigger>
+	
+	<scope>source.d3-basic</scope>
+</snippet>

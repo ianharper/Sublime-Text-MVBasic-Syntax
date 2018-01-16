@@ -1,0 +1,14 @@
+<snippet>
+	<content>
+EXECUTE \\$1\\ RTNLIST $2 $3
+LOOP
+  READNEXT $4 FROM $2 ELSE EXIT
+  READ $5 FROM $6, $4 ELSE CONTINUE
+  $7
+REPEAT
+</content>
+	
+	<tabTrigger>ELRNR</tabTrigger>
+	
+	<scope>source.d3-basic</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content>
+FOR $1 = ${2:1} TO $3
+	$4
+NEXT $1$0
+</content>
+	
+	<tabTrigger>FOR</tabTrigger>
+	
+	<scope>source.qm-basic</scope>
+</snippet>
