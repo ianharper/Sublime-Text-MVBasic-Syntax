@@ -4208,46 +4208,46 @@ locked
 
 * Labels:
 10
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 10 
-* <- source.qm-basic entity.name.function
-* ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+* ^ source.qm-basic - entity.name.function.linelabel
 
 1000
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 1000 
-* <- source.qm-basic entity.name.function
-*   ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+*   ^ source.qm-basic - entity.name.function.linelabel
 
 1000:
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 1000: 
-* <- source.qm-basic entity.name.function
-*    ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+*    ^ source.qm-basic - entity.name.function.linelabel
 
 10.50
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 10.50 
-* <- source.qm-basic entity.name.function
-*    ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+*    ^ source.qm-basic - entity.name.function.linelabel
 
 semantic.label:
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 semantic.label: 
-* <- source.qm-basic entity.name.function
-*              ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+*              ^ source.qm-basic - entity.name.function.linelabel
 
 onewordlabel:
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 onewordlabel: 
-* <- source.qm-basic entity.name.function
-*            ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+*            ^ source.qm-basic - entity.name.function.linelabel
 
 multiple.dots.in.label:
-* <- source.qm-basic entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
 multiple.dots.in.label: 
-* <- source.qm-basic entity.name.function
-*                      ^ source.qm-basic - entity.name.function
+* <- source.qm-basic entity.name.function.linelabel
+*                      ^ source.qm-basic - entity.name.function.linelabel
 
 * Variables: 
  abs.test 
@@ -11950,34 +11950,6 @@ break.test
 *  ^ source.qm-basic 
 *             ^ source.qm-basic - variable
 
- call.test 
-*^ source.qm-basic variable
-    call.test  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
-call.test 
-* <- source.qm-basic variable
-   call.test  
-*  ^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.call 
-*^ source.qm-basic variable
-    test.call  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.call
-*^ source.qm-basic variable
-    test.call 
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
  chain.test 
 *^ source.qm-basic variable
     chain.test  
@@ -12985,34 +12957,6 @@ enable.key.test
 *   ^^^^^^^^^^^^^^^ source.qm-basic variable
 *  ^ source.qm-basic 
 *                  ^ source.qm-basic - variable
-
- end.test 
-*^ source.qm-basic variable
-    end.test  
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
-end.test 
-* <- source.qm-basic variable
-   end.test  
-*  ^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*          ^ source.qm-basic - variable
-
- test.end 
-*^ source.qm-basic variable
-    test.end  
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.end
-*^ source.qm-basic variable
-    test.end 
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
 
  enter.test 
 *^ source.qm-basic variable

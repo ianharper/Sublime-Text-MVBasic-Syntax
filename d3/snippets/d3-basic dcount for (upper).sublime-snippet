@@ -1,0 +1,12 @@
+<snippet>
+	<content>
+$1 = DCOUNT($2)
+FOR $3 = ${4:1} TO $1
+	$5
+NEXT $3$0
+</content>
+	
+	<tabTrigger>FORD</tabTrigger>
+	
+	<scope>source.d3-basic</scope>
+</snippet>

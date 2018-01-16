@@ -1,0 +1,13 @@
+<snippet>
+	<content>
+IF $1 THEN
+	$2
+END ELSE
+	$3
+END$4
+</content>
+	
+	<tabTrigger>IFTE</tabTrigger>
+	
+	<scope>source.qm-basic</scope>
+</snippet>

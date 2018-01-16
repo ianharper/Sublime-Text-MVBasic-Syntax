@@ -1,0 +1,11 @@
+<snippet>
+	<content>
+LOOP
+	$1
+REPEAT$0
+</content>
+	
+	<tabTrigger>LOOP</tabTrigger>
+	
+	<scope>source.qm-basic</scope>
+</snippet>
