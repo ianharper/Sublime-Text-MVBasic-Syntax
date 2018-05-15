@@ -34,7 +34,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>magenta4</string>
+        <string>#8B008B</string>
       </dict>
     </dict>
     <dict>
@@ -126,7 +126,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>orangered4</string>
+        <string>#8B2500</string>
         <key>fontStyle</key>
         <string></string>
       </dict>
@@ -140,7 +140,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>orangered4</string>
+        <string>#8B2500</string>
         <key>fontStyle</key>
         <string></string>
       </dict>
