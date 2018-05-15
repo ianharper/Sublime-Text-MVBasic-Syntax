@@ -32,10 +32,10 @@ contexts:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': entity.name.function.linelabel.d3-basic
 
-    - match: (?i)(?<=^|;|\s)(call)\s({{basicvariable}})
+    - match: (?i)(?<=^|;|\s)(call)\s(({{basicvariable}})|@{{basicvariable}})
       captures: 
         '1': support.function.builtin.basicStatement.d3-basic 
-        '2': variable.function.d3-basic
+        '3': variable.function.d3-basic
 
     - match: (\\)
       push:
