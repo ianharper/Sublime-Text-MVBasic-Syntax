@@ -117,6 +117,6 @@ contexts:
 
   ongoto:
     - match: \b{{linelabelref}}\b
-      scope: variable.function.d3-basic
-    - match: ;|$
+      scope: meta.function-call variable.function.qm-basic
+    - match: ;|((?!,)\b\s*$)
       pop: true
