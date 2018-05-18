@@ -89,7 +89,7 @@ contexts:
     - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
-        '2': variable.function.d3-basic
+        '2': meta.function-call.d3-basic variable.function.d3-basic
 
     - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.d3-basic

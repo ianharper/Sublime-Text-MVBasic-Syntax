@@ -93,7 +93,7 @@ contexts:
     - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
       captures:
         '1': support.function.builtin.basicStatement.qm-basic
-        '2': variable.function.qm-basic
+        '2': meta.function-call variable.function.qm-basic
 
     - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.qm-basic
