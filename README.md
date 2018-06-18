@@ -1,7 +1,7 @@
 Sublime Text syntax highlighting, indentation, and sinppets for MultiValue Basic. 
 
-[![Sublime Text MVBasic Syntax Example (wED Theme)](http://ianbharper.com/media/__sized__/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_light-thumbnail-500x500.PNG)](http://192.81.132.16/media/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_light.PNG)
-[![Sublime Text MVBasic Syntax Example (Monokai Theme)](http://ianbharper.com/media/__sized__/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_dark-thumbnail-500x500.PNG)](http://192.81.132.16/media/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_dark.PNG)
+[![Sublime Text MVBasic Syntax Example (wED Theme)](http://ianbharper.com/media/__sized__/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_light-thumbnail-500x500.PNG)](http://ianbharper.com/media/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_light.PNG)
+[![Sublime Text MVBasic Syntax Example (Monokai Theme)](http://ianbharper.com/media/__sized__/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_dark-thumbnail-500x500.PNG)](http://ianbharper.com/media/images/sublime-text-mvbasic-syntax-Sublime-Text-MVBasic-Syntax_example_dark.PNG)
 
 ## Features
 * MultiValue Syntaxes Supported:
