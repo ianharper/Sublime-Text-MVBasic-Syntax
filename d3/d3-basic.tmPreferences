@@ -12,10 +12,17 @@
    <dict>
       
       <key>increaseIndentPattern</key>
-      <string>(?i)^\s*(begin case|loop)$|^\s*(for|case)|.*\s(then|locked|on error|else)\s*(;\s*\*.*)?$</string>
+      <string>(?ix)
+         (
+            ^\s*(begin case|loop)$ |
+            ^\s*(for|case)\s |
+            .*\s(then|locked|on error|else|until)
+         )
+         \s*(;\s*\*.*)?$
+      </string>
 
       <key>decreaseIndentPattern</key>
-      <string>(^\s*)(?i)((end case)|(case)|(end))</string>
+      <string>(^\s*)(?i)((end case)|(case)|(end)|next|repeat|until)(\s|$)</string>
 
       <key>unIndentedLinePattern</key>
       <string>(?i)
