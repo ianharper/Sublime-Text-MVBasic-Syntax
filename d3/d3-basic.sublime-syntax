@@ -17,7 +17,7 @@ contexts:
       captures:
         '1': punctuation.definition.comment.d3-basic
       push:
-        - meta_content_scope: comment.line.d3-basic
+        - meta_content_scope: comment.line.d3-basic 
         - match: $\n?
           pop: true
 
@@ -26,7 +26,6 @@ contexts:
         '2': entity.name.function.linelabel.d3-basic
         '3': entity.name.function.linelabel.d3-basic
         '4': comment.line.d3-basic
-      push: main
 
     - include: literals
 
@@ -82,7 +81,7 @@ contexts:
       push:
         - include: for_block
 
-    - match: (?i)(?<=^|;|\s)loop(?=\s|;|$)
+    - match: (?i)(?<=^|;|\s)loop(?=\s)
       scope: keyword.control.flow.d3-basic
       push: 
         - meta_content_scope: meta.block.loop.d3-basic
@@ -123,9 +122,9 @@ contexts:
         '4': variable.d3-basic
       push:
         - include: readnext_block
-        - match: (?i)then|else(?!\.)\b
+        - match: (?i)then|else(?=\s)
           scope: keyword.control.flow.d3-basic
-        - include: expression
+        - include: main
         - include: end_pop
 
     - match: (?i)(?<=^|;|\s)(commit\s(work|transaction)|readt[x]?|rewind|weof|matwrite[u]?|write([tx]?|([v]?[u]?)))(?=\s)
@@ -138,7 +137,7 @@ contexts:
         - include: expression
         - include: end_pop
 
-    - match: (?i)(?<=^|;|\s)(chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)\b(?!\.)
+    - match: (?i)(?<=^|;|\s)(chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s)
       scope: support.function.builtin.basicStatement.d3-basic
 
     - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)\s
@@ -219,19 +218,17 @@ contexts:
     - include: basicvariables
 
   then_else_block: 
-    - match: (?i)(?<=^|;|\s)(then|else)\s*(?=$|;)
-      captures:
-        '1': keyword.control.flow.d3-basic
+    - match: (?i)(?<=^|;|\s)then|else(?=\s*($|;))
+      scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.if.d3-basic
-        - match: (?i)(?<=^|;|\s)(then|else)(?=\s|$|;)
-          captures:
-            '1': keyword.control.flow.d3-basic
+        - match: (?i)(?<=^|;|\s)then|else(?=\s|$|;)
+          scope: keyword.control.flow.d3-basic
           pop: true
         - include: end_block
 
   read_block:
-    - match: (?i)(?<=^|;|\s)locked|then|else(?=\s*$|;)
+    - match: (?i)(?<=^|;|\s)locked|then|else(?=\s*($|;))
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.read.d3-basic
@@ -241,7 +238,7 @@ contexts:
         - include: end_block
 
   readnext_block:
-    - match: (?i)(?<=^|;|\s)then|else(?=\s*$|;)
+    - match: (?i)(?<=^|;|\s)then|else(?=\s*(;|$))
       scope: keyword.control.flow.readnext.d3-basic
       push: 
         - meta_content_scope: meta.block.readnext.d3-basic
@@ -251,14 +248,12 @@ contexts:
         - include: end_block
 
   then_else_onerr_block:
-    - match: (?i)(?<=^|;|\s)(then|else|onerr)\s*(?=$|;)
-      captures: 
-        '1': keyword.control.flow.d3-basic
+    - match: (?i)(?<=^|;|\s)then|else|onerr(?=\s*($|;))
+      scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.d3-basic
-        - match: (?i)(?<=^|;|\s)(then|else|onerr)\s*(?=$|;)
-          captures: 
-            '1': keyword.control.flow.d3-basic
+        - match: (?i)(?<=^|;|\s)then|else|onerr(?=\s*$|;)
+          scope: keyword.control.flow.d3-basic
           pop: true
         - include: end_block
         - include: main
@@ -280,9 +275,9 @@ contexts:
         - include: main
 
   loop_block:
-    - match: (?i)(?<=^|;|\s)(?=(until|while)(\s|$))
+    - match: (?i)(?=(^|\s)(until|while)\s)
       set:
-        - match: (?i)(?<=^|;|\s)(until|while)(?=\s|$)
+        - match: (?i)(?<=^|\s)(until|while)(?=\s)
           scope: keyword.control.flow.d3-basic
         - match: (?i)((do\s|do$)|(?=repeat(\s|$)|;|$))
           captures:
@@ -302,7 +297,7 @@ contexts:
     - include: main
 
   begin_case_block:
-    - match: (?i)^\s*(case)(?!\.)\b 
+    - match: (?i)^\s*(case)(?=\s) 
       captures: 
         '1': keyword.control.flow.d3-basic
       push:

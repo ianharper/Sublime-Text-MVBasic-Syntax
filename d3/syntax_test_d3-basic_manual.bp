@@ -68,22 +68,38 @@ while x > 0
 repeat
 * <- source.d3-basic keyword.control.flow.d3-basic
 
-if true then
+loop until done
+* <- source.d3-basic keyword.control.flow.d3-basic
+*    ^^^^^ source.d3-basic keyword.control.flow.d3-basic
+*          ^^^^ source.d3-basic variable.d3-basic
+*              ^ source.d3-basic meta.block.until.d3-basic
+  print 'statement in loop block'
+* ^^^^^ source.d3-basic meta.block.until.d3-basic support.function.builtin.basicStatement.d3-basic
+repeat
+* <- source.d3-basic keyword.control.flow.d3-basic
+*     ^ source.d3-basic
+
+loop while true do print 'looping' repeat
+
+
+if true then ;* comment
 * <- source.d3-basic keyword.control.flow.d3-basic
 *       ^ source.d3-basic keyword.control.flow.d3-basic
 
 end
 * <- source.d3-basic keyword.control.flow.d3-basic  
 
-    if false else
+    if false else ;* comment
 *   ^^ source.d3-basic keyword.control.flow.d3-basic
 *            ^^^^ source.d3-basic keyword.control.flow.d3-basic    
+*                  ^ source.d3-basic meta.block.if.d3-basic punctuation.definition.comment.d3-basic
+*                   ^ source.d3-basic meta.block.if.d3-basic comment.line.d3-basic
     end 
 *   ^^^ source.d3-basic keyword.control.flow.d3-basic
 *  ^ source.d3-basic 
 *      ^ source.d3-basic - keyword.control.flow.d3-basic
 
-if single.line then print 'correct highlights' else print 'incorrect!'
+if single.line then print 'correct highlights' else print 'incorrect!' ;* comment
 * <- source.d3-basic keyword.control.flow.d3-basic
 *              ^^^^ source.d3-basic keyword.control.flow.d3-basic
 *                                              ^^^^ source.d3-basic keyword.control.flow.d3-basic
@@ -170,7 +186,7 @@ var -= 10.001
 *      ^^^^^^ source.d3-basic constant.numeric.float.d3-basic
 
 * Block Statements
-read variable from file, id locked
+read variable from file, id locked 
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *   ^ source.d3-basic - support.function.builtin.basicStatement.d3-basic           
 *             ^^^^ source.d3-basic keyword.other.d3-basic
@@ -208,6 +224,11 @@ end
 * <- source.d3-basic keyword.control.flow.d3-basic 
 print 'statement out of block'
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
+
+readnext id else exit
+* <- source.d3-basic support.function.builtin.basicStatement.readnext.d3-basic
+*           ^^^^ source.d3-basic keyword.control.flow.d3-basic
+*                ^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 
 readnext id from list then 
 * <- source.d3-basic support.function.builtin.basicStatement.readnext.d3-basic
