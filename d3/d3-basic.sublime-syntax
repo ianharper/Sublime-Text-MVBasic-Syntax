@@ -41,14 +41,12 @@ contexts:
 
     - include: language_constants
 
-    - match: (?i)(?<=^|;|\s)if[r]?(?!\.)\b
+    - match: (?i)(?<=^|;|\s)if[r]?(?=\s)
       scope: keyword.control.flow.d3-basic
       push:
-        - include: then_else_block # multi-line
-        - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
-          captures:
-            '1': keyword.control.flow.d3-basic
-          # pop: true
+        - include: then_else_block
+        - match: (?i)(?<=\s)(then|else)(?=\s)
+          scope: keyword.control.flow.d3-basic
         - include: main
         - include: end_pop
 
@@ -56,11 +54,10 @@ contexts:
     - match: (?i)(?<=^|;|\s)(begin\s(work|transaction)|get[x]?|if[r]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s)
       scope: support.function.builtin.basicStatement.d3-basic
       push:
-        - include: then_else_block # multi-line
+        - include: then_else_block
         - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
           captures:
             '1': keyword.control.flow.d3-basic
-          pop: true
         - include: main
         - include: end_pop
 
@@ -68,7 +65,7 @@ contexts:
     - match: (?i)(?<=^|;|\s)(key|locate)(?=\()
       scope: support.function.builtin.basicFunction.then-else.d3-basic
       push:
-        - include: then_else_block # multi-line
+        - include: then_else_block
         - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
           captures:
             '1': keyword.control.flow.d3-basic
@@ -108,10 +105,10 @@ contexts:
         - match: (?i)(?<=\s)(from)(?=\s)
           scope: keyword.other.d3-basic
         - include: read_block
-        - match: (?i)(?<=^|;)\s*(locked|then|else)(?!\.)\b
+        - match: (?i)(?<=\s)(locked|then|else)(?=\s)
           captures:
             '1': keyword.control.flow.d3-basic
-        - include: expression
+        - include: main
         - include: end_pop
 
     - match: (?i)(?<=^|;)\s*(readnext)(?!\.)\b\s?({{basicvariable}})?\s?(from(?=\s))?
@@ -218,17 +215,17 @@ contexts:
     - include: basicvariables
 
   then_else_block: 
-    - match: (?i)(?<=^|;|\s)then|else(?=\s*($|;))
+    - match: (?i)(?<=\s)(then|else)(?=\s*($|;))
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.if.d3-basic
-        - match: (?i)(?<=^|;|\s)then|else(?=\s|$|;)
+        - match: (?i)(?<=^|;|\s)(then|else)(?=\s*($|;))
           scope: keyword.control.flow.d3-basic
           pop: true
         - include: end_block
 
   read_block:
-    - match: (?i)(?<=^|;|\s)locked|then|else(?=\s*($|;))
+    - match: (?i)(?<=\s)(locked|then|else)(?=\s*($|;))
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.read.d3-basic
@@ -238,7 +235,7 @@ contexts:
         - include: end_block
 
   readnext_block:
-    - match: (?i)(?<=^|;|\s)then|else(?=\s*(;|$))
+    - match: (?i)(?<=\s)(then|else)(?=\s*(;|$))
       scope: keyword.control.flow.readnext.d3-basic
       push: 
         - meta_content_scope: meta.block.readnext.d3-basic
@@ -248,7 +245,7 @@ contexts:
         - include: end_block
 
   then_else_onerr_block:
-    - match: (?i)(?<=^|;|\s)then|else|onerr(?=\s*($|;))
+    - match: (?i)(?<=\s)(then|else|onerr)(?=\s*($|;))
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.d3-basic
