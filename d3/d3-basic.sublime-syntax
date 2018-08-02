@@ -51,7 +51,7 @@ contexts:
         - include: end_pop
 
 #   statements with then/else blocks
-    - match: (?i)(?<=^|;|\s)(begin\s(work|transaction)|get[x]?|if[r]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s)
+    - match: (?i)(?<=^|;|\s)(begin\s(work|transaction)|get[x]?|if[r]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s|;)
       scope: support.function.builtin.basicStatement.d3-basic
       push:
         - include: then_else_block
@@ -124,7 +124,7 @@ contexts:
         - include: main
         - include: end_pop
 
-    - match: (?i)(?<=^|;|\s)(commit\s(work|transaction)|readt[x]?|rewind|weof|matwrite[u]?|write([tx]?|([v]?[u]?)))(?=\s)
+    - match: (?i)(?<=^|;|\s)(commit\s(work|transaction)|readt[x]?|rewind|weof|matwrite[u]?|write([tx]?|([v]?[u]?)))(?=\s|;)
       scope: support.function.builtin.basicStatement.block.d3-basic
       push:
         - include: then_else_onerr_block
@@ -134,10 +134,10 @@ contexts:
         - include: expression
         - include: end_pop
 
-    - match: (?i)(?<=^|;|\s)(chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s)
+    - match: (?i)(?<=^|;|\s)(chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
       scope: support.function.builtin.basicStatement.d3-basic
 
-    - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)\s
+    - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)(\s|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': variable.d3-basic
