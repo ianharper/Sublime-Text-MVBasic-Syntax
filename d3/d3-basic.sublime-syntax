@@ -9,6 +9,7 @@ scope: source.d3-basic
 variables:
   linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
+  stmtstart: '(?<=^|;|then\s|else\s|locked\s|onerr\s|DO\s|THEN\s|ELSE\s|LOCKED\s|ONERR\s|DO\s)\s*'
 
 
 contexts:
@@ -34,15 +35,16 @@ contexts:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': entity.name.function.linelabel.d3-basic
 
-    - match: (?i)(?<=^|;|\s)(call)\s(({{basicvariable}})|@{{basicvariable}})
+    - match: (?i){{stmtstart}}(call)\s(({{basicvariable}})|@{{basicvariable}})
       captures: 
         '1': support.function.builtin.basicStatement.d3-basic 
         '3': variable.function.d3-basic
 
     - include: language_constants
 
-    - match: (?i)(?<=^|;|\s)if[r]?(?=\s)
-      scope: keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(if[r]?)(?=\s)
+      captures:
+        '1': keyword.control.flow.d3-basic
       push:
         - include: then_else_block
         - match: (?i)(?<=\s)(then|else)(?=\s)
@@ -51,8 +53,9 @@ contexts:
         - include: end_pop
 
 #   statements with then/else blocks
-    - match: (?i)(?<=^|;|\s)(begin\s(work|transaction)|get[x]?|if[r]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s|;)
-      scope: support.function.builtin.basicStatement.d3-basic
+    - match: (?i){{stmtstart}}(begin\s(work|transaction)|get[x]?|if[r]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic
       push:
         - include: then_else_block
         - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
@@ -62,8 +65,9 @@ contexts:
         - include: end_pop
 
 #   functions with then/else blocks
-    - match: (?i)(?<=^|;|\s)(key|locate)(?=\()
-      scope: support.function.builtin.basicFunction.then-else.d3-basic
+    - match: (?i){{stmtstart}}(key|locate)(?=\()
+      captures:
+        '1': support.function.builtin.basicFunction.then-else.d3-basic
       push:
         - include: then_else_block
         - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
@@ -73,31 +77,35 @@ contexts:
         - include: main
         - include: end_pop
 
-    - match: (?i)(?<=^|;|\s)(for)(?!\.)\b
-      scope: keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(for)(?!\.)\b
+      captures:
+        '1': keyword.control.flow.d3-basic
       push:
         - include: for_block
 
-    - match: (?i)(?<=^|;|\s)loop(?=\s)
-      scope: keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(loop)(?=\s)
+      captures:
+        '1': keyword.control.flow.d3-basic
       push: 
         - meta_content_scope: meta.block.loop.d3-basic
         - include: loop_block
 
-    - match: (?i)(?<=^|;|\s)begin\scase(?!\.)\b
-      scope: keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(begin\scase)(?!\.)\b
+      captures:
+        '1': keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.begin-case.d3-basic
         - include: begin_case_block
 
     - include: functions
 
+    # These could be used as syntax errors
     # - match: (?i)(?<=^|;|\s)(end\s)?(then|else|locked)(?=\s|$|;)
     #   captures:
     #     '1': keyword.control.flow.d3-basic
     #     '2': keyword.control.flow.d3-basic
 
-    - match: (?i)(?<=^|;|\s)((mat)?read[v]?[u]?)\b(?=\s)({{basicvariable}})?
+    - match: (?i){{stmtstart}}((mat)?read[v]?[u]?)\b(?=\s)({{basicvariable}})?
       captures: 
         '1': support.function.builtin.basicStatement.d3-basic
         '3': variable.d3-basic
@@ -111,7 +119,7 @@ contexts:
         - include: main
         - include: end_pop
 
-    - match: (?i)(?<=^|;)\s*(readnext)(?!\.)\b\s?({{basicvariable}})?\s?(from(?=\s))?
+    - match: (?i){{stmtstart}}(readnext)(?!\.)\b\s?({{basicvariable}})?\s?(from(?=\s))?
       captures:
         '1': support.function.builtin.basicStatement.readnext.d3-basic
         '2': variable.d3-basic
@@ -124,32 +132,34 @@ contexts:
         - include: main
         - include: end_pop
 
-    - match: (?i)(?<=^|;|\s)(commit\s(work|transaction)|readt[x]?|rewind|weof|matwrite[u]?|write([tx]?|([v]?[u]?)))(?=\s|;)
-      scope: support.function.builtin.basicStatement.block.d3-basic
+    - match: (?i){{stmtstart}}(commit\s(work|transaction)|readt[x]?|rewind|weof|matwrite[u]?|write([tx]?|([v]?[u]?)))(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.block.d3-basic
       push:
         - include: then_else_onerr_block
-        - match: (?i)(?<=^|;)\s*(then|else|onerr)(?!\.)\b
+        - match: (?i){{stmtstart}}(then|else|onerr)(?!\.)\b
           captures:
             '1': keyword.control.flow.d3-basic
         - include: expression
         - include: end_pop
 
-    - match: (?i)(?<=^|;|\s)(chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
-      scope: support.function.builtin.basicStatement.d3-basic
+    - match: (?i){{stmtstart}}(chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic
 
-    - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)(\s|;)
+    - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': variable.d3-basic
         '3': support.function.builtin.basicStatement.d3-basic 
       push: ongoto
 
-    - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
+    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
         '2': meta.function-call.d3-basic variable.function.d3-basic
 
-    - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+    - match: (?i)(?<=\s)(before|do|from|for|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.d3-basic
 
     - include: operators
@@ -272,7 +282,7 @@ contexts:
         - include: main
 
   loop_block:
-    - match: (?i)(?=(^|\s)(until|while)\s)
+    - match: (?i)(?=(^|;|\s)(until|while)\s)
       set:
         - match: (?i)(?<=^|\s)(until|while)(?=\s)
           scope: keyword.control.flow.d3-basic
@@ -317,8 +327,9 @@ contexts:
       pop: true
 
   end_block:
-    - match: (?i)(?<=^|;|\s)end(?=\s|$)
-      scope: keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(end)(?=\s|$)
+      captures:
+        '1': keyword.control.flow.d3-basic
       pop: true
     - include: main
 
