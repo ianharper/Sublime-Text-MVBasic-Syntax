@@ -16,6 +16,7 @@ contexts:
   main:
     - include: comment_line
 
+    # line labels
     - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
         '2': entity.name.function.linelabel.d3-basic
@@ -24,11 +25,13 @@ contexts:
 
     - include: literals
 
+    # subroutine statement
     - match: (?i)^\s*(subroutine)\s({{basicvariable}})?
       captures:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': entity.name.function.linelabel.d3-basic
 
+    # subroutine call
     - match: (?i){{stmtstart}}(call)\s(({{basicvariable}})|@{{basicvariable}})
       captures: 
         '1': support.function.builtin.basicStatement.d3-basic 
@@ -36,6 +39,7 @@ contexts:
 
     - include: language_constants
 
+    # if statements (same syntax as then_else statements below but given different scope)
     - match: (?i){{stmtstart}}(if[r]?)(?=\s)
       captures:
         '1': keyword.control.flow.d3-basic
@@ -46,7 +50,7 @@ contexts:
         - include: main
         - include: end_pop
 
-#   statements with then/else blocks
+    # statements with then/else blocks
     - match: (?i){{stmtstart}}((begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
@@ -58,7 +62,7 @@ contexts:
         - include: main
         - include: end_pop
 
-#   functions with then/else blocks
+    # functions with then/else blocks
     - match: (?i){{stmtstart}}(key|locate)(?=\()
       captures:
         '1': support.function.builtin.basicFunction.then-else.d3-basic
@@ -71,12 +75,14 @@ contexts:
         - include: main
         - include: end_pop
 
+    # For loop
     - match: (?i){{stmtstart}}(for)(?!\.)\b
       captures:
         '1': keyword.control.flow.d3-basic
       push:
         - include: for_block
 
+    # loop loop
     - match: (?i){{stmtstart}}(loop)(?=\s)
       captures:
         '1': keyword.control.flow.d3-basic
@@ -84,6 +90,7 @@ contexts:
         - meta_content_scope: meta.block.loop.d3-basic
         - include: loop_block
 
+    # Begin Case
     - match: (?i){{stmtstart}}(begin\scase)(?!\.)\b
       captures:
         '1': keyword.control.flow.d3-basic
@@ -99,6 +106,7 @@ contexts:
     #     '1': keyword.control.flow.d3-basic
     #     '2': keyword.control.flow.d3-basic
 
+    # Read statement
     - match: (?i){{stmtstart}}((mat)?read[v]?[u]?)\b(?=\s)({{basicvariable}})?
       captures: 
         '1': support.function.builtin.basicStatement.d3-basic
@@ -113,6 +121,7 @@ contexts:
         - include: main
         - include: end_pop
 
+    # Readnext
     - match: (?i){{stmtstart}}(readnext)(?!\.)\b\s?({{basicvariable}})?\s?(from(?=\s))?
       captures:
         '1': support.function.builtin.basicStatement.readnext.d3-basic
@@ -126,7 +135,8 @@ contexts:
         - include: main
         - include: end_pop
 
-    - match: (?i){{stmtstart}}(readt[x]?|rewind|weof)(?=\s|;)
+    # Tape statements with then-else-onerr block
+    - match: (?i){{stmtstart}}(readt[x]?|rewind|weof|writet)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.block.d3-basic
       push:
@@ -137,6 +147,7 @@ contexts:
         - include: expression
         - include: end_pop
 
+    # Write statements with onerr block
     - match: (?i){{stmtstart}}(write([x]?|([v]?[u]?)))(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.block.d3-basic
@@ -148,17 +159,7 @@ contexts:
         - include: expression
         - include: end_pop
 
-    - match: (?i){{stmtstart}}(writet)(?=\s|;)
-      captures:
-        '1': support.function.builtin.basicStatement.block.d3-basic
-      push:
-        - include: then_else_onerr_block
-        - match: (?i){{stmtstart}}(then|else|onerr)(?!\.)\b
-          captures:
-            '1': keyword.control.flow.d3-basic
-        - include: expression
-        - include: end_pop
-
+    # Basic statements
     - match: (?i){{stmtstart}}(chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|matwrite[u]?|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
@@ -236,8 +237,7 @@ contexts:
 
   comment_line:
     - match: (?<=;|^)\s*(\*|\!)
-      captures:
-        '1': punctuation.definition.comment.d3-basic
+      scope: punctuation.definition.comment.d3-basic
       push:
         - meta_content_scope: comment.line.d3-basic 
         - match: $\n?
