@@ -14,13 +14,7 @@ variables:
 
 contexts:
   main:
-    - match: (?<=;|^)\s*(\*|\!)
-      captures:
-        '1': punctuation.definition.comment.d3-basic
-      push:
-        - meta_content_scope: comment.line.d3-basic 
-        - match: $\n?
-          pop: true
+    - include: comment_line
 
     - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
@@ -159,11 +153,8 @@ contexts:
         '1': support.function.builtin.basicStatement.d3-basic
         '2': meta.function-call.d3-basic variable.function.d3-basic
 
-    - match: (?i)(?<=\s)(before|do|from|for|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
-      scope: keyword.other.d3-basic
-
     - include: operators
-
+    - include: other_keywords
     - include: basicvariables
 
     - match: ;
@@ -217,11 +208,26 @@ contexts:
     - match: (?i)\B(@am|@vm|@sm|@svm|@user|@pib|@account)\b
       scope: constant.character.d3-basic
 
+  other_keywords:
+    - match: (?i)(?<=\s)(before|do|from|for|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+      scope: keyword.other.d3-basic
+
+  comment_line:
+    - match: (?<=;|^)\s*(\*|\!)
+      captures:
+        '1': punctuation.definition.comment.d3-basic
+      push:
+        - meta_content_scope: comment.line.d3-basic 
+        - match: $\n?
+          pop: true
+
   expression:
+    - include: comment_line
     - include: language_constants
     - include: functions
     - include: literals
     - include: operators
+    - include: other_keywords
     - include: basicvariables
 
   then_else_block: 
@@ -263,7 +269,6 @@ contexts:
           scope: keyword.control.flow.d3-basic
           pop: true
         - include: end_block
-        - include: main
 
   for_block:
     - match: (?i)(?<=\s)to(?=\s)
@@ -345,4 +350,4 @@ contexts:
 
   else_pop:
     - match: (?=\S)
-      pop: true
+pop: true
