@@ -47,7 +47,7 @@ contexts:
         - include: end_pop
 
 #   statements with then/else blocks
-    - match: (?i){{stmtstart}}(begin\s(work|transaction)|get[x]?|if[r]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s|;)
+    - match: (?i){{stmtstart}}((begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
       push:
@@ -126,7 +126,7 @@ contexts:
         - include: main
         - include: end_pop
 
-    - match: (?i){{stmtstart}}(commit\s(work|transaction)|readt[x]?|rewind|weof|matwrite[u]?|write([tx]?|([v]?[u]?)))(?=\s|;)
+    - match: (?i){{stmtstart}}(readt[x]?|rewind|weof)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.block.d3-basic
       push:
@@ -137,7 +137,29 @@ contexts:
         - include: expression
         - include: end_pop
 
-    - match: (?i){{stmtstart}}(chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
+    - match: (?i){{stmtstart}}(write([x]?|([v]?[u]?)))(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.block.d3-basic
+      push:
+        - include: onerr_block
+        - match: (?i){{stmtstart}}(then|else|onerr)(?!\.)\b
+          captures:
+            '1': keyword.control.flow.d3-basic
+        - include: expression
+        - include: end_pop
+
+    - match: (?i){{stmtstart}}(writet)(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.block.d3-basic
+      push:
+        - include: then_else_onerr_block
+        - match: (?i){{stmtstart}}(then|else|onerr)(?!\.)\b
+          captures:
+            '1': keyword.control.flow.d3-basic
+        - include: expression
+        - include: end_pop
+
+    - match: (?i){{stmtstart}}(chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|matwrite[u]?|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
 
@@ -266,6 +288,16 @@ contexts:
       push:
         - meta_content_scope: meta.block.d3-basic
         - match: (?i)(?<=^|;|\s)then|else|onerr(?=\s*$|;)
+          scope: keyword.control.flow.d3-basic
+          pop: true
+        - include: end_block
+
+  onerr_block:
+    - match: (?i)(?<=\s)onerr(?=\s*($|;))
+      scope: keyword.control.flow.d3-basic
+      push:
+        - meta_content_scope: meta.block.d3-basic
+        - match: (?i)(?<=^|;|\s)onerr(?=\s*$|;)
           scope: keyword.control.flow.d3-basic
           pop: true
         - include: end_block

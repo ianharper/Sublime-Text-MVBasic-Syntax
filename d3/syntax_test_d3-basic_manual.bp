@@ -288,3 +288,17 @@ print 'statement in block'
 * <- source.d3-basic meta.block.if.d3-basic support.function.builtin.basicStatement.d3-basic
 end
 * <- source.d3-basic keyword.control.flow.d3-basic
+
+
+write data on file.var, id onerr
+* <- source.d3-basic support.function.builtin.basicStatement.block.d3-basic
+*     ^^^^ source.d3-basic variable.d3-basic
+*          ^ source.d3-basic keyword.other.d3-basic
+*             ^^^^^^^^ source.d3-basic variable.d3-basic
+*                       ^^ source.d3-basic variable.d3-basic
+*                          ^ source.d3-basic keyword.control.flow.d3-basic
+*                               ^ source.d3-basic meta.block.d3-basic
+  print 'onerr block'
+* ^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
+end 
+* <- source.d3-basic keyword.control.flow.d3-basic
