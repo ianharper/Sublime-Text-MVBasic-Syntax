@@ -209,7 +209,7 @@ contexts:
       scope: constant.character.d3-basic
 
   other_keywords:
-    - match: (?i)(?<=\s)(before|do|from|for|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+    - match: (?i)(?<=\s)(before|do|from|for|in|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.d3-basic
 
   comment_line:
