@@ -9,7 +9,7 @@ scope: source.d3-basic
 variables:
   linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
-  stmtstart: '(?<=^|;|then\s|else\s|locked\s|onerr\s|DO\s|THEN\s|ELSE\s|LOCKED\s|ONERR\s|DO\s)\s*'
+  stmtstart: '(?<=^|;|then\s|else\s|locked\s|loop\s|onerr\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ONERR\s|DO\s)\s*'
 
 
 contexts:
