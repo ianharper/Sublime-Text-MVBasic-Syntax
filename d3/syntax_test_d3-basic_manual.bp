@@ -92,8 +92,8 @@ end
     if false else ;* comment
 *   ^^ source.d3-basic keyword.control.flow.d3-basic
 *            ^^^^ source.d3-basic keyword.control.flow.d3-basic    
-*                  ^ source.d3-basic meta.block.if.d3-basic punctuation.definition.comment.d3-basic
-*                   ^ source.d3-basic meta.block.if.d3-basic comment.line.d3-basic
+*                  ^ source.d3-basic meta.block.d3-basic punctuation.definition.comment.d3-basic
+*                   ^ source.d3-basic meta.block.d3-basic comment.line.d3-basic
     end 
 *   ^^^ source.d3-basic keyword.control.flow.d3-basic
 *  ^ source.d3-basic 
@@ -198,21 +198,21 @@ read variable from file, id locked
 *             ^^^^ source.d3-basic keyword.other.d3-basic
 *                  ^^^^ source.d3-basic variable.d3-basic
 *                           ^^^^^^ source.d3-basic keyword.control.flow.d3-basic
-*                                 ^ source.d3-basic meta.block.read.d3-basic
+*                                 ^ source.d3-basic meta.block.d3-basic
     print 'statement in meta.block'
-*   ^^^^^ source.d3-basic meta.block.read.d3-basic support.function.builtin.basicStatement.d3-basic
+*   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end then 
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
-*       ^ source.d3-basic meta.block.read.d3-basic    
+*       ^ source.d3-basic meta.block.d3-basic    
     print 'statement in meta.block'
-*   ^^^^^ source.d3-basic meta.block.read.d3-basic support.function.builtin.basicStatement.d3-basic
+*   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end else 
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
-*       ^ source.d3-basic meta.block.read.d3-basic    
+*       ^ source.d3-basic meta.block.d3-basic    
     print 'statement in meta.block'
-*   ^^^^^ source.d3-basic meta.block.read.d3-basic support.function.builtin.basicStatement.d3-basic
+*   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end 
 * <- source.d3-basic keyword.control.flow.d3-basic
 print 'statement out of block'
@@ -225,30 +225,30 @@ open 'string' to file.var then
 *                         ^^^^ source.d3-basic keyword.control.flow.d3-basic
 *                             ^ source.d3-basic
     print 'statement in meta.block'
-*   ^^^^^ source.d3-basic meta.block.if.d3-basic support.function.builtin.basicStatement.d3-basic
+*   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end
 * <- source.d3-basic keyword.control.flow.d3-basic 
 print 'statement out of block'
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 
 readnext id else exit
-* <- source.d3-basic support.function.builtin.basicStatement.readnext.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *           ^^^^ source.d3-basic keyword.control.flow.d3-basic
 *                ^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 
 readnext id from list then 
-* <- source.d3-basic support.function.builtin.basicStatement.readnext.d3-basic
-*                     ^^^^ source.d3-basic keyword.control.flow.readnext.d3-basic
-*                         ^ source.d3-basic meta.block.readnext.d3-basic 
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
+*                     ^^^^ source.d3-basic keyword.control.flow.d3-basic
+*                         ^ source.d3-basic meta.block.d3-basic 
 end else 
 * <- source.d3-basic keyword.control.flow.d3-basic
-*   ^^^^ source.d3-basic keyword.control.flow.readnext.d3-basic
-*       ^ source.d3-basic meta.block.readnext.d3-basic
+*   ^^^^ source.d3-basic keyword.control.flow.d3-basic
+*       ^ source.d3-basic meta.block.d3-basic
 end
 * <- source.d3-basic keyword.control.flow.d3-basic
 
 readt var then 
-* <- source.d3-basic support.function.builtin.basicStatement.block.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *         ^^^^ source.d3-basic keyword.control.flow.d3-basic
 print 'statement in block'
 * <- source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
@@ -270,9 +270,9 @@ input var for time else
 *         ^ source.d3-basic keyword.other.d3-basic
 *             ^ source.d3-basic variable.d3-basic
 *                  ^ source.d3-basic keyword.control.flow.d3-basic
-*                      ^ source.d3-basic meta.block.if.d3-basic
+*                      ^ source.d3-basic meta.block.d3-basic
   print 'input block'
-* ^ source.d3-basic meta.block.if.d3-basic support.function.builtin.basicStatement.d3-basic
+* ^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end
 * <- source.d3-basic keyword.control.flow.d3-basic
 
@@ -280,18 +280,18 @@ input var then
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *         ^^^^ source.d3-basic keyword.control.flow.d3-basic
 print 'statement in block'
-* <- source.d3-basic meta.block.if.d3-basic support.function.builtin.basicStatement.d3-basic
+* <- source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end else 
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
 print 'statement in block'
-* <- source.d3-basic meta.block.if.d3-basic support.function.builtin.basicStatement.d3-basic
+* <- source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end
 * <- source.d3-basic keyword.control.flow.d3-basic
 
 
 write data on file.var, id onerr
-* <- source.d3-basic support.function.builtin.basicStatement.block.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *     ^^^^ source.d3-basic variable.d3-basic
 *          ^ source.d3-basic keyword.other.d3-basic
 *             ^^^^^^^^ source.d3-basic variable.d3-basic
@@ -302,3 +302,4 @@ write data on file.var, id onerr
 * ^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end 
 * <- source.d3-basic keyword.control.flow.d3-basic
+
