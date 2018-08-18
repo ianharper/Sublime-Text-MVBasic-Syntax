@@ -42,38 +42,18 @@ contexts:
     # if statement
     - match: (?i){{stmtstart}}(if[r]?)(?=\s)
       scope: keyword.control.flow.d3-basic
-      push:
-        - include: blocks
-        - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
-          captures:
-            '1': keyword.control.flow.d3-basic
-        - include: main
-        - include: end_pop
 
     # statements with blocks
     - match: (?i){{stmtstart}}(write([x]?|([v]?[u]?))|readt[x]?|rewind|weof|writet|readnext|(mat)?read[v]?[u]?|(begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s)
       captures:
         '1': support.function.builtin.basicStatement.d3-basic
-      push:
-        - include: blocks
-        - match: (?i)(?<=^|;|\s)(then|else|locked|onerr)(?=\s) # single line
-          captures:
-            '1': keyword.control.flow.d3-basic
-        - include: main
-        - include: end_pop
 
     # functions with then/else blocks
     - match: (?i){{stmtstart}}(key|locate)(?=\()
       captures:
         '1': support.function.builtin.basicFunction.then-else.d3-basic
-      push:
-        - include: then_else_block
-        - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
-          captures:
-            '1': keyword.control.flow.d3-basic
-          pop: true
-        - include: main
-        - include: end_pop
+
+    - include: blocks
 
     # For loop
     - match: (?i){{stmtstart}}(for)(?!\.)\b
@@ -198,14 +178,17 @@ contexts:
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.d3-basic
-        - match: (?i)(?<=^|;|\s)(then|else|locked|onerr)(?=\s*($|;))
-          scope: keyword.control.flow.d3-basic
-          pop: true
         - match: (?i){{stmtstart}}(end)(?=\s|$)
           captures:
             '1': keyword.control.flow.d3-basic
           pop: true
         - include: main
+    - match: (?i)(?<=^|;|\s)(then|else|locked|onerr)(?=\s) # single line
+      captures:
+        '1': keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
+      captures:
+        '1': invalid.illegal.stray-end.d3-basic
 
   for_block:
     - match: (?i)(?<=\s)to(?=\s)

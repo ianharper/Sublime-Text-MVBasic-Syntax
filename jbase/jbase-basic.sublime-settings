@@ -1,0 +1,40 @@
+{
+    // Characters that are considered to separate words
+    "word_separators": "/\\()\"'-:,;<>~!#%^&*|+=[]{}`~?",
+
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces": true,
+
+    // Calculates indentation automatically when pressing enter
+    "auto_indent": true,
+
+    // Makes auto indent a little smarter, e.g., by indenting the next line
+    // after an if statement in C. Requires auto_indent to be enabled.
+    "smart_indent": true,
+
+    // Trims white space added by auto_indent when moving the caret off the
+    // line.
+    "trim_automatic_white_space": true,
+
+    // Set to false to disable underlining the brackets surrounding the caret
+    "match_brackets": true,
+
+    // Set to false if you'd rather only highlight the brackets when the caret is
+    // next to one
+    "match_brackets_content": true,
+
+    // Set to false to not highlight square brackets. This only takes effect if
+    // match_brackets is true
+    "match_brackets_square": true,
+
+    // Set to false to not highlight curly brackets. This only takes effect if
+    // match_brackets is true
+    "match_brackets_braces": true,
+
+    // Set to false to not highlight angle brackets. This only takes effect if
+    // match_brackets is true
+    "match_brackets_angle": true,
+    
+    // Highlights other occurrences of the currently selected text
+    "match_selection": true,
+}
