@@ -65,98 +65,12 @@ contexts:
     - include: functions
 
     # if statements (same syntax as then_else statements below but given different scope)
-    - match: (?i){{stmtstart}}(if)(?=\s)
+    - match: (?i){{stmtstart}}(IF)(?=\s)
       captures:
         '1': keyword.control.flow.jbase-basic
-      push:
-        - include: then_else_block
-        - match: (?i)(?<=\s)(then|else)(?=\s)
-          scope: keyword.control.flow.jbase-basic
-        - include: main
-        - include: end_pop
-
-    # statements with then/else blocks
-    - match: (?i){{stmtstart}}(CREATE|FIND(STR)?|GET[x]?|GETLIST|IF|IN|INPUT|LOCATE|LOCK|NOBUF|OBJEXCALLBACK|OPEN|OPENINDEX|OPENPATH|PROCREAD|READBLK|READLIST|READNEXT|READPREV|READSEQ|READT|READXML|REWIND|SEEK|SEND[x]?|STATUS|TRANSABORT|TRANSTART|TRANSEND|WEOFSEQ|WRITEBLK|WRITESEQ|WRITET)(?=\s|;)
-      captures:
-        '1': support.function.builtin.basicStatement.jbase-basic
-      push:
-        - include: then_else_block
-        - match: (?i)(?<=^|;|\s)(then|else)(?=\s) # single line
-          captures:
-            '1': keyword.control.flow.jbase-basic
-        - include: main
-        - include: end_pop
-
-    # Todo: this probably isn't used, just remove
-    # Read statement
-    - match: (?i){{stmtstart}}((mat)?read[v]?[u]?)\b(?=\s)({{basicvariable}})?
-      captures: 
-        '1': support.function.builtin.basicStatement.jbase-basic
-        '3': variable.jbase-basic
-      push:
-        - match: (?i)(?<=\s)(from)(?=\s)
-          scope: keyword.other.jbase-basic
-        - include: read_block
-        - match: (?i)(?<=\s)(locked|then|else)(?!\.)\b
-          captures:
-            '1': keyword.control.flow.jbase-basic
-        - include: main
-        - include: end_pop
-
-    # todo: add on-error locked then else block (readL)
-
-    # statements with locked-then-else blocks
-    - match: (?i)(?<=^|;|\s)(OPENDEV|OPENSEQ|OPENSER)(?=\s)
-      scope: support.function.builtin.basicStatement.jbase-basic
-      push:
-        - include: locked_then_else_block
-        - match: (?i)(?<=\s)(locked|then|else)(?!\.)\b
-          captures:
-            '1': keyword.control.flow.jbase-basic
-        - include: main
-        - include: end_pop
-
-    # todo: this should be in with the normal then-else statements
-    # Readnext
-    - match: (?i){{stmtstart}}(readnext)(?!\.)\b\s?({{basicvariable}})?\s?(from(?=\s))?
-      captures:
-        '1': support.function.builtin.basicStatement.readnext.jbase-basic
-        '2': variable.jbase-basic
-        '3': keyword.other.jbase-basic
-        '4': variable.jbase-basic
-      push:
-        - include: readnext_block
-        - match: (?i)then|else(?=\s)
-          scope: keyword.control.flow.jbase-basic
-        - include: main
-        - include: end_pop
-
-    # statements with then-else-on_error block
-    - match: (?i){{stmtstart}}(OSOPEN|OSREAD|READ[v]?|WRITESEQF)(?=\s)
-      captures:
-        '1': support.function.builtin.basicStatement.block.jbase-basic
-      push:
-        - include: then_else_on-error_block
-        - match: (?i){{stmtstart}}(then|else|on\serror)(?!\.)\b
-          captures:
-            '1': keyword.control.flow.jbase-basic
-        - include: expression
-        - include: end_pop
-
-    # statements with on_error block
-    - match: (?i){{stmtstart}}(OSOPEN|READ[v]?|WRITESEQF)(?=\s|;)
-      captures:
-        '1': support.function.builtin.basicStatement.block.jbase-basic
-      push:
-        - include: on-error_block
-        - match: (?i){{stmtstart}}(then|else|on\serror)(?!\.)\b
-          captures:
-            '1': keyword.control.flow.jbase-basic
-        - include: expression
-        - include: end_pop
 
     # Basic statements
-    - match: (?i){{stmtstart}}(ABORT|BREAK|CHAIN|CHANGE|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARSELECT|CLOSESEQ|COLLECTDATA|COMMON|CONTINUE|CONVERT|CREATE|CRT|DATA|DEBUG|DEFC|DEFCE|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIMENSION|ECHO|ENTER|EXECUTE|EXIT|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FOOTING|FORMLIST|HEADINGE|HUSH|INCLUDE|INPUTCLEAR|INPUTNULL|INS|JQLCOMPILE|JQLEXECUTE|JQLFETCH|JQLGETPROPERTY|JQLPUTPROPERTY|MATBUILD|MATPARSE|NULL|OCONV|OUT|PAGE|PAUSE|PRECISION|PRINT|PRINTER|RELEASE|RETURN|RTNDATA|SELECT|SLEEP|SSELECT|STATUS|STOP|TIMEOUT|TRIM|UNLOCK|WAKE)(?=\s|;)
+    - match: (?i){{stmtstart}}(CREATE|DIM|DISPLAY|EQU(ATE)?|FIND(STR)?|FUNCTION|GET[x]?|GETLIST|GROUPSTORE|HEADING[EN]?|IN|INPUT|LOCATE|LOCK|NOBUF|OBJEXCALLBACK|OPEN|OPENINDEX|OPENPATH|PROCREAD|READBLK|READLIST|READNEXT|READPREV|READSEQ|READT|READXML|REWIND|SEEK|SEND[x]?|STATUS|TRANSABORT|TRANSTART|TRANSEND|WEOF|WEOFSEQ|WRITEBLK|WRITLIST|WRITESEQ|WRITET|(MAT)?READ[V]?[U]?|OPENDEV|OPENSEQ|OPENSER|READNEXT|OSOPEN|OSREAD|READ[v]?|WRITESEQF|OSOPEN|READ[v]?|WRITESEQF|ABORT|BREAK(\s(ON|OFF))?|CHAIN|CHANGE|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|CLOSE|CLOSESEQ|COLLECTDATA|COMMON|CONTINUE|CONVERT|CREATE|CRT|DATA|DEBUG|DEFC|DEFCE|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIMENSION|ECHO|ENTER|EXECUTE|EXIT|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FOOTING|FORMLIST|HEADINGE|HUSH|INCLUDE|INPUTCLEAR|INPUTNULL|INS|JQLCOMPILE|JQLEXECUTE|JQLFETCH|JQLGETPROPERTY|JQLGETPROPERTY|JQLPUTPROPERTY|MAT|MATBUILD|MATPARSE|MSLEEP|NULL|OCONV|OUT|PAGE|PAUSE|PRECISION|PERFORM|PRINT|PRINTER|PRINTERR|PROCWRITE|PROGRAM|PROMPT|RELEASE|RETURN|RQM|RTNDATA|SELECT|SLEEP|SSELECT|STATUS|STOP|TIMEOUT|TRIM|UNLOCK|WAKE)(?=\s|;)
       captures:
         '1': support.function.builtin.basicStatement.jbase-basic
 
@@ -172,12 +86,15 @@ contexts:
         '1': support.function.builtin.basicStatement.jbase-basic
         '2': meta.function-call.jbase-basic variable.function.jbase-basic
 
+    - include: blocks
     - include: operators
     - include: other_keywords
     - include: basicvariables
 
     - match: ;
       scope: punctuation.terminator.jbase-basic
+
+
 
   operators:
     - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
@@ -248,65 +165,22 @@ contexts:
     - include: other_keywords
     - include: basicvariables
 
-  then_else_block: 
-    - match: (?i)(?<=\s)(then|else)(?=\s*($|;))
-      scope: keyword.control.flow.jbase-basic
+  blocks:
+    - match: (?i)(?<=\s)(then|else|locked|on\serror)(?=\s*($|;))
+      scope: keyword.control.flow.d3-basic
       push:
-        - meta_content_scope: meta.block.if.jbase-basic
-        - match: (?i)(?<=^|;|\s)(then|else)(?=\s*($|;))
-          scope: keyword.control.flow.jbase-basic
+        - meta_content_scope: meta.block.d3-basic
+        - match: (?i){{stmtstart}}(end)(?=\s|$)
+          captures:
+            '1': keyword.control.flow.d3-basic
           pop: true
-        - include: end_block
-
-  read_block:
-    - match: (?i)(?<=\s)(locked|then|else)(?=\s*($|;))
-      scope: keyword.control.flow.jbase-basic
-      push:
-        - meta_content_scope: meta.block.read.jbase-basic
-        - match: (?i)(?<=^|;|\s)(then|else|locked)(?=\s|$|;)
-          scope: keyword.control.flow.jbase-basic
-          pop: true
-        - include: end_block
-
-  readnext_block:
-    - match: (?i)(?<=\s)(then|else)(?=\s*(;|$))
-      scope: keyword.control.flow.readnext.jbase-basic
-      push: 
-        - meta_content_scope: meta.block.readnext.jbase-basic
-        - match: (?i)(?<=^|;|\s)then|else(?=\s|$|;)
-          scope: keyword.control.flow.readnext.jbase-basic
-          pop: true
-        - include: end_block
-
-  locked_then_else_block:
-    - match: (?i)(?<=^|;|\s)locked|then|else(?=\s*$|;)
-      scope: keyword.control.flow.jbase-basic
-      push:
-        - meta_content_scope: meta.block.read.jbase-basic
-        - match: (?i)(?<=^|;|\s)(then|else|locked)(?=\s|$|;)
-          scope: keyword.control.flow.jbase-basic
-          pop: true
-        - include: end_block
-
-  then_else_on-error_block:
-    - match: (?i)(?<=\s)(then|else|on\serror)(?=\s*($|;))
-      scope: keyword.control.flow.jbase-basic
-      push:
-        - meta_content_scope: meta.block.jbase-basic
-        - match: (?i)(?<=^|;|\s)then|else|on\serror(?=\s*$|;)
-          scope: keyword.control.flow.jbase-basic
-          pop: true
-        - include: end_block
-
-  on-error_block:
-    - match: (?i)(?<=\s)on\serror(?=\s*($|;))
-      scope: keyword.control.flow.jbase-basic
-      push:
-        - meta_content_scope: meta.block.jbase-basic
-        - match: (?i)(?<=^|;|\s)on\serror(?=\s*$|;)
-          scope: keyword.control.flow.jbase-basic
-          pop: true
-        - include: end_block
+        - include: main
+    - match: (?i)(?<=^|;|\s)(then|else|locked|on\serror)(?=\s) # single line
+      captures:
+        '1': keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
+      captures:
+        '1': invalid.illegal.stray-end.d3-basic
 
   for_block:
     - match: (?i)(?<=\s)to(?=\s)
