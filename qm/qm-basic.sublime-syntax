@@ -9,7 +9,7 @@ scope: source.qm-basic
 variables:
   linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
-  stmtstart: '(?<=^|;|then\s|else\s|locked\s|loop\s|onerr\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ONERR\s|DO\s)\s*'
+  stmtstart: '(?<=^|;|then\s|else\s|locked\s|loop\s|on\serror\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ON\sERROR\s|DO\s)\s*'
 
 
 contexts:
@@ -177,7 +177,7 @@ contexts:
     - include: basicvariables
 
   blocks:
-    - match: (?i)(?<=\s)(then|else|locked|onerr)(?=\s*($|;))
+    - match: (?i)(?<=\s)(then|else|locked|on\serror)(?=\s*($|;))
       scope: keyword.control.flow.qm-basic
       push:
         - meta_content_scope: meta.block.qm-basic
@@ -186,7 +186,7 @@ contexts:
             '1': keyword.control.flow.qm-basic
           pop: true
         - include: main
-    - match: (?i)(?<=^|;|\s)(then|else|locked|onerr)(?=\s) # single line
+    - match: (?i)(?<=^|;|\s)(then|else|locked|on\serror)(?=\s) # single line
       captures:
         '1': keyword.control.flow.qm-basic
     - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
