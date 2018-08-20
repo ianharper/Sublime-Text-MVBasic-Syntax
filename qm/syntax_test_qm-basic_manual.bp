@@ -1,0 +1,305 @@
+* SYNTAX TEST "qm-basic.sublime-syntax"
+
+* foo
+* <- source.qm-basic punctuation.definition.comment.qm-basic
+* ^ source.qm-basic comment.line.qm-basic
+
+
+* Labels
+
+1000 * comment
+* <- source.qm-basic entity.name.function.linelabel.qm-basic
+*   ^ source.qm-basic
+*    ^ source.qm-basic comment.line.qm-basic
+
+semantic.label: * comment
+* <- source.qm-basic entity.name.function.linelabel.qm-basic
+*              ^ source.qm-basic
+*               ^ source.qm-basic comment.line.qm-basic
+
+
+* Variable with the same name as functions:
+
+  tot.abs(1)
+* ^ source.qm-basic variable.qm-basic
+
+  a.abs(1)
+* ^^^^^ source.qm-basic variable.qm-basic
+
+
+* Strings
+
+ 'single quoted string ;* not a comment'
+* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.qm-basic string.quoted.single.qm-basic
+
+ "string quoted  += double"
+* ^^^^^^^^^^^^^^^^^^^^^^^^ source.qm-basic string.quoted.double.qm-basic
+
+ \string=quoted double\
+* ^^^^^^^^^^^^^^^^^^^^ source.qm-basic string.quoted.double.qm-basic
+
+
+* Flow Control:
+
+for x = 1 to 10
+* <- source.qm-basic keyword.control.flow.qm-basic
+*     ^ source.qm-basic keyword.operator.qm-basic
+*          ^ source.qm-basic keyword.control.flow.qm-basic
+
+next x
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+loop
+
+until done
+* <- source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic
+
+repeat
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+loop 
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+while x > 0
+* <- source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic keyword.operator.qm-basic
+
+repeat
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+loop until done
+* <- source.qm-basic keyword.control.flow.qm-basic
+*    ^^^^^ source.qm-basic keyword.control.flow.qm-basic
+*          ^^^^ source.qm-basic variable.qm-basic
+*              ^ source.qm-basic meta.block.until.qm-basic
+  print 'statement in loop block'
+* ^^^^^ source.qm-basic meta.block.until.qm-basic support.function.builtin.basicStatement.qm-basic
+repeat
+* <- source.qm-basic keyword.control.flow.qm-basic
+*     ^ source.qm-basic
+
+loop while true do print 'looping' repeat
+
+
+if true then ;* comment
+* <- source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic keyword.control.flow.qm-basic
+
+end
+* <- source.qm-basic keyword.control.flow.qm-basic  
+
+    if false else ;* comment
+*   ^^ source.qm-basic keyword.control.flow.qm-basic
+*            ^^^^ source.qm-basic keyword.control.flow.qm-basic    
+*                  ^ source.qm-basic meta.block.qm-basic punctuation.definition.comment.qm-basic
+*                   ^ source.qm-basic meta.block.qm-basic comment.line.qm-basic
+    end 
+*   ^^^ source.qm-basic keyword.control.flow.qm-basic
+*  ^ source.qm-basic 
+*      ^ source.qm-basic - keyword.control.flow.qm-basic
+
+if single.line then print 'correct highlights' else print 'incorrect!' ;* comment
+* <- source.qm-basic keyword.control.flow.qm-basic
+*              ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                                              ^^^^ source.qm-basic keyword.control.flow.qm-basic
+
+    if single.line then print 'correct highlights' else print 'incorrect!'
+*   ^^ source.qm-basic keyword.control.flow.qm-basic
+*                  ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                       ^^^^^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+*                                                  ^^^^ source.qm-basic keyword.control.flow.qm-basic
+
+begin case
+* <- source.qm-basic keyword.control.flow.qm-basic
+    case 
+*   ^^^^ source.qm-basic keyword.control.flow.qm-basic        
+case 1
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+end case
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+
+
+* gosub/goto:
+
+goto 1000 ;* comment
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*    ^ meta.function-call.qm-basic variable.function.qm-basic
+*         ^ source.qm-basic punctuation.terminator.qm-basic
+*          ^ source.qm-basic punctuation.definition.comment.qm-basic
+*            ^ source.qm-basic comment.line.qm-basic
+
+gosub 1000
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*     ^ meta.function-call.qm-basic variable.function.qm-basic
+
+on variable goto 100, 200, semantic.label
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*           ^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+*                ^^^ meta.function-call.qm-basic variable.function.qm-basic
+*                   ^ source.qm-basic
+*                     ^ meta.function-call.qm-basic variable.function.qm-basic
+*                          ^ meta.function-call.qm-basic variable.function.qm-basic
+
+on variable gosub 100, 200, semantic.label
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*           ^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+*                 ^^^ variable.function
+*                    ^ source.qm-basic
+*                      ^ variable.function
+*                            ^ variable.function
+
+on variable gosub 100, 200, semantic.label,
+gosub.continuation
+* ^^^^^^^^^^^^^^^^ meta.function-call.qm-basic variable.function.qm-basic
+
+IF TRUE THEN GOTO LINE.REF
+* <- source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic keyword.control.flow.qm-basic
+*            ^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+*                  ^ source.qm-basic meta.function-call.qm-basic variable.function.qm-basic
+
+* Operators:
+
+ var = 1 + 2 - 3 * 4 / 5 : '.'
+*    ^ source.qm-basic keyword.operator.qm-basic
+*      ^ source.qm-basic constant.numeric.integer.qm-basic
+*        ^ source.qm-basic keyword.operator.qm-basic
+*          ^ source.qm-basic constant.numeric.integer.qm-basic
+*            ^ source.qm-basic keyword.operator.qm-basic
+*                ^ source.qm-basic keyword.operator.qm-basic
+*                    ^ source.qm-basic keyword.operator.qm-basic
+*                        ^ source.qm-basic keyword.operator.qm-basic
+
+ var=1+2-3*4/5:'.'
+*   ^ source.qm-basic keyword.operator.qm-basic
+*     ^ source.qm-basic keyword.operator.qm-basic
+*       ^ source.qm-basic keyword.operator.qm-basic
+*         ^ source.qm-basic keyword.operator.qm-basic
+*           ^ source.qm-basic keyword.operator.qm-basic
+*             ^ source.qm-basic keyword.operator.qm-basic
+
+  var += 1000 
+* ^^^ source.qm-basic variable.qm-basic
+*     ^^ source.qm-basic keyword.operator.qm-basic
+*        ^^^^ source.qm-basic constant.numeric.integer.qm-basic
+
+var -= 10.001
+* <- source.qm-basic variable.qm-basic
+*   ^^ source.qm-basic keyword.operator.qm-basic
+*      ^^^^^^ source.qm-basic constant.numeric.float.qm-basic
+
+* Block Statements
+read variable from file, id locked 
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*   ^ source.qm-basic - support.function.builtin.basicStatement.qm-basic           
+*             ^^^^ source.qm-basic keyword.other.qm-basic
+*                  ^^^^ source.qm-basic variable.qm-basic
+*                           ^^^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                                 ^ source.qm-basic meta.block.qm-basic
+    print 'statement in meta.block'
+*   ^^^^^ source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end then 
+* <- source.qm-basic keyword.control.flow.qm-basic
+*   ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic meta.block.qm-basic    
+    print 'statement in meta.block'
+*   ^^^^^ source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end else 
+* <- source.qm-basic keyword.control.flow.qm-basic
+*   ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic meta.block.qm-basic    
+    print 'statement in meta.block'
+*   ^^^^^ source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end 
+* <- source.qm-basic keyword.control.flow.qm-basic
+print 'statement out of block'
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+
+open 'string' to file.var then 
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*     ^^^^^^ source.qm-basic string.quoted.single.qm-basic
+*             ^^ source.qm-basic keyword.other.qm-basic
+*                         ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                             ^ source.qm-basic
+    print 'statement in meta.block'
+*   ^^^^^ source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end
+* <- source.qm-basic keyword.control.flow.qm-basic 
+print 'statement out of block'
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+
+readnext id else exit
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*           ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                ^^^^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+
+readnext id from list then 
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*                     ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                         ^ source.qm-basic meta.block.qm-basic 
+end else 
+* <- source.qm-basic keyword.control.flow.qm-basic
+*   ^^^^ source.qm-basic keyword.control.flow.qm-basic
+*       ^ source.qm-basic meta.block.qm-basic
+end
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+readseq var then 
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*           ^^^^ source.qm-basic keyword.control.flow.qm-basic
+print 'statement in block'
+* <- source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end else 
+* <- source.qm-basic keyword.control.flow.qm-basic
+*   ^^^^ source.qm-basic keyword.control.flow.qm-basic
+end on error
+* <- source.qm-basic keyword.control.flow.qm-basic
+*   ^^^^^ source.qm-basic keyword.control.flow.qm-basic
+print 'statement in block'
+* <- source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end
+* <- source.qm-basic keyword.control.flow.qm-basic 
+print 'statement out of block'
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+
+input var for time else
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*         ^ source.qm-basic keyword.other.qm-basic
+*             ^ source.qm-basic variable.qm-basic
+*                  ^ source.qm-basic keyword.control.flow.qm-basic
+*                      ^ source.qm-basic meta.block.qm-basic
+  print 'input block'
+* ^ source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+input var then 
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*         ^^^^ source.qm-basic keyword.control.flow.qm-basic
+print 'statement in block'
+* <- source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end else 
+* <- source.qm-basic keyword.control.flow.qm-basic
+*   ^^^^ source.qm-basic keyword.control.flow.qm-basic
+print 'statement in block'
+* <- source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end
+* <- source.qm-basic keyword.control.flow.qm-basic
+
+
+write data on file.var, id on error
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+*     ^^^^ source.qm-basic variable.qm-basic
+*          ^ source.qm-basic keyword.other.qm-basic
+*             ^^^^^^^^ source.qm-basic variable.qm-basic
+*                       ^^ source.qm-basic variable.qm-basic
+*                          ^^^^^^^^ source.qm-basic keyword.control.flow.qm-basic
+*                                  ^ source.qm-basic meta.block.qm-basic
+  print 'on error block'
+* ^ source.qm-basic meta.block.qm-basic support.function.builtin.basicStatement.qm-basic
+end 
+* <- source.qm-basic keyword.control.flow.qm-basic
+
