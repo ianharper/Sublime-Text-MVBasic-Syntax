@@ -262,4 +262,4 @@ contexts:
 
   else_pop:
     - match: (?=\S)
-pop: true
+      pop: true
