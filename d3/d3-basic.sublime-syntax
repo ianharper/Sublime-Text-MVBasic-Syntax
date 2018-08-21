@@ -187,8 +187,10 @@ contexts:
       captures:
         '1': keyword.control.flow.d3-basic
     - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
-      captures:
-        '1': invalid.illegal.stray-end.d3-basic
+      scope: keyword.control.flow.d3-basic
+      push:
+        - match: .*
+          scope: text.after-final-end.d3-basic
 
   for_block:
     - match: (?i)(?<=\s)to(?=\s)
