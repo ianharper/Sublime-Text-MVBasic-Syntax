@@ -178,7 +178,7 @@ contexts:
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.d3-basic
-        - match: (?i){{stmtstart}}(end)(?=\s|$)
+        - match: (?i){{stmtstart}}(end)(?=\s|;|$)
           captures:
             '1': keyword.control.flow.d3-basic
           pop: true

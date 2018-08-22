@@ -170,7 +170,7 @@ contexts:
       scope: keyword.control.flow.jbase-basic
       push:
         - meta_content_scope: meta.block.jbase-basic
-        - match: (?i){{stmtstart}}(end)(?=\s|$)
+        - match: (?i){{stmtstart}}(end)(?=\s|;|$)
           captures:
             '1': keyword.control.flow.jbase-basic
           pop: true

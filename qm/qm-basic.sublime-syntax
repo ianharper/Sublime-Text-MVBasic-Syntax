@@ -181,7 +181,7 @@ contexts:
       scope: keyword.control.flow.qm-basic
       push:
         - meta_content_scope: meta.block.qm-basic
-        - match: (?i){{stmtstart}}(end)(?=\s|$)
+        - match: (?i){{stmtstart}}(end)(?=\s|;|$)
           captures:
             '1': keyword.control.flow.qm-basic
           pop: true
