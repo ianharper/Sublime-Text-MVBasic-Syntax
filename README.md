@@ -6,6 +6,7 @@ Sublime Text syntax highlighting, indentation, and sinppets for MultiValue Basic
 ## Features
 * MultiValue Syntaxes Supported:
   * D3
+  * jBASE
   * OpenQM
 * "\\" Quotes
 * Auto-Indentation while typing
