@@ -7,36 +7,116 @@ file_extensions:
 scope: source.qm-basic
 
 variables:
-  linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9][\.0-9]*)'
+  linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
+  stmtstart: '(?<=^|;|then\s|else\s|locked\s|loop\s|on\serror\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ON\sERROR\s|DO\s)\s*'
+
 
 contexts:
   main:
-    - match: (?<=;|^)\s*(\*|\!)
-      captures:
-        '1': punctuation.definition.comment.qm-basic
-      push:
-        - meta_content_scope: comment.line.qm-basic
-        - match: \n
-          pop: true
+    - include: comment_line
 
+    # line labels
     - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
         '2': entity.name.function.linelabel.qm-basic
         '3': entity.name.function.linelabel.qm-basic
         '4': comment.line.qm-basic
-      push: main
 
-    - match: (?i)^\s*(subroutine)\s({{basicvariable}})
+    - include: literals
+
+    # subroutine statement
+    - match: (?i)^\s*(subroutine)\s({{basicvariable}})?
       captures:
         '1': support.function.builtin.basicStatement.qm-basic 
         '2': entity.name.function.linelabel.qm-basic
 
-    - match: (?i)(?<=^|;|\s)(call)\s({{basicvariable}})
+    # subroutine call
+    - match: (?i){{stmtstart}}(call)\s(({{basicvariable}})|@{{basicvariable}})
       captures: 
         '1': support.function.builtin.basicStatement.qm-basic 
-        '2': variable.function.qm-basic
+        '3': variable.function.qm-basic
 
+    - include: language_constants
+
+    # if statement
+    - match: (?i){{stmtstart}}(if)(?=\s)
+      scope: keyword.control.flow.qm-basic
+
+    # # statements
+    # - match: (?i){{stmtstart}}(write([x]?|([v]?[u]?))|readt[x]?|rewind|weof|writet|readnext|(mat)?read[v]?[u]?|(begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s)
+    #   captures:
+    #     '1': support.function.builtin.basicStatement.qm-basic
+
+    # functions with then/else blocks
+    - match: (?i){{stmtstart}}(locate)(?=\()
+      captures:
+        '1': support.function.builtin.basicFunction.then-else.qm-basic
+
+    - include: blocks
+
+    # For loop
+    - match: (?i){{stmtstart}}(for)(?!\.)\b
+      captures:
+        '1': keyword.control.flow.qm-basic
+      push:
+        - include: for_block
+
+    # loop loop
+    - match: (?i){{stmtstart}}(loop)(?=\s)
+      captures:
+        '1': keyword.control.flow.qm-basic
+      push: 
+        - meta_content_scope: meta.block.loop.qm-basic
+        - include: loop_block
+
+    # Begin Case
+    - match: (?i){{stmtstart}}(begin\scase)(?!\.)\b
+      captures:
+        '1': keyword.control.flow.qm-basic
+      push:
+        - meta_content_scope: meta.block.begin-case.qm-basic
+        - include: begin_case_block
+
+    - include: functions
+
+    # Basic statements
+    - match: (?i){{stmtstart}}(return\sto|return\sfrom\sprogram|printer\s(close|display|file|name|off|on|reset|setting)|begin\stransaction|end\stransaction|abort|aborte|abortm|break|chain|class|clear|clearcommon|cleardata|clearfile|clearinput|clearselect|close|closeseq|close.socket|commit|common|continue|convert|create|create.file|crt|csv.mode|data|debug|deffun|del|delete|deletelist|deleteseq|deleteu|dim|dimension|disinherit|display|disable.key|dparse|dparse.csv|echo|enable.key|enter|equate|errmsg|evaluate|execute|exit|file|filelock|fileunlock|find|findstr|flush|flush.dh.cache|footing|formlist|formlistv|function|get|getlist|getlistv|heading|hush|in|inherit|input|inputclear|inputcsv|inputerr|inputfield|inputfieldv|inputnull|inputtrap|ins|keep.select|keyedit|keyexit|keytrap|local|locate|lock|logmsg|mark.mapping|mat|matbuild|matparse|matread|matreadcsv|matreadl|matreadu|matwrite|matwriteu|mouse|nap|nobuf|null|open|openpath|openseq|opentemp|os.execute|osdelete|osread|oswrite|page|pause|pdump|perform|phantom|pool.idle|precision|print|printcsv|printerr|private|procread|procwrite|program|prompt|public|put|randomize|read|readblk|readcsv|readl|readlist|readnext|readseq|readu|readv|readvl|readvu|recordlockl|recordlocku|redim|redimension|release|remark|remove|remove.break.handler|restore.screen|return|rollback|rqm|savelist|seek|select|selecte|selectindex|selectindexv|selectleft|selectleftv|selectn|selectright|selectrightv|selectv|set.arg|set.break.handler|set.exit.status|set.status|set.timezone|setleft|setpu|setright|setrem|shared|sleep|sortadd|sortclear|sselect|status|stop|stope|stopm|subroutine|tclread|throw|timeout|transaction(\sabort|\scommit|\sstart)?|ttyset|unlock|void|wake|weofseq|write|writeblk|writecsv|writelist|writeseq|writeseqf|writeu|writev|writevu)(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.qm-basic
+
+    - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
+      captures:
+        '1': support.function.builtin.basicStatement.qm-basic 
+        '2': variable.qm-basic
+        '3': support.function.builtin.basicStatement.qm-basic 
+      push: ongoto
+
+    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
+      captures:
+        '1': support.function.builtin.basicStatement.qm-basic
+        '2': meta.function-call.qm-basic variable.function.qm-basic
+
+    - include: operators
+    - include: other_keywords
+    - include: basicvariables
+
+    - match: ;
+      scope: punctuation.terminator.qm-basic
+
+  operators:
+    - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
+      captures: 
+        '1': keyword.operator.qm-basic
+
+    - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
+      scope: keyword.operator.qm-basic
+
+  basicvariables:
+    - match: (?i)({{basicvariable}})\(?
+      scope: variable.qm-basic
+
+  literals:
     - match: (\\)
       push:
         - meta_scope: string.quoted.double.qm-basic
@@ -55,72 +135,135 @@ contexts:
         - match: (')
           pop: true
 
+    - match: \b((?<!\d)-)?\d+\.\d+\b
+      scope: constant.numeric.float.qm-basic
+
+    - match: \b((?<!\d)-)?\d+\b
+      scope: constant.numeric.integer.qm-basic
+
+  functions:
+    - match: (?i)(?<!\.)(abs|abss|accept.socket.connection|account.path|acos|alpha|ands|arg|arg.count|arg.present|ascii|asin|assigned|atan|bindkey|bitand|bitnot|bitor|bitreset|bitset|bittest|bitxor|break.count|catalogued|cats|caught|change|char|chars|checksum|child|col1|col2|collection|compare|compares|config|connect.port|convert|cos|count|counts|create.server.socket|crop|csvdq|date|dcount|decrypt|delete|dfpart|display.width|display.widths|dir|div|downcase|dquote|dquotes|dtx|ebcdic|echar|echars|element.exists|encrypt|enter.package|enumerate|env|epoch|eqs|ereplace|exit.package|exp|expand|extract|fcontrol|field|fields|fieldstore|file.event|fileinfo|fix|fmt|fmtdw|fmtdws|fmts|fold|folddw|folds|folddws|formcsv|ges|get|get.messages|get.port.params|getnls|getpu|getrem|gts|iconv|iconvs|idiv|ifs|index|indexs|indices|inmat|insert|int|is.alnum|is.alpha|is.digit|is.ecs|is.graph|is.mark|is.space|is.user.char|is.widestr|itype|jbuild|jparse|keycode|keycodev|keyin|keyinc|keyincv|keyinr|keyinv|keyready|last|lasts|left|len|lens|les|listindex|ln|locate|lower|lts|mat|matchess|matchfield|matchfields|max|maximum|md5|mergelist|min|minimum|mod|mods|mvdate|mvdate.time|mvepoch|mvtime|neg|negs|nes|not|nots|ns|num|nums|nv|object|objinfo|oconv|oconvs|open.socket|option|ors|os.error|ospath|osrename|outerjoin|parse|printer.setting|pterm|pwr|quote|quotes|raise|rdiv|read.socket|recordlocked|rem|remove|removef|replace|reuse|right|rmvd|rnd|rounddown|roundup|rtrans|sadd|save.screen|scmp|sdiv|select.socket|selectinfo|sentence|seq|seqs|server.addr|server.window|set.ecs.map|set.port.params|set.socket.mode|setnls|shift|signal|sin|smul|socket.info|sort|sortdata|sortnext|sort.compare|soundex|soundexs|space|spaces|splice|sqrt|squote|squotes|ssub|status|str|strs|subr|substitute|substrdw|substrdws|substrings|sum|summation|swap|swapcase|swapmarks|sysmsg|system|tan|terminfo|terminfo.ex|testlock|time|timedate|trans|transliterate|trim|trimb|trimbs|trimf|trimfs|trims|trimw|trimws|ttyget|unassigned|upcase|vartype|vocpath|vslice|wait.file.event|write.socket|xlate|xtd)(?=\()
+      scope: support.function.builtin.basicFunction.qm-basic
+
+    - match: (?i)(?<!\.)(abspath|account\.rules|atvar|callhttp|ced|chmod|clog|dump|errlog\.filter|errtext|exc\.stack|findprog|getpu|listu|oscopy|package|pathtkn|parser|pcl|phlog|pick|picklist|qmclient|screen|setpu|setvar|sort|username|userno|view|vocrec)(?=\()
+      scope: support.function.builtin.basicFunction.qm-basic
+
+    - match: \B(@)(?=\()
+      scope: support.function.builtin.basicFunction.qm-basic
+        
+  language_constants:
     - match: (?i)\B(@am|@fm|@im|@vm|@sm|@svm|@tm|@false|@true|@abort\.code|@abort\.message|@acall\.fno|@account|@ans|@bpv|@command(\.stack)?|@conv|@crthigh|@crtwide|@data\.pending|@data|@date|@day|@dictrecs|@drive|@ds|@exception\.data|@exception\.origin|@exception\.stack|@exception|@file\.name|@filename|@fmt|@gid|@hostname|@id|@ip\.addr|@itype\.mode|@level|@line|@logname|@lptrhigh|@lptrwide|@mbutton|@mcol|@month|@mrow|@nb|@ni|@null|@option|@parasentence|@path|@pib|@pob|@pstat|@qm\.group|@qmsys|@record|@selected|@sentence|@seqno|@sib|@sob|@socket|@stdfil|@system\.return\.code|@sys\.bell|@term\.type|@time|@transaction\.id|@transaction\.level|@trigger\.return\.code|@tty|@uid|@user0to|@user4|@userno|@user\.no|@user\.return\.code|@user|@voc|@where|@who|@year|@year4)\b
       scope: constant.character.qm-basic
 
-    - match: (?i)(?<!\.)(abs|abss|accept.socket.connection|account.path|acos|alpha|ands|arg|arg.count|arg.present|ascii|asin|assigned|atan|bindkey|bitand|bitnot|bitor|bitreset|bitset|bittest|bitxor|break.count|catalogued|cats|caught|change|char|chars|checksum|child|col1|col2|collection|compare|compares|config|connect.port|convert|cos|count|counts|create.server.socket|crop|csvdq|date|dcount|decrypt|delete|dfpart|display.width|display.widths|dir|div|downcase|dquote|dquotes|dtx|ebcdic|echar|echars|element.exists|encrypt|enter.package|enumerate|env|epoch|eqs|ereplace|exit.package|exp|expand|extract|fcontrol|field|fields|fieldstore|file.event|fileinfo|fix|fmt|fmtdw|fmtdws|fmts|fold|folddw|folds|folddws|formcsv|ges|get|get.messages|get.port.params|getnls|getpu|getrem|gts|iconv|iconvs|idiv|ifs|index|indexs|indices|inmat|insert|int|is.alnum|is.alpha|is.digit|is.ecs|is.graph|is.mark|is.space|is.user.char|is.widestr|itype|jbuild|jparse|keycode|keycodev|keyin|keyinc|keyincv|keyinr|keyinv|keyready|last|lasts|left|len|lens|les|listindex|ln|locate|lower|lts|mat|matchess|matchfield|matchfields|max|maximum|md5|mergelist|min|minimum|mod|mods|mvdate|mvdate.time|mvepoch|mvtime|neg|negs|nes|not|nots|ns|num|nums|nv|object|objinfo|oconv|oconvs|open.socket|option|ors|os.error|ospath|osrename|outerjoin|parse|printer.setting|pterm|pwr|quote|quotes|raise|rdiv|read.socket|recordlocked|rem|remove|removef|replace|reuse|right|rmvd|rnd|rounddown|roundup|rtrans|sadd|save.screen|scmp|sdiv|select.socket|selectinfo|sentence|seq|seqs|server.addr|server.window|set.ecs.map|set.port.params|set.socket.mode|setnls|shift|signal|sin|smul|socket.info|sort|sortdata|sortnext|sort.compare|soundex|soundexs|space|spaces|splice|sqrt|squote|squotes|ssub|status|str|strs|subr|substitute|substrdw|substrdws|substrings|sum|summation|swap|swapcase|swapmarks|sysmsg|system|tan|terminfo|terminfo.ex|testlock|time|timedate|trans|transliterate|trim|trimb|trimbs|trimf|trimfs|trims|trimw|trimws|ttyget|unassigned|upcase|vartype|vocpath|vslice|wait.file.event|write.socket|xlate|xtd)\(
-      captures: 
-        '1': support.function.builtin.basicFunction.qm-basic
-
-    - match: (?i)\b(abspath|account\.rules|atvar|callhttp|ced|chmod|clog|dump|errlog\.filter|errtext|exc\.stack|findprog|getpu|listu|oscopy|package|pathtkn|parser|pcl|phlog|pick|picklist|qmclient|screen|setpu|setvar|sort|username|userno|view|vocrec)\(
-      captures: 
-        '1': support.function.builtin.basicFunction.qm-basic
-
-    - match: (?i)(?<=^|;|\s)(return\sto|return\sfrom\sprogram|printer\s(close|display|file|name|off|on|reset|setting)|begin\stransaction|end\stransaction|abort|aborte|abortm|break|chain|class|clear|clearcommon|cleardata|clearfile|clearinput|clearselect|close|closeseq|close.socket|commit|common|continue|convert|create|create.file|crt|csv.mode|data|debug|deffun|del|delete|deletelist|deleteseq|deleteu|dim|dimension|disinherit|display|disable.key|dparse|dparse.csv|echo|enable.key|enter|equate|errmsg|evaluate|execute|exit|file|filelock|fileunlock|find|findstr|flush|flush.dh.cache|footing|formlist|formlistv|function|get|getlist|getlistv|heading|hush|in|inherit|input|inputclear|inputcsv|inputerr|inputfield|inputfieldv|inputnull|inputtrap|ins|keep.select|keyedit|keyexit|keytrap|local|locate|lock|logmsg|mark.mapping|mat|matbuild|matparse|matread|matreadcsv|matreadl|matreadu|matwrite|matwriteu|mouse|nap|nobuf|null|open|openpath|openseq|opentemp|os.execute|osdelete|osread|oswrite|page|pause|pdump|perform|phantom|pool.idle|precision|print|printcsv|printerr|private|procread|procwrite|program|prompt|public|put|randomize|read|readblk|readcsv|readl|readlist|readnext|readseq|readu|readv|readvl|readvu|recordlockl|recordlocku|redim|redimension|release|remark|remove|remove.break.handler|restore.screen|return|rollback|rqm|savelist|seek|select|selecte|selectindex|selectindexv|selectleft|selectleftv|selectn|selectright|selectrightv|selectv|set.arg|set.break.handler|set.exit.status|set.status|set.timezone|setleft|setpu|setright|setrem|shared|sleep|sortadd|sortclear|sselect|status|stop|stope|stopm|subroutine|tclread|throw|timeout|transaction(\sabort|\scommit|\sstart)?|ttyset|unlock|void|wake|weofseq|write|writeblk|writecsv|writelist|writeseq|writeseqf|writeu|writev|writevu)\b(?!\.)
-      scope: support.function.builtin.basicStatement.qm-basic
-
-    - match: \B(@)\(
-      captures:
-        '1': support.function.builtin.basicFunction.qm-basic
-
-    - match: (?i)(?<=^|;|\s)(for|loop|repeat|until|while|next|if)(?!\.)\b
-      scope: keyword.control.flow.qm-basic
-
-    - match: (?i)(?<=^|;|\s)(begin\s|end\s)?(case)(?=\s|$|;)
-      scope: keyword.control.flow.qm-basic
-
-    - match: (?i)(?<=^|;|\s)(end\s)?(then|else|end|locked)(?=\s|$|;)
-      captures:
-        '1': keyword.control.flow.qm-basic
-        '2': keyword.control.flow.qm-basic
-
-    - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)\s
-      captures:
-        '1': support.function.builtin.basicStatement.qm-basic 
-        '3': support.function.builtin.basicStatement.qm-basic 
-      push: ongoto
-
-    - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
-      captures:
-        '1': support.function.builtin.basicStatement.qm-basic
-        '2': meta.function-call variable.function.qm-basic
-
-    - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+  other_keywords:
+    - match: (?i)(?<=\s)(before|do|from|for|in|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.qm-basic
 
-    - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
-      captures: 
-        '1': keyword.operator.qm-basic
+  comment_line:
+    - match: (?<=;|^)\s*(\*|\!)
+      scope: punctuation.definition.comment.qm-basic
+      push:
+        - meta_content_scope: comment.line.qm-basic 
+        - match: $\n?
+          pop: true
 
-    - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
-      scope: keyword.operator.qm-basic
+  expression:
+    - include: comment_line
+    - include: language_constants
+    - include: functions
+    - include: literals
+    - include: operators
+    - include: other_keywords
+    - include: basicvariables
 
-    - match: (?i)({{basicvariable}})\(?
+  blocks:
+    - match: (?i)(?<=\s)(then|else|locked|on\serror)(?=\s*($|;))
+      scope: keyword.control.flow.qm-basic
+      push:
+        - meta_content_scope: meta.block.qm-basic
+        - match: (?i){{stmtstart}}(end)(?=\s|;|$)
+          captures:
+            '1': keyword.control.flow.qm-basic
+          pop: true
+        - include: main
+    - match: (?i)(?<=^|;|\s)(then|else|locked|on\serror)(?=\s) # single line
       captures:
-        '1': variable.qm-basic
+        '1': keyword.control.flow.qm-basic
+    - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
+      captures:
+        '1': invalid.illegal.stray-end.qm-basic
 
-    - match: \b[0-9]+\.[0-9]+\b
-      scope: constant.numeric.float.qm-basic
+  for_block:
+    - match: (?i)(?<=\s)to(?=\s)
+      scope: keyword.control.flow.qm-basic
+    - match: (?i)(?<=\s)step(?=\s)
+      scope: keyword.control.flow.qm-basic
+    - include: expression
+    - match: (?i)(?<=next)
+      pop: true
+    - match: (?=$|;)
+      push:
+        - meta_content_scope: meta.block.for.qm-basic
+        - match: (?i)(?<=^|;|\s)next(?=\s)
+          scope: keyword.control.flow.qm-basic
+          pop: true
+        - include: main
 
-    - match: \b\d+\b
-      scope: constant.numeric.integer.qm-basic
+  loop_block:
+    - match: (?i)(?=(^|;|\s)(until|while)\s)
+      set:
+        - match: (?i)(?<=^|\s)(until|while)(?=\s)
+          scope: keyword.control.flow.qm-basic
+        - match: (?i)((do\s|do$)|(?=repeat(\s|$)|;|$))
+          captures:
+            '2': keyword.control.flow.qm-basic
+          set: 
+          - meta_content_scope: meta.block.until.qm-basic
+          - match: (?i)(?<=\s)do(?=;|$|\s)
+            scope: keyword.control.flow.qm-basic
+          - match: (?i)(?<=^|;|\s)repeat(?=\s|$|;)
+            scope: keyword.control.flow.qm-basic
+            pop: true
+          - include: main
+        - include: expression
+    - match: (?i)(?<=^|;|\s)repeat(?=\s|$|;)
+      scope: keyword.control.flow.qm-basic
+      pop: true
+    - include: main
 
-    - match: ;
-      scope: punctuation.terminator.qm-basic
-      set: main
+  begin_case_block:
+    - match: (?i)^\s*(case)(?=\s) 
+      captures: 
+        '1': keyword.control.flow.qm-basic
+      push:
+        - match: (?=$|;)
+          push:
+          - meta_content_scope: meta.block.case.qm-basic
+          - include: end_case_block
+          - include: main
+        - include: end_case_block
+        - include: expression
+    - match: (?i)(?<=^|\s)end\scase(?!\.)\b
+      scope: keyword.control.flow.qm-basic
+      pop: true
+    - include: main
+
+  end_case_block:
+    - match: (?i)(?=^\s*end\scase\b)
+      pop: true
+    - match: (?i)(?=^\s*case\b)
+      pop: true
 
   ongoto:
     - match: \b{{linelabelref}}\b
-      scope: meta.function-call variable.function.qm-basic
+      scope: meta.function-call.qm-basic variable.function.qm-basic
     - match: ;|((?!,)\b\s*$)
+      pop: true
+
+  end_pop:
+    - match: '$'
+      pop: true
+
+  else_pop:
+    - match: (?=\S)
       pop: true

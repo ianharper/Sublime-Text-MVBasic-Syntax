@@ -9,33 +9,114 @@ scope: source.d3-basic
 variables:
   linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
+  stmtstart: '(?<=^|;|then\s|else\s|locked\s|loop\s|onerr\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ONERR\s|DO\s)\s*'
+
 
 contexts:
   main:
-    - match: (?<=;|^)\s*(\*|\!)
-      captures:
-        '1': punctuation.definition.comment.d3-basic
-      push:
-        - meta_content_scope: comment.line.d3-basic
-        - match: \n
-          pop: true
+    - include: comment_line
 
+    # line labels
     - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
       captures:
         '2': entity.name.function.linelabel.d3-basic
         '3': entity.name.function.linelabel.d3-basic
         '4': comment.line.d3-basic
 
-    - match: (?i)^\s*(subroutine)\s({{basicvariable}})
+    - include: literals
+
+    # subroutine statement
+    - match: (?i)^\s*(subroutine)\s({{basicvariable}})?
       captures:
         '1': support.function.builtin.basicStatement.d3-basic 
         '2': entity.name.function.linelabel.d3-basic
 
-    - match: (?i)(?<=^|;|\s)(call)\s(({{basicvariable}})|@{{basicvariable}})
+    # subroutine call
+    - match: (?i){{stmtstart}}(call)\s(({{basicvariable}})|@{{basicvariable}})
       captures: 
         '1': support.function.builtin.basicStatement.d3-basic 
         '3': variable.function.d3-basic
 
+    - include: language_constants
+
+    # if statement
+    - match: (?i){{stmtstart}}(if[r]?)(?=\s)
+      scope: keyword.control.flow.d3-basic
+
+    # statements with blocks
+    - match: (?i){{stmtstart}}(write([x]?|([v]?[u]?))|readt[x]?|rewind|weof|writet|readnext|(mat)?read[v]?[u]?|(begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic
+
+    # functions with then/else blocks
+    - match: (?i){{stmtstart}}(key|locate)(?=\()
+      captures:
+        '1': support.function.builtin.basicFunction.then-else.d3-basic
+
+    - include: blocks
+
+    # For loop
+    - match: (?i){{stmtstart}}(for)(?!\.)\b
+      captures:
+        '1': keyword.control.flow.d3-basic
+      push:
+        - include: for_block
+
+    # loop loop
+    - match: (?i){{stmtstart}}(loop)(?=\s)
+      captures:
+        '1': keyword.control.flow.d3-basic
+      push: 
+        - meta_content_scope: meta.block.loop.d3-basic
+        - include: loop_block
+
+    # Begin Case
+    - match: (?i){{stmtstart}}(begin\scase)(?!\.)\b
+      captures:
+        '1': keyword.control.flow.d3-basic
+      push:
+        - meta_content_scope: meta.block.begin-case.d3-basic
+        - include: begin_case_block
+
+    - include: functions
+
+    # Basic statements
+    - match: (?i){{stmtstart}}(chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|matwrite[u]?|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic
+
+    - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic 
+        '2': variable.d3-basic
+        '3': support.function.builtin.basicStatement.d3-basic 
+      push: ongoto
+
+    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic
+        '2': meta.function-call.d3-basic variable.function.d3-basic
+
+    - include: operators
+    - include: other_keywords
+    - include: basicvariables
+
+    - match: ;
+      scope: punctuation.terminator.d3-basic
+
+  operators:
+    - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
+      captures: 
+        '1': keyword.operator.d3-basic
+
+    - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
+      scope: keyword.operator.d3-basic
+
+  basicvariables:
+    - match: (?i)({{basicvariable}})\(?
+      scope: variable.d3-basic
+
+  literals:
     - match: (\\)
       push:
         - meta_scope: string.quoted.double.d3-basic
@@ -54,68 +135,134 @@ contexts:
         - match: (')
           pop: true
 
+    - match: \b((?<!\d)-)?\d+\.\d+\b
+      scope: constant.numeric.float.d3-basic
+
+    - match: \b((?<!\d)-)?\d+\b
+      scope: constant.numeric.integer.d3-basic
+
+  functions:
+    - match: (?i)(?<!\.)(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)(?=\()
+      scope: support.function.builtin.basicFunction.d3-basic
+
+    - match: \B(@)(?=\()
+      scope: support.function.builtin.basicFunction.d3-basic
+        
+  language_constants:
     - match: (?i)\B(@am|@vm|@sm|@svm|@user|@pib|@account)\b
       scope: constant.character.d3-basic
 
-    - match: (?i)(?<!\.)(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)\(
-      captures: 
-        '1': support.function.builtin.basicFunction.d3-basic
-
-    - match: \B(@)\(
-      captures:
-        '1': support.function.builtin.basicFunction.d3-basic
-
-    - match: (?i)(?<=^|;|\s)(for|loop|repeat|until|while|next|if)(?!\.)\b
-      scope: keyword.control.flow.d3-basic
-
-    - match: (?i)(?<=^|;|\s)(begin\s|end\s)?(case)(?=\s|$|;)
-      scope: keyword.control.flow.d3-basic
-
-    - match: (?i)(?<=^|;|\s)(end\s)?(then|else|end|locked)(?=\s|$|;)
-      captures:
-        '1': keyword.control.flow.d3-basic
-        '2': keyword.control.flow.d3-basic
-
-    - match: (?i)(?<=^|;|\s)(chain|include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|commit\swork|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|get|getx|heading|in|input|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|locate|lock|mat|matbuild|matparse|matread[ut]?|matwrite|matwriteu|null|open|out|page|precision|print(\son)?|printchar|printer|procread|procwrite|program|prompt|read[u]?|readnext|readt|readtx|readv[u]?|release|rem|remove|replace|return|rewind|rollback\swork|root|rqm|select|send|sendx|sleep|spoolq|stop|subroutine|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock|weof|write|writet|writeu|writev|writevu|writex)\b(?!\.)
-      scope: support.function.builtin.basicStatement.d3-basic
-
-    - match: (?i)(?<=^|;|\s)(on)\s({{basicvariable}})\s(gosub|goto)\s
-      captures:
-        '1': support.function.builtin.basicStatement.d3-basic 
-        '3': support.function.builtin.basicStatement.d3-basic 
-      push: ongoto
-
-    - match: (?i)(?<=^|;|\s)(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
-      captures:
-        '1': support.function.builtin.basicStatement.d3-basic
-        '2': meta.function-call.d3-basic variable.function.d3-basic
-
-    - match: (?i)(?<=\s)(before|do|from|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+  other_keywords:
+    - match: (?i)(?<=\s)(before|do|from|for|in|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
       scope: keyword.other.d3-basic
 
-    - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
-      captures: 
-        '1': keyword.operator.d3-basic
+  comment_line:
+    - match: (?<=;|^)\s*(\*|\!)
+      scope: punctuation.definition.comment.d3-basic
+      push:
+        - meta_content_scope: comment.line.d3-basic 
+        - match: $\n?
+          pop: true
 
-    - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
-      scope: keyword.operator.d3-basic
+  expression:
+    - include: comment_line
+    - include: language_constants
+    - include: functions
+    - include: literals
+    - include: operators
+    - include: other_keywords
+    - include: basicvariables
 
-    - match: (?i)({{basicvariable}})\(?
+  blocks:
+    - match: (?i)(?<=\s)(then|else|locked|onerr)(?=\s*($|;))
+      scope: keyword.control.flow.d3-basic
+      push:
+        - meta_content_scope: meta.block.d3-basic
+        - match: (?i){{stmtstart}}(end)(?=\s|;|$)
+          captures:
+            '1': keyword.control.flow.d3-basic
+          pop: true
+        - include: main
+    - match: (?i)(?<=^|;|\s)(then|else|locked|onerr)(?=\s) # single line
       captures:
-        '1': variable.d3-basic
+        '1': keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
+      scope: keyword.control.flow.d3-basic
+      push:
+        - match: .*
+          scope: text.after-final-end.d3-basic
 
-    - match: \b[0-9]+\.[0-9]+\b
-      scope: constant.numeric.float.d3-basic
+  for_block:
+    - match: (?i)(?<=\s)to(?=\s)
+      scope: keyword.control.flow.d3-basic
+    - match: (?i)(?<=\s)step(?=\s)
+      scope: keyword.control.flow.d3-basic
+    - include: expression
+    - match: (?i)(?<=next)
+      pop: true
+    - match: (?=$|;)
+      push:
+        - meta_content_scope: meta.block.for.d3-basic
+        - match: (?i)(?<=^|;|\s)next(?=\s)
+          scope: keyword.control.flow.d3-basic
+          pop: true
+        - include: main
 
-    - match: \b\d+\b
-      scope: constant.numeric.integer.d3-basic
+  loop_block:
+    - match: (?i)(?=(^|;|\s)(until|while)\s)
+      set:
+        - match: (?i)(?<=^|\s)(until|while)(?=\s)
+          scope: keyword.control.flow.d3-basic
+        - match: (?i)((do\s|do$)|(?=repeat(\s|$)|;|$))
+          captures:
+            '2': keyword.control.flow.d3-basic
+          set: 
+          - meta_content_scope: meta.block.until.d3-basic
+          - match: (?i)(?<=\s)do(?=;|$|\s)
+            scope: keyword.control.flow.d3-basic
+          - match: (?i)(?<=^|;|\s)repeat(?=\s|$|;)
+            scope: keyword.control.flow.d3-basic
+            pop: true
+          - include: main
+        - include: expression
+    - match: (?i)(?<=^|;|\s)repeat(?=\s|$|;)
+      scope: keyword.control.flow.d3-basic
+      pop: true
+    - include: main
 
-    - match: ;
-      scope: punctuation.terminator.d3-basic
-      set: main
+  begin_case_block:
+    - match: (?i)^\s*(case)(?=\s) 
+      captures: 
+        '1': keyword.control.flow.d3-basic
+      push:
+        - match: (?=$|;)
+          push:
+          - meta_content_scope: meta.block.case.d3-basic
+          - include: end_case_block
+          - include: main
+        - include: end_case_block
+        - include: expression
+    - match: (?i)(?<=^|\s)end\scase(?!\.)\b
+      scope: keyword.control.flow.d3-basic
+      pop: true
+    - include: main
+
+  end_case_block:
+    - match: (?i)(?=^\s*end\scase\b)
+      pop: true
+    - match: (?i)(?=^\s*case\b)
+      pop: true
 
   ongoto:
     - match: \b{{linelabelref}}\b
-      scope: meta.function-call variable.function.qm-basic
+      scope: meta.function-call.d3-basic variable.function.d3-basic
     - match: ;|((?!,)\b\s*$)
+      pop: true
+
+  end_pop:
+    - match: '$'
+      pop: true
+
+  else_pop:
+    - match: (?=\S)
       pop: true

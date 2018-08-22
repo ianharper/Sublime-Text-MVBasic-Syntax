@@ -33,6 +33,5 @@ Pull requests are welcome. For major changes please open an issue to discuss wha
 
 ## TODO
 * Add additional MV dialects
-* Add re-indentation
-* Add block structure to enable re-indentation.
 * Add error highlighting (missing quotes, parens, etc.)
+* Optimize indentation plugin

@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
    <key>name</key>
-   <string>D3 Basic Metadata</string>
+   <string>jBase Basic Metadata</string>
    
    <key>scope</key>
-   <string>source.d3-basic</string>
+   <string>source.jbase-basic</string>
 
    <key>settings</key>
    <dict>

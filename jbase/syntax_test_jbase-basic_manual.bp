@@ -1,0 +1,305 @@
+* SYNTAX TEST "jbase-basic.sublime-syntax"
+
+* foo
+* <- source.jbase-basic punctuation.definition.comment.jbase-basic
+* ^ source.jbase-basic comment.line.jbase-basic
+
+
+* Labels
+
+1000 * comment
+* <- source.jbase-basic entity.name.function.linelabel.jbase-basic
+*   ^ source.jbase-basic
+*    ^ source.jbase-basic comment.line.jbase-basic
+
+semantic.label: * comment
+* <- source.jbase-basic entity.name.function.linelabel.jbase-basic
+*              ^ source.jbase-basic
+*               ^ source.jbase-basic comment.line.jbase-basic
+
+
+* Variable with the same name as functions:
+
+  tot.abs(1)
+* ^ source.jbase-basic variable.jbase-basic
+
+  a.abs(1)
+* ^^^^^ source.jbase-basic variable.jbase-basic
+
+
+* Strings
+
+ 'single quoted string ;* not a comment'
+* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jbase-basic string.quoted.single.jbase-basic
+
+ "string quoted  += double"
+* ^^^^^^^^^^^^^^^^^^^^^^^^ source.jbase-basic string.quoted.double.jbase-basic
+
+ \string=quoted double\
+* ^^^^^^^^^^^^^^^^^^^^ source.jbase-basic string.quoted.double.jbase-basic
+
+
+* Flow Control:
+
+for x = 1 to 10
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*     ^ source.jbase-basic keyword.operator.jbase-basic
+*          ^ source.jbase-basic keyword.control.flow.jbase-basic
+
+next x
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+loop
+
+until done
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic
+
+repeat
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+loop 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+while x > 0
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic keyword.operator.jbase-basic
+
+repeat
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+loop until done
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*    ^^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*          ^^^^ source.jbase-basic variable.jbase-basic
+*              ^ source.jbase-basic meta.block.until.jbase-basic
+  print 'statement in loop block'
+* ^^^^^ source.jbase-basic meta.block.until.jbase-basic support.function.builtin.basicStatement.jbase-basic
+repeat
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*     ^ source.jbase-basic
+
+loop while true do print 'looping' repeat
+
+
+if true then ;* comment
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic keyword.control.flow.jbase-basic
+
+end
+* <- source.jbase-basic keyword.control.flow.jbase-basic  
+
+    if false else ;* comment
+*   ^^ source.jbase-basic keyword.control.flow.jbase-basic
+*            ^^^^ source.jbase-basic keyword.control.flow.jbase-basic    
+*                  ^ source.jbase-basic meta.block.jbase-basic punctuation.definition.comment.jbase-basic
+*                   ^ source.jbase-basic meta.block.jbase-basic comment.line.jbase-basic
+    end 
+*   ^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*  ^ source.jbase-basic 
+*      ^ source.jbase-basic - keyword.control.flow.jbase-basic
+
+if single.line then print 'correct highlights' else print 'incorrect!' ;* comment
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*              ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                                              ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+
+    if single.line then print 'correct highlights' else print 'incorrect!'
+*   ^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                  ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                       ^^^^^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*                                                  ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+
+begin case
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+    case 
+*   ^^^^ source.jbase-basic keyword.control.flow.jbase-basic        
+case 1
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+end case
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+
+
+* gosub/goto:
+
+goto 1000 ;* comment
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*    ^ meta.function-call.jbase-basic variable.function.jbase-basic
+*         ^ source.jbase-basic punctuation.terminator.jbase-basic
+*          ^ source.jbase-basic punctuation.definition.comment.jbase-basic
+*            ^ source.jbase-basic comment.line.jbase-basic
+
+gosub 1000
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*     ^ meta.function-call.jbase-basic variable.function.jbase-basic
+
+on variable goto 100, 200, semantic.label
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*           ^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*                ^^^ meta.function-call.jbase-basic variable.function.jbase-basic
+*                   ^ source.jbase-basic
+*                     ^ meta.function-call.jbase-basic variable.function.jbase-basic
+*                          ^ meta.function-call.jbase-basic variable.function.jbase-basic
+
+on variable gosub 100, 200, semantic.label
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*           ^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*                 ^^^ variable.function
+*                    ^ source.jbase-basic
+*                      ^ variable.function
+*                            ^ variable.function
+
+on variable gosub 100, 200, semantic.label,
+gosub.continuation
+* ^^^^^^^^^^^^^^^^ meta.function-call.jbase-basic variable.function.jbase-basic
+
+IF TRUE THEN GOTO LINE.REF
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic keyword.control.flow.jbase-basic
+*            ^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*                  ^ source.jbase-basic meta.function-call.jbase-basic variable.function.jbase-basic
+
+* Operators:
+
+ var = 1 + 2 - 3 * 4 / 5 : '.'
+*    ^ source.jbase-basic keyword.operator.jbase-basic
+*      ^ source.jbase-basic constant.numeric.integer.jbase-basic
+*        ^ source.jbase-basic keyword.operator.jbase-basic
+*          ^ source.jbase-basic constant.numeric.integer.jbase-basic
+*            ^ source.jbase-basic keyword.operator.jbase-basic
+*                ^ source.jbase-basic keyword.operator.jbase-basic
+*                    ^ source.jbase-basic keyword.operator.jbase-basic
+*                        ^ source.jbase-basic keyword.operator.jbase-basic
+
+ var=1+2-3*4/5:'.'
+*   ^ source.jbase-basic keyword.operator.jbase-basic
+*     ^ source.jbase-basic keyword.operator.jbase-basic
+*       ^ source.jbase-basic keyword.operator.jbase-basic
+*         ^ source.jbase-basic keyword.operator.jbase-basic
+*           ^ source.jbase-basic keyword.operator.jbase-basic
+*             ^ source.jbase-basic keyword.operator.jbase-basic
+
+  var += 1000 
+* ^^^ source.jbase-basic variable.jbase-basic
+*     ^^ source.jbase-basic keyword.operator.jbase-basic
+*        ^^^^ source.jbase-basic constant.numeric.integer.jbase-basic
+
+var -= 10.001
+* <- source.jbase-basic variable.jbase-basic
+*   ^^ source.jbase-basic keyword.operator.jbase-basic
+*      ^^^^^^ source.jbase-basic constant.numeric.float.jbase-basic
+
+* Block Statements
+read variable from file, id locked 
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*   ^ source.jbase-basic - support.function.builtin.basicStatement.jbase-basic           
+*             ^^^^ source.jbase-basic keyword.other.jbase-basic
+*                  ^^^^ source.jbase-basic variable.jbase-basic
+*                           ^^^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                                 ^ source.jbase-basic meta.block.jbase-basic
+    print 'statement in meta.block'
+*   ^^^^^ source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end then 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*   ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic meta.block.jbase-basic    
+    print 'statement in meta.block'
+*   ^^^^^ source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end else 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*   ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic meta.block.jbase-basic    
+    print 'statement in meta.block'
+*   ^^^^^ source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+print 'statement out of block'
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+
+open 'string' to file.var then 
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*     ^^^^^^ source.jbase-basic string.quoted.single.jbase-basic
+*             ^^ source.jbase-basic keyword.other.jbase-basic
+*                         ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                             ^ source.jbase-basic
+    print 'statement in meta.block'
+*   ^^^^^ source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end
+* <- source.jbase-basic keyword.control.flow.jbase-basic 
+print 'statement out of block'
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+
+readnext id else exit
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*           ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                ^^^^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+
+readnext id from list then 
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*                     ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                         ^ source.jbase-basic meta.block.jbase-basic 
+end else 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*   ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*       ^ source.jbase-basic meta.block.jbase-basic
+end
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+readseq var then 
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*           ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+print 'statement in block'
+* <- source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end else 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*   ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+end on error
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*   ^^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+print 'statement in block'
+* <- source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end
+* <- source.jbase-basic keyword.control.flow.jbase-basic 
+print 'statement out of block'
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+
+input var for time else
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*         ^ source.jbase-basic keyword.other.jbase-basic
+*             ^ source.jbase-basic variable.jbase-basic
+*                  ^ source.jbase-basic keyword.control.flow.jbase-basic
+*                      ^ source.jbase-basic meta.block.jbase-basic
+  print 'input block'
+* ^ source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+input var then 
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*         ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+print 'statement in block'
+* <- source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end else 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+*   ^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+print 'statement in block'
+* <- source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+
+
+write data on file.var, id on error
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*     ^^^^ source.jbase-basic variable.jbase-basic
+*          ^ source.jbase-basic keyword.other.jbase-basic
+*             ^^^^^^^^ source.jbase-basic variable.jbase-basic
+*                       ^^ source.jbase-basic variable.jbase-basic
+*                          ^^^^^^^^ source.jbase-basic keyword.control.flow.jbase-basic
+*                                  ^ source.jbase-basic meta.block.jbase-basic
+  print 'on error block'
+* ^ source.jbase-basic meta.block.jbase-basic support.function.builtin.basicStatement.jbase-basic
+end 
+* <- source.jbase-basic keyword.control.flow.jbase-basic
+

@@ -1,3 +1,0 @@
-{
-	"cmd": ["/home/qm/external_compile.sh","$file","$file_name"]
-}

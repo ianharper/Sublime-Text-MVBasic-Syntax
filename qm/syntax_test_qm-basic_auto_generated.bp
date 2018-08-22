@@ -3973,20 +3973,6 @@ repeat
 * ^ source.qm-basic 
 *        ^ source.qm-basic - keyword.control.flow
 
-until
-* <- source.qm-basic keyword.control.flow
-   until 
-*  ^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*       ^ source.qm-basic - keyword.control.flow
-
-while
-* <- source.qm-basic keyword.control.flow
-   while 
-*  ^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*       ^ source.qm-basic - keyword.control.flow
-
 next
 * <- source.qm-basic keyword.control.flow
    next 
@@ -4014,55 +4000,6 @@ end case
 *  ^^^^^^^^ source.qm-basic keyword.control.flow
 * ^ source.qm-basic 
 *          ^ source.qm-basic - keyword.control.flow
-
-case
-* <- source.qm-basic keyword.control.flow
-   case 
-*  ^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*      ^ source.qm-basic - keyword.control.flow
-
-end then
-* <- source.qm-basic keyword.control.flow
-   end then 
-*  ^^^^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.control.flow
-
-then
-* <- source.qm-basic keyword.control.flow
-   then 
-*  ^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*      ^ source.qm-basic - keyword.control.flow
-
-else
-* <- source.qm-basic keyword.control.flow
-   else 
-*  ^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*      ^ source.qm-basic - keyword.control.flow
-
-end else
-* <- source.qm-basic keyword.control.flow
-   end else 
-*  ^^^^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.control.flow
-
-end
-* <- source.qm-basic keyword.control.flow
-   end 
-*  ^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.control.flow
-
-locked
-* <- source.qm-basic keyword.control.flow
-   locked 
-*  ^^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*        ^ source.qm-basic - keyword.control.flow
 
 * Other Keywords:
  before 
