@@ -955,13 +955,6 @@ matreadu
 * ^ source.d3-basic 
 *          ^ source.d3-basic - support.function.builtin.basicStatement
 
-matreadt
-* <- source.d3-basic support.function.builtin.basicStatement
-   matreadt 
-*  ^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
-* ^ source.d3-basic 
-*          ^ source.d3-basic - support.function.builtin.basicStatement
-
 matwrite
 * <- source.d3-basic support.function.builtin.basicStatement
    matwrite 
@@ -1111,7 +1104,7 @@ readv
 
 readvu
 * <- source.d3-basic support.function.builtin.basicStatement
-   readvu 
+   readvu
 *  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
 *        ^ source.d3-basic - support.function.builtin.basicStatement
@@ -1222,9 +1215,9 @@ stop
 *      ^ source.d3-basic - support.function.builtin.basicStatement
 
 subroutine
-* <- source.d3-basic support.function.builtin.basicStatement
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
    subroutine 
-*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
+*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 * ^ source.d3-basic 
 *            ^ source.d3-basic - support.function.builtin.basicStatement
 
@@ -1364,10 +1357,19 @@ for
 
 loop
 * <- source.d3-basic keyword.control.flow
+
+until
+* <- source.d3-basic keyword.control.flow
+
    loop 
 *  ^^^^ source.d3-basic keyword.control.flow
 * ^ source.d3-basic 
 *      ^ source.d3-basic - keyword.control.flow
+
+   until 
+*  ^^^^^ source.d3-basic keyword.control.flow
+* ^ source.d3-basic 
+*       ^ source.d3-basic - keyword.control.flow
 
 repeat
 * <- source.d3-basic keyword.control.flow
@@ -1375,20 +1377,6 @@ repeat
 *  ^^^^^^ source.d3-basic keyword.control.flow
 * ^ source.d3-basic 
 *        ^ source.d3-basic - keyword.control.flow
-
-until
-* <- source.d3-basic keyword.control.flow
-   until 
-*  ^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*       ^ source.d3-basic - keyword.control.flow
-
-while
-* <- source.d3-basic keyword.control.flow
-   while 
-*  ^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*       ^ source.d3-basic - keyword.control.flow
 
 next
 * <- source.d3-basic keyword.control.flow
@@ -1411,13 +1399,6 @@ begin case
 * ^ source.d3-basic 
 *            ^ source.d3-basic - keyword.control.flow
 
-end case
-* <- source.d3-basic keyword.control.flow
-   end case 
-*  ^^^^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.control.flow
-
 case
 * <- source.d3-basic keyword.control.flow
    case 
@@ -1425,47 +1406,13 @@ case
 * ^ source.d3-basic 
 *      ^ source.d3-basic - keyword.control.flow
 
-end then
+end case
 * <- source.d3-basic keyword.control.flow
-   end then 
+   end case
 *  ^^^^^^^^ source.d3-basic keyword.control.flow
 * ^ source.d3-basic 
 *          ^ source.d3-basic - keyword.control.flow
 
-then
-* <- source.d3-basic keyword.control.flow
-   then 
-*  ^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*      ^ source.d3-basic - keyword.control.flow
-
-else
-* <- source.d3-basic keyword.control.flow
-   else 
-*  ^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*      ^ source.d3-basic - keyword.control.flow
-
-end else
-* <- source.d3-basic keyword.control.flow
-   end else 
-*  ^^^^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.control.flow
-
-end
-* <- source.d3-basic keyword.control.flow
-   end 
-*  ^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.control.flow
-
-locked
-* <- source.d3-basic keyword.control.flow
-   locked 
-*  ^^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*        ^ source.d3-basic - keyword.control.flow
 
 * Other Keywords:
  before 
