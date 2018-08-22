@@ -1,0 +1,7 @@
+<snippet>
+	<content>
+IF UNASSIGNED($1) THEN OPEN '$2' TO $1 ELSE STOP 201, '$2'
+</content>
+	<tabTrigger>OPEN</tabTrigger>
+	<scope>source.jbase-basic</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+if $1 then
+	$2
+end
+]]></content>
+	<tabTrigger>ift</tabTrigger>
+	<scope>source.jbase-basic</scope>
+</snippet>

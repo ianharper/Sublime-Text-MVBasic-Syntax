@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+for $1 = ${2:1} to $3
+	$4
+next $1$0
+]]></content>
+	<tabTrigger>for</tabTrigger>
+	<scope>source.jbase-basic</scope>
+</snippet>

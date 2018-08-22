@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+if unassigned($1) then open '$2' to $1 else stop 201, '$2'
+]]></content>
+	<tabTrigger>open</tabTrigger>
+	<scope>source.jbase-basic</scope>
+</snippet>

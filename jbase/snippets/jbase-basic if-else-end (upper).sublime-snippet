@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+IF $1 ELSE
+	$2
+END$3
+</content>
+	<tabTrigger>IFE</tabTrigger>
+	<scope>source.jbase-basic</scope>
+</snippet>
