@@ -11,8 +11,9 @@ class mvBasicReindentCommand(sublime_plugin.TextCommand):
 		
 	def setIndentLevel(self, scopes, base_indent_level, indent_comments):
 		scopes = scopes.split(' ')
-		if not(indent_comments) and scopes[1][:30] == 'punctuation.definition.comment': return 0
-		if scopes[1][:20] == 'entity.name.function': return 0
+		for scope in scopes:
+			if not(indent_comments) and scope[:30] == 'punctuation.definition.comment': return 0
+			if scope[:20] == 'entity.name.function': return 0
 		return self.getBlockCount(scopes) + int(base_indent_level)
 
 
