@@ -2,28 +2,28 @@
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
 name: D3 Basic
-file_extensions:
-  - bp
+file_extensions: [bp,d3]
 scope: source.d3-basic
 
 variables:
-  linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
+  # D3 Specific - don't forget if[r]?
+  linelabels:       '(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)(?!=)'
+  linelabelref:     '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
+  basicStatements:  '(key|locate)(?=\()|(write([x]?|([v]?[u]?))|readt[x]?|rewind|weof|writet|readnext|(mat)?read[v]?[u]?|(begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?|chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|matwrite[u]?|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s)'
+  basicFunctions:   'abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd'
+  atVars:           '@am|@vm|@sm|@svm|@user|@pib|@account'
+  otherKeywords:    'before|do|from|for|in|to|on|rtnlist|capturing|returning|setting|stacking|passlist'
+  blockStatements:  'then|else|locked|onerr'
+
+  # General 
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
-  stmtstart: '(?<=^|;|then\s|else\s|locked\s|loop\s|onerr\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ONERR\s|DO\s)\s*'
+  stmtstart:     '\b(?<!\.\$)'
+  stmtend:       '(?!\.\$)\b'
 
 
 contexts:
   main:
     - include: comment_line
-
-    # line labels
-    - match: ^(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)\s*(\*.*$)?
-      captures:
-        '2': entity.name.function.linelabel.d3-basic
-        '3': entity.name.function.linelabel.d3-basic
-        '4': comment.line.d3-basic
-
-    - include: literals
 
     # subroutine statement
     - match: (?i)^\s*(subroutine)\s({{basicvariable}})?
@@ -37,53 +37,38 @@ contexts:
         '1': support.function.builtin.basicStatement.d3-basic 
         '3': variable.function.d3-basic
 
+    - include: blocks
     - include: language_constants
 
-    # if statement
-    - match: (?i){{stmtstart}}(if[r]?)(?=\s)
-      scope: keyword.control.flow.d3-basic
-
-    # statements with blocks
-    - match: (?i){{stmtstart}}(write([x]?|([v]?[u]?))|readt[x]?|rewind|weof|writet|readnext|(mat)?read[v]?[u]?|(begin|commit)\s(work|transaction)|get[x]?|input|locate|lock|open|procread|rollback\swork|root|send[x]?)(?=\s)
-      captures:
-        '1': support.function.builtin.basicStatement.d3-basic
-
-    # functions with then/else blocks
-    - match: (?i){{stmtstart}}(key|locate)(?=\()
-      captures:
-        '1': support.function.builtin.basicFunction.then-else.d3-basic
-
-    - include: blocks
-
     # For loop
-    - match: (?i){{stmtstart}}(for)(?!\.)\b
-      captures:
-        '1': keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(for)(?=\s)
+      scope: keyword.control.flow.d3-basic
       push:
         - include: for_block
 
     # loop loop
-    - match: (?i){{stmtstart}}(loop)(?=\s)
-      captures:
-        '1': keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(loop){{stmtend}}
+      scope: keyword.control.flow.d3-basic
       push: 
         - meta_content_scope: meta.block.loop.d3-basic
         - include: loop_block
 
     # Begin Case
-    - match: (?i){{stmtstart}}(begin\scase)(?!\.)\b
-      captures:
-        '1': keyword.control.flow.d3-basic
+    - match: (?i){{stmtstart}}(begin\scase){{stmtend}}
+      scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.begin-case.d3-basic
         - include: begin_case_block
 
     - include: functions
 
+    # if statements
+    - match: (?i){{stmtstart}}(if[r]?)(?=\s)
+      scope: keyword.control.flow.d3-basic
+
     # Basic statements
-    - match: (?i){{stmtstart}}(chain|[\$]?include|options|abort|aux|begin\swork|break|casing|cfunction|chain|clear|cleardata|clearfile|clearselect|close|com|common|compare|continue|convert|crt|data|debug|del|delete|dim|dimension|echo|enter|equ|equate|error|execute|exit|file|filelock|fileunlock|footing|heading|in|inputclear|inputctrl|inputerr|inputnull|inputparity|inputtrap\soff|ins|let|lock|mat|matbuild|matparse|matwrite[u]?|null|out|page|precision|print(\son)?|printchar|printer|procwrite|program|prompt|release|rem|remove|replace|return|rqm|select|sleep|spoolq|stop|ta|tcl|tclread|transaction(\s(abort|cache|commit|flush|rollback|start))?|unlock)(?=\s|;)
-      captures:
-        '1': support.function.builtin.basicStatement.d3-basic
+    - match: (?i){{stmtstart}}({{basicStatements}})
+      scope: support.function.builtin.basicStatement.d3-basic
 
     - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
       captures:
@@ -97,12 +82,22 @@ contexts:
         '1': support.function.builtin.basicStatement.d3-basic
         '2': meta.function-call.d3-basic variable.function.d3-basic
 
-    - include: operators
+    # line labels
+    - match: ^{{linelabels}}\s*(\*.*)?
+      captures:
+        '2': entity.name.function.linelabel.d3-basic
+        '3': entity.name.function.linelabel.d3-basic
+        '4': comment.line.d3-basic
+
     - include: other_keywords
+    - include: operators
     - include: basicvariables
+    - include: literals
 
     - match: ;
       scope: punctuation.terminator.d3-basic
+
+
 
   operators:
     - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
@@ -142,18 +137,18 @@ contexts:
       scope: constant.numeric.integer.d3-basic
 
   functions:
-    - match: (?i)(?<!\.)(abs|access|alpha|ascii|assigned|change|char|col1|col2|convert|cos|count|date|dcount|delete|dquote|dtx|ebcdic|ereplace|error|exchange|exp|extract|field|fmt|fold|iconv|index|inmat|insert|int|key|len|ln|locate|maximum|minimum|mod|not|num|occurs|oconv|oconvs|pwr|rem|replace|rnd|scan|sentence|seq|sin|sort|soundex|space|sqrt|squote|status|str|sum|summation|swap|system|tan|time|timedate|trans|trim|trimb|trimf|xtd)(?=\()
+    - match: (?i)(?<!\.)({{basicFunctions}})(?=\()
       scope: support.function.builtin.basicFunction.d3-basic
 
     - match: \B(@)(?=\()
       scope: support.function.builtin.basicFunction.d3-basic
         
   language_constants:
-    - match: (?i)\B(@am|@vm|@sm|@svm|@user|@pib|@account)\b
+    - match: (?i)\B({{atVars}})\b
       scope: constant.character.d3-basic
 
   other_keywords:
-    - match: (?i)(?<=\s)(before|do|from|for|in|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+    - match: (?i)(?<=\S)\s+{{stmtstart}}({{otherKeywords}})(?=\s)
       scope: keyword.other.d3-basic
 
   comment_line:
@@ -170,20 +165,19 @@ contexts:
     - include: functions
     - include: literals
     - include: operators
-    - include: other_keywords
+    # - include: other_keywords
     - include: basicvariables
 
   blocks:
-    - match: (?i)(?<=\s)(then|else|locked|onerr)(?=\s*($|;))
+    - match: (?i)(?<=\s)({{blockStatements}})(?=\s*($|;))
       scope: keyword.control.flow.d3-basic
       push:
         - meta_content_scope: meta.block.d3-basic
         - match: (?i){{stmtstart}}(end)(?=\s|;|$)
-          captures:
-            '1': keyword.control.flow.d3-basic
+          scope: keyword.control.flow.d3-basic
           pop: true
         - include: main
-    - match: (?i)(?<=^|;|\s)(then|else|locked|onerr)(?=\s) # single line
+    - match: (?i)(?<=^|;|\s)({{blockStatements}})(?=\s) # single line
       captures:
         '1': keyword.control.flow.d3-basic
     - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
@@ -242,7 +236,7 @@ contexts:
           - include: main
         - include: end_case_block
         - include: expression
-    - match: (?i)(?<=^|\s)end\scase(?!\.)\b
+    - match: (?i)(?<=^|\s)end\scase{{stmtend}}
       scope: keyword.control.flow.d3-basic
       pop: true
     - include: main
@@ -252,6 +246,12 @@ contexts:
       pop: true
     - match: (?i)(?=^\s*case\b)
       pop: true
+
+  end_block:
+    - match: (?i){{stmtstart}}(end)(?=\s|$)
+      scope: keyword.control.flow.d3-basic
+      pop: true
+    - include: main
 
   ongoto:
     - match: \b{{linelabelref}}\b

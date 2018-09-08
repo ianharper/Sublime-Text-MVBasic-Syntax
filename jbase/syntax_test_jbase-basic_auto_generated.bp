@@ -1255,13 +1255,6 @@ STATUS()
 * ^ source.jbase-basic 
 *          ^ source.jbase-basic - support.function.builtin.basicFunction
 
-STOP()
-* <- source.jbase-basic support.function.builtin.basicFunction
-   STOP() 
-*  ^^^^ source.jbase-basic support.function.builtin.basicFunction
-* ^ source.jbase-basic 
-*        ^ source.jbase-basic - support.function.builtin.basicFunction
-
 STR()
 * <- source.jbase-basic support.function.builtin.basicFunction
    STR() 
@@ -1515,19 +1508,26 @@ BREAK
 * ^ source.jbase-basic 
 *       ^ source.jbase-basic - support.function.builtin.basicStatement
 
-BREAK ON 
+BREAK ON
 * <- source.jbase-basic support.function.builtin.basicStatement
-   BREAK ON  
+   BREAK ON 
 *  ^^^^^^^^ source.jbase-basic support.function.builtin.basicStatement
 * ^ source.jbase-basic 
 *          ^ source.jbase-basic - support.function.builtin.basicStatement
 
-BREAK OFF 
+BREAK OFF
 * <- source.jbase-basic support.function.builtin.basicStatement
-   BREAK OFF  
+   BREAK OFF 
 *  ^^^^^^^^^ source.jbase-basic support.function.builtin.basicStatement
 * ^ source.jbase-basic 
 *           ^ source.jbase-basic - support.function.builtin.basicStatement
+
+CALLJ
+* <- source.jbase-basic support.function.builtin.basicStatement
+   CALLJ 
+*  ^^^^^ source.jbase-basic support.function.builtin.basicStatement
+* ^ source.jbase-basic 
+*       ^ source.jbase-basic - support.function.builtin.basicStatement
 
 CHAIN
 * <- source.jbase-basic support.function.builtin.basicStatement
@@ -1753,26 +1753,12 @@ FORMLIST
 * ^ source.jbase-basic 
 *          ^ source.jbase-basic - support.function.builtin.basicStatement
 
-FUNCTION 
+FUNCTION
 * <- source.jbase-basic support.function.builtin.basicStatement
-   FUNCTION  
+   FUNCTION 
 *  ^^^^^^^^ source.jbase-basic support.function.builtin.basicStatement
 * ^ source.jbase-basic 
 *          ^ source.jbase-basic - support.function.builtin.basicStatement
-
-GOSUB KJHJKH
-* <- source.jbase-basic support.function.builtin.basicStatement
-   GOSUB KJHK
-*  ^^^^^ source.jbase-basic support.function.builtin.basicStatement
-* ^ source.jbase-basic 
-*       ^ source.jbase-basic - support.function.builtin.basicStatement
-
-GOTO SDF
-* <- source.jbase-basic support.function.builtin.basicStatement
-   GOTO SDF
-*  ^^^^ source.jbase-basic support.function.builtin.basicStatement
-* ^ source.jbase-basic 
-*      ^ source.jbase-basic - support.function.builtin.basicStatement
 
 GROUPSTORE
 * <- source.jbase-basic support.function.builtin.basicStatement
@@ -2055,224 +2041,259 @@ WRITLIST
 *          ^ source.jbase-basic - support.function.builtin.basicStatement
 
 * Flow Control:
-for
-* <- source.jbase-basic keyword.control.flow
-   for 
-*  ^^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.control.flow
-
-loop
-* <- source.jbase-basic keyword.control.flow
-   loop 
-*  ^^^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*      ^ source.jbase-basic - keyword.control.flow
-
-repeat
-* <- source.jbase-basic keyword.control.flow
-   repeat 
-*  ^^^^^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*        ^ source.jbase-basic - keyword.control.flow
-
-next
-* <- source.jbase-basic keyword.control.flow
-   next 
-*  ^^^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*      ^ source.jbase-basic - keyword.control.flow
-
-if
-* <- source.jbase-basic keyword.control.flow
-   if 
-*  ^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*    ^ source.jbase-basic - keyword.control.flow
-
-begin case
-* <- source.jbase-basic keyword.control.flow
-   begin case 
-*  ^^^^^^^^^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*            ^ source.jbase-basic - keyword.control.flow
-
-end case
-* <- source.jbase-basic keyword.control.flow
-   end case 
-*  ^^^^^^^^ source.jbase-basic keyword.control.flow
-* ^ source.jbase-basic 
-*          ^ source.jbase-basic - keyword.control.flow
-
 * Other Keywords:
- before 
-*^ source.jbase-basic keyword.other
-    before  
-*   ^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
+word before 
+*    ^ source.jbase-basic keyword.other
+   word before  
+*       ^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*             ^ source.jbase-basic - keyword.other
+
+word do 
+*    ^ source.jbase-basic keyword.other
+   word do  
+*       ^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
 *         ^ source.jbase-basic - keyword.other
 
- do 
-*^ source.jbase-basic keyword.other
-    do  
-*   ^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.other
-
- from 
-*^ source.jbase-basic keyword.other
-    from  
-*   ^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*       ^ source.jbase-basic - keyword.other
-
- to 
-*^ source.jbase-basic keyword.other
-    to  
-*   ^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.other
-
- on 
-*^ source.jbase-basic keyword.other
-    on  
-*   ^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.other
-
- rtnlist 
-*^ source.jbase-basic keyword.other
-    rtnlist  
-*   ^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - keyword.other
-
- capturing 
-*^ source.jbase-basic keyword.other
-    capturing  
-*   ^^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - keyword.other
-
- returning 
-*^ source.jbase-basic keyword.other
-    returning  
-*   ^^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - keyword.other
-
- setting 
-*^ source.jbase-basic keyword.other
-    setting  
-*   ^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - keyword.other
-
- stacking 
-*^ source.jbase-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
+word from 
+*    ^ source.jbase-basic keyword.other
+   word from  
+*       ^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
 *           ^ source.jbase-basic - keyword.other
 
- passlist 
-*^ source.jbase-basic keyword.other
-    passlist  
-*   ^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - keyword.other
+word to 
+*    ^ source.jbase-basic keyword.other
+   word to  
+*       ^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*         ^ source.jbase-basic - keyword.other
 
- stacking 
-*^ source.jbase-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - keyword.other
+word on 
+*    ^ source.jbase-basic keyword.other
+   word on  
+*       ^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*         ^ source.jbase-basic - keyword.other
+
+word rtnlist 
+*    ^ source.jbase-basic keyword.other
+   word rtnlist  
+*       ^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*              ^ source.jbase-basic - keyword.other
+
+word capturing 
+*    ^ source.jbase-basic keyword.other
+   word capturing  
+*       ^^^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*                ^ source.jbase-basic - keyword.other
+
+word returning 
+*    ^ source.jbase-basic keyword.other
+   word returning  
+*       ^^^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*                ^ source.jbase-basic - keyword.other
+
+word setting 
+*    ^ source.jbase-basic keyword.other
+   word setting  
+*       ^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*              ^ source.jbase-basic - keyword.other
+
+word stacking 
+*    ^ source.jbase-basic keyword.other
+   word stacking  
+*       ^^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*               ^ source.jbase-basic - keyword.other
+
+word passlist 
+*    ^ source.jbase-basic keyword.other
+   word passlist  
+*       ^^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*               ^ source.jbase-basic - keyword.other
+
+word stacking 
+*    ^ source.jbase-basic keyword.other
+   word stacking  
+*       ^^^^^^^^ source.jbase-basic keyword.other
+*      ^ source.jbase-basic 
+*               ^ source.jbase-basic - keyword.other
 
 * Operators:
- before 
-*^ source.jbase-basic keyword.other
-    before  
-*   ^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*         ^ source.jbase-basic - keyword.other
+var = 1 ge 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 ge  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- do 
-*^ source.jbase-basic keyword.other
-    do  
-*   ^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.other
+var = 1 gt 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 gt  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- from 
-*^ source.jbase-basic keyword.other
-    from  
-*   ^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*       ^ source.jbase-basic - keyword.other
+var = 1 le 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 le  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- to 
-*^ source.jbase-basic keyword.other
-    to  
-*   ^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.other
+var = 1 lt 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 lt  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- on 
-*^ source.jbase-basic keyword.other
-    on  
-*   ^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*     ^ source.jbase-basic - keyword.other
+var = 1 eq 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 eq  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- rtnlist 
-*^ source.jbase-basic keyword.other
-    rtnlist  
-*   ^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - keyword.other
+var = 1 ne 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 ne  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- capturing 
-*^ source.jbase-basic keyword.other
-    capturing  
-*   ^^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - keyword.other
+var = 1 and 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 and  
+*          ^^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*             ^ source.jbase-basic - keyword.operator
 
- returning 
-*^ source.jbase-basic keyword.other
-    returning  
-*   ^^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - keyword.other
+var = 1 or 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 or  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
- setting 
-*^ source.jbase-basic keyword.other
-    setting  
-*   ^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - keyword.other
+var = 1 + 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 +  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
 
- stacking 
-*^ source.jbase-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - keyword.other
+var = 1 - 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 -  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
 
- passlist 
-*^ source.jbase-basic keyword.other
-    passlist  
-*   ^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - keyword.other
+var = 1 * 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 *  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
 
- stacking 
-*^ source.jbase-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.jbase-basic keyword.other
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - keyword.other
+var = 1 / 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 /  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
+
+var = 1 : 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 :  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
+
+var = 1 = 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 =  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
+
+var = 1 # 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 #  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
+
+var = 1 < 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 <  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
+
+var = 1 > 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 >  
+*          ^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*           ^ source.jbase-basic - keyword.operator
+
+var = 1 >= 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 >=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
+
+var = 1 <= 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 <=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
+
+var = 1 := 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 :=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
+
+var = 1 += 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 +=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
+
+var = 1 -= 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 -=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
+
+var = 1 *= 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 *=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
+
+var = 1 /= 
+*       ^ source.jbase-basic keyword.operator
+   var = 1 /=  
+*          ^^ source.jbase-basic keyword.operator
+*         ^ source.jbase-basic 
+*            ^ source.jbase-basic - keyword.operator
 
 * Labels:
 10
@@ -6098,34 +6119,6 @@ STATUS.test
 *  ^ source.jbase-basic 
 *              ^ source.jbase-basic - variable
 
- STOP.test 
-*^ source.jbase-basic variable
-    STOP.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-STOP.test 
-* <- source.jbase-basic variable
-   STOP.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.STOP 
-*^ source.jbase-basic variable
-    test.STOP  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.STOP
-*^ source.jbase-basic variable
-    test.STOP 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
  STR.test 
 *^ source.jbase-basic variable
     STR.test  
@@ -7134,61 +7127,61 @@ BREAK.test
 *  ^ source.jbase-basic 
 *             ^ source.jbase-basic - variable
 
- BREAK.ON 
+ BREAK.ON.test 
 *^ source.jbase-basic variable
-    BREAK.ON  
-*   ^^^^^^^^ source.jbase-basic variable
+    BREAK.ON.test  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                     ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
-BREAK.ON 
+BREAK.ON.test 
 * <- source.jbase-basic variable
-   BREAK.ON  
-*  ^^^^^^^^ source.jbase-basic variable
+   BREAK.ON.test  
+*  ^^^^^^^^^^^^^ source.jbase-basic variable
 * ^ source.jbase-basic 
-*                    ^ source.jbase-basic - variable
+*               ^ source.jbase-basic - variable
 
  test.BREAK.ON 
 *^ source.jbase-basic variable
     test.BREAK.ON  
 *   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                     ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
  test.BREAK.ON
 *^ source.jbase-basic variable
     test.BREAK.ON 
 *   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                     ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
- CALL..test 
+ BREAK.OFF.test 
 *^ source.jbase-basic variable
-    CALL..test  
-*   ^^^^^^^^^^ source.jbase-basic variable
+    BREAK.OFF.test  
+*   ^^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
+*                 ^ source.jbase-basic - variable
 
-CALL..test 
+BREAK.OFF.test 
 * <- source.jbase-basic variable
-   CALL..test  
-*  ^^^^^^^^^^ source.jbase-basic variable
+   BREAK.OFF.test  
+*  ^^^^^^^^^^^^^^ source.jbase-basic variable
 * ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
- test.CALL. 
+ test.BREAK.OFF 
 *^ source.jbase-basic variable
-    test.CALL.  
-*   ^^^^^^^^^^ source.jbase-basic variable
+    test.BREAK.OFF  
+*   ^^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
+*                 ^ source.jbase-basic - variable
 
- test.CALL.
+ test.BREAK.OFF
 *^ source.jbase-basic variable
-    test.CALL. 
-*   ^^^^^^^^^^ source.jbase-basic variable
+    test.BREAK.OFF 
+*   ^^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
+*                 ^ source.jbase-basic - variable
 
  CALLJ.test 
 *^ source.jbase-basic variable
@@ -8114,89 +8107,33 @@ FORMLIST..test
 *  ^ source.jbase-basic 
 *                 ^ source.jbase-basic - variable
 
- FUNCTION..test 
+ FUNCTION.test 
 *^ source.jbase-basic variable
-    FUNCTION..test  
-*   ^^^^^^^^^^^^^^ source.jbase-basic variable
+    FUNCTION.test  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                 ^ source.jbase-basic - variable
-
-FUNCTION..test 
-* <- source.jbase-basic variable
-   FUNCTION..test  
-*  ^^^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
 *                ^ source.jbase-basic - variable
 
- test.FUNCTION. 
-*^ source.jbase-basic variable
-    test.FUNCTION.  
-*   ^^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                 ^ source.jbase-basic - variable
-
- test.FUNCTION.
-*^ source.jbase-basic variable
-    test.FUNCTION. 
-*   ^^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                 ^ source.jbase-basic - variable
-
- GOSUB..test 
-*^ source.jbase-basic variable
-    GOSUB..test  
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
-GOSUB..test 
+FUNCTION.test 
 * <- source.jbase-basic variable
-   GOSUB..test  
-*  ^^^^^^^^^^^ source.jbase-basic variable
+   FUNCTION.test  
+*  ^^^^^^^^^^^^^ source.jbase-basic variable
 * ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
+*               ^ source.jbase-basic - variable
 
- test.GOSUB. 
+ test.FUNCTION 
 *^ source.jbase-basic variable
-    test.GOSUB.  
-*   ^^^^^^^^^^^ source.jbase-basic variable
+    test.FUNCTION  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
- test.GOSUB.
+ test.FUNCTION
 *^ source.jbase-basic variable
-    test.GOSUB. 
-*   ^^^^^^^^^^^ source.jbase-basic variable
+    test.FUNCTION 
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
- GOTO.test 
-*^ source.jbase-basic variable
-    GOTO.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-GOTO.test 
-* <- source.jbase-basic variable
-   GOTO.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.GOTO 
-*^ source.jbase-basic variable
-    test.GOTO  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.GOTO
-*^ source.jbase-basic variable
-    test.GOTO 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
  GROUPSTORE.test 
 *^ source.jbase-basic variable
@@ -8254,33 +8191,61 @@ HEADING.test
 *  ^ source.jbase-basic 
 *               ^ source.jbase-basic - variable
 
- HEADINGE.AND.HEADINGN.test 
+ HEADINGE.test 
 *^ source.jbase-basic variable
-    HEADINGE.AND.HEADINGN.test  
-*   ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+    HEADINGE.test  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                             ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
-HEADINGE.AND.HEADINGN.test 
+HEADINGE.test 
 * <- source.jbase-basic variable
-   HEADINGE.AND.HEADINGN.test  
-*  ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+   HEADINGE.test  
+*  ^^^^^^^^^^^^^ source.jbase-basic variable
 * ^ source.jbase-basic 
-*                            ^ source.jbase-basic - variable
+*               ^ source.jbase-basic - variable
 
- test.HEADINGE.AND.HEADINGN 
+ test.HEADINGE 
 *^ source.jbase-basic variable
-    test.HEADINGE.AND.HEADINGN  
-*   ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+    test.HEADINGE  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                             ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
 
- test.HEADINGE.AND.HEADINGN
+ test.HEADINGE
 *^ source.jbase-basic variable
-    test.HEADINGE.AND.HEADINGN 
-*   ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+    test.HEADINGE 
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                             ^ source.jbase-basic - variable
+*                ^ source.jbase-basic - variable
+
+ HEADINGN.test 
+*^ source.jbase-basic variable
+    HEADINGN.test  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
+*  ^ source.jbase-basic 
+*                ^ source.jbase-basic - variable
+
+HEADINGN.test 
+* <- source.jbase-basic variable
+   HEADINGN.test  
+*  ^^^^^^^^^^^^^ source.jbase-basic variable
+* ^ source.jbase-basic 
+*               ^ source.jbase-basic - variable
+
+ test.HEADINGN 
+*^ source.jbase-basic variable
+    test.HEADINGN  
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
+*  ^ source.jbase-basic 
+*                ^ source.jbase-basic - variable
+
+ test.HEADINGN
+*^ source.jbase-basic variable
+    test.HEADINGN 
+*   ^^^^^^^^^^^^^ source.jbase-basic variable
+*  ^ source.jbase-basic 
+*                ^ source.jbase-basic - variable
 
  HUSH.test 
 *^ source.jbase-basic variable
@@ -8478,33 +8443,33 @@ JQLFETCH.test
 *  ^ source.jbase-basic 
 *                ^ source.jbase-basic - variable
 
- JQLGEPROPERTY.test 
+ JQLGETPROPERTY.test 
 *^ source.jbase-basic variable
-    JQLGEPROPERTY.test  
-*   ^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+    JQLGETPROPERTY.test  
+*   ^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                     ^ source.jbase-basic - variable
+*                      ^ source.jbase-basic - variable
 
-JQLGEPROPERTY.test 
+JQLGETPROPERTY.test 
 * <- source.jbase-basic variable
-   JQLGEPROPERTY.test  
-*  ^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+   JQLGETPROPERTY.test  
+*  ^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
 * ^ source.jbase-basic 
-*                    ^ source.jbase-basic - variable
-
- test.JQLGEPROPERTY 
-*^ source.jbase-basic variable
-    test.JQLGEPROPERTY  
-*   ^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
 *                     ^ source.jbase-basic - variable
 
- test.JQLGEPROPERTY
+ test.JQLGETPROPERTY 
 *^ source.jbase-basic variable
-    test.JQLGEPROPERTY 
-*   ^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+    test.JQLGETPROPERTY  
+*   ^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
-*                     ^ source.jbase-basic - variable
+*                      ^ source.jbase-basic - variable
+
+ test.JQLGETPROPERTY
+*^ source.jbase-basic variable
+    test.JQLGETPROPERTY 
+*   ^^^^^^^^^^^^^^^^^^^ source.jbase-basic variable
+*  ^ source.jbase-basic 
+*                      ^ source.jbase-basic - variable
 
  JQLPUTPROPERTY..test 
 *^ source.jbase-basic variable
@@ -8673,62 +8638,6 @@ NULL.test
 *   ^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
 *            ^ source.jbase-basic - variable
-
- ONGOSUB.test 
-*^ source.jbase-basic variable
-    ONGOSUB.test  
-*   ^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
-ONGOSUB.test 
-* <- source.jbase-basic variable
-   ONGOSUB.test  
-*  ^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
- test.ONGOSUB 
-*^ source.jbase-basic variable
-    test.ONGOSUB  
-*   ^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
- test.ONGOSUB
-*^ source.jbase-basic variable
-    test.ONGOSUB 
-*   ^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
- ONGOTO..test 
-*^ source.jbase-basic variable
-    ONGOTO..test  
-*   ^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
-ONGOTO..test 
-* <- source.jbase-basic variable
-   ONGOTO..test  
-*  ^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
- test.ONGOTO. 
-*^ source.jbase-basic variable
-    test.ONGOTO.  
-*   ^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
- test.ONGOTO.
-*^ source.jbase-basic variable
-    test.ONGOTO. 
-*   ^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
 
  OUT..test 
 *^ source.jbase-basic variable
@@ -9345,454 +9254,6 @@ WRITLIST.test
 *   ^^^^^^^^^^^^^ source.jbase-basic variable
 *  ^ source.jbase-basic 
 *                ^ source.jbase-basic - variable
-
- for.test 
-*^ source.jbase-basic variable
-    for.test  
-*   ^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
-for.test 
-* <- source.jbase-basic variable
-   for.test  
-*  ^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*          ^ source.jbase-basic - variable
-
- test.for 
-*^ source.jbase-basic variable
-    test.for  
-*   ^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.for
-*^ source.jbase-basic variable
-    test.for 
-*   ^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- loop.test 
-*^ source.jbase-basic variable
-    loop.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-loop.test 
-* <- source.jbase-basic variable
-   loop.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.loop 
-*^ source.jbase-basic variable
-    test.loop  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.loop
-*^ source.jbase-basic variable
-    test.loop 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- repeat.test 
-*^ source.jbase-basic variable
-    repeat.test  
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
-repeat.test 
-* <- source.jbase-basic variable
-   repeat.test  
-*  ^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
- test.repeat 
-*^ source.jbase-basic variable
-    test.repeat  
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
- test.repeat
-*^ source.jbase-basic variable
-    test.repeat 
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
- until.test 
-*^ source.jbase-basic variable
-    until.test  
-*   ^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
-until.test 
-* <- source.jbase-basic variable
-   until.test  
-*  ^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.until 
-*^ source.jbase-basic variable
-    test.until  
-*   ^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
- test.until
-*^ source.jbase-basic variable
-    test.until 
-*   ^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
- while.test 
-*^ source.jbase-basic variable
-    while.test  
-*   ^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
-while.test 
-* <- source.jbase-basic variable
-   while.test  
-*  ^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.while 
-*^ source.jbase-basic variable
-    test.while  
-*   ^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
- test.while
-*^ source.jbase-basic variable
-    test.while 
-*   ^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
- next.test 
-*^ source.jbase-basic variable
-    next.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-next.test 
-* <- source.jbase-basic variable
-   next.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.next 
-*^ source.jbase-basic variable
-    test.next  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.next
-*^ source.jbase-basic variable
-    test.next 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- if.test 
-*^ source.jbase-basic variable
-    if.test  
-*   ^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - variable
-
-if.test 
-* <- source.jbase-basic variable
-   if.test  
-*  ^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*         ^ source.jbase-basic - variable
-
- test.if 
-*^ source.jbase-basic variable
-    test.if  
-*   ^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - variable
-
- test.if
-*^ source.jbase-basic variable
-    test.if 
-*   ^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*          ^ source.jbase-basic - variable
-
- begin.case.test 
-*^ source.jbase-basic variable
-    begin.case.test  
-*   ^^^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                  ^ source.jbase-basic - variable
-
-begin.case.test 
-* <- source.jbase-basic variable
-   begin.case.test  
-*  ^^^^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*                 ^ source.jbase-basic - variable
-
- test.begin.case 
-*^ source.jbase-basic variable
-    test.begin.case  
-*   ^^^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                  ^ source.jbase-basic - variable
-
- test.begin.case
-*^ source.jbase-basic variable
-    test.begin.case 
-*   ^^^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                  ^ source.jbase-basic - variable
-
- end.case.test 
-*^ source.jbase-basic variable
-    end.case.test  
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
-end.case.test 
-* <- source.jbase-basic variable
-   end.case.test  
-*  ^^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
- test.end.case 
-*^ source.jbase-basic variable
-    test.end.case  
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
- test.end.case
-*^ source.jbase-basic variable
-    test.end.case 
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
- case.test 
-*^ source.jbase-basic variable
-    case.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-case.test 
-* <- source.jbase-basic variable
-   case.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.case 
-*^ source.jbase-basic variable
-    test.case  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.case
-*^ source.jbase-basic variable
-    test.case 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- end.then.test 
-*^ source.jbase-basic variable
-    end.then.test  
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
-end.then.test 
-* <- source.jbase-basic variable
-   end.then.test  
-*  ^^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
- test.end.then 
-*^ source.jbase-basic variable
-    test.end.then  
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
- test.end.then
-*^ source.jbase-basic variable
-    test.end.then 
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
- then.test 
-*^ source.jbase-basic variable
-    then.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-then.test 
-* <- source.jbase-basic variable
-   then.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.then 
-*^ source.jbase-basic variable
-    test.then  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.then
-*^ source.jbase-basic variable
-    test.then 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- else.test 
-*^ source.jbase-basic variable
-    else.test  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
-else.test 
-* <- source.jbase-basic variable
-   else.test  
-*  ^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.else 
-*^ source.jbase-basic variable
-    test.else  
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- test.else
-*^ source.jbase-basic variable
-    test.else 
-*   ^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*            ^ source.jbase-basic - variable
-
- end.else.test 
-*^ source.jbase-basic variable
-    end.else.test  
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
-end.else.test 
-* <- source.jbase-basic variable
-   end.else.test  
-*  ^^^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*               ^ source.jbase-basic - variable
-
- test.end.else 
-*^ source.jbase-basic variable
-    test.end.else  
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
- test.end.else
-*^ source.jbase-basic variable
-    test.end.else 
-*   ^^^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*                ^ source.jbase-basic - variable
-
- end.test 
-*^ source.jbase-basic variable
-    end.test  
-*   ^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
-end.test 
-* <- source.jbase-basic variable
-   end.test  
-*  ^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*          ^ source.jbase-basic - variable
-
- test.end 
-*^ source.jbase-basic variable
-    test.end  
-*   ^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- test.end
-*^ source.jbase-basic variable
-    test.end 
-*   ^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*           ^ source.jbase-basic - variable
-
- locked.test 
-*^ source.jbase-basic variable
-    locked.test  
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
-locked.test 
-* <- source.jbase-basic variable
-   locked.test  
-*  ^^^^^^^^^^^ source.jbase-basic variable
-* ^ source.jbase-basic 
-*             ^ source.jbase-basic - variable
-
- test.locked 
-*^ source.jbase-basic variable
-    test.locked  
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
-
- test.locked
-*^ source.jbase-basic variable
-    test.locked 
-*   ^^^^^^^^^^^ source.jbase-basic variable
-*  ^ source.jbase-basic 
-*              ^ source.jbase-basic - variable
 
  before.test 
 *^ source.jbase-basic variable

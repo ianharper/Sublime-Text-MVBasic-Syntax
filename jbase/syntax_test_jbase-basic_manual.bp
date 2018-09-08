@@ -17,7 +17,15 @@ semantic.label: * comment
 *              ^ source.jbase-basic
 *               ^ source.jbase-basic comment.line.jbase-basic
 
+9999 STOP ;* Using these kinds of labels!!!
+* <- source.jbase-basic entity.name.function.linelabel.jbase-basic
+*    ^^^^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
 
+variable.could.be.a.label:=concatenated
+* <- source.jbase-basic variable.jbase-basic
+*                        ^^ source.jbase-basic keyword.operator.jbase-basic
+
+stop 
 * Variable with the same name as functions:
 
   tot.abs(1)
@@ -38,6 +46,10 @@ semantic.label: * comment
  \string=quoted double\
 * ^^^^^^^^^^^^^^^^^^^^ source.jbase-basic string.quoted.double.jbase-basic
 
+
+call sub.routine()
+
+call @subname 
 
 * Flow Control:
 
@@ -290,7 +302,7 @@ end
 * <- source.jbase-basic keyword.control.flow.jbase-basic
 
 
-write data on file.var, id on error
+write text on file.var, id on error
 * <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
 *     ^^^^ source.jbase-basic variable.jbase-basic
 *          ^ source.jbase-basic keyword.other.jbase-basic

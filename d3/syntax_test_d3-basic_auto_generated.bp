@@ -1104,7 +1104,7 @@ readv
 
 readvu
 * <- source.d3-basic support.function.builtin.basicStatement
-   readvu
+   readvu 
 *  ^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
 *        ^ source.d3-basic - support.function.builtin.basicStatement
@@ -1215,9 +1215,9 @@ stop
 *      ^ source.d3-basic - support.function.builtin.basicStatement
 
 subroutine
-* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
+* <- source.d3-basic support.function.builtin.basicStatement
    subroutine 
-*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
+*  ^^^^^^^^^^ source.d3-basic support.function.builtin.basicStatement
 * ^ source.d3-basic 
 *            ^ source.d3-basic - support.function.builtin.basicStatement
 
@@ -1348,284 +1348,302 @@ writex
 *        ^ source.d3-basic - support.function.builtin.basicStatement
 
 * Flow Control:
-for
-* <- source.d3-basic keyword.control.flow
-   for 
-*  ^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.control.flow
-
-loop
-* <- source.d3-basic keyword.control.flow
-
-until
-* <- source.d3-basic keyword.control.flow
-
-   loop 
-*  ^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*      ^ source.d3-basic - keyword.control.flow
-
-   until 
-*  ^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*       ^ source.d3-basic - keyword.control.flow
-
-repeat
-* <- source.d3-basic keyword.control.flow
-   repeat 
-*  ^^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*        ^ source.d3-basic - keyword.control.flow
-
-next
-* <- source.d3-basic keyword.control.flow
-   next 
-*  ^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*      ^ source.d3-basic - keyword.control.flow
-
-if
-* <- source.d3-basic keyword.control.flow
-   if 
-*  ^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*    ^ source.d3-basic - keyword.control.flow
-
-begin case
-* <- source.d3-basic keyword.control.flow
-   begin case 
-*  ^^^^^^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*            ^ source.d3-basic - keyword.control.flow
-
-case
-* <- source.d3-basic keyword.control.flow
-   case 
-*  ^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*      ^ source.d3-basic - keyword.control.flow
-
-end case
-* <- source.d3-basic keyword.control.flow
-   end case
-*  ^^^^^^^^ source.d3-basic keyword.control.flow
-* ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.control.flow
-
-
 * Other Keywords:
- before 
-*^ source.d3-basic keyword.other
-    before  
-*   ^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
+word before 
+*    ^ source.d3-basic keyword.other
+   word before  
+*       ^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*             ^ source.d3-basic - keyword.other
+
+word do 
+*    ^ source.d3-basic keyword.other
+   word do  
+*       ^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
 *         ^ source.d3-basic - keyword.other
 
- do 
-*^ source.d3-basic keyword.other
-    do  
-*   ^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.other
-
- from 
-*^ source.d3-basic keyword.other
-    from  
-*   ^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*       ^ source.d3-basic - keyword.other
-
- to 
-*^ source.d3-basic keyword.other
-    to  
-*   ^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.other
-
- on 
-*^ source.d3-basic keyword.other
-    on  
-*   ^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.other
-
- rtnlist 
-*^ source.d3-basic keyword.other
-    rtnlist  
-*   ^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.other
-
- capturing 
-*^ source.d3-basic keyword.other
-    capturing  
-*   ^^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - keyword.other
-
- returning 
-*^ source.d3-basic keyword.other
-    returning  
-*   ^^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - keyword.other
-
- setting 
-*^ source.d3-basic keyword.other
-    setting  
-*   ^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.other
-
- stacking 
-*^ source.d3-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
+word from 
+*    ^ source.d3-basic keyword.other
+   word from  
+*       ^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
 *           ^ source.d3-basic - keyword.other
 
- passlist 
-*^ source.d3-basic keyword.other
-    passlist  
-*   ^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - keyword.other
+word to 
+*    ^ source.d3-basic keyword.other
+   word to  
+*       ^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*         ^ source.d3-basic - keyword.other
 
- stacking 
-*^ source.d3-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - keyword.other
+word on 
+*    ^ source.d3-basic keyword.other
+   word on  
+*       ^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*         ^ source.d3-basic - keyword.other
+
+word rtnlist 
+*    ^ source.d3-basic keyword.other
+   word rtnlist  
+*       ^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*              ^ source.d3-basic - keyword.other
+
+word capturing 
+*    ^ source.d3-basic keyword.other
+   word capturing  
+*       ^^^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*                ^ source.d3-basic - keyword.other
+
+word returning 
+*    ^ source.d3-basic keyword.other
+   word returning  
+*       ^^^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*                ^ source.d3-basic - keyword.other
+
+word setting 
+*    ^ source.d3-basic keyword.other
+   word setting  
+*       ^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*              ^ source.d3-basic - keyword.other
+
+word stacking 
+*    ^ source.d3-basic keyword.other
+   word stacking  
+*       ^^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*               ^ source.d3-basic - keyword.other
+
+word passlist 
+*    ^ source.d3-basic keyword.other
+   word passlist  
+*       ^^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*               ^ source.d3-basic - keyword.other
+
+word stacking 
+*    ^ source.d3-basic keyword.other
+   word stacking  
+*       ^^^^^^^^ source.d3-basic keyword.other
+*      ^ source.d3-basic 
+*               ^ source.d3-basic - keyword.other
 
 * Operators:
- before 
-*^ source.d3-basic keyword.other
-    before  
-*   ^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*         ^ source.d3-basic - keyword.other
+var = 1 ge 
+*       ^ source.d3-basic keyword.operator
+   var = 1 ge  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- do 
-*^ source.d3-basic keyword.other
-    do  
-*   ^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.other
+var = 1 gt 
+*       ^ source.d3-basic keyword.operator
+   var = 1 gt  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- from 
-*^ source.d3-basic keyword.other
-    from  
-*   ^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*       ^ source.d3-basic - keyword.other
+var = 1 le 
+*       ^ source.d3-basic keyword.operator
+   var = 1 le  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- to 
-*^ source.d3-basic keyword.other
-    to  
-*   ^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.other
+var = 1 lt 
+*       ^ source.d3-basic keyword.operator
+   var = 1 lt  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- on 
-*^ source.d3-basic keyword.other
-    on  
-*   ^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*     ^ source.d3-basic - keyword.other
+var = 1 eq 
+*       ^ source.d3-basic keyword.operator
+   var = 1 eq  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- rtnlist 
-*^ source.d3-basic keyword.other
-    rtnlist  
-*   ^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.other
+var = 1 ne 
+*       ^ source.d3-basic keyword.operator
+   var = 1 ne  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- capturing 
-*^ source.d3-basic keyword.other
-    capturing  
-*   ^^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - keyword.other
+var = 1 and 
+*       ^ source.d3-basic keyword.operator
+   var = 1 and  
+*          ^^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*             ^ source.d3-basic - keyword.operator
 
- returning 
-*^ source.d3-basic keyword.other
-    returning  
-*   ^^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - keyword.other
+var = 1 or 
+*       ^ source.d3-basic keyword.operator
+   var = 1 or  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
- setting 
-*^ source.d3-basic keyword.other
-    setting  
-*   ^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - keyword.other
+var = 1 + 
+*       ^ source.d3-basic keyword.operator
+   var = 1 +  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
 
- stacking 
-*^ source.d3-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - keyword.other
+var = 1 - 
+*       ^ source.d3-basic keyword.operator
+   var = 1 -  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
 
- passlist 
-*^ source.d3-basic keyword.other
-    passlist  
-*   ^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - keyword.other
+var = 1 * 
+*       ^ source.d3-basic keyword.operator
+   var = 1 *  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
 
- stacking 
-*^ source.d3-basic keyword.other
-    stacking  
-*   ^^^^^^^^ source.d3-basic keyword.other
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - keyword.other
+var = 1 / 
+*       ^ source.d3-basic keyword.operator
+   var = 1 /  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
+
+var = 1 : 
+*       ^ source.d3-basic keyword.operator
+   var = 1 :  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
+
+var = 1 = 
+*       ^ source.d3-basic keyword.operator
+   var = 1 =  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
+
+var = 1 # 
+*       ^ source.d3-basic keyword.operator
+   var = 1 #  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
+
+var = 1 < 
+*       ^ source.d3-basic keyword.operator
+   var = 1 <  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
+
+var = 1 > 
+*       ^ source.d3-basic keyword.operator
+   var = 1 >  
+*          ^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*           ^ source.d3-basic - keyword.operator
+
+var = 1 >= 
+*       ^ source.d3-basic keyword.operator
+   var = 1 >=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
+
+var = 1 <= 
+*       ^ source.d3-basic keyword.operator
+   var = 1 <=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
+
+var = 1 := 
+*       ^ source.d3-basic keyword.operator
+   var = 1 :=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
+
+var = 1 += 
+*       ^ source.d3-basic keyword.operator
+   var = 1 +=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
+
+var = 1 -= 
+*       ^ source.d3-basic keyword.operator
+   var = 1 -=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
+
+var = 1 *= 
+*       ^ source.d3-basic keyword.operator
+   var = 1 *=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
+
+var = 1 /= 
+*       ^ source.d3-basic keyword.operator
+   var = 1 /=  
+*          ^^ source.d3-basic keyword.operator
+*         ^ source.d3-basic 
+*            ^ source.d3-basic - keyword.operator
 
 * Labels:
 10
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 10 
-* <- source.d3-basic entity.name.function
-* ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+* ^ source.d3-basic - entity.name.function.linelabel
 
 1000
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 1000 
-* <- source.d3-basic entity.name.function
-*   ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*   ^ source.d3-basic - entity.name.function.linelabel
 
 1000:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 1000: 
-* <- source.d3-basic entity.name.function
-*    ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*    ^ source.d3-basic - entity.name.function.linelabel
 
 10.50
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 10.50 
-* <- source.d3-basic entity.name.function
-*    ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*    ^ source.d3-basic - entity.name.function.linelabel
 
 semantic.label:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 semantic.label: 
-* <- source.d3-basic entity.name.function
-*              ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*              ^ source.d3-basic - entity.name.function.linelabel
 
 onewordlabel:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 onewordlabel: 
-* <- source.d3-basic entity.name.function
-*            ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*            ^ source.d3-basic - entity.name.function.linelabel
 
 multiple.dots.in.label:
-* <- source.d3-basic entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
 multiple.dots.in.label: 
-* <- source.d3-basic entity.name.function
-*                      ^ source.d3-basic - entity.name.function
+* <- source.d3-basic entity.name.function.linelabel
+*                      ^ source.d3-basic - entity.name.function.linelabel
 
 * Variables: 
  abs.test 
@@ -5212,34 +5230,6 @@ matreadu.test
 *  ^ source.d3-basic 
 *                ^ source.d3-basic - variable
 
- matreadt.test 
-*^ source.d3-basic variable
-    matreadt.test  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
-matreadt.test 
-* <- source.d3-basic variable
-   matreadt.test  
-*  ^^^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*               ^ source.d3-basic - variable
-
- test.matreadt 
-*^ source.d3-basic variable
-    test.matreadt  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- test.matreadt
-*^ source.d3-basic variable
-    test.matreadt 
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
  matwrite.test 
 *^ source.d3-basic variable
     matwrite.test  
@@ -6804,454 +6794,6 @@ writex.test
  test.writex
 *^ source.d3-basic variable
     test.writex 
-*   ^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*              ^ source.d3-basic - variable
-
- for.test 
-*^ source.d3-basic variable
-    for.test  
-*   ^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
-for.test 
-* <- source.d3-basic variable
-   for.test  
-*  ^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*          ^ source.d3-basic - variable
-
- test.for 
-*^ source.d3-basic variable
-    test.for  
-*   ^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.for
-*^ source.d3-basic variable
-    test.for 
-*   ^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- loop.test 
-*^ source.d3-basic variable
-    loop.test  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
-loop.test 
-* <- source.d3-basic variable
-   loop.test  
-*  ^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.loop 
-*^ source.d3-basic variable
-    test.loop  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.loop
-*^ source.d3-basic variable
-    test.loop 
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- repeat.test 
-*^ source.d3-basic variable
-    repeat.test  
-*   ^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*              ^ source.d3-basic - variable
-
-repeat.test 
-* <- source.d3-basic variable
-   repeat.test  
-*  ^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
- test.repeat 
-*^ source.d3-basic variable
-    test.repeat  
-*   ^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*              ^ source.d3-basic - variable
-
- test.repeat
-*^ source.d3-basic variable
-    test.repeat 
-*   ^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*              ^ source.d3-basic - variable
-
- until.test 
-*^ source.d3-basic variable
-    until.test  
-*   ^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
-until.test 
-* <- source.d3-basic variable
-   until.test  
-*  ^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.until 
-*^ source.d3-basic variable
-    test.until  
-*   ^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
- test.until
-*^ source.d3-basic variable
-    test.until 
-*   ^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
- while.test 
-*^ source.d3-basic variable
-    while.test  
-*   ^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
-while.test 
-* <- source.d3-basic variable
-   while.test  
-*  ^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.while 
-*^ source.d3-basic variable
-    test.while  
-*   ^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
- test.while
-*^ source.d3-basic variable
-    test.while 
-*   ^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
- next.test 
-*^ source.d3-basic variable
-    next.test  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
-next.test 
-* <- source.d3-basic variable
-   next.test  
-*  ^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.next 
-*^ source.d3-basic variable
-    test.next  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.next
-*^ source.d3-basic variable
-    test.next 
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- if.test 
-*^ source.d3-basic variable
-    if.test  
-*   ^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - variable
-
-if.test 
-* <- source.d3-basic variable
-   if.test  
-*  ^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*         ^ source.d3-basic - variable
-
- test.if 
-*^ source.d3-basic variable
-    test.if  
-*   ^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - variable
-
- test.if
-*^ source.d3-basic variable
-    test.if 
-*   ^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*          ^ source.d3-basic - variable
-
- begin.case.test 
-*^ source.d3-basic variable
-    begin.case.test  
-*   ^^^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                  ^ source.d3-basic - variable
-
-begin.case.test 
-* <- source.d3-basic variable
-   begin.case.test  
-*  ^^^^^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*                 ^ source.d3-basic - variable
-
- test.begin.case 
-*^ source.d3-basic variable
-    test.begin.case  
-*   ^^^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                  ^ source.d3-basic - variable
-
- test.begin.case
-*^ source.d3-basic variable
-    test.begin.case 
-*   ^^^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                  ^ source.d3-basic - variable
-
- end.case.test 
-*^ source.d3-basic variable
-    end.case.test  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
-end.case.test 
-* <- source.d3-basic variable
-   end.case.test  
-*  ^^^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*               ^ source.d3-basic - variable
-
- test.end.case 
-*^ source.d3-basic variable
-    test.end.case  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- test.end.case
-*^ source.d3-basic variable
-    test.end.case 
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- case.test 
-*^ source.d3-basic variable
-    case.test  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
-case.test 
-* <- source.d3-basic variable
-   case.test  
-*  ^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.case 
-*^ source.d3-basic variable
-    test.case  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.case
-*^ source.d3-basic variable
-    test.case 
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- end.then.test 
-*^ source.d3-basic variable
-    end.then.test  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
-end.then.test 
-* <- source.d3-basic variable
-   end.then.test  
-*  ^^^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*               ^ source.d3-basic - variable
-
- test.end.then 
-*^ source.d3-basic variable
-    test.end.then  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- test.end.then
-*^ source.d3-basic variable
-    test.end.then 
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- then.test 
-*^ source.d3-basic variable
-    then.test  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
-then.test 
-* <- source.d3-basic variable
-   then.test  
-*  ^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.then 
-*^ source.d3-basic variable
-    test.then  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.then
-*^ source.d3-basic variable
-    test.then 
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- else.test 
-*^ source.d3-basic variable
-    else.test  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
-else.test 
-* <- source.d3-basic variable
-   else.test  
-*  ^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.else 
-*^ source.d3-basic variable
-    test.else  
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- test.else
-*^ source.d3-basic variable
-    test.else 
-*   ^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*            ^ source.d3-basic - variable
-
- end.else.test 
-*^ source.d3-basic variable
-    end.else.test  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
-end.else.test 
-* <- source.d3-basic variable
-   end.else.test  
-*  ^^^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*               ^ source.d3-basic - variable
-
- test.end.else 
-*^ source.d3-basic variable
-    test.end.else  
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- test.end.else
-*^ source.d3-basic variable
-    test.end.else 
-*   ^^^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*                ^ source.d3-basic - variable
-
- end.test 
-*^ source.d3-basic variable
-    end.test  
-*   ^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
-end.test 
-* <- source.d3-basic variable
-   end.test  
-*  ^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*          ^ source.d3-basic - variable
-
- test.end 
-*^ source.d3-basic variable
-    test.end  
-*   ^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- test.end
-*^ source.d3-basic variable
-    test.end 
-*   ^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*           ^ source.d3-basic - variable
-
- locked.test 
-*^ source.d3-basic variable
-    locked.test  
-*   ^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*              ^ source.d3-basic - variable
-
-locked.test 
-* <- source.d3-basic variable
-   locked.test  
-*  ^^^^^^^^^^^ source.d3-basic variable
-* ^ source.d3-basic 
-*             ^ source.d3-basic - variable
-
- test.locked 
-*^ source.d3-basic variable
-    test.locked  
-*   ^^^^^^^^^^^ source.d3-basic variable
-*  ^ source.d3-basic 
-*              ^ source.d3-basic - variable
-
- test.locked
-*^ source.d3-basic variable
-    test.locked 
 *   ^^^^^^^^^^^ source.d3-basic variable
 *  ^ source.d3-basic 
 *              ^ source.d3-basic - variable
