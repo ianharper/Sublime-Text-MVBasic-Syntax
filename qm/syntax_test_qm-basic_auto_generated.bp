@@ -3952,196 +3952,245 @@ writevu
 *         ^ source.qm-basic - support.function.builtin.basicStatement
 
 * Flow Control:
-for
-* <- source.qm-basic keyword.control.flow
-   for 
-*  ^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.control.flow
-
-loop
-* <- source.qm-basic keyword.control.flow
-   loop 
-*  ^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*      ^ source.qm-basic - keyword.control.flow
-
-repeat
-* <- source.qm-basic keyword.control.flow
-   repeat 
-*  ^^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*        ^ source.qm-basic - keyword.control.flow
-
-next
-* <- source.qm-basic keyword.control.flow
-   next 
-*  ^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*      ^ source.qm-basic - keyword.control.flow
-
-if
-* <- source.qm-basic keyword.control.flow
-   if 
-*  ^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*    ^ source.qm-basic - keyword.control.flow
-
-begin case
-* <- source.qm-basic keyword.control.flow
-   begin case 
-*  ^^^^^^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*            ^ source.qm-basic - keyword.control.flow
-
-end case
-* <- source.qm-basic keyword.control.flow
-   end case 
-*  ^^^^^^^^ source.qm-basic keyword.control.flow
-* ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.control.flow
-
 * Other Keywords:
- before 
-*^ source.qm-basic keyword.other
-    before  
-*   ^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
+word before 
+*    ^ source.qm-basic keyword.other
+   word before  
+*       ^^^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*             ^ source.qm-basic - keyword.other
+
+word do 
+*    ^ source.qm-basic keyword.other
+   word do  
+*       ^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
 *         ^ source.qm-basic - keyword.other
 
- do 
-*^ source.qm-basic keyword.other
-    do  
-*   ^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.other
-
- from 
-*^ source.qm-basic keyword.other
-    from  
-*   ^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*       ^ source.qm-basic - keyword.other
-
- to 
-*^ source.qm-basic keyword.other
-    to  
-*   ^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.other
-
- on 
-*^ source.qm-basic keyword.other
-    on  
-*   ^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.other
-
- rtnlist 
-*^ source.qm-basic keyword.other
-    rtnlist  
-*   ^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.other
-
- capturing 
-*^ source.qm-basic keyword.other
-    capturing  
-*   ^^^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - keyword.other
-
- returning 
-*^ source.qm-basic keyword.other
-    returning  
-*   ^^^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - keyword.other
-
- setting 
-*^ source.qm-basic keyword.other
-    setting  
-*   ^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.other
-
- passlist 
-*^ source.qm-basic keyword.other
-    passlist  
-*   ^^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
+word from 
+*    ^ source.qm-basic keyword.other
+   word from  
+*       ^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
 *           ^ source.qm-basic - keyword.other
+
+word to 
+*    ^ source.qm-basic keyword.other
+   word to  
+*       ^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*         ^ source.qm-basic - keyword.other
+
+word on 
+*    ^ source.qm-basic keyword.other
+   word on  
+*       ^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*         ^ source.qm-basic - keyword.other
+
+word rtnlist 
+*    ^ source.qm-basic keyword.other
+   word rtnlist  
+*       ^^^^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*              ^ source.qm-basic - keyword.other
+
+word capturing 
+*    ^ source.qm-basic keyword.other
+   word capturing  
+*       ^^^^^^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*                ^ source.qm-basic - keyword.other
+
+word returning 
+*    ^ source.qm-basic keyword.other
+   word returning  
+*       ^^^^^^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*                ^ source.qm-basic - keyword.other
+
+word setting 
+*    ^ source.qm-basic keyword.other
+   word setting  
+*       ^^^^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*              ^ source.qm-basic - keyword.other
+
+word passlist 
+*    ^ source.qm-basic keyword.other
+   word passlist  
+*       ^^^^^^^^ source.qm-basic keyword.other
+*      ^ source.qm-basic 
+*               ^ source.qm-basic - keyword.other
 
 * Operators:
- before 
-*^ source.qm-basic keyword.other
-    before  
-*   ^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*         ^ source.qm-basic - keyword.other
+var = 1 ge 
+*       ^ source.qm-basic keyword.operator
+   var = 1 ge  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- do 
-*^ source.qm-basic keyword.other
-    do  
-*   ^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.other
+var = 1 gt 
+*       ^ source.qm-basic keyword.operator
+   var = 1 gt  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- from 
-*^ source.qm-basic keyword.other
-    from  
-*   ^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*       ^ source.qm-basic - keyword.other
+var = 1 le 
+*       ^ source.qm-basic keyword.operator
+   var = 1 le  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- to 
-*^ source.qm-basic keyword.other
-    to  
-*   ^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.other
+var = 1 lt 
+*       ^ source.qm-basic keyword.operator
+   var = 1 lt  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- on 
-*^ source.qm-basic keyword.other
-    on  
-*   ^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*     ^ source.qm-basic - keyword.other
+var = 1 eq 
+*       ^ source.qm-basic keyword.operator
+   var = 1 eq  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- rtnlist 
-*^ source.qm-basic keyword.other
-    rtnlist  
-*   ^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.other
+var = 1 ne 
+*       ^ source.qm-basic keyword.operator
+   var = 1 ne  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- capturing 
-*^ source.qm-basic keyword.other
-    capturing  
-*   ^^^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - keyword.other
+var = 1 and 
+*       ^ source.qm-basic keyword.operator
+   var = 1 and  
+*          ^^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*             ^ source.qm-basic - keyword.operator
 
- returning 
-*^ source.qm-basic keyword.other
-    returning  
-*   ^^^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - keyword.other
+var = 1 or 
+*       ^ source.qm-basic keyword.operator
+   var = 1 or  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
- setting 
-*^ source.qm-basic keyword.other
-    setting  
-*   ^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - keyword.other
+var = 1 + 
+*       ^ source.qm-basic keyword.operator
+   var = 1 +  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
 
- passlist 
-*^ source.qm-basic keyword.other
-    passlist  
-*   ^^^^^^^^ source.qm-basic keyword.other
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - keyword.other
+var = 1 - 
+*       ^ source.qm-basic keyword.operator
+   var = 1 -  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 * 
+*       ^ source.qm-basic keyword.operator
+   var = 1 *  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 / 
+*       ^ source.qm-basic keyword.operator
+   var = 1 /  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 : 
+*       ^ source.qm-basic keyword.operator
+   var = 1 :  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 = 
+*       ^ source.qm-basic keyword.operator
+   var = 1 =  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 # 
+*       ^ source.qm-basic keyword.operator
+   var = 1 #  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 < 
+*       ^ source.qm-basic keyword.operator
+   var = 1 <  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 > 
+*       ^ source.qm-basic keyword.operator
+   var = 1 >  
+*          ^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*           ^ source.qm-basic - keyword.operator
+
+var = 1 >= 
+*       ^ source.qm-basic keyword.operator
+   var = 1 >=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
+
+var = 1 <= 
+*       ^ source.qm-basic keyword.operator
+   var = 1 <=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
+
+var = 1 := 
+*       ^ source.qm-basic keyword.operator
+   var = 1 :=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
+
+var = 1 += 
+*       ^ source.qm-basic keyword.operator
+   var = 1 +=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
+
+var = 1 -= 
+*       ^ source.qm-basic keyword.operator
+   var = 1 -=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
+
+var = 1 *= 
+*       ^ source.qm-basic keyword.operator
+   var = 1 *=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
+
+var = 1 /= 
+*       ^ source.qm-basic keyword.operator
+   var = 1 /=  
+*          ^^ source.qm-basic keyword.operator
+*         ^ source.qm-basic 
+*            ^ source.qm-basic - keyword.operator
 
 * Labels:
 10
@@ -17542,454 +17591,6 @@ writevu.test
 *   ^^^^^^^^^^^^ source.qm-basic variable
 *  ^ source.qm-basic 
 *               ^ source.qm-basic - variable
-
- for.test 
-*^ source.qm-basic variable
-    for.test  
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
-for.test 
-* <- source.qm-basic variable
-   for.test  
-*  ^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*          ^ source.qm-basic - variable
-
- test.for 
-*^ source.qm-basic variable
-    test.for  
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.for
-*^ source.qm-basic variable
-    test.for 
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- loop.test 
-*^ source.qm-basic variable
-    loop.test  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
-loop.test 
-* <- source.qm-basic variable
-   loop.test  
-*  ^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.loop 
-*^ source.qm-basic variable
-    test.loop  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.loop
-*^ source.qm-basic variable
-    test.loop 
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- repeat.test 
-*^ source.qm-basic variable
-    repeat.test  
-*   ^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*              ^ source.qm-basic - variable
-
-repeat.test 
-* <- source.qm-basic variable
-   repeat.test  
-*  ^^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
- test.repeat 
-*^ source.qm-basic variable
-    test.repeat  
-*   ^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*              ^ source.qm-basic - variable
-
- test.repeat
-*^ source.qm-basic variable
-    test.repeat 
-*   ^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*              ^ source.qm-basic - variable
-
- until.test 
-*^ source.qm-basic variable
-    until.test  
-*   ^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
-until.test 
-* <- source.qm-basic variable
-   until.test  
-*  ^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.until 
-*^ source.qm-basic variable
-    test.until  
-*   ^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
- test.until
-*^ source.qm-basic variable
-    test.until 
-*   ^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
- while.test 
-*^ source.qm-basic variable
-    while.test  
-*   ^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
-while.test 
-* <- source.qm-basic variable
-   while.test  
-*  ^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.while 
-*^ source.qm-basic variable
-    test.while  
-*   ^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
- test.while
-*^ source.qm-basic variable
-    test.while 
-*   ^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
- next.test 
-*^ source.qm-basic variable
-    next.test  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
-next.test 
-* <- source.qm-basic variable
-   next.test  
-*  ^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.next 
-*^ source.qm-basic variable
-    test.next  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.next
-*^ source.qm-basic variable
-    test.next 
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- if.test 
-*^ source.qm-basic variable
-    if.test  
-*   ^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - variable
-
-if.test 
-* <- source.qm-basic variable
-   if.test  
-*  ^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*         ^ source.qm-basic - variable
-
- test.if 
-*^ source.qm-basic variable
-    test.if  
-*   ^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - variable
-
- test.if
-*^ source.qm-basic variable
-    test.if 
-*   ^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*          ^ source.qm-basic - variable
-
- begin.case.test 
-*^ source.qm-basic variable
-    begin.case.test  
-*   ^^^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                  ^ source.qm-basic - variable
-
-begin.case.test 
-* <- source.qm-basic variable
-   begin.case.test  
-*  ^^^^^^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*                 ^ source.qm-basic - variable
-
- test.begin.case 
-*^ source.qm-basic variable
-    test.begin.case  
-*   ^^^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                  ^ source.qm-basic - variable
-
- test.begin.case
-*^ source.qm-basic variable
-    test.begin.case 
-*   ^^^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                  ^ source.qm-basic - variable
-
- end.case.test 
-*^ source.qm-basic variable
-    end.case.test  
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
-end.case.test 
-* <- source.qm-basic variable
-   end.case.test  
-*  ^^^^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*               ^ source.qm-basic - variable
-
- test.end.case 
-*^ source.qm-basic variable
-    test.end.case  
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
- test.end.case
-*^ source.qm-basic variable
-    test.end.case 
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
- case.test 
-*^ source.qm-basic variable
-    case.test  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
-case.test 
-* <- source.qm-basic variable
-   case.test  
-*  ^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.case 
-*^ source.qm-basic variable
-    test.case  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.case
-*^ source.qm-basic variable
-    test.case 
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- end.then.test 
-*^ source.qm-basic variable
-    end.then.test  
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
-end.then.test 
-* <- source.qm-basic variable
-   end.then.test  
-*  ^^^^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*               ^ source.qm-basic - variable
-
- test.end.then 
-*^ source.qm-basic variable
-    test.end.then  
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
- test.end.then
-*^ source.qm-basic variable
-    test.end.then 
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
- then.test 
-*^ source.qm-basic variable
-    then.test  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
-then.test 
-* <- source.qm-basic variable
-   then.test  
-*  ^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.then 
-*^ source.qm-basic variable
-    test.then  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.then
-*^ source.qm-basic variable
-    test.then 
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- else.test 
-*^ source.qm-basic variable
-    else.test  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
-else.test 
-* <- source.qm-basic variable
-   else.test  
-*  ^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.else 
-*^ source.qm-basic variable
-    test.else  
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- test.else
-*^ source.qm-basic variable
-    test.else 
-*   ^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*            ^ source.qm-basic - variable
-
- end.else.test 
-*^ source.qm-basic variable
-    end.else.test  
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
-end.else.test 
-* <- source.qm-basic variable
-   end.else.test  
-*  ^^^^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*               ^ source.qm-basic - variable
-
- test.end.else 
-*^ source.qm-basic variable
-    test.end.else  
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
- test.end.else
-*^ source.qm-basic variable
-    test.end.else 
-*   ^^^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*                ^ source.qm-basic - variable
-
- end.test 
-*^ source.qm-basic variable
-    end.test  
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
-end.test 
-* <- source.qm-basic variable
-   end.test  
-*  ^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*          ^ source.qm-basic - variable
-
- test.end 
-*^ source.qm-basic variable
-    test.end  
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- test.end
-*^ source.qm-basic variable
-    test.end 
-*   ^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*           ^ source.qm-basic - variable
-
- locked.test 
-*^ source.qm-basic variable
-    locked.test  
-*   ^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*              ^ source.qm-basic - variable
-
-locked.test 
-* <- source.qm-basic variable
-   locked.test  
-*  ^^^^^^^^^^^ source.qm-basic variable
-* ^ source.qm-basic 
-*             ^ source.qm-basic - variable
-
- test.locked 
-*^ source.qm-basic variable
-    test.locked  
-*   ^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*              ^ source.qm-basic - variable
-
- test.locked
-*^ source.qm-basic variable
-    test.locked 
-*   ^^^^^^^^^^^ source.qm-basic variable
-*  ^ source.qm-basic 
-*              ^ source.qm-basic - variable
 
  before.test 
 *^ source.qm-basic variable

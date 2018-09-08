@@ -2,16 +2,23 @@
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
 name: jBASE Basic
-file_extensions:
-  - bp
+file_extensions: [bp,jbase]
 scope: source.jbase-basic
 
 variables:
-  linelabels: '(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)'
-  linelabelref: '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
-  basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
-  stmtstart: '(^{{linelabels}}|(?<=^|;|then\s|else\s|locked\s|loop\s|on\serror\s|DO\s|THEN\s|ELSE\s|LOCKED\s|LOOP\s|ON\SERROR\s|DO\s))\s*'
+  # jBASE Specific 
+  linelabels:       '(([A-Za-z]+[a-zA-Z0-9\._]*):|([0-9]+\.?[0-9]*):?)'
+  linelabelref:     '([A-Za-z][a-zA-Z0-9\._]+)|([0-9]+\.?[0-9]*)'
+  basicStatements:  '(CREATE|DIM|DISPLAY|EQU(ATE)?|FIND(STR)?|FUNCTION|GET[x]?|GETLIST|GROUPSTORE|HEADING[EN]?|IN|INPUT|LOCATE|LOCK|NOBUF|OBJEXCALLBACK|OPEN|OPENINDEX|OPENPATH|PROCREAD|READBLK|READLIST|READNEXT|READPREV|READSEQ|READT|READXML|REWIND|SEEK|SEND[x]?|STATUS|TRANSABORT|TRANSTART|TRANSEND|WEOF|WEOFSEQ|WRITE|WRITEBLK|WRITLIST|WRITESEQ|WRITET|(MAT)?READ[V]?[U]?|OPENDEV|OPENSEQ|OPENSER|READNEXT|OSOPEN|OSREAD|READ[v]?|WRITESEQF|OSOPEN|READ[v]?|ABORT|BREAK(\s(ON|OFF))?|CALLJ|CHAIN|CHANGE|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|CLOSE|CLOSESEQ|COLLECTDATA|COMMON|CONTINUE|CONVERT|CREATE|CRT|DATA|DEBUG|DEFC|DEFCE|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIMENSION|ECHO|ENTER|EXECUTE|EXIT|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FOOTING|FORMLIST|HEADINGE|HUSH|INCLUDE|INPUTCLEAR|INPUTNULL|INS|JQLCOMPILE|JQLEXECUTE|JQLFETCH|JQLGETPROPERTY|JQLGETPROPERTY|JQLPUTPROPERTY|MAT|MATBUILD|MATPARSE|MSLEEP|NULL|OCONV|OUT|PAGE|PAUSE|PRECISION|PERFORM|PRINT|PRINTER|PRINTERR|PROCWRITE|PROGRAM|PROMPT|RELEASE|RETURN|RQM|RTNDATA|SELECT|SLEEP|SSELECT|STATUS|STOP|TIMEOUT|TRIM|UNLOCK|WAKE)(?=\s|;)'
+  basicFunctions:   'ABS|ABSS|ADDS|ALPHA|ANDS|ASCII|ASSIGNED|BITAND|BITCHANGE|BITCHECK|BITLOAD|BITNOT|BITOR|BITRESET|BITSET|BITTEST|BITXOR|BYTELEN|CALLONEXIT|CATS|CHANGETIMESTAMP|CHAR|CHARS|CHDIR|CHECKSUM|COMPARE|CONVERT|COS|COUNT|COUNTS|DATE|DCOUNT|DECRYPT|DIR|DIV|DIVS|DOWNCASE|UPPERCASE|DROUND|DTX|DYNTOXML|EBCDIC|ENCRYPT|EQS|EREPLACE|EXP|EXTRACT|FADD|FDIV|FIELD|FIELDS|FILEINFO|FMT|FMTS|FMUL|FOLD|FSUB|GES|GETCWD|GETENV|GROUP|ICONV|ICONVS|IFS|INDEX|INMAT|INSERT|INT|IOCTL|ISALNUM|ISALPHA|ISCNTRL|ISDIGIT|ISLOWER|ISPRINT|ISSPACE|ISUPPER|ITYPE|JBASECOREDUMP|KEYIN|LATIN1|LEFT|LEN|LENDP|LENS|LES|LN|LOCALDATE|LOCALTIME|LOWER|MAKETIMESTAMP|MATCHES|MATCHFIELD|MAXIMUM|MINIMUM|MOD|MODS|MULS|NEGS|NES|NOT|NOTS|NUM|NUMS|OCONV|OCONVS|ORS|PUTENV|PWR|QUOTE|DQUOTE|SQUOTE|RAISE|RECORDLOCKED|REGEXP|REM|REMOVE|RIGHT|RND|SADD|SDIV|SENTENCE|SEQ|SEQS|SIN|SMUL|SORT|SOUNDEX|SPACE|SPACES|SPLICE|SPOOLER|SQRT|SSUB|STATUS|STR|STRS|SUBS|SUBSTRINGS|SUM|SWAP|SYSTEM|TAN|TIME|TIMEDATE|TIMEDIFF|TIMEOUT|TIMESTAMP|TRANS|TRANSQUERY|TRIM|TRIMB|TRIMBS|TRIMF|TRIMFS|UNASSIGNED|UNIQUEKEY|UPCASE|UTF8|WRITEXML|XLATE|XMLTODYN|XMLTOXML|XTD|COL1|COL2|INDICES|NEG|REPLACE'
+  atVars:           '@ACCOUNT|@AM|@CALLSTACK|@CODEPAGE|@COMMAND|@CR|@DATA|@DAY|@EOF|@ESC|@FALSE|@FF|@FILENAME|@FM|@ID|@IM|@LEVEL|@LF|@LOCALE|@LOGNAME|@LPTRHIGH|@MONTH|@PARASENTENCE|@PATH|@PID|@RECORD|@RM|@SELECTED|@SM|@SVM|@TAB|@TIMEZONE|@TM|@TRUE|@TTY|@UDTNO|@UID|@USER|@USERNO|@USERSTATS|@VM|@WHO|@YEAR'
+  otherKeywords:    'before|do|from|for|in|to|on(?!\serror)|rtnlist|capturing|returning|setting|stacking|passlist'
+  blockStatements:  'then|else|locked|on\serror'
 
+  # General 
+  basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
+  stmtstart:     '\b(?<!\.\$)'
+  stmtend:       '(?!\.\$)\b'
 
 
 contexts:
@@ -27,75 +34,63 @@ contexts:
     # subroutine call
     - match: (?i){{stmtstart}}(call)\s(({{basicvariable}})|@{{basicvariable}})
       captures: 
-        '5': support.function.builtin.basicStatement.jbase-basic 
-        '7': variable.function.jbase-basic
+        '1': support.function.builtin.basicStatement.jbase-basic 
+        '3': variable.function.jbase-basic
 
+    - include: blocks
     - include: language_constants
 
     # For loop
     - match: (?i){{stmtstart}}(for)(?=\s)
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': keyword.control.flow.jbase-basic
+      scope: keyword.control.flow.jbase-basic
       push:
         - include: for_block
 
     # loop loop
-    - match: (?i){{stmtstart}}(loop)(?!\.)\b
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': keyword.control.flow.jbase-basic
+    - match: (?i){{stmtstart}}(loop){{stmtend}}
+      scope: keyword.control.flow.jbase-basic
       push: 
         - meta_content_scope: meta.block.loop.jbase-basic
         - include: loop_block
 
     # Begin Case
-    - match: (?i){{stmtstart}}(begin\scase)(?!\.)\b
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': keyword.control.flow.jbase-basic
+    - match: (?i){{stmtstart}}(begin\scase){{stmtend}}
+      scope: keyword.control.flow.jbase-basic
       push:
         - meta_content_scope: meta.block.begin-case.jbase-basic
         - include: begin_case_block
 
     - include: functions
 
-    # if statements (same syntax as then_else statements below but given different scope)
+    # if statements
     - match: (?i){{stmtstart}}(IF)(?=\s)
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': keyword.control.flow.jbase-basic
+      scope: keyword.control.flow.jbase-basic
 
     # Basic statements
-    - match: (?i){{stmtstart}}(CREATE|DIM|DISPLAY|EQU(ATE)?|FIND(STR)?|FUNCTION|GET[x]?|GETLIST|GROUPSTORE|HEADING[EN]?|IN|INPUT|LOCATE|LOCK|NOBUF|OBJEXCALLBACK|OPEN|OPENINDEX|OPENPATH|PROCREAD|READBLK|READLIST|READNEXT|READPREV|READSEQ|READT|READXML|REWIND|SEEK|SEND[x]?|STATUS|TRANSABORT|TRANSTART|TRANSEND|WEOF|WEOFSEQ|WRITE|WRITEBLK|WRITLIST|WRITESEQ|WRITET|(MAT)?READ[V]?[U]?|OPENDEV|OPENSEQ|OPENSER|READNEXT|OSOPEN|OSREAD|READ[v]?|WRITESEQF|OSOPEN|READ[v]?|ABORT|BREAK(\s(ON|OFF))?|CHAIN|CHANGE|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARINPUT|CLEARSELECT|CLOSE|CLOSESEQ|COLLECTDATA|COMMON|CONTINUE|CONVERT|CREATE|CRT|DATA|DEBUG|DEFC|DEFCE|DEFFUN|DEL|DELETE|DELETELIST|DELETESEQ|DELETEU|DIMENSION|ECHO|ENTER|EXECUTE|EXIT|FILELOCK|FILEUNLOCK|FIND|FINDSTR|FOOTING|FORMLIST|HEADINGE|HUSH|INCLUDE|INPUTCLEAR|INPUTNULL|INS|JQLCOMPILE|JQLEXECUTE|JQLFETCH|JQLGETPROPERTY|JQLGETPROPERTY|JQLPUTPROPERTY|MAT|MATBUILD|MATPARSE|MSLEEP|NULL|OCONV|OUT|PAGE|PAUSE|PRECISION|PERFORM|PRINT|PRINTER|PRINTERR|PROCWRITE|PROGRAM|PROMPT|RELEASE|RETURN|RQM|RTNDATA|SELECT|SLEEP|SSELECT|STATUS|STOP|TIMEOUT|TRIM|UNLOCK|WAKE)(?=\s|;)
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': support.function.builtin.basicStatement.jbase-basic
+    - match: (?i){{stmtstart}}({{basicStatements}})
+      scope: support.function.builtin.basicStatement.jbase-basic
 
     - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
       captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': support.function.builtin.basicStatement.jbase-basic 
-        '6': variable.jbase-basic
-        '7': support.function.builtin.basicStatement.jbase-basic 
+        '1': support.function.builtin.basicStatement.jbase-basic 
+        '2': variable.jbase-basic
+        '3': support.function.builtin.basicStatement.jbase-basic 
       push: ongoto
 
     - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
       captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': support.function.builtin.basicStatement.jbase-basic
-        '6': meta.function-call.jbase-basic variable.function.jbase-basic
+        '1': support.function.builtin.basicStatement.jbase-basic
+        '2': meta.function-call.jbase-basic variable.function.jbase-basic
 
-        # line labels
-    - match: ^{{linelabels}}\s*(\*.*)?$
+    # line labels
+    - match: ^{{linelabels}}\s*(\*.*)?
       captures:
         '2': entity.name.function.linelabel.jbase-basic
         '3': entity.name.function.linelabel.jbase-basic
         '4': comment.line.jbase-basic
 
-    - include: blocks
-    - include: operators
     - include: other_keywords
+    - include: operators
     - include: basicvariables
     - include: literals
 
@@ -142,18 +137,18 @@ contexts:
       scope: constant.numeric.integer.jbase-basic
 
   functions:
-    - match: (?i)(?<!\.)(ABS|ABSS|ADDS|ALPHA|ANDS|ASCII|ASSIGNED|BITAND|BITCHANGE|BITCHECK|BITLOAD|BITNOT|BITOR|BITRESET|BITSET|BITTEST|BITXOR|BYTELEN|CALLONEXIT|CATS|CHANGETIMESTAMP|CHAR|CHARS|CHDIR|CHECKSUM|COMPARE|CONVERT|COS|COUNT|COUNTS|DATE|DCOUNT|DECRYPT|DIR|DIV|DIVS|DOWNCASE|UPPERCASE|DROUND|DTX|DYNTOXML|EBCDIC|ENCRYPT|EQS|EREPLACE|EXP|EXTRACT|FADD|FDIV|FIELD|FIELDS|FILEINFO|FMT|FMTS|FMUL|FOLD|FSUB|GES|GETCWD|GETENV|GROUP|ICONV|ICONVS|IFS|INDEX|INMAT|INSERT|INT|IOCTL|ISALNUM|ISALPHA|ISCNTRL|ISDIGIT|ISLOWER|ISPRINT|ISSPACE|ISUPPER|ITYPE|JBASECOREDUMP|KEYIN|LATIN1|LEFT|LEN|LENDP|LENS|LES|LN|LOCALDATE|LOCALTIME|LOWER|MAKETIMESTAMP|MATCHES|MATCHFIELD|MAXIMUM|MINIMUM|MOD|MODS|MULS|NEGS|NES|NOT|NOTS|NUM|NUMS|OCONV|OCONVS|ORS|PUTENV|PWR|QUOTE|DQUOTE|SQUOTE|RAISE|RECORDLOCKED|REGEXP|REM|REMOVE|RIGHT|RND|SADD|SDIV|SENTENCE|SEQ|SEQS|SIN|SMUL|SORT|SOUNDEX|SPACE|SPACES|SPLICE|SPOOLER|SQRT|SSUB|STATUS|STR|STRS|SUBS|SUBSTRINGS|SUM|SWAP|SYSTEM|TAN|TIME|TIMEDATE|TIMEDIFF|TIMEOUT|TIMESTAMP|TRANS|TRANSQUERY|TRIM|TRIMB|TRIMBS|TRIMF|TRIMFS|UNASSIGNED|UNIQUEKEY|UPCASE|UTF8|WRITEXML|XLATE|XMLTODYN|XMLTOXML|XTD|COL1|COL2|INDICES|NEG|REPLACE)(?=\()
+    - match: (?i)(?<!\.)({{basicFunctions}})(?=\()
       scope: support.function.builtin.basicFunction.jbase-basic
 
     - match: \B(@)(?=\()
       scope: support.function.builtin.basicFunction.jbase-basic
         
   language_constants:
-    - match: (?i)\B(@ACCOUNT|@AM|@CALLSTACK|@CODEPAGE|@COMMAND|@CR|@DATA|@DAY|@EOF|@ESC|@FALSE|@FF|@FILENAME|@FM|@ID|@IM|@LEVEL|@LF|@LOCALE|@LOGNAME|@LPTRHIGH|@MONTH|@PARASENTENCE|@PATH|@PID|@RECORD|@RM|@SELECTED|@SM|@SVM|@TAB|@TIMEZONE|@TM|@TRUE|@TTY|@UDTNO|@UID|@USER|@USERNO|@USERSTATS|@VM|@WHO|@YEAR)\b
+    - match: (?i)\B({{atVars}})\b
       scope: constant.character.jbase-basic
 
   other_keywords:
-    - match: (?i)(?<=\s)(before|do|from|for|in|to|on|rtnlist|capturing|returning|setting|stacking|passlist)(?=\s)
+    - match: (?i)(?<=\S)\s+{{stmtstart}}({{otherKeywords}})(?=\s)
       scope: keyword.other.jbase-basic
 
   comment_line:
@@ -170,26 +165,26 @@ contexts:
     - include: functions
     - include: literals
     - include: operators
-    - include: other_keywords
+    # - include: other_keywords
     - include: basicvariables
 
   blocks:
-    - match: (?i)(?<=\s)(then|else|locked|on\serror)(?=\s*($|;))
+    - match: (?i)(?<=\s)({{blockStatements}})(?=\s*($|;))
       scope: keyword.control.flow.jbase-basic
       push:
         - meta_content_scope: meta.block.jbase-basic
         - match: (?i){{stmtstart}}(end)(?=\s|;|$)
-          captures:
-            '5': keyword.control.flow.jbase-basic
+          scope: keyword.control.flow.jbase-basic
           pop: true
         - include: main
-    - match: (?i)(?<=^|;|\s)(then|else|locked|on\serror)(?=\s) # single line
+    - match: (?i)(?<=^|;|\s)({{blockStatements}})(?=\s) # single line
       captures:
         '1': keyword.control.flow.jbase-basic
     - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': invalid.illegal.stray-end.jbase-basic
+      scope: keyword.control.flow.d3-basic
+      push:
+        - match: .*
+          scope: text.after-final-end.d3-basic
 
   for_block:
     - match: (?i)(?<=\s)to(?=\s)
@@ -241,7 +236,7 @@ contexts:
           - include: main
         - include: end_case_block
         - include: expression
-    - match: (?i)(?<=^|\s)end\scase(?!\.)\b
+    - match: (?i)(?<=^|\s)end\scase{{stmtend}}
       scope: keyword.control.flow.jbase-basic
       pop: true
     - include: main
@@ -254,9 +249,7 @@ contexts:
 
   end_block:
     - match: (?i){{stmtstart}}(end)(?=\s|$)
-      captures:
-        '2': entity.name.function.linelabel.jbase-basic
-        '5': keyword.control.flow.jbase-basic
+      scope: keyword.control.flow.jbase-basic
       pop: true
     - include: main
 

@@ -290,7 +290,7 @@ end
 * <- source.qm-basic keyword.control.flow.qm-basic
 
 
-write data on file.var, id on error
+write text on file.var, id on error
 * <- source.qm-basic support.function.builtin.basicStatement.qm-basic
 *     ^^^^ source.qm-basic variable.qm-basic
 *          ^ source.qm-basic keyword.other.qm-basic
