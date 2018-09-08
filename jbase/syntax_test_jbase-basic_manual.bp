@@ -21,6 +21,10 @@ semantic.label: * comment
 * <- source.jbase-basic entity.name.function.linelabel.jbase-basic
 *    ^^^^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
 
+variable.could.be.a.label:=concatenated
+* <- source.jbase-basic variable.jbase-basic
+*                        ^^ source.jbase-basic keyword.operator.jbase-basic
+
 stop 
 * Variable with the same name as functions:
 

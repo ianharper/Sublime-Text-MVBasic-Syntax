@@ -17,6 +17,13 @@ semantic.label: * comment
 *              ^ source.d3-basic
 *               ^ source.d3-basic comment.line.d3-basic
 
+9999 STOP ;* Using these kinds of labels!!!
+* <- source.d3-basic entity.name.function.linelabel.d3-basic
+*    ^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
+
+variable.could.be.a.label:=concatenated
+* <- source.d3-basic variable.d3-basic
+*                        ^^ source.d3-basic keyword.operator.d3-basic
 
 * Variable with the same name as functions:
 

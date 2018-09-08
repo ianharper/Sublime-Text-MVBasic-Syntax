@@ -17,6 +17,13 @@ semantic.label: * comment
 *              ^ source.qm-basic
 *               ^ source.qm-basic comment.line.qm-basic
 
+9999 STOP ;* Using these kinds of labels!!!
+* <- source.qm-basic entity.name.function.linelabel.qm-basic
+*    ^^^^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+
+variable.could.be.a.label:=concatenated
+* <- source.qm-basic variable.qm-basic
+*                        ^^ source.qm-basic keyword.operator.qm-basic
 
 * Variable with the same name as functions:
 
