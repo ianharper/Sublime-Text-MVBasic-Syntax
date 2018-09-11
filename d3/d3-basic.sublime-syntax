@@ -118,6 +118,19 @@ contexts:
           pop: true
         - include: expression
 
+    - match: (?i)({{basicvariable}})(?=\(.*?\)<.*?>)((?!.*?\s(and|or)\s)|(?=.*?>.*?\s(and|or)\s))
+      captures:
+        '1': variable.d3-basic
+      push:
+        - match: (?<=\))<
+          scope: punctuation.definition.section.attributeref.begin.d3-basic
+          set:
+            - match: '>'
+              scope: punctuation.definition.section.attributeref.end.d3-basic
+              pop: true
+            - include: expression
+        - include: expression
+
     - match: (?i)({{basicvariable}})\(?
       scope: variable.d3-basic
 
