@@ -8,6 +8,7 @@ Sublime Text syntax highlighting, indentation, and sinppets for MultiValue Basic
   * D3
   * jBASE
   * OpenQM
+  * mvBase
 * "\\" Quotes
 * Auto-Indentation while typing
 * "wED" Color Scheme (at least this is how I've setup colors in wED)
