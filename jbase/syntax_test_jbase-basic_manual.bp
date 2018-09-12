@@ -21,6 +21,25 @@ semantic.label: * comment
 * <- source.jbase-basic entity.name.function.linelabel.jbase-basic
 *    ^^^^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
 
+ variable<attribute> = var<ac, vm, sm>
+*        ^ source.jbase-basic punctuation.definition.section.attributeref.begin.jbase-basic
+*                  ^ source.jbase-basic punctuation.definition.section.attributeref.end.jbase-basic
+*                         ^ source.jbase-basic punctuation.definition.section.attributeref.begin.jbase-basic
+*                                    ^ source.jbase-basic punctuation.definition.section.attributeref.end.jbase-basic
+
+crt var< dcount(var, @AM) >
+*      ^ source.jbase-basic punctuation.definition.section.attributeref.begin.jbase-basic
+*                         ^ source.jbase-basic punctuation.definition.section.attributeref.end.jbase-basic
+
+if var1<var2 and var1>var3 then null
+*      ^ source.jbase-basic keyword.operator.jbase-basic
+*                    ^ source.jbase-basic keyword.operator.jbase-basic
+
+var(1)<2>
+* <- source.jbase-basic variable.jbase-basic
+*     ^ source.jbase-basic punctuation.definition.section.attributeref.begin.jbase-basic
+*       ^ source.jbase-basic punctuation.definition.section.attributeref.end.jbase-basic
+
 variable.could.be.a.label:=concatenated
 * <- source.jbase-basic variable.jbase-basic
 *                        ^^ source.jbase-basic keyword.operator.jbase-basic
@@ -46,10 +65,6 @@ stop
  \string=quoted double\
 * ^^^^^^^^^^^^^^^^^^^^ source.jbase-basic string.quoted.double.jbase-basic
 
-
-call sub.routine()
-
-call @subname 
 
 * Flow Control:
 
