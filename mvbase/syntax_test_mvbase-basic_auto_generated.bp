@@ -1,0 +1,6758 @@
+* SYNTAX TEST "mvbase-basic.sublime-syntax"
+
+* Constants:
+@am
+* <- source.mvbase-basic constant.character
+   @am 
+*  ^^^ source.mvbase-basic constant.character
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - constant.character
+
+@fm
+* <- source.mvbase-basic constant.character
+   @fm 
+*  ^^^ source.mvbase-basic constant.character
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - constant.character
+
+@vm
+* <- source.mvbase-basic constant.character
+   @vm 
+*  ^^^ source.mvbase-basic constant.character
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - constant.character
+
+@sm
+* <- source.mvbase-basic constant.character
+   @sm 
+*  ^^^ source.mvbase-basic constant.character
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - constant.character
+
+* Functions:
+ABS()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   ABS() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+ALPHA()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   ALPHA() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+ASCII()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   ASCII() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+ASSIGNED()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   ASSIGNED() 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+UNASSIGNED()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   UNASSIGNED() 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+CHANGE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   CHANGE() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+CHAR()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   CHAR() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+COL1()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   COL1() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+COL2()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   COL2() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+CONVERT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   CONVERT() 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+COS()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   COS() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+COUNT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   COUNT() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+DATE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   DATE() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+DCOUNT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   DCOUNT() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+DELETE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   DELETE() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+DQUOTE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   DQUOTE() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+DTX()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   DTX() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+EBCDIC()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   EBCDIC() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+EREPLACE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   EREPLACE() 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+EXCHANGE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   EXCHANGE() 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+EXP()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   EXP() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+EXTRACT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   EXTRACT() 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+FIELD()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   FIELD() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+FMT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   FMT() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+FOLD()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   FOLD() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+ICONV()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   ICONV() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+INDEX()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   INDEX() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+INMAT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   INMAT() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+INSERT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   INSERT() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+INT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   INT() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+LEN()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   LEN() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+LINESTATUS()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   LINESTATUS() 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+LN()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   LN() 
+*  ^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+MAXIMUM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   MAXIMUM() 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+MINIMUM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   MINIMUM() 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+MOD()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   MOD() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+NOT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   NOT() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+NUM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   NUM() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+OCONV()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   OCONV() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+PWR()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   PWR() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+REM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   REM() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+REPLACE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   REPLACE() 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+RND()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   RND() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SENTENCE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SENTENCE() 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SEQ()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SEQ() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SIN()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SIN() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SORT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SORT() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SOUNDEX()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SOUNDEX() 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SPACE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SPACE() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SQRT()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SQRT() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SQUOTE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SQUOTE() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+STATUS()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   STATUS() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+STR()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   STR() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SUM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SUM() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SUMMATION()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SUMMATION() 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SWAP()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SWAP() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+SYSTEM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   SYSTEM() 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TA()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TA() 
+*  ^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TAN()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TAN() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TIME()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TIME() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TIMEDATE()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TIMEDATE() 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TRIM()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TRIM() 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TRIMB()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TRIMB() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+TRIMF()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   TRIMF() 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+UNASSIGNED()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   UNASSIGNED() 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+ASSIGNED()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   ASSIGNED() 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+XTD()
+* <- source.mvbase-basic support.function.builtin.basicFunction
+   XTD() 
+*  ^^^ source.mvbase-basic support.function.builtin.basicFunction
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicFunction
+
+* Statements:
+ABORT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   ABORT 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+ATTACH TAPE DEVICES
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   ATTACH TAPE DEVICES 
+*  ^^^^^^^^^^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*                     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+AUX ON
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   AUX ON 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+AUX OFF
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   AUX OFF 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+BLOCK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   BLOCK 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+UNBLOCK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   UNBLOCK 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+BREAK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   BREAK 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CHAIN
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CHAIN 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CLEAR
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CLEAR 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CLEARCOMMON
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CLEARCOMMON 
+*  ^^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CLEARDATA
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CLEARDATA 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CLEARFILE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CLEARFILE 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CLEARSELECT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CLEARSELECT 
+*  ^^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+COMMON
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   COMMON 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+COMPARE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   COMPARE 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CONNECT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CONNECT 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DISCONNECT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DISCONNECT 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CONSOLE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CONSOLE 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CONVERT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CONVERT 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CRT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CRT 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CRT ON
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CRT ON 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DATA
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DATA 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DEBUG
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DEBUG 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DEL
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DEL 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DELETE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DELETE 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DETACH TAPE DEVICES
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DETACH TAPE DEVICES 
+*  ^^^^^^^^^^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*                     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DIMENSION
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DIMENSION 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DISCONNECT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DISCONNECT 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+CONNECT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   CONNECT 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+DISPLAY
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   DISPLAY 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+ECHO
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   ECHO 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+ENTER
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   ENTER 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+EQUATE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   EQUATE 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+ERROR
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   ERROR 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+EXECUTE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   EXECUTE 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+FOOTING
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   FOOTING 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+FUNCTION
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   FUNCTION 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+GET
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   GET 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+GETX
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   GETX 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+HEADING
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   HEADING 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+IN
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   IN 
+*  ^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*    ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUT 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUT 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUTCLEAR
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUTCLEAR 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUT CTRL
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUT CTRL 
+*  ^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUT 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUTERR
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUTERR 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUTIF
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUTIF 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUTNULL
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUTNULL 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUTPROMPT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUTPROMPT 
+*  ^^^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INPUTTRAP
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INPUTTRAP 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+INS
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   INS 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+LOCATE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   LOCATE 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+LOCK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   LOCK 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MAT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MAT 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MATBUILD
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MATBUILD 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MATPARSE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MATPARSE 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MATREAD
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MATREAD 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MATREADU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MATREADU 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MATWRITE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MATWRITE 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+MATWRITEU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   MATWRITEU 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+NULL
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   NULL 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+OPEN
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   OPEN 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PAGE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PAGE 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PRECISION
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PRECISION 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PRINT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PRINT 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PRINTER
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PRINTER 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PRINTERR
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PRINTERR 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PROCREAD
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PROCREAD 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PROCWRITE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PROCWRITE 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+PROMPT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   PROMPT 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READ
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READ 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READB
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READB 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READF
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READF 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READNEXT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READNEXT 
+*  ^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READT 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READTX
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READTX 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READU 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READV
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READV 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+READVU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   READVU 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+RELEASE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   RELEASE 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+REM
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   REM 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+REMOVE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   REMOVE 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+RETURN
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   RETURN 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+REWIND
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   REWIND 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+RQM
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   RQM 
+*  ^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*     ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+SELECT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   SELECT 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+SEND
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   SEND 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+SENDBREAK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   SENDBREAK 
+*  ^^^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+SENDX
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   SENDX 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+SLEEP
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   SLEEP 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+SPOOLQ
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   SPOOLQ 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+STOP
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   STOP 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+TA
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   TA 
+*  ^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*    ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+TIMEOUT
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   TIMEOUT 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+UNBLOCK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   UNBLOCK 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+BLOCK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   BLOCK 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+UNLOCK
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   UNLOCK 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WAKEUP
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WAKEUP 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WEOF
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WEOF 
+*  ^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITE
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITE 
+*  ^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*       ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEB
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEB 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEBU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEBU 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEF
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEF 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEFU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEFU 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITET
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITET 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEU 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEV
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEV 
+*  ^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*        ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+WRITEVU
+* <- source.mvbase-basic support.function.builtin.basicStatement
+   WRITEVU 
+*  ^^^^^^^ source.mvbase-basic support.function.builtin.basicStatement
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - support.function.builtin.basicStatement
+
+* Flow Control:
+* Other Keywords:
+word before 
+*    ^ source.mvbase-basic keyword.other
+   word before  
+*       ^^^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - keyword.other
+
+word do 
+*    ^ source.mvbase-basic keyword.other
+   word do  
+*       ^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - keyword.other
+
+word from 
+*    ^ source.mvbase-basic keyword.other
+   word from  
+*       ^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.other
+
+word to 
+*    ^ source.mvbase-basic keyword.other
+   word to  
+*       ^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - keyword.other
+
+word on 
+*    ^ source.mvbase-basic keyword.other
+   word on  
+*       ^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - keyword.other
+
+word rtnlist 
+*    ^ source.mvbase-basic keyword.other
+   word rtnlist  
+*       ^^^^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - keyword.other
+
+word capturing 
+*    ^ source.mvbase-basic keyword.other
+   word capturing  
+*       ^^^^^^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - keyword.other
+
+word returning 
+*    ^ source.mvbase-basic keyword.other
+   word returning  
+*       ^^^^^^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - keyword.other
+
+word setting 
+*    ^ source.mvbase-basic keyword.other
+   word setting  
+*       ^^^^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - keyword.other
+
+word passlist 
+*    ^ source.mvbase-basic keyword.other
+   word passlist  
+*       ^^^^^^^^ source.mvbase-basic keyword.other
+*      ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - keyword.other
+
+* Operators:
+var = 1 ge 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 ge  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 gt 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 gt  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 le 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 le  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 lt 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 lt  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 eq 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 eq  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 ne 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 ne  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 and 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 and  
+*          ^^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - keyword.operator
+
+var = 1 or 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 or  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 + 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 +  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 - 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 -  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 * 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 *  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 / 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 /  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 : 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 :  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 = 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 =  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 # 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 #  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 < 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 <  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 > 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 >  
+*          ^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - keyword.operator
+
+var = 1 >= 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 >=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 <= 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 <=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 := 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 :=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 += 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 +=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 -= 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 -=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 *= 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 *=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+var = 1 /= 
+*       ^ source.mvbase-basic keyword.operator
+   var = 1 /=  
+*          ^^ source.mvbase-basic keyword.operator
+*         ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - keyword.operator
+
+* Labels:
+10
+* <- source.mvbase-basic entity.name.function.linelabel
+10 
+* <- source.mvbase-basic entity.name.function.linelabel
+* ^ source.mvbase-basic - entity.name.function.linelabel
+
+1000
+* <- source.mvbase-basic entity.name.function.linelabel
+1000 
+* <- source.mvbase-basic entity.name.function.linelabel
+*   ^ source.mvbase-basic - entity.name.function.linelabel
+
+1000:
+* <- source.mvbase-basic entity.name.function.linelabel
+1000: 
+* <- source.mvbase-basic entity.name.function.linelabel
+*    ^ source.mvbase-basic - entity.name.function.linelabel
+
+10.50
+* <- source.mvbase-basic entity.name.function.linelabel
+10.50 
+* <- source.mvbase-basic entity.name.function.linelabel
+*    ^ source.mvbase-basic - entity.name.function.linelabel
+
+semantic.label:
+* <- source.mvbase-basic entity.name.function.linelabel
+semantic.label: 
+* <- source.mvbase-basic entity.name.function.linelabel
+*              ^ source.mvbase-basic - entity.name.function.linelabel
+
+onewordlabel:
+* <- source.mvbase-basic entity.name.function.linelabel
+onewordlabel: 
+* <- source.mvbase-basic entity.name.function.linelabel
+*            ^ source.mvbase-basic - entity.name.function.linelabel
+
+multiple.dots.in.label:
+* <- source.mvbase-basic entity.name.function.linelabel
+multiple.dots.in.label: 
+* <- source.mvbase-basic entity.name.function.linelabel
+*                      ^ source.mvbase-basic - entity.name.function.linelabel
+
+* Variables: 
+ ABS.test 
+*^ source.mvbase-basic variable
+    ABS.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ABS.test 
+* <- source.mvbase-basic variable
+   ABS.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.ABS 
+*^ source.mvbase-basic variable
+    test.ABS  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.ABS
+*^ source.mvbase-basic variable
+    test.ABS 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ ALPHA.test 
+*^ source.mvbase-basic variable
+    ALPHA.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ALPHA.test 
+* <- source.mvbase-basic variable
+   ALPHA.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ALPHA 
+*^ source.mvbase-basic variable
+    test.ALPHA  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.ALPHA
+*^ source.mvbase-basic variable
+    test.ALPHA 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ ASCII.test 
+*^ source.mvbase-basic variable
+    ASCII.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ASCII.test 
+* <- source.mvbase-basic variable
+   ASCII.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ASCII 
+*^ source.mvbase-basic variable
+    test.ASCII  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.ASCII
+*^ source.mvbase-basic variable
+    test.ASCII 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ ASSIGNED.test 
+*^ source.mvbase-basic variable
+    ASSIGNED.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ASSIGNED.test 
+* <- source.mvbase-basic variable
+   ASSIGNED.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.ASSIGNED 
+*^ source.mvbase-basic variable
+    test.ASSIGNED  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.ASSIGNED
+*^ source.mvbase-basic variable
+    test.ASSIGNED 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ UNASSIGNED.test 
+*^ source.mvbase-basic variable
+    UNASSIGNED.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+UNASSIGNED.test 
+* <- source.mvbase-basic variable
+   UNASSIGNED.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.UNASSIGNED 
+*^ source.mvbase-basic variable
+    test.UNASSIGNED  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.UNASSIGNED
+*^ source.mvbase-basic variable
+    test.UNASSIGNED 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ CHANGE.test 
+*^ source.mvbase-basic variable
+    CHANGE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+CHANGE.test 
+* <- source.mvbase-basic variable
+   CHANGE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.CHANGE 
+*^ source.mvbase-basic variable
+    test.CHANGE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CHANGE
+*^ source.mvbase-basic variable
+    test.CHANGE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ CHAR.test 
+*^ source.mvbase-basic variable
+    CHAR.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+CHAR.test 
+* <- source.mvbase-basic variable
+   CHAR.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.CHAR 
+*^ source.mvbase-basic variable
+    test.CHAR  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.CHAR
+*^ source.mvbase-basic variable
+    test.CHAR 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ COL1.test 
+*^ source.mvbase-basic variable
+    COL1.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+COL1.test 
+* <- source.mvbase-basic variable
+   COL1.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.COL1 
+*^ source.mvbase-basic variable
+    test.COL1  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.COL1
+*^ source.mvbase-basic variable
+    test.COL1 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ COL2.test 
+*^ source.mvbase-basic variable
+    COL2.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+COL2.test 
+* <- source.mvbase-basic variable
+   COL2.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.COL2 
+*^ source.mvbase-basic variable
+    test.COL2  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.COL2
+*^ source.mvbase-basic variable
+    test.COL2 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ CONVERT.test 
+*^ source.mvbase-basic variable
+    CONVERT.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+CONVERT.test 
+* <- source.mvbase-basic variable
+   CONVERT.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CONVERT 
+*^ source.mvbase-basic variable
+    test.CONVERT  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.CONVERT
+*^ source.mvbase-basic variable
+    test.CONVERT 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ COS.test 
+*^ source.mvbase-basic variable
+    COS.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+COS.test 
+* <- source.mvbase-basic variable
+   COS.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.COS 
+*^ source.mvbase-basic variable
+    test.COS  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.COS
+*^ source.mvbase-basic variable
+    test.COS 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ COUNT.test 
+*^ source.mvbase-basic variable
+    COUNT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+COUNT.test 
+* <- source.mvbase-basic variable
+   COUNT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.COUNT 
+*^ source.mvbase-basic variable
+    test.COUNT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.COUNT
+*^ source.mvbase-basic variable
+    test.COUNT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ DATE.test 
+*^ source.mvbase-basic variable
+    DATE.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+DATE.test 
+* <- source.mvbase-basic variable
+   DATE.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.DATE 
+*^ source.mvbase-basic variable
+    test.DATE  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.DATE
+*^ source.mvbase-basic variable
+    test.DATE 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ DCOUNT.test 
+*^ source.mvbase-basic variable
+    DCOUNT.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+DCOUNT.test 
+* <- source.mvbase-basic variable
+   DCOUNT.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.DCOUNT 
+*^ source.mvbase-basic variable
+    test.DCOUNT  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.DCOUNT
+*^ source.mvbase-basic variable
+    test.DCOUNT 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ DELETE.test 
+*^ source.mvbase-basic variable
+    DELETE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+DELETE.test 
+* <- source.mvbase-basic variable
+   DELETE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.DELETE 
+*^ source.mvbase-basic variable
+    test.DELETE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.DELETE
+*^ source.mvbase-basic variable
+    test.DELETE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ DQUOTE.test 
+*^ source.mvbase-basic variable
+    DQUOTE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+DQUOTE.test 
+* <- source.mvbase-basic variable
+   DQUOTE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.DQUOTE 
+*^ source.mvbase-basic variable
+    test.DQUOTE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.DQUOTE
+*^ source.mvbase-basic variable
+    test.DQUOTE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ DTX.test 
+*^ source.mvbase-basic variable
+    DTX.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+DTX.test 
+* <- source.mvbase-basic variable
+   DTX.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.DTX 
+*^ source.mvbase-basic variable
+    test.DTX  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.DTX
+*^ source.mvbase-basic variable
+    test.DTX 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ EBCDIC.test 
+*^ source.mvbase-basic variable
+    EBCDIC.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+EBCDIC.test 
+* <- source.mvbase-basic variable
+   EBCDIC.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.EBCDIC 
+*^ source.mvbase-basic variable
+    test.EBCDIC  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.EBCDIC
+*^ source.mvbase-basic variable
+    test.EBCDIC 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ EREPLACE.test 
+*^ source.mvbase-basic variable
+    EREPLACE.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+EREPLACE.test 
+* <- source.mvbase-basic variable
+   EREPLACE.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.EREPLACE 
+*^ source.mvbase-basic variable
+    test.EREPLACE  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.EREPLACE
+*^ source.mvbase-basic variable
+    test.EREPLACE 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ EXCHANGE.test 
+*^ source.mvbase-basic variable
+    EXCHANGE.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+EXCHANGE.test 
+* <- source.mvbase-basic variable
+   EXCHANGE.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.EXCHANGE 
+*^ source.mvbase-basic variable
+    test.EXCHANGE  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.EXCHANGE
+*^ source.mvbase-basic variable
+    test.EXCHANGE 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ EXP.test 
+*^ source.mvbase-basic variable
+    EXP.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+EXP.test 
+* <- source.mvbase-basic variable
+   EXP.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.EXP 
+*^ source.mvbase-basic variable
+    test.EXP  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.EXP
+*^ source.mvbase-basic variable
+    test.EXP 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ EXTRACT.test 
+*^ source.mvbase-basic variable
+    EXTRACT.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+EXTRACT.test 
+* <- source.mvbase-basic variable
+   EXTRACT.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.EXTRACT 
+*^ source.mvbase-basic variable
+    test.EXTRACT  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.EXTRACT
+*^ source.mvbase-basic variable
+    test.EXTRACT 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ FIELD.test 
+*^ source.mvbase-basic variable
+    FIELD.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+FIELD.test 
+* <- source.mvbase-basic variable
+   FIELD.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.FIELD 
+*^ source.mvbase-basic variable
+    test.FIELD  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.FIELD
+*^ source.mvbase-basic variable
+    test.FIELD 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ FMT.test 
+*^ source.mvbase-basic variable
+    FMT.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+FMT.test 
+* <- source.mvbase-basic variable
+   FMT.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.FMT 
+*^ source.mvbase-basic variable
+    test.FMT  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.FMT
+*^ source.mvbase-basic variable
+    test.FMT 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ FOLD.test 
+*^ source.mvbase-basic variable
+    FOLD.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+FOLD.test 
+* <- source.mvbase-basic variable
+   FOLD.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.FOLD 
+*^ source.mvbase-basic variable
+    test.FOLD  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.FOLD
+*^ source.mvbase-basic variable
+    test.FOLD 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ ICONV.test 
+*^ source.mvbase-basic variable
+    ICONV.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ICONV.test 
+* <- source.mvbase-basic variable
+   ICONV.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ICONV 
+*^ source.mvbase-basic variable
+    test.ICONV  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.ICONV
+*^ source.mvbase-basic variable
+    test.ICONV 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ INDEX.test 
+*^ source.mvbase-basic variable
+    INDEX.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+INDEX.test 
+* <- source.mvbase-basic variable
+   INDEX.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.INDEX 
+*^ source.mvbase-basic variable
+    test.INDEX  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.INDEX
+*^ source.mvbase-basic variable
+    test.INDEX 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ INMAT.test 
+*^ source.mvbase-basic variable
+    INMAT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+INMAT.test 
+* <- source.mvbase-basic variable
+   INMAT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.INMAT 
+*^ source.mvbase-basic variable
+    test.INMAT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.INMAT
+*^ source.mvbase-basic variable
+    test.INMAT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ INSERT.test 
+*^ source.mvbase-basic variable
+    INSERT.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+INSERT.test 
+* <- source.mvbase-basic variable
+   INSERT.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.INSERT 
+*^ source.mvbase-basic variable
+    test.INSERT  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.INSERT
+*^ source.mvbase-basic variable
+    test.INSERT 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ INT.test 
+*^ source.mvbase-basic variable
+    INT.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+INT.test 
+* <- source.mvbase-basic variable
+   INT.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.INT 
+*^ source.mvbase-basic variable
+    test.INT  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.INT
+*^ source.mvbase-basic variable
+    test.INT 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ LEN.test 
+*^ source.mvbase-basic variable
+    LEN.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+LEN.test 
+* <- source.mvbase-basic variable
+   LEN.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.LEN 
+*^ source.mvbase-basic variable
+    test.LEN  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.LEN
+*^ source.mvbase-basic variable
+    test.LEN 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ LINESTATUS.test 
+*^ source.mvbase-basic variable
+    LINESTATUS.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+LINESTATUS.test 
+* <- source.mvbase-basic variable
+   LINESTATUS.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.LINESTATUS 
+*^ source.mvbase-basic variable
+    test.LINESTATUS  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.LINESTATUS
+*^ source.mvbase-basic variable
+    test.LINESTATUS 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ LN.test 
+*^ source.mvbase-basic variable
+    LN.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+LN.test 
+* <- source.mvbase-basic variable
+   LN.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.LN 
+*^ source.mvbase-basic variable
+    test.LN  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.LN
+*^ source.mvbase-basic variable
+    test.LN 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ MAXIMUM.test 
+*^ source.mvbase-basic variable
+    MAXIMUM.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+MAXIMUM.test 
+* <- source.mvbase-basic variable
+   MAXIMUM.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.MAXIMUM 
+*^ source.mvbase-basic variable
+    test.MAXIMUM  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MAXIMUM
+*^ source.mvbase-basic variable
+    test.MAXIMUM 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ MINIMUM.test 
+*^ source.mvbase-basic variable
+    MINIMUM.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+MINIMUM.test 
+* <- source.mvbase-basic variable
+   MINIMUM.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.MINIMUM 
+*^ source.mvbase-basic variable
+    test.MINIMUM  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MINIMUM
+*^ source.mvbase-basic variable
+    test.MINIMUM 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ MOD.test 
+*^ source.mvbase-basic variable
+    MOD.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+MOD.test 
+* <- source.mvbase-basic variable
+   MOD.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.MOD 
+*^ source.mvbase-basic variable
+    test.MOD  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.MOD
+*^ source.mvbase-basic variable
+    test.MOD 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ NOT.test 
+*^ source.mvbase-basic variable
+    NOT.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+NOT.test 
+* <- source.mvbase-basic variable
+   NOT.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.NOT 
+*^ source.mvbase-basic variable
+    test.NOT  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.NOT
+*^ source.mvbase-basic variable
+    test.NOT 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ NUM.test 
+*^ source.mvbase-basic variable
+    NUM.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+NUM.test 
+* <- source.mvbase-basic variable
+   NUM.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.NUM 
+*^ source.mvbase-basic variable
+    test.NUM  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.NUM
+*^ source.mvbase-basic variable
+    test.NUM 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ OCONV.test 
+*^ source.mvbase-basic variable
+    OCONV.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+OCONV.test 
+* <- source.mvbase-basic variable
+   OCONV.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.OCONV 
+*^ source.mvbase-basic variable
+    test.OCONV  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.OCONV
+*^ source.mvbase-basic variable
+    test.OCONV 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ PWR.test 
+*^ source.mvbase-basic variable
+    PWR.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+PWR.test 
+* <- source.mvbase-basic variable
+   PWR.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.PWR 
+*^ source.mvbase-basic variable
+    test.PWR  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.PWR
+*^ source.mvbase-basic variable
+    test.PWR 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ REM.test 
+*^ source.mvbase-basic variable
+    REM.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+REM.test 
+* <- source.mvbase-basic variable
+   REM.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.REM 
+*^ source.mvbase-basic variable
+    test.REM  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.REM
+*^ source.mvbase-basic variable
+    test.REM 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ REPLACE.test 
+*^ source.mvbase-basic variable
+    REPLACE.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+REPLACE.test 
+* <- source.mvbase-basic variable
+   REPLACE.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.REPLACE 
+*^ source.mvbase-basic variable
+    test.REPLACE  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.REPLACE
+*^ source.mvbase-basic variable
+    test.REPLACE 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ RND.test 
+*^ source.mvbase-basic variable
+    RND.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+RND.test 
+* <- source.mvbase-basic variable
+   RND.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.RND 
+*^ source.mvbase-basic variable
+    test.RND  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.RND
+*^ source.mvbase-basic variable
+    test.RND 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ SENTENCE.test 
+*^ source.mvbase-basic variable
+    SENTENCE.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+SENTENCE.test 
+* <- source.mvbase-basic variable
+   SENTENCE.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.SENTENCE 
+*^ source.mvbase-basic variable
+    test.SENTENCE  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.SENTENCE
+*^ source.mvbase-basic variable
+    test.SENTENCE 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ SEQ.test 
+*^ source.mvbase-basic variable
+    SEQ.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+SEQ.test 
+* <- source.mvbase-basic variable
+   SEQ.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.SEQ 
+*^ source.mvbase-basic variable
+    test.SEQ  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SEQ
+*^ source.mvbase-basic variable
+    test.SEQ 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ SIN.test 
+*^ source.mvbase-basic variable
+    SIN.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+SIN.test 
+* <- source.mvbase-basic variable
+   SIN.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.SIN 
+*^ source.mvbase-basic variable
+    test.SIN  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SIN
+*^ source.mvbase-basic variable
+    test.SIN 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ SORT.test 
+*^ source.mvbase-basic variable
+    SORT.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+SORT.test 
+* <- source.mvbase-basic variable
+   SORT.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SORT 
+*^ source.mvbase-basic variable
+    test.SORT  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SORT
+*^ source.mvbase-basic variable
+    test.SORT 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ SOUNDEX.test 
+*^ source.mvbase-basic variable
+    SOUNDEX.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+SOUNDEX.test 
+* <- source.mvbase-basic variable
+   SOUNDEX.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.SOUNDEX 
+*^ source.mvbase-basic variable
+    test.SOUNDEX  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.SOUNDEX
+*^ source.mvbase-basic variable
+    test.SOUNDEX 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ SPACE.test 
+*^ source.mvbase-basic variable
+    SPACE.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+SPACE.test 
+* <- source.mvbase-basic variable
+   SPACE.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SPACE 
+*^ source.mvbase-basic variable
+    test.SPACE  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SPACE
+*^ source.mvbase-basic variable
+    test.SPACE 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ SQRT.test 
+*^ source.mvbase-basic variable
+    SQRT.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+SQRT.test 
+* <- source.mvbase-basic variable
+   SQRT.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SQRT 
+*^ source.mvbase-basic variable
+    test.SQRT  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SQRT
+*^ source.mvbase-basic variable
+    test.SQRT 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ SQUOTE.test 
+*^ source.mvbase-basic variable
+    SQUOTE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+SQUOTE.test 
+* <- source.mvbase-basic variable
+   SQUOTE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SQUOTE 
+*^ source.mvbase-basic variable
+    test.SQUOTE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.SQUOTE
+*^ source.mvbase-basic variable
+    test.SQUOTE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ STATUS.test 
+*^ source.mvbase-basic variable
+    STATUS.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+STATUS.test 
+* <- source.mvbase-basic variable
+   STATUS.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.STATUS 
+*^ source.mvbase-basic variable
+    test.STATUS  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.STATUS
+*^ source.mvbase-basic variable
+    test.STATUS 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ STR.test 
+*^ source.mvbase-basic variable
+    STR.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+STR.test 
+* <- source.mvbase-basic variable
+   STR.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.STR 
+*^ source.mvbase-basic variable
+    test.STR  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.STR
+*^ source.mvbase-basic variable
+    test.STR 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ SUM.test 
+*^ source.mvbase-basic variable
+    SUM.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+SUM.test 
+* <- source.mvbase-basic variable
+   SUM.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.SUM 
+*^ source.mvbase-basic variable
+    test.SUM  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SUM
+*^ source.mvbase-basic variable
+    test.SUM 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ SUMMATION.test 
+*^ source.mvbase-basic variable
+    SUMMATION.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+SUMMATION.test 
+* <- source.mvbase-basic variable
+   SUMMATION.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.SUMMATION 
+*^ source.mvbase-basic variable
+    test.SUMMATION  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.SUMMATION
+*^ source.mvbase-basic variable
+    test.SUMMATION 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ SWAP.test 
+*^ source.mvbase-basic variable
+    SWAP.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+SWAP.test 
+* <- source.mvbase-basic variable
+   SWAP.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SWAP 
+*^ source.mvbase-basic variable
+    test.SWAP  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SWAP
+*^ source.mvbase-basic variable
+    test.SWAP 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ SYSTEM.test 
+*^ source.mvbase-basic variable
+    SYSTEM.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+SYSTEM.test 
+* <- source.mvbase-basic variable
+   SYSTEM.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SYSTEM 
+*^ source.mvbase-basic variable
+    test.SYSTEM  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.SYSTEM
+*^ source.mvbase-basic variable
+    test.SYSTEM 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ TA.test 
+*^ source.mvbase-basic variable
+    TA.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+TA.test 
+* <- source.mvbase-basic variable
+   TA.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.TA 
+*^ source.mvbase-basic variable
+    test.TA  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.TA
+*^ source.mvbase-basic variable
+    test.TA 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ TAN.test 
+*^ source.mvbase-basic variable
+    TAN.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+TAN.test 
+* <- source.mvbase-basic variable
+   TAN.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.TAN 
+*^ source.mvbase-basic variable
+    test.TAN  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.TAN
+*^ source.mvbase-basic variable
+    test.TAN 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ TIME.test 
+*^ source.mvbase-basic variable
+    TIME.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+TIME.test 
+* <- source.mvbase-basic variable
+   TIME.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.TIME 
+*^ source.mvbase-basic variable
+    test.TIME  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.TIME
+*^ source.mvbase-basic variable
+    test.TIME 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ TIMEDATE.test 
+*^ source.mvbase-basic variable
+    TIMEDATE.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+TIMEDATE.test 
+* <- source.mvbase-basic variable
+   TIMEDATE.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.TIMEDATE 
+*^ source.mvbase-basic variable
+    test.TIMEDATE  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.TIMEDATE
+*^ source.mvbase-basic variable
+    test.TIMEDATE 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ TRIM.test 
+*^ source.mvbase-basic variable
+    TRIM.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+TRIM.test 
+* <- source.mvbase-basic variable
+   TRIM.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.TRIM 
+*^ source.mvbase-basic variable
+    test.TRIM  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.TRIM
+*^ source.mvbase-basic variable
+    test.TRIM 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ TRIMB.test 
+*^ source.mvbase-basic variable
+    TRIMB.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+TRIMB.test 
+* <- source.mvbase-basic variable
+   TRIMB.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.TRIMB 
+*^ source.mvbase-basic variable
+    test.TRIMB  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.TRIMB
+*^ source.mvbase-basic variable
+    test.TRIMB 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ TRIMF.test 
+*^ source.mvbase-basic variable
+    TRIMF.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+TRIMF.test 
+* <- source.mvbase-basic variable
+   TRIMF.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.TRIMF 
+*^ source.mvbase-basic variable
+    test.TRIMF  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.TRIMF
+*^ source.mvbase-basic variable
+    test.TRIMF 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ UNASSIGNED.test 
+*^ source.mvbase-basic variable
+    UNASSIGNED.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+UNASSIGNED.test 
+* <- source.mvbase-basic variable
+   UNASSIGNED.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.UNASSIGNED 
+*^ source.mvbase-basic variable
+    test.UNASSIGNED  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.UNASSIGNED
+*^ source.mvbase-basic variable
+    test.UNASSIGNED 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ ASSIGNED.test 
+*^ source.mvbase-basic variable
+    ASSIGNED.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ASSIGNED.test 
+* <- source.mvbase-basic variable
+   ASSIGNED.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.ASSIGNED 
+*^ source.mvbase-basic variable
+    test.ASSIGNED  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.ASSIGNED
+*^ source.mvbase-basic variable
+    test.ASSIGNED 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ XTD.test 
+*^ source.mvbase-basic variable
+    XTD.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+XTD.test 
+* <- source.mvbase-basic variable
+   XTD.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.XTD 
+*^ source.mvbase-basic variable
+    test.XTD  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.XTD
+*^ source.mvbase-basic variable
+    test.XTD 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ ABORT.test 
+*^ source.mvbase-basic variable
+    ABORT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ABORT.test 
+* <- source.mvbase-basic variable
+   ABORT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ABORT 
+*^ source.mvbase-basic variable
+    test.ABORT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.ABORT
+*^ source.mvbase-basic variable
+    test.ABORT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ ATTACH.TAPE.DEVICES.test 
+*^ source.mvbase-basic variable
+    ATTACH.TAPE.DEVICES.test  
+*   ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                           ^ source.mvbase-basic - variable
+
+ATTACH.TAPE.DEVICES.test 
+* <- source.mvbase-basic variable
+   ATTACH.TAPE.DEVICES.test  
+*  ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                          ^ source.mvbase-basic - variable
+
+ test.ATTACH.TAPE.DEVICES 
+*^ source.mvbase-basic variable
+    test.ATTACH.TAPE.DEVICES  
+*   ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                           ^ source.mvbase-basic - variable
+
+ test.ATTACH.TAPE.DEVICES
+*^ source.mvbase-basic variable
+    test.ATTACH.TAPE.DEVICES 
+*   ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                           ^ source.mvbase-basic - variable
+
+ AUX.ON.test 
+*^ source.mvbase-basic variable
+    AUX.ON.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+AUX.ON.test 
+* <- source.mvbase-basic variable
+   AUX.ON.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.AUX.ON 
+*^ source.mvbase-basic variable
+    test.AUX.ON  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.AUX.ON
+*^ source.mvbase-basic variable
+    test.AUX.ON 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ AUX.OFF.test 
+*^ source.mvbase-basic variable
+    AUX.OFF.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+AUX.OFF.test 
+* <- source.mvbase-basic variable
+   AUX.OFF.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.AUX.OFF 
+*^ source.mvbase-basic variable
+    test.AUX.OFF  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.AUX.OFF
+*^ source.mvbase-basic variable
+    test.AUX.OFF 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ BLOCK.test 
+*^ source.mvbase-basic variable
+    BLOCK.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+BLOCK.test 
+* <- source.mvbase-basic variable
+   BLOCK.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.BLOCK 
+*^ source.mvbase-basic variable
+    test.BLOCK  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.BLOCK
+*^ source.mvbase-basic variable
+    test.BLOCK 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ UNBLOCK.test 
+*^ source.mvbase-basic variable
+    UNBLOCK.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+UNBLOCK.test 
+* <- source.mvbase-basic variable
+   UNBLOCK.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.UNBLOCK 
+*^ source.mvbase-basic variable
+    test.UNBLOCK  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.UNBLOCK
+*^ source.mvbase-basic variable
+    test.UNBLOCK 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ BREAK.test 
+*^ source.mvbase-basic variable
+    BREAK.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+BREAK.test 
+* <- source.mvbase-basic variable
+   BREAK.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.BREAK 
+*^ source.mvbase-basic variable
+    test.BREAK  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.BREAK
+*^ source.mvbase-basic variable
+    test.BREAK 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ CHAIN.test 
+*^ source.mvbase-basic variable
+    CHAIN.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+CHAIN.test 
+* <- source.mvbase-basic variable
+   CHAIN.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.CHAIN 
+*^ source.mvbase-basic variable
+    test.CHAIN  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.CHAIN
+*^ source.mvbase-basic variable
+    test.CHAIN 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ CLEAR.test 
+*^ source.mvbase-basic variable
+    CLEAR.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+CLEAR.test 
+* <- source.mvbase-basic variable
+   CLEAR.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.CLEAR 
+*^ source.mvbase-basic variable
+    test.CLEAR  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.CLEAR
+*^ source.mvbase-basic variable
+    test.CLEAR 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ CLEARCOMMON.test 
+*^ source.mvbase-basic variable
+    CLEARCOMMON.test  
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+CLEARCOMMON.test 
+* <- source.mvbase-basic variable
+   CLEARCOMMON.test  
+*  ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.CLEARCOMMON 
+*^ source.mvbase-basic variable
+    test.CLEARCOMMON  
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+ test.CLEARCOMMON
+*^ source.mvbase-basic variable
+    test.CLEARCOMMON 
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+ CLEARDATA.test 
+*^ source.mvbase-basic variable
+    CLEARDATA.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+CLEARDATA.test 
+* <- source.mvbase-basic variable
+   CLEARDATA.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.CLEARDATA 
+*^ source.mvbase-basic variable
+    test.CLEARDATA  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.CLEARDATA
+*^ source.mvbase-basic variable
+    test.CLEARDATA 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ CLEARFILE.test 
+*^ source.mvbase-basic variable
+    CLEARFILE.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+CLEARFILE.test 
+* <- source.mvbase-basic variable
+   CLEARFILE.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.CLEARFILE 
+*^ source.mvbase-basic variable
+    test.CLEARFILE  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.CLEARFILE
+*^ source.mvbase-basic variable
+    test.CLEARFILE 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ CLEARSELECT.test 
+*^ source.mvbase-basic variable
+    CLEARSELECT.test  
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+CLEARSELECT.test 
+* <- source.mvbase-basic variable
+   CLEARSELECT.test  
+*  ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.CLEARSELECT 
+*^ source.mvbase-basic variable
+    test.CLEARSELECT  
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+ test.CLEARSELECT
+*^ source.mvbase-basic variable
+    test.CLEARSELECT 
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+ COMMON.test 
+*^ source.mvbase-basic variable
+    COMMON.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+COMMON.test 
+* <- source.mvbase-basic variable
+   COMMON.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.COMMON 
+*^ source.mvbase-basic variable
+    test.COMMON  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.COMMON
+*^ source.mvbase-basic variable
+    test.COMMON 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ COMPARE.test 
+*^ source.mvbase-basic variable
+    COMPARE.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+COMPARE.test 
+* <- source.mvbase-basic variable
+   COMPARE.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.COMPARE 
+*^ source.mvbase-basic variable
+    test.COMPARE  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.COMPARE
+*^ source.mvbase-basic variable
+    test.COMPARE 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ CONNECT.test 
+*^ source.mvbase-basic variable
+    CONNECT.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+CONNECT.test 
+* <- source.mvbase-basic variable
+   CONNECT.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CONNECT 
+*^ source.mvbase-basic variable
+    test.CONNECT  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.CONNECT
+*^ source.mvbase-basic variable
+    test.CONNECT 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ DISCONNECT.test 
+*^ source.mvbase-basic variable
+    DISCONNECT.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+DISCONNECT.test 
+* <- source.mvbase-basic variable
+   DISCONNECT.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.DISCONNECT 
+*^ source.mvbase-basic variable
+    test.DISCONNECT  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.DISCONNECT
+*^ source.mvbase-basic variable
+    test.DISCONNECT 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ CONSOLE.test 
+*^ source.mvbase-basic variable
+    CONSOLE.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+CONSOLE.test 
+* <- source.mvbase-basic variable
+   CONSOLE.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CONSOLE 
+*^ source.mvbase-basic variable
+    test.CONSOLE  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.CONSOLE
+*^ source.mvbase-basic variable
+    test.CONSOLE 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ CONVERT.test 
+*^ source.mvbase-basic variable
+    CONVERT.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+CONVERT.test 
+* <- source.mvbase-basic variable
+   CONVERT.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CONVERT 
+*^ source.mvbase-basic variable
+    test.CONVERT  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.CONVERT
+*^ source.mvbase-basic variable
+    test.CONVERT 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ CRT.test 
+*^ source.mvbase-basic variable
+    CRT.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+CRT.test 
+* <- source.mvbase-basic variable
+   CRT.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.CRT 
+*^ source.mvbase-basic variable
+    test.CRT  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.CRT
+*^ source.mvbase-basic variable
+    test.CRT 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ CRT.ON.test 
+*^ source.mvbase-basic variable
+    CRT.ON.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+CRT.ON.test 
+* <- source.mvbase-basic variable
+   CRT.ON.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.CRT.ON 
+*^ source.mvbase-basic variable
+    test.CRT.ON  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CRT.ON
+*^ source.mvbase-basic variable
+    test.CRT.ON 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ DATA.test 
+*^ source.mvbase-basic variable
+    DATA.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+DATA.test 
+* <- source.mvbase-basic variable
+   DATA.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.DATA 
+*^ source.mvbase-basic variable
+    test.DATA  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.DATA
+*^ source.mvbase-basic variable
+    test.DATA 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ DEBUG.test 
+*^ source.mvbase-basic variable
+    DEBUG.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+DEBUG.test 
+* <- source.mvbase-basic variable
+   DEBUG.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.DEBUG 
+*^ source.mvbase-basic variable
+    test.DEBUG  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.DEBUG
+*^ source.mvbase-basic variable
+    test.DEBUG 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ DEL.test 
+*^ source.mvbase-basic variable
+    DEL.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+DEL.test 
+* <- source.mvbase-basic variable
+   DEL.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.DEL 
+*^ source.mvbase-basic variable
+    test.DEL  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.DEL
+*^ source.mvbase-basic variable
+    test.DEL 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ DELETE.test 
+*^ source.mvbase-basic variable
+    DELETE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+DELETE.test 
+* <- source.mvbase-basic variable
+   DELETE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.DELETE 
+*^ source.mvbase-basic variable
+    test.DELETE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.DELETE
+*^ source.mvbase-basic variable
+    test.DELETE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ DETACH.TAPE.DEVICES.test 
+*^ source.mvbase-basic variable
+    DETACH.TAPE.DEVICES.test  
+*   ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                           ^ source.mvbase-basic - variable
+
+DETACH.TAPE.DEVICES.test 
+* <- source.mvbase-basic variable
+   DETACH.TAPE.DEVICES.test  
+*  ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                          ^ source.mvbase-basic - variable
+
+ test.DETACH.TAPE.DEVICES 
+*^ source.mvbase-basic variable
+    test.DETACH.TAPE.DEVICES  
+*   ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                           ^ source.mvbase-basic - variable
+
+ test.DETACH.TAPE.DEVICES
+*^ source.mvbase-basic variable
+    test.DETACH.TAPE.DEVICES 
+*   ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                           ^ source.mvbase-basic - variable
+
+ DIMENSION.test 
+*^ source.mvbase-basic variable
+    DIMENSION.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+DIMENSION.test 
+* <- source.mvbase-basic variable
+   DIMENSION.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.DIMENSION 
+*^ source.mvbase-basic variable
+    test.DIMENSION  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.DIMENSION
+*^ source.mvbase-basic variable
+    test.DIMENSION 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ DISCONNECT.test 
+*^ source.mvbase-basic variable
+    DISCONNECT.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+DISCONNECT.test 
+* <- source.mvbase-basic variable
+   DISCONNECT.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.DISCONNECT 
+*^ source.mvbase-basic variable
+    test.DISCONNECT  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.DISCONNECT
+*^ source.mvbase-basic variable
+    test.DISCONNECT 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ CONNECT.test 
+*^ source.mvbase-basic variable
+    CONNECT.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+CONNECT.test 
+* <- source.mvbase-basic variable
+   CONNECT.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.CONNECT 
+*^ source.mvbase-basic variable
+    test.CONNECT  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.CONNECT
+*^ source.mvbase-basic variable
+    test.CONNECT 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ DISPLAY.test 
+*^ source.mvbase-basic variable
+    DISPLAY.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+DISPLAY.test 
+* <- source.mvbase-basic variable
+   DISPLAY.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.DISPLAY 
+*^ source.mvbase-basic variable
+    test.DISPLAY  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.DISPLAY
+*^ source.mvbase-basic variable
+    test.DISPLAY 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ ECHO.test 
+*^ source.mvbase-basic variable
+    ECHO.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ECHO.test 
+* <- source.mvbase-basic variable
+   ECHO.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.ECHO 
+*^ source.mvbase-basic variable
+    test.ECHO  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ECHO
+*^ source.mvbase-basic variable
+    test.ECHO 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ ENTER.test 
+*^ source.mvbase-basic variable
+    ENTER.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ENTER.test 
+* <- source.mvbase-basic variable
+   ENTER.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ENTER 
+*^ source.mvbase-basic variable
+    test.ENTER  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.ENTER
+*^ source.mvbase-basic variable
+    test.ENTER 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ EQUATE.test 
+*^ source.mvbase-basic variable
+    EQUATE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+EQUATE.test 
+* <- source.mvbase-basic variable
+   EQUATE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.EQUATE 
+*^ source.mvbase-basic variable
+    test.EQUATE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.EQUATE
+*^ source.mvbase-basic variable
+    test.EQUATE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ ERROR.test 
+*^ source.mvbase-basic variable
+    ERROR.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ERROR.test 
+* <- source.mvbase-basic variable
+   ERROR.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.ERROR 
+*^ source.mvbase-basic variable
+    test.ERROR  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.ERROR
+*^ source.mvbase-basic variable
+    test.ERROR 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ EXECUTE.test 
+*^ source.mvbase-basic variable
+    EXECUTE.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+EXECUTE.test 
+* <- source.mvbase-basic variable
+   EXECUTE.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.EXECUTE 
+*^ source.mvbase-basic variable
+    test.EXECUTE  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.EXECUTE
+*^ source.mvbase-basic variable
+    test.EXECUTE 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ FOOTING.test 
+*^ source.mvbase-basic variable
+    FOOTING.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+FOOTING.test 
+* <- source.mvbase-basic variable
+   FOOTING.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.FOOTING 
+*^ source.mvbase-basic variable
+    test.FOOTING  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.FOOTING
+*^ source.mvbase-basic variable
+    test.FOOTING 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ FUNCTION.test 
+*^ source.mvbase-basic variable
+    FUNCTION.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+FUNCTION.test 
+* <- source.mvbase-basic variable
+   FUNCTION.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.FUNCTION 
+*^ source.mvbase-basic variable
+    test.FUNCTION  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.FUNCTION
+*^ source.mvbase-basic variable
+    test.FUNCTION 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ GET.test 
+*^ source.mvbase-basic variable
+    GET.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+GET.test 
+* <- source.mvbase-basic variable
+   GET.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.GET 
+*^ source.mvbase-basic variable
+    test.GET  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.GET
+*^ source.mvbase-basic variable
+    test.GET 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ GETX.test 
+*^ source.mvbase-basic variable
+    GETX.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+GETX.test 
+* <- source.mvbase-basic variable
+   GETX.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.GETX 
+*^ source.mvbase-basic variable
+    test.GETX  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.GETX
+*^ source.mvbase-basic variable
+    test.GETX 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ HEADING.test 
+*^ source.mvbase-basic variable
+    HEADING.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+HEADING.test 
+* <- source.mvbase-basic variable
+   HEADING.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.HEADING 
+*^ source.mvbase-basic variable
+    test.HEADING  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.HEADING
+*^ source.mvbase-basic variable
+    test.HEADING 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ IN.test 
+*^ source.mvbase-basic variable
+    IN.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+IN.test 
+* <- source.mvbase-basic variable
+   IN.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.IN 
+*^ source.mvbase-basic variable
+    test.IN  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.IN
+*^ source.mvbase-basic variable
+    test.IN 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ INPUT.test 
+*^ source.mvbase-basic variable
+    INPUT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+INPUT.test 
+* <- source.mvbase-basic variable
+   INPUT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.INPUT 
+*^ source.mvbase-basic variable
+    test.INPUT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.INPUT
+*^ source.mvbase-basic variable
+    test.INPUT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ INPUT.test 
+*^ source.mvbase-basic variable
+    INPUT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+INPUT.test 
+* <- source.mvbase-basic variable
+   INPUT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.INPUT 
+*^ source.mvbase-basic variable
+    test.INPUT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.INPUT
+*^ source.mvbase-basic variable
+    test.INPUT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ INPUTCLEAR.test 
+*^ source.mvbase-basic variable
+    INPUTCLEAR.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+INPUTCLEAR.test 
+* <- source.mvbase-basic variable
+   INPUTCLEAR.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.INPUTCLEAR 
+*^ source.mvbase-basic variable
+    test.INPUTCLEAR  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.INPUTCLEAR
+*^ source.mvbase-basic variable
+    test.INPUTCLEAR 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ INPUT.CTRL.test 
+*^ source.mvbase-basic variable
+    INPUT.CTRL.test  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+INPUT.CTRL.test 
+* <- source.mvbase-basic variable
+   INPUT.CTRL.test  
+*  ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.INPUT.CTRL 
+*^ source.mvbase-basic variable
+    test.INPUT.CTRL  
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.INPUT.CTRL
+*^ source.mvbase-basic variable
+    test.INPUT.CTRL 
+*   ^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ INPUT.test 
+*^ source.mvbase-basic variable
+    INPUT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+INPUT.test 
+* <- source.mvbase-basic variable
+   INPUT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.INPUT 
+*^ source.mvbase-basic variable
+    test.INPUT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.INPUT
+*^ source.mvbase-basic variable
+    test.INPUT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ INPUTERR.test 
+*^ source.mvbase-basic variable
+    INPUTERR.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+INPUTERR.test 
+* <- source.mvbase-basic variable
+   INPUTERR.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.INPUTERR 
+*^ source.mvbase-basic variable
+    test.INPUTERR  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.INPUTERR
+*^ source.mvbase-basic variable
+    test.INPUTERR 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ INPUTIF.test 
+*^ source.mvbase-basic variable
+    INPUTIF.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+INPUTIF.test 
+* <- source.mvbase-basic variable
+   INPUTIF.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.INPUTIF 
+*^ source.mvbase-basic variable
+    test.INPUTIF  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.INPUTIF
+*^ source.mvbase-basic variable
+    test.INPUTIF 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ INPUTNULL.test 
+*^ source.mvbase-basic variable
+    INPUTNULL.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+INPUTNULL.test 
+* <- source.mvbase-basic variable
+   INPUTNULL.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.INPUTNULL 
+*^ source.mvbase-basic variable
+    test.INPUTNULL  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.INPUTNULL
+*^ source.mvbase-basic variable
+    test.INPUTNULL 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ INPUTPROMPT.test 
+*^ source.mvbase-basic variable
+    INPUTPROMPT.test  
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+INPUTPROMPT.test 
+* <- source.mvbase-basic variable
+   INPUTPROMPT.test  
+*  ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                  ^ source.mvbase-basic - variable
+
+ test.INPUTPROMPT 
+*^ source.mvbase-basic variable
+    test.INPUTPROMPT  
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+ test.INPUTPROMPT
+*^ source.mvbase-basic variable
+    test.INPUTPROMPT 
+*   ^^^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                   ^ source.mvbase-basic - variable
+
+ INPUTTRAP.test 
+*^ source.mvbase-basic variable
+    INPUTTRAP.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+INPUTTRAP.test 
+* <- source.mvbase-basic variable
+   INPUTTRAP.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.INPUTTRAP 
+*^ source.mvbase-basic variable
+    test.INPUTTRAP  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.INPUTTRAP
+*^ source.mvbase-basic variable
+    test.INPUTTRAP 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ INS.test 
+*^ source.mvbase-basic variable
+    INS.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+INS.test 
+* <- source.mvbase-basic variable
+   INS.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.INS 
+*^ source.mvbase-basic variable
+    test.INS  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.INS
+*^ source.mvbase-basic variable
+    test.INS 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ LOCATE.test 
+*^ source.mvbase-basic variable
+    LOCATE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+LOCATE.test 
+* <- source.mvbase-basic variable
+   LOCATE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.LOCATE 
+*^ source.mvbase-basic variable
+    test.LOCATE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.LOCATE
+*^ source.mvbase-basic variable
+    test.LOCATE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ LOCK.test 
+*^ source.mvbase-basic variable
+    LOCK.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+LOCK.test 
+* <- source.mvbase-basic variable
+   LOCK.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.LOCK 
+*^ source.mvbase-basic variable
+    test.LOCK  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.LOCK
+*^ source.mvbase-basic variable
+    test.LOCK 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ MAT.test 
+*^ source.mvbase-basic variable
+    MAT.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+MAT.test 
+* <- source.mvbase-basic variable
+   MAT.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.MAT 
+*^ source.mvbase-basic variable
+    test.MAT  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.MAT
+*^ source.mvbase-basic variable
+    test.MAT 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ MATBUILD.test 
+*^ source.mvbase-basic variable
+    MATBUILD.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+MATBUILD.test 
+* <- source.mvbase-basic variable
+   MATBUILD.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MATBUILD 
+*^ source.mvbase-basic variable
+    test.MATBUILD  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.MATBUILD
+*^ source.mvbase-basic variable
+    test.MATBUILD 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ MATPARSE.test 
+*^ source.mvbase-basic variable
+    MATPARSE.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+MATPARSE.test 
+* <- source.mvbase-basic variable
+   MATPARSE.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MATPARSE 
+*^ source.mvbase-basic variable
+    test.MATPARSE  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.MATPARSE
+*^ source.mvbase-basic variable
+    test.MATPARSE 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ MATREAD.test 
+*^ source.mvbase-basic variable
+    MATREAD.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+MATREAD.test 
+* <- source.mvbase-basic variable
+   MATREAD.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.MATREAD 
+*^ source.mvbase-basic variable
+    test.MATREAD  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MATREAD
+*^ source.mvbase-basic variable
+    test.MATREAD 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ MATREADU.test 
+*^ source.mvbase-basic variable
+    MATREADU.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+MATREADU.test 
+* <- source.mvbase-basic variable
+   MATREADU.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MATREADU 
+*^ source.mvbase-basic variable
+    test.MATREADU  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.MATREADU
+*^ source.mvbase-basic variable
+    test.MATREADU 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ MATWRITE.test 
+*^ source.mvbase-basic variable
+    MATWRITE.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+MATWRITE.test 
+* <- source.mvbase-basic variable
+   MATWRITE.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.MATWRITE 
+*^ source.mvbase-basic variable
+    test.MATWRITE  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.MATWRITE
+*^ source.mvbase-basic variable
+    test.MATWRITE 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ MATWRITEU.test 
+*^ source.mvbase-basic variable
+    MATWRITEU.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+MATWRITEU.test 
+* <- source.mvbase-basic variable
+   MATWRITEU.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.MATWRITEU 
+*^ source.mvbase-basic variable
+    test.MATWRITEU  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.MATWRITEU
+*^ source.mvbase-basic variable
+    test.MATWRITEU 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ NULL.test 
+*^ source.mvbase-basic variable
+    NULL.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+NULL.test 
+* <- source.mvbase-basic variable
+   NULL.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.NULL 
+*^ source.mvbase-basic variable
+    test.NULL  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.NULL
+*^ source.mvbase-basic variable
+    test.NULL 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ OPEN.test 
+*^ source.mvbase-basic variable
+    OPEN.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+OPEN.test 
+* <- source.mvbase-basic variable
+   OPEN.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.OPEN 
+*^ source.mvbase-basic variable
+    test.OPEN  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.OPEN
+*^ source.mvbase-basic variable
+    test.OPEN 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ PAGE.test 
+*^ source.mvbase-basic variable
+    PAGE.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+PAGE.test 
+* <- source.mvbase-basic variable
+   PAGE.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.PAGE 
+*^ source.mvbase-basic variable
+    test.PAGE  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.PAGE
+*^ source.mvbase-basic variable
+    test.PAGE 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ PRECISION.test 
+*^ source.mvbase-basic variable
+    PRECISION.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+PRECISION.test 
+* <- source.mvbase-basic variable
+   PRECISION.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.PRECISION 
+*^ source.mvbase-basic variable
+    test.PRECISION  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.PRECISION
+*^ source.mvbase-basic variable
+    test.PRECISION 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ PRINT.test 
+*^ source.mvbase-basic variable
+    PRINT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+PRINT.test 
+* <- source.mvbase-basic variable
+   PRINT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.PRINT 
+*^ source.mvbase-basic variable
+    test.PRINT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.PRINT
+*^ source.mvbase-basic variable
+    test.PRINT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ PRINTER.test 
+*^ source.mvbase-basic variable
+    PRINTER.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+PRINTER.test 
+* <- source.mvbase-basic variable
+   PRINTER.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.PRINTER 
+*^ source.mvbase-basic variable
+    test.PRINTER  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.PRINTER
+*^ source.mvbase-basic variable
+    test.PRINTER 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ PRINTERR.test 
+*^ source.mvbase-basic variable
+    PRINTERR.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+PRINTERR.test 
+* <- source.mvbase-basic variable
+   PRINTERR.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.PRINTERR 
+*^ source.mvbase-basic variable
+    test.PRINTERR  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.PRINTERR
+*^ source.mvbase-basic variable
+    test.PRINTERR 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ PROCREAD.test 
+*^ source.mvbase-basic variable
+    PROCREAD.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+PROCREAD.test 
+* <- source.mvbase-basic variable
+   PROCREAD.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.PROCREAD 
+*^ source.mvbase-basic variable
+    test.PROCREAD  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.PROCREAD
+*^ source.mvbase-basic variable
+    test.PROCREAD 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ PROCWRITE.test 
+*^ source.mvbase-basic variable
+    PROCWRITE.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+PROCWRITE.test 
+* <- source.mvbase-basic variable
+   PROCWRITE.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.PROCWRITE 
+*^ source.mvbase-basic variable
+    test.PROCWRITE  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.PROCWRITE
+*^ source.mvbase-basic variable
+    test.PROCWRITE 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ PROMPT.test 
+*^ source.mvbase-basic variable
+    PROMPT.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+PROMPT.test 
+* <- source.mvbase-basic variable
+   PROMPT.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.PROMPT 
+*^ source.mvbase-basic variable
+    test.PROMPT  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.PROMPT
+*^ source.mvbase-basic variable
+    test.PROMPT 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ READ.test 
+*^ source.mvbase-basic variable
+    READ.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+READ.test 
+* <- source.mvbase-basic variable
+   READ.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.READ 
+*^ source.mvbase-basic variable
+    test.READ  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.READ
+*^ source.mvbase-basic variable
+    test.READ 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ READB.test 
+*^ source.mvbase-basic variable
+    READB.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+READB.test 
+* <- source.mvbase-basic variable
+   READB.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.READB 
+*^ source.mvbase-basic variable
+    test.READB  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READB
+*^ source.mvbase-basic variable
+    test.READB 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ READF.test 
+*^ source.mvbase-basic variable
+    READF.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+READF.test 
+* <- source.mvbase-basic variable
+   READF.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.READF 
+*^ source.mvbase-basic variable
+    test.READF  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READF
+*^ source.mvbase-basic variable
+    test.READF 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ READNEXT.test 
+*^ source.mvbase-basic variable
+    READNEXT.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+READNEXT.test 
+* <- source.mvbase-basic variable
+   READNEXT.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.READNEXT 
+*^ source.mvbase-basic variable
+    test.READNEXT  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.READNEXT
+*^ source.mvbase-basic variable
+    test.READNEXT 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ READT.test 
+*^ source.mvbase-basic variable
+    READT.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+READT.test 
+* <- source.mvbase-basic variable
+   READT.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.READT 
+*^ source.mvbase-basic variable
+    test.READT  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READT
+*^ source.mvbase-basic variable
+    test.READT 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ READTX.test 
+*^ source.mvbase-basic variable
+    READTX.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+READTX.test 
+* <- source.mvbase-basic variable
+   READTX.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READTX 
+*^ source.mvbase-basic variable
+    test.READTX  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.READTX
+*^ source.mvbase-basic variable
+    test.READTX 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ READU.test 
+*^ source.mvbase-basic variable
+    READU.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+READU.test 
+* <- source.mvbase-basic variable
+   READU.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.READU 
+*^ source.mvbase-basic variable
+    test.READU  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READU
+*^ source.mvbase-basic variable
+    test.READU 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ READV.test 
+*^ source.mvbase-basic variable
+    READV.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+READV.test 
+* <- source.mvbase-basic variable
+   READV.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.READV 
+*^ source.mvbase-basic variable
+    test.READV  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READV
+*^ source.mvbase-basic variable
+    test.READV 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ READVU.test 
+*^ source.mvbase-basic variable
+    READVU.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+READVU.test 
+* <- source.mvbase-basic variable
+   READVU.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.READVU 
+*^ source.mvbase-basic variable
+    test.READVU  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.READVU
+*^ source.mvbase-basic variable
+    test.READVU 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ RELEASE.test 
+*^ source.mvbase-basic variable
+    RELEASE.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+RELEASE.test 
+* <- source.mvbase-basic variable
+   RELEASE.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.RELEASE 
+*^ source.mvbase-basic variable
+    test.RELEASE  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.RELEASE
+*^ source.mvbase-basic variable
+    test.RELEASE 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ REM.test 
+*^ source.mvbase-basic variable
+    REM.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+REM.test 
+* <- source.mvbase-basic variable
+   REM.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.REM 
+*^ source.mvbase-basic variable
+    test.REM  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.REM
+*^ source.mvbase-basic variable
+    test.REM 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ REMOVE.test 
+*^ source.mvbase-basic variable
+    REMOVE.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+REMOVE.test 
+* <- source.mvbase-basic variable
+   REMOVE.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.REMOVE 
+*^ source.mvbase-basic variable
+    test.REMOVE  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.REMOVE
+*^ source.mvbase-basic variable
+    test.REMOVE 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ RETURN.test 
+*^ source.mvbase-basic variable
+    RETURN.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+RETURN.test 
+* <- source.mvbase-basic variable
+   RETURN.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.RETURN 
+*^ source.mvbase-basic variable
+    test.RETURN  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.RETURN
+*^ source.mvbase-basic variable
+    test.RETURN 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ REWIND.test 
+*^ source.mvbase-basic variable
+    REWIND.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+REWIND.test 
+* <- source.mvbase-basic variable
+   REWIND.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.REWIND 
+*^ source.mvbase-basic variable
+    test.REWIND  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.REWIND
+*^ source.mvbase-basic variable
+    test.REWIND 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ RQM.test 
+*^ source.mvbase-basic variable
+    RQM.test  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+RQM.test 
+* <- source.mvbase-basic variable
+   RQM.test  
+*  ^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.RQM 
+*^ source.mvbase-basic variable
+    test.RQM  
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.RQM
+*^ source.mvbase-basic variable
+    test.RQM 
+*   ^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ SELECT.test 
+*^ source.mvbase-basic variable
+    SELECT.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+SELECT.test 
+* <- source.mvbase-basic variable
+   SELECT.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SELECT 
+*^ source.mvbase-basic variable
+    test.SELECT  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.SELECT
+*^ source.mvbase-basic variable
+    test.SELECT 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ SEND.test 
+*^ source.mvbase-basic variable
+    SEND.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+SEND.test 
+* <- source.mvbase-basic variable
+   SEND.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.SEND 
+*^ source.mvbase-basic variable
+    test.SEND  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SEND
+*^ source.mvbase-basic variable
+    test.SEND 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ SENDBREAK.test 
+*^ source.mvbase-basic variable
+    SENDBREAK.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+SENDBREAK.test 
+* <- source.mvbase-basic variable
+   SENDBREAK.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.SENDBREAK 
+*^ source.mvbase-basic variable
+    test.SENDBREAK  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.SENDBREAK
+*^ source.mvbase-basic variable
+    test.SENDBREAK 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ SENDX.test 
+*^ source.mvbase-basic variable
+    SENDX.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+SENDX.test 
+* <- source.mvbase-basic variable
+   SENDX.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SENDX 
+*^ source.mvbase-basic variable
+    test.SENDX  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SENDX
+*^ source.mvbase-basic variable
+    test.SENDX 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ SLEEP.test 
+*^ source.mvbase-basic variable
+    SLEEP.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+SLEEP.test 
+* <- source.mvbase-basic variable
+   SLEEP.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.SLEEP 
+*^ source.mvbase-basic variable
+    test.SLEEP  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SLEEP
+*^ source.mvbase-basic variable
+    test.SLEEP 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ SPOOLQ.test 
+*^ source.mvbase-basic variable
+    SPOOLQ.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+SPOOLQ.test 
+* <- source.mvbase-basic variable
+   SPOOLQ.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.SPOOLQ 
+*^ source.mvbase-basic variable
+    test.SPOOLQ  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.SPOOLQ
+*^ source.mvbase-basic variable
+    test.SPOOLQ 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ STOP.test 
+*^ source.mvbase-basic variable
+    STOP.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+STOP.test 
+* <- source.mvbase-basic variable
+   STOP.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.STOP 
+*^ source.mvbase-basic variable
+    test.STOP  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.STOP
+*^ source.mvbase-basic variable
+    test.STOP 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ TA.test 
+*^ source.mvbase-basic variable
+    TA.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+TA.test 
+* <- source.mvbase-basic variable
+   TA.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.TA 
+*^ source.mvbase-basic variable
+    test.TA  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.TA
+*^ source.mvbase-basic variable
+    test.TA 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ TIMEOUT.test 
+*^ source.mvbase-basic variable
+    TIMEOUT.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+TIMEOUT.test 
+* <- source.mvbase-basic variable
+   TIMEOUT.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.TIMEOUT 
+*^ source.mvbase-basic variable
+    test.TIMEOUT  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.TIMEOUT
+*^ source.mvbase-basic variable
+    test.TIMEOUT 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ UNBLOCK.test 
+*^ source.mvbase-basic variable
+    UNBLOCK.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+UNBLOCK.test 
+* <- source.mvbase-basic variable
+   UNBLOCK.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.UNBLOCK 
+*^ source.mvbase-basic variable
+    test.UNBLOCK  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.UNBLOCK
+*^ source.mvbase-basic variable
+    test.UNBLOCK 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ BLOCK.test 
+*^ source.mvbase-basic variable
+    BLOCK.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+BLOCK.test 
+* <- source.mvbase-basic variable
+   BLOCK.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.BLOCK 
+*^ source.mvbase-basic variable
+    test.BLOCK  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.BLOCK
+*^ source.mvbase-basic variable
+    test.BLOCK 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ UNLOCK.test 
+*^ source.mvbase-basic variable
+    UNLOCK.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+UNLOCK.test 
+* <- source.mvbase-basic variable
+   UNLOCK.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.UNLOCK 
+*^ source.mvbase-basic variable
+    test.UNLOCK  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.UNLOCK
+*^ source.mvbase-basic variable
+    test.UNLOCK 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WAKEUP.test 
+*^ source.mvbase-basic variable
+    WAKEUP.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+WAKEUP.test 
+* <- source.mvbase-basic variable
+   WAKEUP.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WAKEUP 
+*^ source.mvbase-basic variable
+    test.WAKEUP  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WAKEUP
+*^ source.mvbase-basic variable
+    test.WAKEUP 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WEOF.test 
+*^ source.mvbase-basic variable
+    WEOF.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+WEOF.test 
+* <- source.mvbase-basic variable
+   WEOF.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.WEOF 
+*^ source.mvbase-basic variable
+    test.WEOF  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.WEOF
+*^ source.mvbase-basic variable
+    test.WEOF 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ WRITE.test 
+*^ source.mvbase-basic variable
+    WRITE.test  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+WRITE.test 
+* <- source.mvbase-basic variable
+   WRITE.test  
+*  ^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.WRITE 
+*^ source.mvbase-basic variable
+    test.WRITE  
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WRITE
+*^ source.mvbase-basic variable
+    test.WRITE 
+*   ^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ WRITEB.test 
+*^ source.mvbase-basic variable
+    WRITEB.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+WRITEB.test 
+* <- source.mvbase-basic variable
+   WRITEB.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WRITEB 
+*^ source.mvbase-basic variable
+    test.WRITEB  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEB
+*^ source.mvbase-basic variable
+    test.WRITEB 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WRITEBU.test 
+*^ source.mvbase-basic variable
+    WRITEBU.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+WRITEBU.test 
+* <- source.mvbase-basic variable
+   WRITEBU.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEBU 
+*^ source.mvbase-basic variable
+    test.WRITEBU  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.WRITEBU
+*^ source.mvbase-basic variable
+    test.WRITEBU 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ WRITEF.test 
+*^ source.mvbase-basic variable
+    WRITEF.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+WRITEF.test 
+* <- source.mvbase-basic variable
+   WRITEF.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WRITEF 
+*^ source.mvbase-basic variable
+    test.WRITEF  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEF
+*^ source.mvbase-basic variable
+    test.WRITEF 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WRITEFU.test 
+*^ source.mvbase-basic variable
+    WRITEFU.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+WRITEFU.test 
+* <- source.mvbase-basic variable
+   WRITEFU.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEFU 
+*^ source.mvbase-basic variable
+    test.WRITEFU  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.WRITEFU
+*^ source.mvbase-basic variable
+    test.WRITEFU 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ WRITET.test 
+*^ source.mvbase-basic variable
+    WRITET.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+WRITET.test 
+* <- source.mvbase-basic variable
+   WRITET.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WRITET 
+*^ source.mvbase-basic variable
+    test.WRITET  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITET
+*^ source.mvbase-basic variable
+    test.WRITET 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WRITEU.test 
+*^ source.mvbase-basic variable
+    WRITEU.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+WRITEU.test 
+* <- source.mvbase-basic variable
+   WRITEU.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WRITEU 
+*^ source.mvbase-basic variable
+    test.WRITEU  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEU
+*^ source.mvbase-basic variable
+    test.WRITEU 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WRITEV.test 
+*^ source.mvbase-basic variable
+    WRITEV.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+WRITEV.test 
+* <- source.mvbase-basic variable
+   WRITEV.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.WRITEV 
+*^ source.mvbase-basic variable
+    test.WRITEV  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEV
+*^ source.mvbase-basic variable
+    test.WRITEV 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ WRITEVU.test 
+*^ source.mvbase-basic variable
+    WRITEVU.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+WRITEVU.test 
+* <- source.mvbase-basic variable
+   WRITEVU.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.WRITEVU 
+*^ source.mvbase-basic variable
+    test.WRITEVU  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.WRITEVU
+*^ source.mvbase-basic variable
+    test.WRITEVU 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ before.test 
+*^ source.mvbase-basic variable
+    before.test  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+before.test 
+* <- source.mvbase-basic variable
+   before.test  
+*  ^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*             ^ source.mvbase-basic - variable
+
+ test.before 
+*^ source.mvbase-basic variable
+    test.before  
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.before
+*^ source.mvbase-basic variable
+    test.before 
+*   ^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ do.test 
+*^ source.mvbase-basic variable
+    do.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+do.test 
+* <- source.mvbase-basic variable
+   do.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.do 
+*^ source.mvbase-basic variable
+    test.do  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.do
+*^ source.mvbase-basic variable
+    test.do 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ from.test 
+*^ source.mvbase-basic variable
+    from.test  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+from.test 
+* <- source.mvbase-basic variable
+   from.test  
+*  ^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*           ^ source.mvbase-basic - variable
+
+ test.from 
+*^ source.mvbase-basic variable
+    test.from  
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ test.from
+*^ source.mvbase-basic variable
+    test.from 
+*   ^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*            ^ source.mvbase-basic - variable
+
+ to.test 
+*^ source.mvbase-basic variable
+    to.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+to.test 
+* <- source.mvbase-basic variable
+   to.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.to 
+*^ source.mvbase-basic variable
+    test.to  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.to
+*^ source.mvbase-basic variable
+    test.to 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ on.test 
+*^ source.mvbase-basic variable
+    on.test  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+on.test 
+* <- source.mvbase-basic variable
+   on.test  
+*  ^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*         ^ source.mvbase-basic - variable
+
+ test.on 
+*^ source.mvbase-basic variable
+    test.on  
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ test.on
+*^ source.mvbase-basic variable
+    test.on 
+*   ^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*          ^ source.mvbase-basic - variable
+
+ rtnlist.test 
+*^ source.mvbase-basic variable
+    rtnlist.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+rtnlist.test 
+* <- source.mvbase-basic variable
+   rtnlist.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.rtnlist 
+*^ source.mvbase-basic variable
+    test.rtnlist  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.rtnlist
+*^ source.mvbase-basic variable
+    test.rtnlist 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ capturing.test 
+*^ source.mvbase-basic variable
+    capturing.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+capturing.test 
+* <- source.mvbase-basic variable
+   capturing.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.capturing 
+*^ source.mvbase-basic variable
+    test.capturing  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.capturing
+*^ source.mvbase-basic variable
+    test.capturing 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ returning.test 
+*^ source.mvbase-basic variable
+    returning.test  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+returning.test 
+* <- source.mvbase-basic variable
+   returning.test  
+*  ^^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.returning 
+*^ source.mvbase-basic variable
+    test.returning  
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ test.returning
+*^ source.mvbase-basic variable
+    test.returning 
+*   ^^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                 ^ source.mvbase-basic - variable
+
+ setting.test 
+*^ source.mvbase-basic variable
+    setting.test  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+setting.test 
+* <- source.mvbase-basic variable
+   setting.test  
+*  ^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*              ^ source.mvbase-basic - variable
+
+ test.setting 
+*^ source.mvbase-basic variable
+    test.setting  
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.setting
+*^ source.mvbase-basic variable
+    test.setting 
+*   ^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ passlist.test 
+*^ source.mvbase-basic variable
+    passlist.test  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+passlist.test 
+* <- source.mvbase-basic variable
+   passlist.test  
+*  ^^^^^^^^^^^^^ source.mvbase-basic variable
+* ^ source.mvbase-basic 
+*               ^ source.mvbase-basic - variable
+
+ test.passlist 
+*^ source.mvbase-basic variable
+    test.passlist  
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+
+ test.passlist
+*^ source.mvbase-basic variable
+    test.passlist 
+*   ^^^^^^^^^^^^^ source.mvbase-basic variable
+*  ^ source.mvbase-basic 
+*                ^ source.mvbase-basic - variable
+

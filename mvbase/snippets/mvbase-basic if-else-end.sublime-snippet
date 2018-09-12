@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+if $1 else
+	$2
+end$3
+]]></content>
+	<tabTrigger>ife</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>

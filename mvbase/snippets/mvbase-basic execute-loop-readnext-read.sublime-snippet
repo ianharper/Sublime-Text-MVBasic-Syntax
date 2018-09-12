@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+execute \\$1\\ rtnlist $2 $3
+loop
+  readnext $4 from $2 else exit
+  read $5 from $6, $4 else continue
+  $7
+repeat
+]]></content>
+	<tabTrigger>elrnr</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>

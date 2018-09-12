@@ -1,0 +1,317 @@
+* SYNTAX TEST "mvbase-basic.sublime-syntax"
+
+* foo
+* <- source.mvbase-basic punctuation.definition.comment.mvbase-basic
+* ^ source.mvbase-basic comment.line.mvbase-basic
+
+
+* Labels
+
+1000 * comment
+* <- source.mvbase-basic entity.name.function.linelabel.mvbase-basic
+*   ^ source.mvbase-basic
+*    ^ source.mvbase-basic comment.line.mvbase-basic
+
+semantic.label: * comment
+* <- source.mvbase-basic entity.name.function.linelabel.mvbase-basic
+*              ^ source.mvbase-basic
+*               ^ source.mvbase-basic comment.line.mvbase-basic
+
+9999 STOP ;* Using these kinds of labels!!!
+* <- source.mvbase-basic entity.name.function.linelabel.mvbase-basic
+*    ^^^^ source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+
+variable.could.be.a.label:=concatenated
+* <- source.mvbase-basic variable.mvbase-basic
+*                        ^^ source.mvbase-basic keyword.operator.mvbase-basic
+
+stop 
+* Variable with the same name as functions:
+
+  tot.abs(1)
+* ^ source.mvbase-basic variable.mvbase-basic
+
+  a.abs(1)
+* ^^^^^ source.mvbase-basic variable.mvbase-basic
+
+
+* Strings
+
+ 'single quoted string ;* not a comment'
+* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic string.quoted.single.mvbase-basic
+
+ "string quoted  += double"
+* ^^^^^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic string.quoted.double.mvbase-basic
+
+ \string=quoted double\
+* ^^^^^^^^^^^^^^^^^^^^ source.mvbase-basic string.quoted.double.mvbase-basic
+
+
+call sub.routine()
+
+call @subname 
+
+* Flow Control:
+
+for x = 1 to 10
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*     ^ source.mvbase-basic keyword.operator.mvbase-basic
+*          ^ source.mvbase-basic keyword.control.flow.mvbase-basic
+
+next x
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+loop
+
+until done
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic
+
+repeat
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+loop 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+while x > 0
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic keyword.operator.mvbase-basic
+
+repeat
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+loop until done
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*    ^^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*          ^^^^ source.mvbase-basic variable.mvbase-basic
+*              ^ source.mvbase-basic meta.block.until.mvbase-basic
+  print 'statement in loop block'
+* ^^^^^ source.mvbase-basic meta.block.until.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+repeat
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*     ^ source.mvbase-basic
+
+loop while true do print 'looping' repeat
+
+
+if true then ;* comment
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic keyword.control.flow.mvbase-basic
+
+end
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic  
+
+    if false else ;* comment
+*   ^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*            ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic    
+*                  ^ source.mvbase-basic meta.block.mvbase-basic punctuation.definition.comment.mvbase-basic
+*                   ^ source.mvbase-basic meta.block.mvbase-basic comment.line.mvbase-basic
+    end 
+*   ^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*  ^ source.mvbase-basic 
+*      ^ source.mvbase-basic - keyword.control.flow.mvbase-basic
+
+if single.line then print 'correct highlights' else print 'incorrect!' ;* comment
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*              ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                                              ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+
+    if single.line then print 'correct highlights' else print 'incorrect!'
+*   ^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                  ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                       ^^^^^ source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*                                                  ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+
+begin case
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+    case 
+*   ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic        
+case 1
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+end case
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+
+
+* gosub/goto:
+
+goto 1000 ;* comment
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*    ^ meta.function-call.mvbase-basic variable.function.mvbase-basic
+*         ^ source.mvbase-basic punctuation.terminator.mvbase-basic
+*          ^ source.mvbase-basic punctuation.definition.comment.mvbase-basic
+*            ^ source.mvbase-basic comment.line.mvbase-basic
+
+gosub 1000
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*     ^ meta.function-call.mvbase-basic variable.function.mvbase-basic
+
+on variable goto 100, 200, semantic.label
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*           ^ source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*                ^^^ meta.function-call.mvbase-basic variable.function.mvbase-basic
+*                   ^ source.mvbase-basic
+*                     ^ meta.function-call.mvbase-basic variable.function.mvbase-basic
+*                          ^ meta.function-call.mvbase-basic variable.function.mvbase-basic
+
+on variable gosub 100, 200, semantic.label
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*           ^ source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*                 ^^^ variable.function
+*                    ^ source.mvbase-basic
+*                      ^ variable.function
+*                            ^ variable.function
+
+on variable gosub 100, 200, semantic.label,
+gosub.continuation
+* ^^^^^^^^^^^^^^^^ meta.function-call.mvbase-basic variable.function.mvbase-basic
+
+IF TRUE THEN GOTO LINE.REF
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*            ^ source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*                  ^ source.mvbase-basic meta.function-call.mvbase-basic variable.function.mvbase-basic
+
+* Operators:
+
+ var = 1 + 2 - 3 * 4 / 5 : '.'
+*    ^ source.mvbase-basic keyword.operator.mvbase-basic
+*      ^ source.mvbase-basic constant.numeric.integer.mvbase-basic
+*        ^ source.mvbase-basic keyword.operator.mvbase-basic
+*          ^ source.mvbase-basic constant.numeric.integer.mvbase-basic
+*            ^ source.mvbase-basic keyword.operator.mvbase-basic
+*                ^ source.mvbase-basic keyword.operator.mvbase-basic
+*                    ^ source.mvbase-basic keyword.operator.mvbase-basic
+*                        ^ source.mvbase-basic keyword.operator.mvbase-basic
+
+ var=1+2-3*4/5:'.'
+*   ^ source.mvbase-basic keyword.operator.mvbase-basic
+*     ^ source.mvbase-basic keyword.operator.mvbase-basic
+*       ^ source.mvbase-basic keyword.operator.mvbase-basic
+*         ^ source.mvbase-basic keyword.operator.mvbase-basic
+*           ^ source.mvbase-basic keyword.operator.mvbase-basic
+*             ^ source.mvbase-basic keyword.operator.mvbase-basic
+
+  var += 1000 
+* ^^^ source.mvbase-basic variable.mvbase-basic
+*     ^^ source.mvbase-basic keyword.operator.mvbase-basic
+*        ^^^^ source.mvbase-basic constant.numeric.integer.mvbase-basic
+
+var -= 10.001
+* <- source.mvbase-basic variable.mvbase-basic
+*   ^^ source.mvbase-basic keyword.operator.mvbase-basic
+*      ^^^^^^ source.mvbase-basic constant.numeric.float.mvbase-basic
+
+* Block Statements
+read variable from file, id locked 
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*   ^ source.mvbase-basic - support.function.builtin.basicStatement.mvbase-basic           
+*             ^^^^ source.mvbase-basic keyword.other.mvbase-basic
+*                  ^^^^ source.mvbase-basic variable.mvbase-basic
+*                           ^^^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                                 ^ source.mvbase-basic meta.block.mvbase-basic
+    print 'statement in meta.block'
+*   ^^^^^ source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end then 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*   ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic meta.block.mvbase-basic    
+    print 'statement in meta.block'
+*   ^^^^^ source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end else 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*   ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic meta.block.mvbase-basic    
+    print 'statement in meta.block'
+*   ^^^^^ source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+print 'statement out of block'
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+
+open 'string' to file.var then 
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*     ^^^^^^ source.mvbase-basic string.quoted.single.mvbase-basic
+*             ^^ source.mvbase-basic keyword.other.mvbase-basic
+*                         ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                             ^ source.mvbase-basic
+    print 'statement in meta.block'
+*   ^^^^^ source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic 
+print 'statement out of block'
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+
+readnext id else exit
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*           ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                ^^^^ source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+
+readnext id from list then 
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*                     ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                         ^ source.mvbase-basic meta.block.mvbase-basic 
+end else 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*   ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*       ^ source.mvbase-basic meta.block.mvbase-basic
+end
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+readt var then 
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*         ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+print 'statement in block'
+* <- source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end else 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*   ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+end on error
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*   ^^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+print 'statement in block'
+* <- source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic 
+print 'statement out of block'
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+
+input var for time else
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*         ^ source.mvbase-basic keyword.other.mvbase-basic
+*             ^ source.mvbase-basic variable.mvbase-basic
+*                  ^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                      ^ source.mvbase-basic meta.block.mvbase-basic
+  print 'input block'
+* ^ source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+input var then 
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*         ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+print 'statement in block'
+* <- source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end else 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+*   ^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+print 'statement in block'
+* <- source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+
+
+write text on file.var, id on error
+* <- source.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+*     ^^^^ source.mvbase-basic variable.mvbase-basic
+*          ^ source.mvbase-basic keyword.other.mvbase-basic
+*             ^^^^^^^^ source.mvbase-basic variable.mvbase-basic
+*                       ^^ source.mvbase-basic variable.mvbase-basic
+*                          ^^^^^^^^ source.mvbase-basic keyword.control.flow.mvbase-basic
+*                                  ^ source.mvbase-basic meta.block.mvbase-basic
+  print 'on error block'
+* ^ source.mvbase-basic meta.block.mvbase-basic support.function.builtin.basicStatement.mvbase-basic
+end 
+* <- source.mvbase-basic keyword.control.flow.mvbase-basic
+

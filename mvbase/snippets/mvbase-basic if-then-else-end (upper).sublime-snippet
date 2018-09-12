@@ -1,0 +1,11 @@
+<snippet>
+	<content>
+IF $1 THEN
+	$2
+END ELSE
+	$3
+END
+</content>
+	<tabTrigger>IFTE</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>

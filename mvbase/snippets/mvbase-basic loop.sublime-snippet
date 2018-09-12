@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+loop
+	$1
+repeat$0
+]]></content>
+	<tabTrigger>loop</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>
