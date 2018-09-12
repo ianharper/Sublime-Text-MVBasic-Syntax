@@ -25,6 +25,25 @@ variable.could.be.a.label:=concatenated
 * <- source.d3-basic variable.d3-basic
 *                        ^^ source.d3-basic keyword.operator.d3-basic
 
+ variable<attribute> = var<ac, vm, sm>
+*        ^ source.d3-basic punctuation.definition.section.attributeref.begin.d3-basic
+*                  ^ source.d3-basic punctuation.definition.section.attributeref.end.d3-basic
+*                         ^ source.d3-basic punctuation.definition.section.attributeref.begin.d3-basic
+*                                    ^ source.d3-basic punctuation.definition.section.attributeref.end.d3-basic
+
+crt var< dcount(var, @AM) >
+*      ^ source.d3-basic punctuation.definition.section.attributeref.begin.d3-basic
+*                         ^ source.d3-basic punctuation.definition.section.attributeref.end.d3-basic
+
+if var1<var2 and var1>var3 then null
+*      ^ source.d3-basic keyword.operator.d3-basic
+*                    ^ source.d3-basic keyword.operator.d3-basic
+
+var(1)<2>
+* <- source.d3-basic variable.d3-basic
+*     ^ source.d3-basic punctuation.definition.section.attributeref.begin.d3-basic
+*       ^ source.d3-basic punctuation.definition.section.attributeref.end.d3-basic 
+
 * Variable with the same name as functions:
 
   tot.abs(1)

@@ -21,6 +21,25 @@ semantic.label: * comment
 * <- source.qm-basic entity.name.function.linelabel.qm-basic
 *    ^^^^ source.qm-basic support.function.builtin.basicStatement.qm-basic
 
+ variable<attribute> = var<ac, vm, sm>
+*        ^ source.qm-basic punctuation.definition.section.attributeref.begin.qm-basic
+*                  ^ source.qm-basic punctuation.definition.section.attributeref.end.qm-basic
+*                         ^ source.qm-basic punctuation.definition.section.attributeref.begin.qm-basic
+*                                    ^ source.qm-basic punctuation.definition.section.attributeref.end.qm-basic
+
+crt var< dcount(var, @AM) >
+*      ^ source.qm-basic punctuation.definition.section.attributeref.begin.qm-basic
+*                         ^ source.qm-basic punctuation.definition.section.attributeref.end.qm-basic
+
+if var1<var2 and var1>var3 then null
+*      ^ source.qm-basic keyword.operator.qm-basic
+*                    ^ source.qm-basic keyword.operator.qm-basic
+
+var(1)<2>
+* <- source.qm-basic variable.qm-basic
+*     ^ source.qm-basic punctuation.definition.section.attributeref.begin.qm-basic
+*       ^ source.qm-basic punctuation.definition.section.attributeref.end.qm-basic
+
 variable.could.be.a.label:=concatenated
 * <- source.qm-basic variable.qm-basic
 *                        ^^ source.qm-basic keyword.operator.qm-basic
