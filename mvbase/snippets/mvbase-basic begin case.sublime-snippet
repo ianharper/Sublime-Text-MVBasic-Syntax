@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+begin case
+	case $1
+		$2
+end case
+]]></content>
+	<tabTrigger>beg</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>

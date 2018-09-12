@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+IF $1 THEN
+	$2
+END
+</content>
+	<tabTrigger>IFT</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>

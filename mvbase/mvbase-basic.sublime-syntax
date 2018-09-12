@@ -1,0 +1,268 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: mvBase Basic
+file_extensions: [bp,mvbase]
+scope: source.mvbase-basic
+
+variables:
+  # jBASE Specific 
+  linelabels:       '(([A-Za-z]+[a-zA-Z0-9\.\$]*):|([0-9]+\.?[0-9]*):?)(?!=)'
+  linelabelref:     '([A-Za-z][a-zA-Z0-9\.\$]+)|([0-9]+\.?[0-9]*)'
+  basicStatements:  '(ABORT|ATTACH\sTAPE\sDEVICES|CHANGE\sBLOCK-SIZE|AUX\s(ON|OFF)|BLOCK|UNBLOCK|BREAK|CHAIN|CLEAR|CLEARCOMMON|CLEARDATA|CLEARFILE|CLEARSELECT|COMMON|COMPARE|CONNECT|DISCONNECT|CONSOLE|CONVERT|CRT(\sON)?|DATA|DEBUG|DEL|DELETE|DETACH\sTAPE\sDEVICES|DIMENSION|DISCONNECT|CONNECT|DISPLAY|ECHO|ENTER|EQUATE|ERROR|EXECUTE|EXIT|FOOTING|FUNCTION|GET|GETX|HEADING|IN|INPUT(\sCTRL)?|INPUTCLEAR|INPUTERR|INPUTIF|INPUTNULL|INPUTPROMPT|INPUTTRAP|INS|LOCATE|LOCK|LOCK-BEEP|MAT|MATBUILD|MATPARSE|MATREAD|MATREADU|MATWRITE|MATWRITEU|NULL|OPEN|PAGE|PRECISION|PRINT|PRINTER|PRINTERR|PROCREAD|PROCWRITE|PROMPT|READ|READB|READF|READNEXT|READT|READTX|READU|READV|READVU|RELEASE|REM|REMOVE|RETURN|REWIND|RQM|SELECT|SEND|SENDBREAK|SENDX|SLEEP|SPOOLQ|STOP|TA|TIMEOUT|UNBLOCK|BLOCK|UNLOCK|WAKEUP|WEOF|WRITE|WRITEB|WRITEBU|WRITEF|WRITEFU|WRITET|WRITEU|WRITEV|WRITEVU)(?=\s|;)'
+  basicFunctions:   'ABS|ALPHA|ASCII|ASSIGNED|UNASSIGNED|CHANGE|CHAR|COL1|COL2|CONVERT|COS|COUNT|DATE|DCOUNT|DELETE|DQUOTE|DTX|EBCDIC|EREPLACE|EXCHANGE|EXP|EXTRACT|FIELD|FMT|FOLD|ICONV|INDEX|INMAT|INSERT|INT|LEN|LINESTATUS|LN|MAXIMUM|MINIMUM|MOD|NOT|NUM|OCONV|PWR|REM|REPLACE|RND|SENTENCE|SEQ|SIN|SORT|SOUNDEX|SPACE|SQRT|SQUOTE|STATUS|STR|SUM|SUMMATION|SWAP|SYSTEM|TA|TAN|TIME|TIMEDATE|TRIM|TRIMB|TRIMF|UNASSIGNED|ASSIGNED|XTD'
+  atVars:           '@AM|@FM|@VM|@SM'
+  otherKeywords:    'BEFORE|DO|FROM|FOR|IN|TO|ON(?!\sERROR)|RTNLIST|CAPTURING|RETURNING|SETTING|STACKING|PASSLIST'
+  blockStatements:  'THEN|ELSE|LOCKED|ON\sERROR'
+
+  # General 
+  basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
+  stmtstart:     '\b(?<!\.\$)'
+  stmtend:       '(?!\.\$)\b'
+
+
+contexts:
+  main:
+    - include: comment_line
+
+    # subroutine statement
+    - match: (?i)^\s*(subroutine)\s({{basicvariable}})?
+      captures:
+        '1': support.function.builtin.basicStatement.mvbase-basic 
+        '2': entity.name.function.linelabel.mvbase-basic
+
+    # subroutine call
+    - match: (?i){{stmtstart}}(call)\s(({{basicvariable}})|@{{basicvariable}})
+      captures: 
+        '1': support.function.builtin.basicStatement.mvbase-basic 
+        '3': variable.function.mvbase-basic
+
+    - include: blocks
+    - include: language_constants
+
+    # For loop
+    - match: (?i){{stmtstart}}(for)(?=\s)
+      scope: keyword.control.flow.mvbase-basic
+      push:
+        - include: for_block
+
+    # loop loop
+    - match: (?i){{stmtstart}}(loop){{stmtend}}
+      scope: keyword.control.flow.mvbase-basic
+      push: 
+        - meta_content_scope: meta.block.loop.mvbase-basic
+        - include: loop_block
+
+    # Begin Case
+    - match: (?i){{stmtstart}}(begin\scase){{stmtend}}
+      scope: keyword.control.flow.mvbase-basic
+      push:
+        - meta_content_scope: meta.block.begin-case.mvbase-basic
+        - include: begin_case_block
+
+    - include: functions
+
+    # if statements
+    - match: (?i){{stmtstart}}(IF)(?=\s)
+      scope: keyword.control.flow.mvbase-basic
+
+    # Basic statements
+    - match: (?i){{stmtstart}}({{basicStatements}})
+      scope: support.function.builtin.basicStatement.mvbase-basic
+
+    - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
+      captures:
+        '1': support.function.builtin.basicStatement.mvbase-basic 
+        '2': variable.mvbase-basic
+        '3': support.function.builtin.basicStatement.mvbase-basic 
+      push: ongoto
+
+    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
+      captures:
+        '1': support.function.builtin.basicStatement.mvbase-basic
+        '2': meta.function-call.mvbase-basic variable.function.mvbase-basic
+
+    # line labels
+    - match: ^{{linelabels}}\s*(\*.*)?
+      captures:
+        '2': entity.name.function.linelabel.mvbase-basic
+        '3': entity.name.function.linelabel.mvbase-basic
+        '4': comment.line.mvbase-basic
+
+    - include: other_keywords
+    - include: operators
+    - include: basicvariables
+    - include: literals
+
+    - match: ;
+      scope: punctuation.terminator.mvbase-basic
+
+
+
+  operators:
+    - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
+      captures: 
+        '1': keyword.operator.mvbase-basic
+
+    - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
+      scope: keyword.operator.mvbase-basic
+
+  basicvariables:
+    - match: (?i)({{basicvariable}})\(?
+      scope: variable.mvbase-basic
+
+  literals:
+    - match: (\\)
+      push:
+        - meta_scope: string.quoted.double.mvbase-basic
+        - match: (\\)
+          pop: true
+
+    - match: (")
+      push:
+        - meta_scope: string.quoted.double.mvbase-basic
+        - match: (")
+          pop: true
+
+    - match: (')
+      push:
+        - meta_scope: string.quoted.single.mvbase-basic
+        - match: (')
+          pop: true
+
+    - match: \b((?<!\d)-)?\d+\.\d+\b
+      scope: constant.numeric.float.mvbase-basic
+
+    - match: \b((?<!\d)-)?\d+\b
+      scope: constant.numeric.integer.mvbase-basic
+
+  functions:
+    - match: (?i)(?<!\.)({{basicFunctions}})(?=\()
+      scope: support.function.builtin.basicFunction.mvbase-basic
+
+    - match: \B(@)(?=\()
+      scope: support.function.builtin.basicFunction.mvbase-basic
+        
+  language_constants:
+    - match: (?i)\B({{atVars}})\b
+      scope: constant.character.mvbase-basic
+
+  other_keywords:
+    - match: (?i)(?<=\S)\s+{{stmtstart}}({{otherKeywords}})(?=\s)
+      scope: keyword.other.mvbase-basic
+
+  comment_line:
+    - match: (?<=;|^)\s*(\*|\!)
+      scope: punctuation.definition.comment.mvbase-basic
+      push:
+        - meta_content_scope: comment.line.mvbase-basic 
+        - match: $\n?
+          pop: true
+
+  expression:
+    - include: comment_line
+    - include: language_constants
+    - include: functions
+    - include: literals
+    - include: operators
+    # - include: other_keywords
+    - include: basicvariables
+
+  blocks:
+    - match: (?i)(?<=\s)({{blockStatements}})(?=\s*($|;))
+      scope: keyword.control.flow.mvbase-basic
+      push:
+        - meta_content_scope: meta.block.mvbase-basic
+        - match: (?i){{stmtstart}}(end)(?=\s|;|$)
+          scope: keyword.control.flow.mvbase-basic
+          pop: true
+        - include: main
+    - match: (?i)(?<=^|;|\s)({{blockStatements}})(?=\s) # single line
+      captures:
+        '1': keyword.control.flow.mvbase-basic
+    - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
+      scope: keyword.control.flow.mvbase-basic
+      push:
+        - match: .*
+          scope: text.after-final-end.mvbase-basic
+
+  for_block:
+    - match: (?i)(?<=\s)to(?=\s)
+      scope: keyword.control.flow.mvbase-basic
+    - match: (?i)(?<=\s)step(?=\s)
+      scope: keyword.control.flow.mvbase-basic
+    - include: expression
+    - match: (?i)(?<=next)
+      pop: true
+    - match: (?=$|;)
+      push:
+        - meta_content_scope: meta.block.for.mvbase-basic
+        - match: (?i)(?<=^|;|\s)next(?=\s)
+          scope: keyword.control.flow.mvbase-basic
+          pop: true
+        - include: main
+
+  loop_block:
+    - match: (?i)(?=(^|;|\s)(until|while)\s)
+      set:
+        - match: (?i)(?<=^|\s)(until|while)(?=\s)
+          scope: keyword.control.flow.mvbase-basic
+        - match: (?i)((do\s|do$)|(?=repeat(\s|$)|;|$))
+          captures:
+            '2': keyword.control.flow.mvbase-basic
+          set: 
+          - meta_content_scope: meta.block.until.mvbase-basic
+          - match: (?i)(?<=\s)do(?=;|$|\s)
+            scope: keyword.control.flow.mvbase-basic
+          - match: (?i)(?<=^|;|\s)repeat(?=\s|$|;)
+            scope: keyword.control.flow.mvbase-basic
+            pop: true
+          - include: main
+        - include: expression
+    - match: (?i)(?<=^|;|\s)repeat(?=\s|$|;)
+      scope: keyword.control.flow.mvbase-basic
+      pop: true
+    - include: main
+
+  begin_case_block:
+    - match: (?i)^\s*(case)(?=\s) 
+      captures: 
+        '1': keyword.control.flow.mvbase-basic
+      push:
+        - match: (?=$|;)
+          push:
+          - meta_content_scope: meta.block.case.mvbase-basic
+          - include: end_case_block
+          - include: main
+        - include: end_case_block
+        - include: expression
+    - match: (?i)(?<=^|\s)end\scase{{stmtend}}
+      scope: keyword.control.flow.mvbase-basic
+      pop: true
+    - include: main
+
+  end_case_block:
+    - match: (?i)(?=^\s*end\scase\b)
+      pop: true
+    - match: (?i)(?=^\s*case\b)
+      pop: true
+
+  end_block:
+    - match: (?i){{stmtstart}}(end)(?=\s|$)
+      scope: keyword.control.flow.mvbase-basic
+      pop: true
+    - include: main
+
+  ongoto:
+    - match: \b{{linelabelref}}\b
+      scope: meta.function-call.mvbase-basic variable.function.mvbase-basic
+    - match: ;|((?!,)\b\s*$)
+      pop: true
+
+  end_pop:
+    - match: '$'
+      pop: true
+
+  else_pop:
+    - match: (?=\S)
+      pop: true

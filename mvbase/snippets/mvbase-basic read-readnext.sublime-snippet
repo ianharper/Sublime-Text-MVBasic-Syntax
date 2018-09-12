@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+readnext $1 else exit
+read $2 from $3, $1$0 else continue
+$4
+]]></content>
+	<tabTrigger>rnr</tabTrigger>
+	<scope>source.mvbase-basic</scope>
+</snippet>
