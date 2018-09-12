@@ -108,6 +108,29 @@ contexts:
       scope: keyword.operator.jbase-basic
 
   basicvariables:
+    - match: (?i)({{basicvariable}})(<)(?=.*?>)((?!.*?\s(and|or)\s)|(?=.*?>.*?\s(and|or)\s))
+      captures:
+        '1': variable.jbase-basic
+        '2': punctuation.definition.section.attributeref.begin.jbase-basic
+      push: 
+        - match: '>'
+          scope: punctuation.definition.section.attributeref.end.jbase-basic
+          pop: true
+        - include: expression
+
+    - match: (?i)({{basicvariable}})(?=\(.*?\)<.*?>)((?!.*?\s(and|or)\s)|(?=.*?>.*?\s(and|or)\s))
+      captures:
+        '1': variable.jbase-basic
+      push:
+        - match: (?<=\))<
+          scope: punctuation.definition.section.attributeref.begin.jbase-basic
+          set:
+            - match: '>'
+              scope: punctuation.definition.section.attributeref.end.jbase-basic
+              pop: true
+            - include: expression
+        - include: expression
+
     - match: (?i)({{basicvariable}})\(?
       scope: variable.jbase-basic
 
@@ -181,10 +204,10 @@ contexts:
       captures:
         '1': keyword.control.flow.jbase-basic
     - match: (?i){{stmtstart}}(end)(?=\s*(;|$))
-      scope: keyword.control.flow.d3-basic
+      scope: keyword.control.flow.jbase-basic
       push:
         - match: .*
-          scope: text.after-final-end.d3-basic
+          scope: text.after-final-end.jbase-basic
 
   for_block:
     - match: (?i)(?<=\s)to(?=\s)
