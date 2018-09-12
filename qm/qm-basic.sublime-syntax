@@ -101,13 +101,35 @@ contexts:
 
   operators:
     - match: (?i)(?<=\s)(ge|gt|le|lt|eq|ne|and|or)(?=\s)
-      captures: 
-        '1': keyword.operator.qm-basic
+      scope: keyword.operator.qm-basic
 
     - match: '(\+|-|\*|\/|:|=|#|\<|\>|>=|<=|:=|\+=|-=|\*=|\/=)'
       scope: keyword.operator.qm-basic
 
   basicvariables:
+    - match: (?i)({{basicvariable}})(<)(?=.*?>)((?!.*?\s(and|or)\s)|(?=.*?>.*?\s(and|or)\s))
+      captures:
+        '1': variable.qm-basic
+        '2': punctuation.definition.section.attributeref.begin.qm-basic
+      push: 
+        - match: '>'
+          scope: punctuation.definition.section.attributeref.end.qm-basic
+          pop: true
+        - include: expression
+
+    - match: (?i)({{basicvariable}})(?=\(.*?\)<.*?>)((?!.*?\s(and|or)\s)|(?=.*?>.*?\s(and|or)\s))
+      captures:
+        '1': variable.qm-basic
+      push:
+        - match: (?<=\))<
+          scope: punctuation.definition.section.attributeref.begin.qm-basic
+          set:
+            - match: '>'
+              scope: punctuation.definition.section.attributeref.end.qm-basic
+              pop: true
+            - include: expression
+        - include: expression
+
     - match: (?i)({{basicvariable}})\(?
       scope: variable.qm-basic
 
