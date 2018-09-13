@@ -17,8 +17,8 @@ variables:
 
   # General 
   basicvariable: '[A-Za-z][A-Za-z_\.\$0-9]*'
-  stmtstart:     '\b(?<!\.\$)'
-  stmtend:       '(?!\.\$)\b'
+  stmtstart:     '\b(?<![\.\$])'
+  stmtend:       '(?![\.\$])\b'
 
 
 contexts:
