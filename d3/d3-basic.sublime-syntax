@@ -66,9 +66,10 @@ contexts:
     - match: (?i){{stmtstart}}(if[r]?)(?=\s)
       scope: keyword.control.flow.d3-basic
 
-    # Basic statements
-    - match: (?i){{stmtstart}}({{basicStatements}})
-      scope: support.function.builtin.basicStatement.d3-basic
+    - match: (?i){{stmtstart}}(gosub|goto|go|return\sto)\s({{linelabelref}})(?=\s|$|;)
+      captures:
+        '1': support.function.builtin.basicStatement.d3-basic
+        '2': meta.function-call.d3-basic variable.function.d3-basic
 
     - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
       captures:
@@ -77,10 +78,9 @@ contexts:
         '3': support.function.builtin.basicStatement.d3-basic 
       push: ongoto
 
-    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
-      captures:
-        '1': support.function.builtin.basicStatement.d3-basic
-        '2': meta.function-call.d3-basic variable.function.d3-basic
+    # Basic statements
+    - match: (?i){{stmtstart}}({{basicStatements}})
+      scope: support.function.builtin.basicStatement.d3-basic
 
     # line labels
     - match: ^{{linelabels}}\s*(\*.*)?

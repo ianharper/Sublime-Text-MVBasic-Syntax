@@ -188,6 +188,11 @@ IF TRUE THEN GOTO LINE.REF
 *            ^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
 *                  ^ source.jbase-basic meta.function-call.jbase-basic variable.function.jbase-basic
 
+return to 1000
+* <- source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+* ^^^^^^^ source.jbase-basic support.function.builtin.basicStatement.jbase-basic
+*         ^^^^ meta.function-call.jbase-basic variable.function.jbase-basic
+
 * Operators:
 
  var = 1 + 2 - 3 * 4 / 5 : '.'

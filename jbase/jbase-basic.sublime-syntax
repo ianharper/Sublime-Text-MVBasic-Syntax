@@ -66,10 +66,6 @@ contexts:
     - match: (?i){{stmtstart}}(IF)(?=\s)
       scope: keyword.control.flow.jbase-basic
 
-    # Basic statements
-    - match: (?i){{stmtstart}}({{basicStatements}})
-      scope: support.function.builtin.basicStatement.jbase-basic
-
     - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
       captures:
         '1': support.function.builtin.basicStatement.jbase-basic 
@@ -77,10 +73,14 @@ contexts:
         '3': support.function.builtin.basicStatement.jbase-basic 
       push: ongoto
 
-    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
+    - match: (?i){{stmtstart}}(gosub|goto|go|return\sto)\s({{linelabelref}})(?=\s|$|;)
       captures:
         '1': support.function.builtin.basicStatement.jbase-basic
         '2': meta.function-call.jbase-basic variable.function.jbase-basic
+
+    # Basic statements
+    - match: (?i){{stmtstart}}({{basicStatements}})
+      scope: support.function.builtin.basicStatement.jbase-basic
 
     # line labels
     - match: ^{{linelabels}}\s*(\*.*)?

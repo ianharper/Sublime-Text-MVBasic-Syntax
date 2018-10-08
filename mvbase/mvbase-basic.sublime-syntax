@@ -66,10 +66,6 @@ contexts:
     - match: (?i){{stmtstart}}(IF)(?=\s)
       scope: keyword.control.flow.mvbase-basic
 
-    # Basic statements
-    - match: (?i){{stmtstart}}({{basicStatements}})
-      scope: support.function.builtin.basicStatement.mvbase-basic
-
     - match: (?i){{stmtstart}}(on)\s({{basicvariable}})\s(gosub|goto)(\s)
       captures:
         '1': support.function.builtin.basicStatement.mvbase-basic 
@@ -77,10 +73,14 @@ contexts:
         '3': support.function.builtin.basicStatement.mvbase-basic 
       push: ongoto
 
-    - match: (?i){{stmtstart}}(gosub|goto|go)\s({{linelabelref}})(?=\s|$|;)
+    - match: (?i){{stmtstart}}(gosub|goto|go|return\sto)\s({{linelabelref}})(?=\s|$|;)
       captures:
         '1': support.function.builtin.basicStatement.mvbase-basic
         '2': meta.function-call.mvbase-basic variable.function.mvbase-basic
+
+    # Basic statements
+    - match: (?i){{stmtstart}}({{basicStatements}})
+      scope: support.function.builtin.basicStatement.mvbase-basic
 
     # line labels
     - match: ^{{linelabels}}\s*(\*.*)?

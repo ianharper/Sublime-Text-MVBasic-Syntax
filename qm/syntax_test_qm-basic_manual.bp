@@ -187,6 +187,12 @@ IF TRUE THEN GOTO LINE.REF
 *            ^ source.qm-basic support.function.builtin.basicStatement.qm-basic
 *                  ^ source.qm-basic meta.function-call.qm-basic variable.function.qm-basic
 
+return to 1000
+* <- source.qm-basic support.function.builtin.basicStatement.qm-basic
+* ^^^^^^^ source.qm-basic support.function.builtin.basicStatement.qm-basic
+*         ^^^^ meta.function-call.qm-basic variable.function.qm-basic
+
+
 * Operators:
 
  var = 1 + 2 - 3 * 4 / 5 : '.'

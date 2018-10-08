@@ -42,7 +42,7 @@ if var1<var2 and var1>var3 then null
 var(1)<2>
 * <- source.d3-basic variable.d3-basic
 *     ^ source.d3-basic punctuation.definition.section.attributeref.begin.d3-basic
-*       ^ source.d3-basic punctuation.definition.section.attributeref.end.d3-basic 
+*       ^ source.d3-basic punctuation.definition.section.attributeref.end.d3-basic
 
 * Variable with the same name as functions:
 
@@ -84,7 +84,7 @@ until done
 repeat
 * <- source.d3-basic keyword.control.flow.d3-basic
 
-loop 
+loop
 * <- source.d3-basic keyword.control.flow.d3-basic
 
 while x > 0
@@ -113,16 +113,16 @@ if true then ;* comment
 *       ^ source.d3-basic keyword.control.flow.d3-basic
 
 end
-* <- source.d3-basic keyword.control.flow.d3-basic  
+* <- source.d3-basic keyword.control.flow.d3-basic
 
     if false else ;* comment
 *   ^^ source.d3-basic keyword.control.flow.d3-basic
-*            ^^^^ source.d3-basic keyword.control.flow.d3-basic    
+*            ^^^^ source.d3-basic keyword.control.flow.d3-basic
 *                  ^ source.d3-basic meta.block.d3-basic punctuation.definition.comment.d3-basic
 *                   ^ source.d3-basic meta.block.d3-basic comment.line.d3-basic
-    end 
+    end
 *   ^^^ source.d3-basic keyword.control.flow.d3-basic
-*  ^ source.d3-basic 
+*  ^ source.d3-basic
 *      ^ source.d3-basic - keyword.control.flow.d3-basic
 
 if single.line then print 'correct highlights' else print 'incorrect!' ;* comment
@@ -138,8 +138,8 @@ if single.line then print 'correct highlights' else print 'incorrect!' ;* commen
 
 begin case
 * <- source.d3-basic keyword.control.flow.d3-basic
-    case 
-*   ^^^^ source.d3-basic keyword.control.flow.d3-basic        
+    case
+*   ^^^^ source.d3-basic keyword.control.flow.d3-basic
 case 1
 * <- source.d3-basic keyword.control.flow.d3-basic
 
@@ -187,6 +187,11 @@ IF TRUE THEN GOTO LINE.REF
 *            ^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 *                  ^ source.d3-basic meta.function-call.d3-basic variable.function.d3-basic
 
+return to 1000
+* <- source.d3-basic support.function.builtin.basicStatement.d3-basic
+* ^^^^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
+*         ^^^^ meta.function-call.d3-basic variable.function.d3-basic
+
 * Operators:
 
  var = 1 + 2 - 3 * 4 / 5 : '.'
@@ -207,7 +212,7 @@ IF TRUE THEN GOTO LINE.REF
 *           ^ source.d3-basic keyword.operator.d3-basic
 *             ^ source.d3-basic keyword.operator.d3-basic
 
-  var += 1000 
+  var += 1000
 * ^^^ source.d3-basic variable.d3-basic
 *     ^^ source.d3-basic keyword.operator.d3-basic
 *        ^^^^ source.d3-basic constant.numeric.integer.d3-basic
@@ -218,33 +223,33 @@ var -= 10.001
 *      ^^^^^^ source.d3-basic constant.numeric.float.d3-basic
 
 * Block Statements
-read variable from file, id locked 
+read variable from file, id locked
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
-*   ^ source.d3-basic - support.function.builtin.basicStatement.d3-basic           
+*   ^ source.d3-basic - support.function.builtin.basicStatement.d3-basic
 *             ^^^^ source.d3-basic keyword.other.d3-basic
 *                  ^^^^ source.d3-basic variable.d3-basic
 *                           ^^^^^^ source.d3-basic keyword.control.flow.d3-basic
 *                                 ^ source.d3-basic meta.block.d3-basic
     print 'statement in meta.block'
 *   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
-end then 
+end then
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
-*       ^ source.d3-basic meta.block.d3-basic    
+*       ^ source.d3-basic meta.block.d3-basic
     print 'statement in meta.block'
 *   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
-end else 
+end else
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
-*       ^ source.d3-basic meta.block.d3-basic    
+*       ^ source.d3-basic meta.block.d3-basic
     print 'statement in meta.block'
 *   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
-end 
+end
 * <- source.d3-basic keyword.control.flow.d3-basic
 print 'statement out of block'
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 
-open 'string' to file.var then 
+open 'string' to file.var then
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *     ^^^^^^ source.d3-basic string.quoted.single.d3-basic
 *             ^^ source.d3-basic keyword.other.d3-basic
@@ -253,7 +258,7 @@ open 'string' to file.var then
     print 'statement in meta.block'
 *   ^^^^^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end
-* <- source.d3-basic keyword.control.flow.d3-basic 
+* <- source.d3-basic keyword.control.flow.d3-basic
 print 'statement out of block'
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 
@@ -262,23 +267,23 @@ readnext id else exit
 *           ^^^^ source.d3-basic keyword.control.flow.d3-basic
 *                ^^^^ source.d3-basic support.function.builtin.basicStatement.d3-basic
 
-readnext id from list then 
+readnext id from list then
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *                     ^^^^ source.d3-basic keyword.control.flow.d3-basic
-*                         ^ source.d3-basic meta.block.d3-basic 
-end else 
+*                         ^ source.d3-basic meta.block.d3-basic
+end else
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
 *       ^ source.d3-basic meta.block.d3-basic
 end
 * <- source.d3-basic keyword.control.flow.d3-basic
 
-readt var then 
+readt var then
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *         ^^^^ source.d3-basic keyword.control.flow.d3-basic
 print 'statement in block'
 * <- source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
-end else 
+end else
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
 end onerr
@@ -287,7 +292,7 @@ end onerr
 print 'statement in block'
 * <- source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
 end
-* <- source.d3-basic keyword.control.flow.d3-basic 
+* <- source.d3-basic keyword.control.flow.d3-basic
 print 'statement out of block'
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 
@@ -302,12 +307,12 @@ input var for time else
 end
 * <- source.d3-basic keyword.control.flow.d3-basic
 
-input var then 
+input var then
 * <- source.d3-basic support.function.builtin.basicStatement.d3-basic
 *         ^^^^ source.d3-basic keyword.control.flow.d3-basic
 print 'statement in block'
 * <- source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
-end else 
+end else
 * <- source.d3-basic keyword.control.flow.d3-basic
 *   ^^^^ source.d3-basic keyword.control.flow.d3-basic
 print 'statement in block'
@@ -326,6 +331,6 @@ write text on file.var, id onerr
 *                               ^ source.d3-basic meta.block.d3-basic
   print 'onerr block'
 * ^ source.d3-basic meta.block.d3-basic support.function.builtin.basicStatement.d3-basic
-end 
+end
 * <- source.d3-basic keyword.control.flow.d3-basic
 
