@@ -24,7 +24,7 @@ Sublime Text syntax highlighting, indentation, and sinppets for MultiValue Basic
 
 
 ## Installation
-Installation is easy with Sublime's command palate:
+Installation is easy with Sublime's command palette:
 ~~~~
 Package Control: Install Package
 MultiValue BASIC
